@@ -15,7 +15,7 @@ A personal assistant prepares ingredients for mushroom toast.
 
 ## How Jev fits
 
-Videomemory provides visual/transcript understanding; Jev supports ingredient and store-navigation decisions.
+Videomemory provides visual/transcript understanding; Jev supports ingredient and store-navigation decisions. Video frontend samples about one frame per second, deduplicates, embeds with MobileCLIP, retrieves relevant frames and creates a labeled contact sheet for a separate vision model.
 
 ## Why and impact
 
@@ -28,6 +28,6 @@ Prepared cart is not a completed purchase. No native Jev vision or autonomous pa
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/heykathan/status/2100680287042814326?s=20](https://x.com/heykathan/status/2100680287042814326?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/heykathan/status/2100680287042814326?s=20](https://x.com/heykathan/status/2100680287042814326?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

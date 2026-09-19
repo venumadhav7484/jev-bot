@@ -29,6 +29,6 @@ Players question balance in the Discord replies. Semantic plausibility does not 
 
 - Discord source — private provenance retained locally.
 - [https://github.com/cpaczek/things-vs-stuff](https://github.com/cpaczek/things-vs-stuff) — access: `fetched`; review: `readme_reviewed`.
-- [https://things.iar.dev/](https://things.iar.dev/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://things.iar.dev/](https://things.iar.dev/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

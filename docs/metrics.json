@@ -1,29 +1,50 @@
 {
-  "research_status": "paused",
+  "research_status": "frozen_snapshot_bot_preview",
   "coverage": {
     "snapshot_date": "2026-09-19",
     "main_channel_rows": 3226,
     "thread_rows": 142,
     "thread_count": 14,
     "thread_rows_include_starters_and_parent_copies": true,
-    "external_urls": 809,
+    "external_urls": 826,
     "access_status_counts": {
-      "fetched": 257,
-      "fetch_failed": 547,
+      "fetched": 740,
+      "fetch_failed": 49,
+      "nontext_not_inspected": 34,
       "browser_readable": 2,
-      "asset_no_text": 1,
-      "excluded_preview_asset": 2
+      "asset_no_text": 1
     },
-    "curated_cases": 262,
-    "default_retrieval_cases": 246,
+    "curated_cases": 420,
+    "default_retrieval_cases": 362,
     "message_coverage_status_counts": {
-      "cited_in_case": 350,
-      "uncatalogued_source_row": 2994,
+      "cited_in_case": 1035,
+      "excluded_social_or_logistics": 1078,
+      "ecosystem_jev_not_established": 221,
+      "media_context_unresolved": 104,
+      "proposed_integration": 378,
+      "other_model_context": 50,
+      "launch_claims_secondary": 2,
+      "excluded_unrelated_media": 1,
+      "provenance_correction": 15,
+      "reported_use_insufficient_detail": 113,
+      "measurement_context_unresolved": 26,
+      "substantive_question": 29,
+      "capability_discussion": 158,
+      "official_resource_reference": 16,
       "jev_role_questioned_in_thread": 2,
+      "limitation_discussion": 22,
+      "substantive_discussion": 35,
+      "duplicate_source_reference": 8,
+      "unsubstantiated_claim": 2,
+      "tool_reference": 37,
+      "representation_discussion": 6,
+      "ecosystem_resource": 2,
+      "unsupported_claim": 4,
       "awaiting_access": 3,
       "jev_role_not_established": 5,
       "other_model_not_jev": 1,
-      "planned_integration": 3
+      "planned_integration": 3,
+      "dated_service_limits": 2
     },
     "exhaustive": false,
     "independent_benchmarks_run": 0,
@@ -32,6 +53,34 @@
       "completed": 3358,
       "remaining": 0,
       "is_editorial_approval": false
+    },
+    "editorial_review": {
+      "newly_reviewed_messages": 2994,
+      "unassigned_messages": 0,
+      "unresolved_evidence_statuses": {
+        "media_context_unresolved": 104,
+        "reported_use_insufficient_detail": 113,
+        "measurement_context_unresolved": 26
+      },
+      "evidence_flags_survive_case_assignment": true
+    },
+    "external_review_status_counts": {
+      "not_reviewed": 296,
+      "metadata_only": 93,
+      "context_only_not_jev_evidence": 146,
+      "source_text_reviewed": 56,
+      "article_reviewed": 7,
+      "official_documentation_reviewed": 4,
+      "readme_reviewed": 27,
+      "profile_only_not_project_evidence": 5,
+      "sections_reviewed": 1,
+      "ecosystem_context_reviewed": 2,
+      "provider_listing_reviewed": 2,
+      "excluded_asset": 1,
+      "post_text_reviewed_media_pending": 130,
+      "visible_post_text_reviewed": 51,
+      "post_text_reviewed_media_blocked": 1,
+      "inaccessible_after_attempt": 4
     }
   },
   "triage": {

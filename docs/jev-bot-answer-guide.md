@@ -1,6 +1,6 @@
 # Jev-bot answer guide
 
-This is a proposed retrieval and response contract, not a running chatbot.
+A local research-preview assistant now implements a bounded version of this contract. It uses authored design templates and curated topical neighborhoods, then returns complete case fields and source links. Optional Jev Choice routes the entered idea; no generative answer model is configured. It is not an unrestricted conversational or production system.
 
 ## Input
 
@@ -39,3 +39,11 @@ Possible state: approved content excerpt, destination, data classification, poli
 This is a proposal, not a documented su-lekha deployment. [Full example and constraints](jev-knowledge-reference.md#20-example-use-case-su-lekha). Adjacent precedents: [Pi-heed](use-cases/pi-heed.md) for runtime constraints, [NoiseGate](use-cases/noisegate.md) for local exact rules plus semantic checks, and [advisory evaluation](use-cases/advisory-adversarial.md) for contradictory evidence and threshold sensitivity. None proves data-loss prevention reliability.
 
 Pilot on one supported integration in observation mode. Use seeded policy violations, benign near-matches, missing-context cases and adversarial text. Evaluate detection separately from event-capture completeness and enforceable controls.
+
+## Local assistant and evaluation scope
+
+Run `python3 scripts/serve_bot.py` from the repository root, then open `http://127.0.0.1:8765`. Offline mode requires no credentials and reads only the sanitized public snapshot. The optional Jev checkbox sends the entered idea to TypeSafe for pattern classification; it does not upload the private archive. Follow-up details can be added to the same description; chat history is not persisted.
+
+Eleven authored integration families cover policy review, routing, semantic data filtering, media pipelines, bounded action selection, memory, evaluation, exact computation, financial evidence, clinical documents and generation boundaries. This deliberately limited preview can miss novel fits. Source cards retain what/how/impact/limits and source review status. Counterexamples have a separate retrieval path. Related cases establish precedents, not proof that the proposed design will work.
+
+The private `scripts/evidence.py search --full` path additionally includes inspected-source review notes. Its abbreviated excerpts are not complete evidence. `--purpose counterevidence` and `--purpose tools` expose those evidence roles explicitly. Development retrieval and assistant checks test selected scenarios, citation resolution, abstention and evidence boundaries; they are not an independent reliability benchmark.

@@ -1,6 +1,6 @@
 # Jev: comprehensive knowledge reference
 
-**Prepared:** 19 September 2026 · **Revision:** 4 · **Context:** Jev capabilities and integration reference
+**Prepared:** 19 September 2026 · **Revision:** 5 · **Context:** Jev capabilities and integration reference
 
 This document focuses on understanding Jev: its capabilities, typed decisions, API, integration patterns, limitations, evidence and unanswered questions. It consolidates the substantive lessons, examples, demonstrations and claims in three supplied Jev transcripts, supplemented by the official documentation reviewed for the original research. **su-lekha is one illustrative use case**, alongside email triage, routing, document review, lead qualification and interactive simulations; it does not define the scope of this reference.
 
@@ -8,7 +8,9 @@ This document focuses on understanding Jev: its capabilities, typed decisions, A
 
 **Revision 4 scope:** added the community resource pool (local-only evidence), linked application patterns and corrected OpenRouter availability using its official model listing. The Discord snapshot and selected linked-source reviews expand the evidence; they do not establish exhaustive coverage. See the coverage report (local-only evidence).
 
-**Research status:** targeted source review completed; broader community curation remains incomplete. No authenticated Jev requests, independent benchmarks, security tests or customer deployment performed. “Documented” means a provider publishes the capability—not that this project has independently verified its performance. Product proposals below remain proposals.
+**Revision 5 scope:** resumed message curation, linked-source reviews, screenshot counterexamples and retrieval checks. Official primitives and state pages rechecked on19 September2026. The local project has now made authenticated Jev triage requests, as recorded in the final section.
+
+**Research status:** all captured messages have editorial dispositions; linked-source and media review remain incomplete. No community benchmarks independently reproduced, security guarantees established or customer deployment performed. “Documented” means a provider publishes the capability—not that this project has independently verified its performance. Product proposals below remain proposals.
 
 ## Contents
 

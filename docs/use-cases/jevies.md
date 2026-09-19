@@ -28,9 +28,9 @@ Self-review may share the same errors as the original judge. Hold-out labels and
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://fixupx.com/ezbaze_/status/2100899085700026410](https://fixupx.com/ezbaze_/status/2100899085700026410) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://github.com/Ezbaze/jevies](https://github.com/Ezbaze/jevies) — access: `fetch_failed`; review: `not_reviewed`.
-- [Ezbaze (@ezbaze_)](https://x.com/ezbaze_/status/2100899085700026410) — access: `fetch_failed`; review: `not_reviewed`.
-- [x.com/CompleteSkeptic/status/2099925682726002904](https://x.com/CompleteSkeptic/status/2099925682726002904) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://fixupx.com/ezbaze_/status/2100899085700026410](https://fixupx.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://github.com/Ezbaze/jevies](https://github.com/Ezbaze/jevies) — access: `fetched`; review: `readme_reviewed`.
+- [Ezbaze (@ezbaze_)](https://x.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [x.com/CompleteSkeptic/status/2099925682726002904](https://x.com/CompleteSkeptic/status/2099925682726002904) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

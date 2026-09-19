@@ -29,6 +29,6 @@ The project was early-stage in its post. A passing judgment does not establish f
 
 - Discord source — private provenance retained locally.
 - [https://github.com/zoidsh/tenet](https://github.com/zoidsh/tenet) — access: `fetched`; review: `not_reviewed`.
-- [https://github.com/zoidsh/tenetlint](https://github.com/zoidsh/tenetlint) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/zoidsh/tenetlint](https://github.com/zoidsh/tenetlint) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

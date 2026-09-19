@@ -28,6 +28,6 @@ Do not infer native music or audio generation. Implementation role needs further
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://textured.fyi/](https://textured.fyi/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://textured.fyi/](https://textured.fyi/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

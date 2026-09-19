@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import re
+from public_links import is_discord_url, is_private_artifact as private_url, private_artifact_roots
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT/'docs'
@@ -19,6 +20,13 @@ mapping[ROOT/'research/README.md'] = DOCS/'research-pipeline.md'
 mapping[ROOT/'research/jev-triage-experiment.md'] = DOCS/'local-triage-experiment.md'
 config=json.loads((ROOT/'resource-pool/sources/collection-checkpoint.json').read_text())
 private_ids={str(config['guild_id']),str(config['main_channel_id'])}
+private_artifact_path = ROOT/'resource-pool/sources/private-artifact-urls.json'
+private_artifacts = json.loads(private_artifact_path.read_text()) if private_artifact_path.exists() else []
+private_roots = private_artifact_roots(private_artifacts)
+
+
+def is_private_artifact(url):
+    return private_url(url, private_roots)
 
 
 def sanitize(source, target):
@@ -26,8 +34,10 @@ def sanitize(source, target):
     text=re.sub(r'^source_message_ids:.*\n','',text,flags=re.M)
     def link(match):
         label,url=match.groups()
-        if re.search(r'https?://[^/]*(?:discord(?:app)?\.com|discord\.gg)',url):
+        if is_discord_url(url):
             return 'Discord source (private provenance retained locally)'
+        if is_private_artifact(url):
+            return 'Private artifact (provenance retained locally)'
         if url.startswith(('https://','http://','#')):
             return match.group(0)
         path,sep,anchor=url.partition('#')
@@ -40,11 +50,16 @@ def sanitize(source, target):
             return f'[{label}]({os.path.relpath(original,target.parent)})'
         return label+' (local-only evidence)'
     text=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,text)
-    text=re.sub(r'https?://(?:cdn\.)?discord(?:app)?\.com/[^\s)>]+','Discord source (private reference)',text)
-    text=re.sub(r'https?://discord\.gg/[^\s)>]+','Discord source (private reference)',text)
+    def bare_url(match):
+        url = match.group(0)
+        if is_discord_url(url):
+            return 'Discord source (private reference)'
+        if is_private_artifact(url):
+            return 'Private artifact (provenance retained locally)'
+        return url
+    text=re.sub(r'https?://[^\s)>\]"\x27]+', bare_url, text)
     for name in config.get('private_source_names', []):
         text=re.sub(re.escape(name),'Discord source',text,flags=re.I)
-    text=text.replace('daily five-post automation remains active','daily five-post automation is paused')
     text=text.replace('daily five-post automation remains active','daily five-post automation is paused')
     text=text.replace('Daily X review remains active','Daily X review is paused')
     text=text.replace('X has a daily retry queue','X has a paused daily retry queue')
@@ -52,14 +67,25 @@ def sanitize(source, target):
     text=re.sub(r'(\n- Discord source — private provenance retained locally\.){2,}',r'\n- Discord source — private provenance retained locally.',text)
     for value in private_ids:
         text=text.replace(value,'[private source identifier]')
+    for value in sorted(private_artifacts, key=len, reverse=True):
+        text=text.replace(value, 'Private artifact (provenance retained locally)')
     return text
 
 
+public_records = []
+retrieval = {r['id']: r for r in map(json.loads, (ROOT/'resource-pool/retrieval-index.jsonl').read_text().splitlines())}
 for source,target in mapping.items():
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_text(sanitize(source,target))
+    content = sanitize(source,target)
+    target.write_text(content)
+    if source.parent == ROOT/'resource-pool/use-cases':
+        row = retrieval[source.stem]
+        public_records.append({'id': row['id'], 'title': row['title'], 'category': row['category'],
+                               'default_retrieval': row['default_retrieval'], 'evidence_role': row['evidence_role'],
+                               'path': target.relative_to(ROOT).as_posix(), 'body': content})
+(DOCS/'bot-cases.json').write_text(json.dumps(public_records, ensure_ascii=False, indent=2)+'\n')
 summary=json.loads((ROOT/'resource-pool/coverage-summary.json').read_text())
 summary['machine_triage'].pop('summary',None)
 triage=json.loads((ROOT/'research/triage/summary.json').read_text())
-(DOCS/'metrics.json').write_text(json.dumps({'research_status':'paused','coverage':summary,'triage':triage},indent=2)+'\n')
+(DOCS/'metrics.json').write_text(json.dumps({'research_status':config.get('research_status','unknown'),'coverage':summary,'triage':triage},indent=2)+'\n')
 print(f'Exported {len(mapping)} sanitized Markdown documents and aggregate metrics. Private inputs remain local.')

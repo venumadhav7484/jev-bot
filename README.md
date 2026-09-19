@@ -1,97 +1,87 @@
 # Jev-bot
 
-A work-in-progress knowledge base and research toolkit for a chatbot that answers:
+A local evidence assistant for one question:
 
-> Describe your use case or idea. How could Jev help, what else would you need, and what are the limits?
+> Describe your use case or idea. Where could Jev help, what else would you need, and what are the limits?
 
-The intended bot combines documented Jev capabilities with community implementations, failures, tools and evaluation evidence. It should explain Jev's specific role, distinguish demonstrated use from proposals, and cite supporting sources instead of inventing capabilities.
+The assistant proposes a bounded integration, retrieves related implementations and counterexamples, and preserves source links and limitations. It uses authored designs and attributed case extracts. Optional Jev Choice classifies the entered idea; no generative answer model is configured.
 
-**Status: research paused.** This repository preserves the current work. The scheduled X review is also paused. The chatbot interface and end-to-end answer evaluation are not implemented.
+## Try it
 
-## Start here
-
-- [Jev capability reference](docs/jev-knowledge-reference.md): primitives, integration patterns, APIs, limits and official references.
-- [262 use-case write-ups](docs/jev-usecases.md): what, how, why, reported impact, limitations and public artifact links.
-- [Community findings](docs/community-evidence-findings.md): strengths, weaknesses, contradictory evidence and implementation lessons.
-- [Integration patterns](docs/integration-patterns.md) and [tools and proposed integrations](docs/pending-and-ecosystem.md).
-- [Bot answer guide](docs/jev-bot-answer-guide.md), including the proposed su-lekha example.
-- [Completion status](docs/completion-status.md), [aggregate metrics](docs/metrics.json) and [local Jev experiment](docs/local-triage-experiment.md).
-
-## Current state
-
-Audit date: **19 September 2026**. These figures describe the captured snapshot, not a guarantee of complete or current source coverage.
-
-| Layer | Current state |
-|---|---|
-| Discord source | 3,358 unique captured message IDs processed locally |
-| Jev-assisted triage | 3,358 / 3,358 messages processed; 420 successful requests for the final prompt version |
-| Curated cases | 262 write-ups; 246 eligible for default case retrieval; 16 held back |
-| Editorial accounting | 350 messages cited in cases, 14 other dispositions, 2,994 still awaiting final disposition |
-| External sources | 809 URLs registered; 783 marked not reviewed |
-| X backlog | 182 distinct posts tracked; follow-up paused |
-| Media | 370 attachment-bearing messages; 118 have sparse body text |
-| Retrieval | Local SQLite full-text search for source messages, cases and reference sections |
-| Product | Research tools exist; chatbot conversation flow and answer evaluation remain unfinished |
-
-**Processing is not verification.** Model categories can be wrong. A small development sample matched 13/13 contribution categories and 11/13 Jev-use relationships; it is not a representative accuracy benchmark. Community performance claims remain attributed reports unless explicitly independently reproduced.
-
-## How Jev is used here
-
-The pipeline uses Choice to categorize contributions and identify the claimed relationship to Jev. Independent Noul questions flag implementation details, negative evidence, measurements, tooling and missing context. Host code handles normalization, batching, validation, caching and review priority.
-
-Every prediction retains provenance and uncertainty. No model label automatically approves or discards evidence. Media inspection, external-source investigation and final synthesis remain separate tasks. See [TypeSafe primitives](https://docs.typesafe.ai/primitives) and the [pipeline notes](docs/research-pipeline.md).
-
-## Repository layout
-
-```text
-docs/                       Sanitized public knowledge and case write-ups
-scripts/jev_triage.py        Resumable Jev API classification
-scripts/evidence.py          Local SQLite evidence indexing and search
-scripts/audit_triage.py      Development-sample audit
-scripts/build-*.py           Private-input provenance and retrieval builders
-scripts/render-cases.py      Curated case renderer
-scripts/export_public.py     Allowlisted public documentation export
-tests/                      Normalization, response and cache checks
-.env.example                Empty credential template
-```
-
-## Setup and checks
-
-Python 3.10+ and the standard library are sufficient. The API runner currently uses Unix file locking (macOS/Linux).
+Python 3.10+; standard library only. No key needed for offline mode.
 
 ```sh
 git clone https://github.com/venumadhav7484/jev-bot.git
 cd jev-bot
+python3 scripts/serve_bot.py
+```
+
+Open **http://127.0.0.1:8765**. Describe an idea, or try the su-lekha example. Add details to the description to refine the result. No conversation history is saved. The server binds to loopback and serves only public assets; it is not a hosted production service.
+
+For optional Jev routing, put `jev_api_key` in local `.env.local`, then select the checkbox in the interface. Only the entered idea goes to TypeSafe. API usage applies. If the service fails, the interface reports a fallback to local keyword routing.
+
+```sh
+python3 scripts/jev_bot.py "Route incoming invoices to the right queue"
+python3 scripts/jev_bot.py "Monitor sensitive information in AI applications" --jev
 python3 -m unittest discover -s tests -v
 ```
 
-An archive-dependent test is skipped when private source inputs are absent. Other tests run without credentials or network access.
+## Frozen snapshot
 
-For an explicitly resumed research run, create `.env.local` using `.env.example` as a template and set `jev_api_key` locally. Never commit that file. Research inputs are intentionally absent from the public repository: the scripts require an authorized local `resource-pool/` and `research/` workspace, including snapshots, a collection checkpoint, source registers and curated editorial data. They do not log into Discord or fetch messages automatically.
+New source collection is paused at the boundary below. The exact last-post link and thread cursors are retained privately, so a later pass can resume with overlap and deduplication. Scheduled X reviews remain paused.
 
-With those private inputs restored, the workflow is:
+<!-- SNAPSHOT-START -->
+| Layer | Frozen snapshot |
+|---|---|
+| Capture cutoff | 19 September 2026, 10:08:31 IST |
+| Messages | 3,358 unique IDs; all editorially accounted for |
+| Cases | 420; 362 default eligible, 58 held back |
+| External evidence | 826 URLs; 296 unreviewed |
+| Media | 10 / 413 attachments inspected |
+| Bot | Local preview; 11 authored design families |
+| S3 | Backup pending |
 
-```sh
-python3 scripts/jev_triage.py prepare
-python3 scripts/jev_triage.py run --max-requests 4 --max-input-tokens 60000
-python3 scripts/jev_triage.py report
-python3 scripts/evidence.py build
-python3 scripts/evidence.py search "routing email" --limit 8
+<!-- SNAPSHOT-END -->
+
+**Accounting is not validation.** The catalog includes author reports, tools, proposals and counterexamples. Default eligibility does not mean independently verified. Metadata-only pages, context screening and text reviews with missing media remain distinct from substantive technical inspection. No community benchmark has been independently reproduced.
+
+## Read the evidence
+
+- [Capability reference](docs/jev-knowledge-reference.md): primitives, APIs, integration patterns and official sources.
+- [Use-case catalog](docs/jev-usecases.md): what, how, why, reported impact, limitations and artifact links.
+- [Community findings](docs/community-evidence-findings.md): strengths, failures, conflicting evidence and lessons.
+- [Answer guide and su-lekha proposal](docs/jev-bot-answer-guide.md).
+- [Completion status](docs/completion-status.md) and [aggregate metrics](docs/metrics.json).
+- [Snapshot and update workflow](docs/system-workflow.md).
+- [Development checks](docs/development-checks.json): authored scenarios and a live API smoke test, with scope limits.
+
+The first assistant covers 11 authored design families: policy review, routing, semantic data filtering, media pipelines, bounded action selection, memory, evaluation, exact computation, financial evidence, clinical documents and generation boundaries. It can miss novel fits; the full catalog remains available for research. Related cases are analogies, not evidence that a new design will work. Development tests do not establish general answer accuracy.
+
+## How Jev is used
+
+The research pipeline used Choice to categorize contributions and their relationship to Jev, with independent Noul questions for evidence dimensions. All model suggestions remain subject to editorial review. The bot optionally uses one Choice question to map an idea to an authored integration family. Application code performs retrieval, applies evidence policy and assembles the response. [TypeSafe primitives](https://docs.typesafe.ai/primitives).
+
+## Repository layout
+
+```text
+docs/                       Sanitized public evidence and bot snapshot
+web/                        Local assistant interface
+scripts/jev_bot.py          Idea routing and evidence-backed design briefs
+scripts/serve_bot.py        Loopback-only web server
+scripts/consolidate.py      Offline private-to-public snapshot rebuild
+scripts/stage_capture.py    New/edited-message intake; no automatic collection
+scripts/evidence.py         Private SQLite evidence search
+scripts/jev_triage.py       Resumable Jev-assisted research triage
+scripts/backup_private.py   Private S3 snapshot and download verification
+tests/                     Boundary, retrieval, intake and response checks
 ```
 
-`run` sends source text to TypeSafe and may incur API charges. Successful batches are cached and resumable. The input-token stop is soft because an in-flight batch can finish after the threshold. Search results retain evidence status; callers must respect `default_retrieval` when building recommendations.
+## Private research and backups
 
-## Public and private boundaries
+Public docs identify private provenance as **Discord source**. Raw messages, source identifiers and links, private artifacts, credentials, local databases and API caches remain ignored. Public repository, demo, article and official-documentation links remain in the case write-ups.
 
-Public docs use **Discord source** as the provenance label. Private message links, source identifiers, raw captures, quoted-message archives, model request/response caches, local databases, credentials and machine-specific resume state are excluded from Git. Public repository, article, demo and official-documentation links remain available in the case write-ups. Exact private provenance is retained locally for future review.
+Research rebuild and incremental intake require the authorized local `resource-pool/`, `research/`, `RESUME.md` and root knowledge reference; these are not shipped in this public repository. `scripts/consolidate.py` regenerates curated Markdown, search indexes, completion reports and sanitized public exports offline. It does not call Jev or collect new posts.
 
-`.gitignore` provides protection, but public updates also require explicit staging and inspection. `export_public.py` exports an allowlist; it is not a general-purpose secret scanner. Do not publish raw research directories or run private builders and blindly stage every resulting file.
+S3 backup uses credentials from `.env.local`, creates an account-owned private bucket, blocks public access, enables encryption and versioning, and verifies downloaded archive and individual file hashes. Environment files and detected credentials are excluded. Bucket names, object keys and receipts remain local. Storage and transfer charges may apply. This backs up evidence; it does not host the bot.
 
-## Paused work
-
-1. Give 2,994 messages a final curated disposition: attach to cases/findings, merge duplicates or exclude with reasons.
-2. Investigate 783 unreviewed external URLs, including blocked X evidence.
-3. Account for media across 370 attachment-bearing messages.
-4. Finish cross-case synthesis and test bot recommendations against positive examples, counterexamples, source accuracy and uncertainty.
-
-No completion claim is made for these tasks. Resume only when requested. No S3 storage or deployed chatbot is part of this snapshot.
+Never blindly stage private builder output. Use the allowlisted exporter, inspect public changes and run `python3 scripts/check_public.py --staged` before every push. The guard checks loaded local credential values and private provenance; it is not a complete secret detector. `.gitignore` alone is not a publication review.

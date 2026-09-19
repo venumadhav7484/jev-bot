@@ -1,0 +1,34 @@
+---
+id: jevctl
+title: "jevctl: composable judgment CLI and agent plugin"
+category: Additional reviewed applications
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# jevctl: composable judgment CLI and agent plugin
+
+## What
+
+CLI exposes typed judgment workflows with probabilities and exit codes.
+
+## How Jev fits
+
+Commands cover evidence verification, screening, classification, regex extraction, matching, routing, retrieval, transcript compaction and concurrent batches; supports multiple provider routes and Claude Code plugin.
+
+## Why and impact
+
+Reusable toolkit may avoid building repeated API plumbing.
+
+## Limits and reuse
+
+Command semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md](https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md) — access: `fetched`; review: `source_text_reviewed`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

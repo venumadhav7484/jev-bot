@@ -28,7 +28,7 @@ No false-deletion or retrieval-quality evaluation. Do not assume autonomous dele
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/JonnadulaS54850/status/2100778097322905627?s=20](https://x.com/JonnadulaS54850/status/2100778097322905627?s=20) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/kysSzlQZDZ](https://t.co/kysSzlQZDZ) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/JonnadulaS54850/status/2100778097322905627?s=20](https://x.com/JonnadulaS54850/status/2100778097322905627?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [https://t.co/kysSzlQZDZ](https://t.co/kysSzlQZDZ) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

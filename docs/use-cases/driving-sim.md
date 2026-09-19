@@ -28,6 +28,7 @@ A simulator is not validated autonomous driving. Exact control, timing and safet
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/kavehmz/status/2100616111771238881](https://x.com/kavehmz/status/2100616111771238881) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/kavehmz/status/2100616111771238881](https://x.com/kavehmz/status/2100616111771238881) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [Author-linked implementation artifact](https://github.com/kavehmz/typesafe-playground/blob/main/driving-simultion.md) — discovered via [external source](https://x.com/kavehmz/status/2100616111771238881); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

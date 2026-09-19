@@ -1,0 +1,33 @@
+---
+id: mostafa-mcp
+title: "TypeSafe MCP connector by itsmostafa"
+category: Additional reviewed applications
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# TypeSafe MCP connector by itsmostafa
+
+## What
+
+MCP adapter exposes Jev to ordinary coding agents.
+
+## How Jev fits
+
+Returns typed judgments and probabilities for host-code branching.
+
+## Why and impact
+
+Integration shortcut for Claude Code, Codex or pi according to author.
+
+## Limits and reuse
+
+No cross-host compatibility or performance testing independently performed.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://github.com/itsmostafa/typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) — access: `fetched`; review: `not_reviewed`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

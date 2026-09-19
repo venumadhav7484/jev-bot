@@ -15,7 +15,7 @@ A local tool tracks improvements and regressions in Jev requests.
 
 ## How Jev fits
 
-Stores Noul, Choice and Score experiments, including mixed requests, in a local SQL database.
+Local workbench supports Noul, Choice, Score, mixed requests and seeded examples. Author also reports WebMCP support; implementation has not been executed here.
 
 ## Why and impact
 
@@ -28,6 +28,7 @@ No evaluation was run here. Useful experiments need labeled cases, stable versio
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Dayhaysoos/status/2100968892591968320](https://x.com/Dayhaysoos/status/2100968892591968320) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/Dayhaysoos/status/2100968892591968320](https://x.com/Dayhaysoos/status/2100968892591968320) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [Jevals workbench repository](https://github.com/dayhaysoos/jevals) — discovered via [external source](https://x.com/Dayhaysoos/status/2100968892591968320); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

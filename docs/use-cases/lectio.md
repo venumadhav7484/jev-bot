@@ -28,6 +28,6 @@ The post establishes examples and speed comparison intent, not a general transla
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/useLectio/status/2100249540599386538](https://x.com/useLectio/status/2100249540599386538) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/useLectio/status/2100249540599386538](https://x.com/useLectio/status/2100249540599386538) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

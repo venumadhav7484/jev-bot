@@ -28,6 +28,7 @@ No independent task-success or latency comparison. Validate tool recall and the 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/vpkxvoice/status/2100995268133146698](https://x.com/vpkxvoice/status/2100995268133146698) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/vpkxvoice/status/2100995268133146698](https://x.com/vpkxvoice/status/2100995268133146698) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [Author-linked implementation artifact](https://github.com/prasanth263/maza) — discovered via [external source](https://x.com/vpkxvoice/status/2100995268133146698); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ Exact content-selection policy and information-loss evaluation are unspecified; 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/tedkalaw/status/2100453504997531751](https://x.com/tedkalaw/status/2100453504997531751) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/tedkalaw/status/2100453504997531751](https://x.com/tedkalaw/status/2100453504997531751) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

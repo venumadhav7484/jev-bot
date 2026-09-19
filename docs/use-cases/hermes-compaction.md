@@ -28,6 +28,6 @@ No retention-quality evaluation supplied. Important constraints can be lost duri
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact](https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact](https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

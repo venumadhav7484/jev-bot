@@ -28,7 +28,7 @@ No recall benchmark supplied. Stopping too early can miss conflicting evidence; 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/aipintodev/status/2101036073719570869](https://x.com/aipintodev/status/2101036073719570869) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/8d0Bc6oGQv](https://t.co/8d0Bc6oGQv) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/aipintodev/status/2101036073719570869](https://x.com/aipintodev/status/2101036073719570869) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [https://t.co/8d0Bc6oGQv](https://t.co/8d0Bc6oGQv) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

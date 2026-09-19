@@ -28,6 +28,7 @@ Briefly tested by the author. Story generation and localization should not be at
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [text adventure](https://text-adventure.p11c.xyz/) — access: `fetch_failed`; review: `not_reviewed`.
+- [text adventure](https://text-adventure.p11c.xyz/) — access: `fetched`; review: `source_text_reviewed`.
+- [here the repo](https://gitlab.com/porky11/text-adventure) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

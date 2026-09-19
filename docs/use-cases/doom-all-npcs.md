@@ -28,7 +28,7 @@ No controlled quality or cost comparison was provided; the game engine still imp
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://fixupx.com/dustin_podell/status/2100458335405588607](https://fixupx.com/dustin_podell/status/2100458335405588607) — access: `fetch_failed`; review: `not_reviewed`.
-- [Dustin Podell (@dustin_podell)](https://x.com/dustin_podell/status/2100458335405588607) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://fixupx.com/dustin_podell/status/2100458335405588607](https://fixupx.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [Dustin Podell (@dustin_podell)](https://x.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

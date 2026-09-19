@@ -28,6 +28,6 @@ Author reports degradation around generation six or seven. Does not establish na
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/crossiBuilds/status/2100972788164985043](https://x.com/crossiBuilds/status/2100972788164985043) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/crossiBuilds/status/2100972788164985043](https://x.com/crossiBuilds/status/2100972788164985043) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -29,6 +29,6 @@ Agreement with another model is not medical validation. Missing ingredients, cro
 
 - Discord source — private provenance retained locally.
 - [https://github.com/amr05008/glutenornot.com](https://github.com/amr05008/glutenornot.com) — access: `fetched`; review: `not_reviewed`.
-- [https://github.com/amr05008/jev-sandbox](https://github.com/amr05008/jev-sandbox) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/amr05008/jev-sandbox](https://github.com/amr05008/jev-sandbox) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

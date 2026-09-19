@@ -28,7 +28,7 @@ The post does not quantify campaign performance or moderation error rates; GitHu
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/0xboyd/status/2100418365986578908](https://x.com/0xboyd/status/2100418365986578908) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/64naxTJlDg](https://t.co/64naxTJlDg) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/0xboyd/status/2100418365986578908](https://x.com/0xboyd/status/2100418365986578908) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [https://t.co/64naxTJlDg](https://t.co/64naxTJlDg) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

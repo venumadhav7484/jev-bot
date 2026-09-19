@@ -28,6 +28,6 @@ Repository content was inaccessible in the initial fetch. This is a discovery-le
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/EpicEric/safe-sh](https://github.com/EpicEric/safe-sh) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/EpicEric/safe-sh](https://github.com/EpicEric/safe-sh) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

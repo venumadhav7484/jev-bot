@@ -28,6 +28,6 @@ The graph contains model judgments, not proven logical entailment. No annotated-
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://jev-demo.corca.ai/](https://jev-demo.corca.ai/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://jev-demo.corca.ai/](https://jev-demo.corca.ai/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

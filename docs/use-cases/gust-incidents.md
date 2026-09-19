@@ -28,7 +28,8 @@ Model versions, sample count and quality parity are not established in the captu
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/MarcioK/status/2101043696422494246](https://x.com/MarcioK/status/2101043696422494246) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/sxIAN4VBUo](https://t.co/sxIAN4VBUo) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/MarcioK/status/2101043696422494246](https://x.com/MarcioK/status/2101043696422494246) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [https://t.co/sxIAN4VBUo](https://t.co/sxIAN4VBUo) — access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](https://gist.github.com/marciok/673a02cfe1dd03055bec3b55b4a5d0f2) — discovered via [external source](https://x.com/MarcioK/status/2101043696422494246); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

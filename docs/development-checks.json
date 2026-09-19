@@ -1,0 +1,29 @@
+{
+  "snapshot_date": "2026-09-19",
+  "unit_tests": {
+    "passed": 29,
+    "failed": 0,
+    "scope": "API validation, evidence policy, media provenance, backup exclusions, local server boundaries, intake idempotency and bot behavior."
+  },
+  "assistant_scenarios": {
+    "passed": 11,
+    "total": 11,
+    "scope": "Eleven authored natural-language assistant scenarios, including abstention. Local routing only; not independent answer-quality validation."
+  },
+  "retrieval_scenarios": {
+    "passed": 10,
+    "total": 10,
+    "scope": "Ten authored search scenarios over the local snapshot; not an independent relevance benchmark or end-to-end chatbot evaluation."
+  },
+  "live_jev_smoke": {
+    "passed": true,
+    "model": "jev-1.13.0",
+    "input": "Synthetic support-email routing idea; no private archive sent.",
+    "usage": {
+      "input_tokens": 518,
+      "output_tokens": 101
+    }
+  },
+  "browser_check": "su-lekha response, proposed architecture, limitations, counterexamples and repository link visibly verified.",
+  "independent_answer_quality_benchmark": false
+}

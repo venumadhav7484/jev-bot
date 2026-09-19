@@ -28,6 +28,6 @@ No independent rating calculation, game count or engine-strength calibration ver
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Dimesio/typesafe-chess](https://github.com/Dimesio/typesafe-chess) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/Dimesio/typesafe-chess](https://github.com/Dimesio/typesafe-chess) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

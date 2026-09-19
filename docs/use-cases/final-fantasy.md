@@ -28,6 +28,6 @@ Audio hinting is not established as implemented. No sustained success rate or na
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/nawtayei/status/2100607727978369138?s=20](https://x.com/nawtayei/status/2100607727978369138?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/nawtayei/status/2100607727978369138?s=20](https://x.com/nawtayei/status/2100607727978369138?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

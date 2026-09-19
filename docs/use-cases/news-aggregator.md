@@ -28,7 +28,8 @@ Relevance filtering does not verify article truth or novelty; network collection
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://news.aatf.ai/](https://news.aatf.ai/) — access: `fetched`; review: `not_reviewed`.
+- [https://news.aatf.ai/](https://news.aatf.ai/) — access: `fetched`; review: `metadata_only`.
 - [https://github.com/flyryan/ai-news-aggregator](https://github.com/flyryan/ai-news-aggregator) — access: `fetched`; review: `not_reviewed`.
+- [https://news.aatf.ai/replay?date=2026-09-18](https://news.aatf.ai/replay?date=2026-09-18) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

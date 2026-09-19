@@ -28,6 +28,6 @@ Judging argument form does not establish factual truth or author intent. No labe
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/smalltownrobot/status/2100999987572203809](https://x.com/smalltownrobot/status/2100999987572203809) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/smalltownrobot/status/2100999987572203809](https://x.com/smalltownrobot/status/2100999987572203809) — access: `fetch_failed`; review: `inaccessible_after_attempt`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

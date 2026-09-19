@@ -28,6 +28,6 @@ False activations and missed requests need evaluation. Audio processing remains 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/t631362/status/2101009035587629078](https://x.com/t631362/status/2101009035587629078) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/t631362/status/2101009035587629078](https://x.com/t631362/status/2101009035587629078) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

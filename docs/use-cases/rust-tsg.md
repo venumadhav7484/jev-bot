@@ -28,7 +28,7 @@ README and tsg documentation were read; code was not installed or benchmarked. t
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg) — access: `fetched`; review: `not_reviewed`.
 - [Rust TypeSafe client README](https://github.com/Twister915/typesafe-ai) — discovered via [external source](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg); access: `fetched`; review: `readme_reviewed`.
 - [tsg semantic search documentation](https://github.com/Twister915/typesafe-ai/blob/main/examples/tsg/README.md) — discovered via [external source](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg); access: `fetched`; review: `readme_reviewed`.
 

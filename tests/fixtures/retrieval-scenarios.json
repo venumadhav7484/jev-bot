@@ -1,0 +1,103 @@
+[
+  {
+    "id": "sulekha",
+    "idea": "Monitor sensitive information in AI applications.",
+    "query": "su lekha policy sensitive information",
+    "support": [
+      "reference:jev-knowledge-reference:21",
+      "noisegate",
+      "pi-heed"
+    ],
+    "counter_query": "adversarial monitor security",
+    "counter": [
+      "ai-control-monitor",
+      "advisory-adversarial"
+    ]
+  },
+  {
+    "id": "email",
+    "idea": "Route incoming invoices to the right queue.",
+    "query": "route invoice email",
+    "support": [
+      "langgraph-intent",
+      "payment-reconciliation"
+    ]
+  },
+  {
+    "id": "sql",
+    "idea": "Apply semantic judgments to database rows.",
+    "query": "database semantic SQL",
+    "support": [
+      "colliber-duckdb",
+      "sqlite-jev",
+      "pgjev"
+    ]
+  },
+  {
+    "id": "media",
+    "idea": "Use Jev in a voice or video application.",
+    "query": "video voice perception",
+    "support": [
+      "mac-voice",
+      "sde-vision-cascade",
+      "reference:community-evidence-findings:14"
+    ]
+  },
+  {
+    "id": "robotics",
+    "idea": "Choose maneuvers for a simulated robot.",
+    "query": "robot drone control",
+    "support": [
+      "drone-sim",
+      "robot-arm",
+      "ariel-drone"
+    ]
+  },
+  {
+    "id": "riddles",
+    "idea": "Trust high-confidence answers for exact date arithmetic.",
+    "counter_query": "arithmetic riddles confidence",
+    "counter": [
+      "riddle-probes"
+    ]
+  },
+  {
+    "id": "security",
+    "idea": "Replace code security review with Jev.",
+    "counter_query": "kernel security false positives",
+    "counter": [
+      "kernel-vulnerability-review",
+      "ai-control-monitor"
+    ]
+  },
+  {
+    "id": "finance",
+    "idea": "Infer profitable trades from model scores.",
+    "counter_query": "trading profit",
+    "counter": [
+      "nifty-paper-trading",
+      "olaf-dry-run-trading",
+      "monad-kuru-trading"
+    ]
+  },
+  {
+    "id": "memory",
+    "idea": "Reduce an agent's context while retaining important information.",
+    "query": "context memory compaction",
+    "support": [
+      "kamchatka-compaction",
+      "hermes-compaction",
+      "jevctl"
+    ]
+  },
+  {
+    "id": "latency",
+    "idea": "Reduce full workflow latency using a fast router.",
+    "counter_query": "routing latency overhead",
+    "counter": [
+      "offload-bench",
+      "opencode-e2e-overhead",
+      "npc-network-latency"
+    ]
+  }
+]

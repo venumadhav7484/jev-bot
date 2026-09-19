@@ -28,6 +28,6 @@ The author's use of deterministic describes the surrounding workflow; semantic j
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.jevlint.com/](https://www.jevlint.com/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://www.jevlint.com/](https://www.jevlint.com/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

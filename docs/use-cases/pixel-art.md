@@ -23,7 +23,7 @@ A deliberately unusual test of typed outputs and batching.
 
 ## Limits and reuse
 
-Jev does not receive or directly generate an image modality here. Coherence remains experimental; later batches need context.
+Jev does not receive or directly generate an image modality here. Coherence remains experimental; later batches need context. Author reports numeric sketch feedback mis-mapped rows and scrambled image. Initial state used only description, coordinates, channel definitions and a composition sentence; independent questions do not implicitly share previously selected pixels.
 
 ## Sources
 

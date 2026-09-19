@@ -1,0 +1,33 @@
+---
+id: antivirus-prototype
+title: "Antivirus classifier repository"
+category: Additional reviewed applications
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# Antivirus classifier repository
+
+## What
+
+Developer links a repository following an antivirus-classification plan.
+
+## How Jev fits
+
+newuser7171/antivirus is available for inspecting the proposed decision pipeline.
+
+## Why and impact
+
+Source lead for security research.
+
+## Limits and reuse
+
+No inspected detection architecture, malware corpus, false positives or evasion evaluation; not deployable protection evidence.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://github.com/newuser7171/antivirus](https://github.com/newuser7171/antivirus) — access: `fetched`; review: `not_reviewed`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

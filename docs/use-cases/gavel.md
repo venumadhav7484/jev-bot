@@ -28,6 +28,6 @@ Author explicitly cautions use at own risk. Installation, permissions and runtim
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/gregb100/gavel](https://github.com/gregb100/gavel) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/gregb100/gavel](https://github.com/gregb100/gavel) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

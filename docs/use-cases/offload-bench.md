@@ -23,12 +23,12 @@ Author reports promising cost and speed.
 
 ## Limits and reuse
 
-Full numerical results were not deeply reviewed; synthetic tasks and agent overhead require careful comparison.
+Full numerical results were not deeply reviewed; synthetic tasks and agent overhead require careful comparison. Detailed results show cascade agreement fell to 98–99/100 for four of six agents. Hybrid times are sums of separate components; costs exclude Jev and mix credits with USD. The 0.70 threshold was selected on the same synthetic cases.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/dnikolayev/typesafe-offload-bench](https://github.com/dnikolayev/typesafe-offload-bench) — access: `fetched`; review: `not_reviewed`.
-- [https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md](https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/dnikolayev/typesafe-offload-bench](https://github.com/dnikolayev/typesafe-offload-bench) — access: `fetched`; review: `source_text_reviewed`.
+- [https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md](https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

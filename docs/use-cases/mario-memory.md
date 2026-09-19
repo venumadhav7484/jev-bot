@@ -23,11 +23,11 @@ Author reports clearing level 1-1 in 193 calls.
 
 ## Limits and reuse
 
-Specific run claim only. Environment memory access and action timing materially affect the result; this does not show native vision.
+Specific run claim only. Environment memory access and action timing materially affect the result; this does not show native vision. The author explicitly pauses the game during inference: 193 calls at roughly 300ms cleared World 1-1. Video game speed must not be described as wall-clock speed.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/rherton/status/2101005942913729001?s=20](https://x.com/rherton/status/2101005942913729001?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/rherton/status/2101005942913729001?s=20](https://x.com/rherton/status/2101005942913729001?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

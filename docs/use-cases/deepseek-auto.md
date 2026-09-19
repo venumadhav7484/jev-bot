@@ -28,6 +28,6 @@ Full-access wording does not establish safety. No permission-boundary or recover
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://git.allen-software.com/allenh1/dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://git.allen-software.com/allenh1/dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

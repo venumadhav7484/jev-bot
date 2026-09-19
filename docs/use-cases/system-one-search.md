@@ -28,6 +28,6 @@ Does not demonstrate arbitrary native diagram generation. Exact grounding and so
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://s1s.iar.dev/](https://s1s.iar.dev/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://s1s.iar.dev/](https://s1s.iar.dev/) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ No labeled equivalence benchmark. Compression may remove decisive details; cache
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Charlyhno/status/2100670579321754080](https://x.com/Charlyhno/status/2100670579321754080) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/Charlyhno/status/2100670579321754080](https://x.com/Charlyhno/status/2100670579321754080) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,7 +28,7 @@ The full query workload, token size and concurrency determine cost; no independe
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Query-farm/vgi-typesafe](https://github.com/Query-farm/vgi-typesafe) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://query.farm/blog/a-where-clause-for-taste/](https://query.farm/blog/a-where-clause-for-taste/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/Query-farm/vgi-typesafe](https://github.com/Query-farm/vgi-typesafe) — access: `fetched`; review: `not_reviewed`.
+- [https://query.farm/blog/a-where-clause-for-taste/](https://query.farm/blog/a-where-clause-for-taste/) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,7 +28,7 @@ Preference representation, allergy handling and recommendation quality are not e
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/blackgirlbytes/status/2101051229249929516?s=20](https://x.com/blackgirlbytes/status/2101051229249929516?s=20) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/LjOXLvprle](https://t.co/LjOXLvprle) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/blackgirlbytes/status/2101051229249929516?s=20](https://x.com/blackgirlbytes/status/2101051229249929516?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [https://t.co/LjOXLvprle](https://t.co/LjOXLvprle) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

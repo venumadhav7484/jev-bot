@@ -15,7 +15,7 @@ Find relevant code through existing catalog documentation.
 
 ## How Jev fits
 
-Jev evaluates documented code candidates before the main model reads selected material.
+Jev evaluates documented code candidates before the main model reads selected material. Existing Markdown catalog is maintained by an agent every 24 hours; retrieval depends on that catalog quality and freshness.
 
 ## Why and impact
 

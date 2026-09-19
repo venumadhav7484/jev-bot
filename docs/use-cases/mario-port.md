@@ -28,7 +28,8 @@ The 100% level-clear figure describes the earlier PPO model, not a verified Jev 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/shantanugoel/status/2100455779627311352](https://x.com/shantanugoel/status/2100455779627311352) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://t.co/xwGtzkuDpu](https://t.co/xwGtzkuDpu) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/shantanugoel/status/2100455779627311352](https://x.com/shantanugoel/status/2100455779627311352) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://t.co/xwGtzkuDpu](https://t.co/xwGtzkuDpu) — access: `fetched`; review: `not_reviewed`.
+- [https://x.com/shantanugoel/status/2100455295801827769](https://x.com/shantanugoel/status/2100455295801827769) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

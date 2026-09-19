@@ -28,25 +28,40 @@ def build():
         CREATE TABLE external_sources (url TEXT PRIMARY KEY, metadata TEXT);
     ''')
     predictions = {r['message_id']: r for r in jsonl(WORK / 'predictions.jsonl')}
+    coverage_path = ROOT / 'resource-pool/sources/message-coverage.json'
+    coverage = {r['message_id']: r for r in json.loads(coverage_path.read_text())} if coverage_path.exists() else {}
     for row in jsonl(WORK / 'messages.jsonl'):
         pred = predictions.get(row['message_id'], {})
+        curated = coverage.get(row['message_id'], {})
         values = (row['message_id'], 'discord_message', row['body'][:100].replace('\n', ' '), row['body'], row['source_url'],
                   pred.get('primary_kind', 'not_triaged'), pred.get('jev_relation', 'not_established'),
-                  json.dumps(pred.get('flags', {})), json.dumps(row['links']), json.dumps(row['case_ids']),
-                  'machine_triage_only' if pred else 'captured_only', row['content_hash'], 0)
+                  json.dumps(pred.get('flags', {})), json.dumps(row['links']), json.dumps(curated.get('case_ids', row['case_ids'])),
+                  curated.get('status', 'machine_triage_only' if pred else 'captured_only'), row['content_hash'], 0)
         conn.execute('INSERT INTO evidence VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', values)
         conn.execute('INSERT INTO evidence_fts VALUES (?,?,?)', values[:1] + values[2:4])
     retrieval = {r['id']:r for r in jsonl(ROOT / 'resource-pool/retrieval-index.jsonl')}
+    external = json.loads((ROOT / 'resource-pool/sources/external-links.json').read_text())
+    external_by_url = {r['url']: r for r in external}
     with (ROOT / 'resource-pool/cases.tsv').open() as handle:
         for row in csv.DictReader(handle, delimiter='\t'):
             path = ROOT / 'resource-pool/use-cases' / (row['id'] + '.md')
             body = path.read_text()
             links = re.findall(r'\]\((https?://[^)]+)\)', body)
+            # Keep corrections and scope beside the case instead of hiding them
+            # in an unsearched metadata table. Fetching alone adds no evidence.
+            for url in dict.fromkeys(links):
+                review = external_by_url.get(url, {})
+                if review.get('note') and review.get('review_status') != 'not_reviewed':
+                    body += ('\n\n### Supporting source review\n'
+                             f'Source: {url}\nStatus: {review.get("review_status")}\n'
+                             f'Date: {review.get("reviewed_on", "unspecified")}\n'
+                             f'Scope: {review.get("review_scope", "See source register")}\n'
+                             f'{review["note"]}\n')
             values = (row['id'], 'curated_case', row['title'], body, str(path.relative_to(ROOT)), row['category'],
-                      'see_case_evidence', '{}', json.dumps(links), json.dumps([row['id']]), 'curated_author_report', '', int(retrieval.get(row['id'],{}).get('default_retrieval',False)))
+                      'see_case_evidence', json.dumps({'evidence_role': retrieval.get(row['id'], {}).get('evidence_role', 'unknown')}), json.dumps(links), json.dumps([row['id']]), 'curated_author_report', '', int(retrieval.get(row['id'],{}).get('default_retrieval',False)))
             conn.execute('INSERT INTO evidence VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', values)
             conn.execute('INSERT INTO evidence_fts VALUES (?,?,?)', values[:1] + values[2:4])
-    for row in json.loads((ROOT / 'resource-pool/sources/external-links.json').read_text()):
+    for row in external:
         conn.execute('INSERT INTO external_sources VALUES (?,?)', (row['url'], json.dumps(row)))
     # Include capability reference and cross-case lessons alongside examples.
     for relative in ('jev-knowledge-reference.md', 'resource-pool/community-evidence-findings.md', 'resource-pool/integration-patterns.md'):
@@ -69,7 +84,11 @@ def build():
     print(json.dumps({'database': str(DB), 'counts': counts}))
 
 
-def search(query, limit, kind):
+def search_records(query, limit=10, kind=None, purpose='recommendation', full=False):
+    if purpose not in ('recommendation', 'counterevidence', 'tools', 'research'):
+        raise ValueError('Unknown retrieval purpose')
+    if not 1 <= limit <= 100:
+        raise ValueError('Search limit must be between 1 and 100')
     # Literal token quoting prevents user text from becoming FTS query syntax.
     tokens = re.findall(r'\w+', query)
     if not tokens:
@@ -81,18 +100,33 @@ def search(query, limit, kind):
              FROM evidence_fts JOIN evidence e ON e.id = evidence_fts.id
              WHERE evidence_fts MATCH ?'''
     params = [match]
+    if purpose == 'recommendation':
+        sql += ' AND e.default_retrieval = 1'
+    elif purpose == 'counterevidence':
+        sql += " AND json_extract(e.flags, '$.evidence_role') IN ('counterexample', 'mixed', 'unvalidated_finance')"
+    elif purpose == 'tools':
+        sql += " AND json_extract(e.flags, '$.evidence_role') = 'community_tool'"
     if kind:
         sql += ' AND e.resource_type = ?'
         params.append(kind)
     sql += ' ORDER BY rank LIMIT ?'
     params.append(limit)
+    results = []
     for row in conn.execute(sql, params):
         result = dict(row)
-        result['excerpt'] = result.pop('body')[:1200]
+        if not full:
+            result['excerpt'] = result.pop('body')[:1200]
+            result['excerpt_is_complete_evidence'] = False
         for key in ('flags', 'links', 'case_ids'):
             result[key] = json.loads(result[key])
-        print(json.dumps(result, ensure_ascii=False))
+        results.append(result)
     conn.close()
+    return results
+
+
+def search(query, limit, kind, purpose='recommendation', full=False):
+    for result in search_records(query, limit, kind, purpose, full):
+        print(json.dumps(result, ensure_ascii=False))
 
 
 def main():
@@ -103,11 +137,14 @@ def main():
     find.add_argument('query')
     find.add_argument('--limit', type=int, default=10)
     find.add_argument('--kind', choices=('discord_message', 'curated_case', 'reference'))
+    find.add_argument('--full', action='store_true', help='Return complete cases, including limitations and source review notes.')
+    find.add_argument('--purpose', choices=('recommendation', 'counterevidence', 'tools', 'research'), default='recommendation',
+                      help='Default suppresses raw messages, proposals and thin evidence. Research explicitly includes all records.')
     args = parser.parse_args()
     if args.command == 'build':
         build()
     else:
-        search(args.query, args.limit, args.kind)
+        search(args.query, args.limit, args.kind, args.purpose, args.full)
 
 
 if __name__ == '__main__':

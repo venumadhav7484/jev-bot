@@ -38,7 +38,7 @@ entries={r['post_id']:r for r in existing['entries']}
 for s in sources:
     pid=post_id(s['url'])
     if not pid:continue
-    missing_media='media_blocked' in s.get('review_status','')
+    missing_media=any(value in s.get('review_status','') for value in ('media_blocked', 'media_pending'))
     if pid not in entries and s.get('access_status') not in ('fetch_failed','response_unmatched','not_attempted') and not missing_media:continue
     if pid not in entries:
         entries[pid]={
@@ -66,7 +66,7 @@ ordered=sorted(entries.values(),key=lambda r:(r['followup_attempts'],r['priority
 document={
     'schema_version':1,'created_on':existing.get('created_on','2026-09-19'),
     'scope':'All X posts recorded as inaccessible or media-blocked in the captured source register; not every post on X.',
-    'daily_batch_size':5,'timezone':'Asia/Kolkata','selection_rule':'Pending, pending_media or retry entries whose next_retry_on is null or due; lowest followup_attempts, then priority, then oldest post ID. Skip reviewed and excluded entries.',
+    'daily_batch_size':5,'timezone':'Asia/Kolkata','selection_rule':'Pending, pending_media, pending_thread_expansion or retry entries whose next_retry_on is null or due; lowest followup_attempts, then priority, then oldest post ID. Skip reviewed and excluded entries.',
     'retry_policy':'Record a failed attempt once per run, defer that entry 7 days, and continue with other entries. Do not retry the same unchanged blocker repeatedly within one run.',
     'automation':existing.get('automation',None),
     'counts':dict(Counter(r['status'] for r in ordered)),

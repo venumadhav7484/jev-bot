@@ -23,11 +23,12 @@ Removes some manual dependency specification. No scheduling-quality or speed ben
 
 ## Limits and reuse
 
-Pairwise judgments can conflict or create cycles. Proposed reuse requires graph validation, missing-edge checks and execution constraints.
+Pairwise judgments can conflict or create cycles. Proposed reuse requires graph validation, missing-edge checks and execution constraints. External author post identifies a concrete missing clone-before-build dependency and resulting race condition; latency/cost benchmarks are still planned.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/JoymFL/status/2101074155605225899](https://x.com/JoymFL/status/2101074155605225899) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/JoymFL/status/2101074155605225899](https://x.com/JoymFL/status/2101074155605225899) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [DAG input example](https://github.com/Joymfl/dag-jev/blob/main/input.txt) — discovered via [external source](https://x.com/JoymFL/status/2101074155605225899); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

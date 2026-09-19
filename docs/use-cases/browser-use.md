@@ -28,7 +28,7 @@ A Discord user reports failing their own evaluations. A successful demo is not g
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/gregpr07/status/2100411066966749359?s=46](https://x.com/gregpr07/status/2100411066966749359?s=46) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/gregpr07/status/2100411066966749359?s=46](https://x.com/gregpr07/status/2100411066966749359?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://github.com/browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

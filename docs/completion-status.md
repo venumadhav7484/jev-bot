@@ -1,34 +1,33 @@
-# Completion status after Jev-assisted processing
+# Frozen snapshot and completion status
 
-Snapshot and audit date: 19 September 2026. The channel capture boundary remains 10:08:31 IST; this pass did not collect later Discord posts.
+Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source collection is paused while this snapshot becomes a usable system. The exact last-post link and capture cursor are preserved privately. Capture progress is separate from content-review progress.
 
-| Layer | Current evidence | Remaining work |
+| Layer | Current state | Remaining scope |
 |---|---|---|
-| Capture | 3,226 main rows plus 142 supplementary thread rows; 3,358 unique message IDs | Independent completeness reconciliation, undiscovered threads and newer posts |
-| Machine triage | **3,358 / 3,358 processed**, with source IDs and saved results | No processing gaps in this snapshot; model errors still require review |
-| Editorial accounting | 350 source IDs cited in cases; 14 additional explicit dispositions | **2,994 IDs** lack curated disposition; includes chatter, duplicates and substantive material |
-| Case documentation | **262 cases**, including eight added during this pass | Deduplicate further discoveries; attach corrections and inspect supporting evidence |
-| Default case retrieval | 246 enabled; 16 held back | Validate recommendations and distinguish proposals, counterexamples and demonstrations |
-| External sources | **809 URLs**; 20 have substantive review markers, some partial; six have profile/asset dispositions | **783 marked not_reviewed**; 547 accesses failed, a separate overlapping count |
-| X review | 182 distinct posts tracked; one has readable text with blocked media | Detailed source follow-up; daily five-post automation is paused |
-| Discord attachments | 370 messages link attachments; 118 have sparse body text | Inspect or transcribe media, preserve access gaps; text-only Jev does not solve this |
-| Cross-case findings | Linked synthesis now includes failures, tools, planned use and counterexamples | Exhaustive synthesis across remaining queues |
-| Bot readiness | Local searchable evidence index; sample triage audit | Chat interface, recommendation logic, citation checks and answer evaluations |
+| Captured source | 3,226 main rows, 142 supplementary thread rows; 3,358 unique IDs; 14 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
+| Editorial accounting | All 3,358 IDs have case links or explicit dispositions; zero uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
+| Cases | 420 write-ups; 362 eligible for default retrieval; 58 held back | Further source validation can correct or merge cases |
+| External URLs | 826 registered; 296 not reviewed | Metadata-only and context-only dispositions are not technical validation |
+| Context screening | 146 links scoped as unrelated context; 93 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
+| X | 182 distinct posts: 42 reviewed, 128 media-pending, 8 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
+| Attachments | 10 / 413 attachment URLs visually reviewed; 7 / 370 messages complete | 403 attachments across 363 messages pending |
+| Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
+| S3 | Requested; no verified backup yet | Backup state is separate from evidence review |
 
-Machine suggestions identify 468 implementation messages, 340 evaluations, 394 limitations/corrections, 431 tools/resources, 433 substantive questions, 221 technical details, 894 community reactions, 36 unrelated messages and 141 unclear messages. These are message categories, not distinct projects or verified facts. Every category remains reviewable.
+## What the counts mean
 
-The 13-message development sample matched all 13 allowed contribution categories but only 11 Jev-use relationships. It was selected during development, so it is not an independent accuracy estimate. Two proposed integrations were misclassified; their curated cases retain the correct proposed status.
+All original 2,994 pending messages were read and given explicit editorial decisions. That closes message accounting. It does not turn every message into a verified implementation. The case-linked count overlaps with unresolved evidence flags, which remain in the editorial ledger.
 
-## How the remaining gaps get closed
+External-source statuses distinguish full saved-text inspection, README inspection, visible post text, metadata shells, limited context screening, media gaps and access failures. Old attachment URL failures do not prove the images are inaccessible in the authenticated source UI. No community benchmark has been independently reproduced.
 
-1. Review complete discussions around substantive posts, merge related messages into cases, and assign every remaining ID a reasoned disposition. Audit the apparent chatter/unrelated queues too, because the classifier can miss useful evidence.
-2. Prioritize failures, contradicted claims and implementation details. Link corrections to the positive example they qualify instead of leaving them as separate chatter.
-3. Follow repositories, demos, benchmarks and papers; record inspected portions, reported metrics and actual blockers. X has a paused daily retry queue; the wider external-source backlog still needs review.
-4. Inspect media separately. Retain source URLs and transcripts or concise observations; do not infer video contents from captions.
-5. Test retrieval and answers with ideas that should fit Jev, ideas that need other models/tools, and known failure cases. Check that every factual recommendation cites evidence and that unsupported details remain unknown.
+The original Jev triage experiment processed all 3,358 IDs with 420 successful requests for its final prompt. Its 13-item development sample matched 13 contribution labels and 11 relationship labels; it is not a representative accuracy estimate.
 
-Successful triage closes the previously missing full-archive routing pass. It does **not** mean comprehensive knowledge-base completion. No single overall percentage is reported because processing, source review and answer reliability are different quantities.
+## Run and update
+
+`python3 scripts/serve_bot.py` starts the local assistant. `python3 scripts/consolidate.py` rebuilds curated files, evidence indexes and sanitized public docs from the frozen private snapshot without network calls. `python3 scripts/stage_capture.py incoming.json` deduplicates a later authorized local capture and queues new or edited rows without changing the frozen snapshot. Promotion and editorial review remain explicit steps; there is no unattended Discord crawler.
+
+The next collection pass should read overlap around the saved post and revisit known threads. Preserve edits, identify new IDs, review the delta, then publish a new snapshot. Do not advance a fully-reviewed cursor from mere capture, triage or upload success.
 
 ## Source of counts
 
-Coverage summary (local-only evidence) · Message ledger (local-only evidence) · External-source register (local-only evidence) · Triage results (local-only evidence) · Sample audit (local-only evidence) · Media inventory (local-only evidence) · Review queues (local-only evidence) · [Completion contract](research-pipeline.md).
+Coverage (local-only evidence) · Source review ledger (local-only evidence) · Media accounting (local-only evidence) · [Answer guide](jev-bot-answer-guide.md) · [Research pipeline](research-pipeline.md). Development check results are stored locally in `research/evaluations/`.

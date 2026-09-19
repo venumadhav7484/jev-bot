@@ -28,8 +28,8 @@ Detailed responsibilities, deployment scale and results are unspecified. This is
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://gen-lang-client-0155046437.web.app/](https://gen-lang-client-0155046437.web.app/) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://satyabhan007.github.io/](https://satyabhan007.github.io/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://gen-lang-client-0155046437.web.app/](https://gen-lang-client-0155046437.web.app/) — access: `fetched`; review: `metadata_only`.
+- [https://satyabhan007.github.io/](https://satyabhan007.github.io/) — access: `fetched`; review: `not_reviewed`.
 - [https://www.linkedin.com/in/satyabhan-bhadoriya-777b28239?utm_source=share_via&utm_content=profile&utm_medium=member_android](https://www.linkedin.com/in/satyabhan-bhadoriya-777b28239?utm_source=share_via&utm_content=profile&utm_medium=member_android) — access: `fetch_failed`; review: `not_reviewed`.
 - [media.licdn.com](https://media.licdn.com/dms/image/v2/C5603AQHfR0gogQLO3A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1651815032489?e=2147483647&v=beta&t=gRcc7nNEFdlHucrmQ03anDiCSaRRKzBn1UuWK0F7j4k) — access: `fetch_failed`; review: `not_reviewed`.
 

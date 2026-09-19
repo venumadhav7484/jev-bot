@@ -23,11 +23,11 @@ Intended to reduce repetitive approval interruptions.
 
 ## Limits and reuse
 
-A classification is not authority to execute. No adversarial evaluation or fail-safe behavior verified; preserve hard permission boundaries and human approval for consequential actions.
+README claims host hook interception and escalation behavior; compatibility and security enforcement are unverified. Audit mode explicitly converts all blocks to ALLOW; trusted fastpaths bypass Jev. Model judgment cannot establish shell containment or guarantee prevention of destructive commands.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/ClemensSchartmueller/jev-guard](https://github.com/ClemensSchartmueller/jev-guard) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/ClemensSchartmueller/jev-guard](https://github.com/ClemensSchartmueller/jev-guard) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

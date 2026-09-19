@@ -28,7 +28,7 @@ Use the detailed source metrics, not a blanket replacement claim. The sample con
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.atisbo.dev/](https://www.atisbo.dev/) — access: `fetch_failed`; review: `not_reviewed`.
-- [www.atisbo.dev](https://www.atisbo.dev/opengraph-image) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://www.atisbo.dev/](https://www.atisbo.dev/) — access: `fetched`; review: `not_reviewed`.
+- [www.atisbo.dev](https://www.atisbo.dev/opengraph-image) — access: `nontext_not_inspected`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

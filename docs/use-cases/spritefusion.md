@@ -29,6 +29,6 @@ The captured posts do not establish arbitrary image/code generation or guarantee
 
 - Discord source — private provenance retained locally.
 - [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `not_reviewed`.
-- [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ No benchmark supplied; do not equate a semantic judgment with a proof.
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://perchscan.com/](https://perchscan.com/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://perchscan.com/](https://perchscan.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -19,7 +19,7 @@ Watch mode asks about separating responsibilities, simplifying functions and con
 
 ## Why and impact
 
-Makes semantic maintainability feedback available in the editing loop.
+Makes semantic maintainability feedback available in the editing loop. Follow-up reports $0.20 for a whole-codebase review with caching so later CI runs inspect differences. No defect-recall study supplied.
 
 ## Limits and reuse
 
@@ -28,6 +28,6 @@ No defect or productivity benchmark supplied. Suggestions are contextual and sho
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

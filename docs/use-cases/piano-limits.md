@@ -28,6 +28,6 @@ Section selection was a proposed alternative, not a demonstrated fix. Do not cla
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/BaselAshraf81/status/2100400028711805242?s=20](https://x.com/BaselAshraf81/status/2100400028711805242?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/BaselAshraf81/status/2100400028711805242?s=20](https://x.com/BaselAshraf81/status/2100400028711805242?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

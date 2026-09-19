@@ -28,6 +28,6 @@ Do not infer accounting correctness or autonomous posting authority. No measured
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/its_d_i_m_a/status/2100961401183592885?s=20](https://x.com/its_d_i_m_a/status/2100961401183592885?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/its_d_i_m_a/status/2100961401183592885?s=20](https://x.com/its_d_i_m_a/status/2100961401183592885?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

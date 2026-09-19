@@ -23,14 +23,14 @@ Preserves readable non-personal content rather than hiding whole columns.
 
 ## Limits and reuse
 
-The post's database-to-browser protection claim does not imply raw content never reaches the model provider. A reply identifies local token classifiers as an alternative.
+The post's database-to-browser protection claim does not imply raw content never reaches the model provider. A reply identifies local token classifiers as an alternative. The claim that unapproved data never leaves the database describes the browser-facing boundary. Jev tagging may require transmitting source text upstream; audit that data flow separately.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://pg-redact.vercel.app/](https://pg-redact.vercel.app/) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://github.com/rishi-raj-jain/pg-redact](https://github.com/rishi-raj-jain/pg-redact) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://x.com/rishi_raj_jain_/status/2100606501501169726](https://x.com/rishi_raj_jain_/status/2100606501501169726) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/rishi-raj-jain/pg-redact](https://github.com/rishi-raj-jain/pg-redact) — access: `fetched`; review: `not_reviewed`.
+- [https://x.com/rishi_raj_jain_/status/2100606501501169726](https://x.com/rishi_raj_jain_/status/2100606501501169726) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://huggingface.co/openai/privacy-filter](https://huggingface.co/openai/privacy-filter) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

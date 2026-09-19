@@ -28,6 +28,7 @@ The described work is simulation; real-arm testing was future work. It does not 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/ali_uraish/status/2100425130082238682?s=46](https://x.com/ali_uraish/status/2100425130082238682?s=46) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/ali_uraish/status/2100425130082238682?s=46](https://x.com/ali_uraish/status/2100425130082238682?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [SO101 simulation repository](https://github.com/AliUraish/Jev_SO101) — discovered via [external source](https://x.com/ali_uraish/status/2100425130082238682); access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

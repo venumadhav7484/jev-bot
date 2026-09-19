@@ -23,14 +23,14 @@ The author claims completion of all pre-hardmode bosses on Master difficulty.
 
 ## Limits and reuse
 
-An earlier post predates Jev access; only the later update claims integration. The existing mod does substantial work, so avoid attributing all gameplay to Jev.
+An earlier post predates Jev access; only the later update claims integration. The existing mod does substantial work, so avoid attributing all gameplay to Jev. README distinguishes code-only14m15s full run at3x speed from later Jev boss fights. Full pipeline used godmode, disabled spawns and mod changes on a known seed; do not describe it as Jev beating vanilla Terraria end-to-end.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.youtube.com/watch?v=g6CADbjBhlk](https://www.youtube.com/watch?v=g6CADbjBhlk) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://github.com/Reisenbug/TerraBlind](https://github.com/Reisenbug/TerraBlind) — access: `fetched`; review: `not_reviewed`.
-- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `not_reviewed`.
-- [Reisenberg](https://www.youtube.com/channel/UCwLNRVlneK40hZr3lhjMgqw) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://www.youtube.com/watch?v=g6CADbjBhlk](https://www.youtube.com/watch?v=g6CADbjBhlk) — access: `fetched`; review: `metadata_only`.
+- [https://github.com/Reisenbug/TerraBlind](https://github.com/Reisenbug/TerraBlind) — access: `fetched`; review: `readme_reviewed`.
+- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `metadata_only`.
+- [Reisenberg](https://www.youtube.com/channel/UCwLNRVlneK40hZr3lhjMgqw) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

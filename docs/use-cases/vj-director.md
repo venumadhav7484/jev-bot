@@ -28,9 +28,9 @@ The author also notes visual quality could improve. Musical feature extraction i
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/shannon_fano/status/2100639390468833379?s=46](https://x.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://fixupx.com/shannon_fano/status/2100639390468833379?s=46](https://fixupx.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetch_failed`; review: `not_reviewed`.
-- [shannon fano (@shannon_fano)](https://x.com/shannon_fano/status/2100639390468833379) — access: `fetch_failed`; review: `not_reviewed`.
-- [Quoting](https://x.com/CompleteSkeptic/status/2099925682726002904) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/shannon_fano/status/2100639390468833379?s=46](https://x.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://fixupx.com/shannon_fano/status/2100639390468833379?s=46](https://fixupx.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [shannon fano (@shannon_fano)](https://x.com/shannon_fano/status/2100639390468833379) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [Quoting](https://x.com/CompleteSkeptic/status/2099925682726002904) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

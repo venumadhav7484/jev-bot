@@ -28,9 +28,9 @@ The linked video was not independently benchmarked. Game-state perception and mo
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.youtube.com/watch?v=cP-GWKteHKo](https://www.youtube.com/watch?v=cP-GWKteHKo) — access: `fetch_failed`; review: `not_reviewed`.
-- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `not_reviewed`.
-- [John](https://www.youtube.com/channel/UCvD25CKcOKDMXi5t2jRrw2A) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP](https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://www.youtube.com/watch?v=cP-GWKteHKo](https://www.youtube.com/watch?v=cP-GWKteHKo) — access: `fetched`; review: `metadata_only`.
+- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `metadata_only`.
+- [John](https://www.youtube.com/channel/UCvD25CKcOKDMXi5t2jRrw2A) — access: `fetched`; review: `metadata_only`.
+- [https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP](https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

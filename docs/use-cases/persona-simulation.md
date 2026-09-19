@@ -28,6 +28,6 @@ Author explicitly says methodology is weak. Synthetic outputs are not public opi
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/smalltownrobot/status/2100600923672228189](https://x.com/smalltownrobot/status/2100600923672228189) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/smalltownrobot/status/2100600923672228189](https://x.com/smalltownrobot/status/2100600923672228189) — access: `fetch_failed`; review: `inaccessible_after_attempt`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

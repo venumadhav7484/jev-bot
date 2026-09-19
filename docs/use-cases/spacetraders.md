@@ -28,6 +28,6 @@ Initial experiment with no sustained-run results supplied.
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [spacetraders.io](https://spacetraders.io/getting-started) — access: `fetched`; review: `not_reviewed`.
+- [spacetraders.io](https://spacetraders.io/getting-started) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

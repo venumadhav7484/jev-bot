@@ -28,8 +28,8 @@ Moderator actions remain consequential. No measured false-positive rate or adver
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://fixupx.com/just_some_dev/status/2100757839056634080](https://fixupx.com/just_some_dev/status/2100757839056634080) — access: `fetch_failed`; review: `not_reviewed`.
-- [Astrid (@just_some_dev)](https://x.com/just_some_dev/status/2100757839056634080) — access: `fetch_failed`; review: `not_reviewed`.
-- [github.com/Infrawrench/Jeeves](https://github.com/Infrawrench/Jeeves) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://fixupx.com/just_some_dev/status/2100757839056634080](https://fixupx.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [Astrid (@just_some_dev)](https://x.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
+- [github.com/Infrawrench/Jeeves](https://github.com/Infrawrench/Jeeves) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

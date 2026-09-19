@@ -30,6 +30,7 @@ Three proposed jobs were rejected: raw grep-line ranking, review-loop pass/fail 
 - Discord source — private provenance retained locally.
 - [https://empryo.com/blog/jev-and-the-harness](https://empryo.com/blog/jev-and-the-harness) — access: `fetched`; review: `article_reviewed`.
 - [https://empryo.com/download](https://empryo.com/download) — access: `fetched`; review: `not_reviewed`.
-- [https://x.com/BniWael/status/2100195854904598745](https://x.com/BniWael/status/2100195854904598745) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/BniWael/status/2100195854904598745](https://x.com/BniWael/status/2100195854904598745) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://github.com/proxysoul/Empryo](https://github.com/proxysoul/Empryo) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

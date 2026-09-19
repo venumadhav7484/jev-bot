@@ -23,7 +23,7 @@ Potentially supports rapid triage.
 
 ## Limits and reuse
 
-The author uses deterministic wording, but probabilistic decisions are not thereby deterministic. No deployment, recall or adversarial robustness established.
+The author uses deterministic wording, but probabilistic decisions are not thereby deterministic. No deployment, recall or adversarial robustness established. Author explicitly reports substantial sensitivity to criterion wording and depth; automated response remains an intended integration, not proven safe enforcement.
 
 ## Sources
 

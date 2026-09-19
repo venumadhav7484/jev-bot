@@ -29,5 +29,6 @@ Probabilistic conditions should not silently replace deterministic invariants. A
 
 - Discord source — private provenance retained locally.
 - [https://github.com/obie/feelings](https://github.com/obie/feelings) — access: `fetched`; review: `not_reviewed`.
+- [https://obiefernandez.com/gems/feelings/](https://obiefernandez.com/gems/feelings/) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

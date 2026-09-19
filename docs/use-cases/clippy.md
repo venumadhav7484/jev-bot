@@ -28,6 +28,6 @@ The author notes trigger quality needs improvement. Hesitation is not proof of c
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/sotak/status/2100701152824185319](https://x.com/sotak/status/2100701152824185319) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/sotak/status/2100701152824185319](https://x.com/sotak/status/2100701152824185319) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

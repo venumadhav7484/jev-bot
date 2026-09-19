@@ -28,6 +28,6 @@ No regression-reproduction or review-recall results supplied. Deterministic repr
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/itsayush__/status/2100600179615518918?s=20](https://x.com/itsayush__/status/2100600179615518918?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/itsayush__/status/2100600179615518918?s=20](https://x.com/itsayush__/status/2100600179615518918?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

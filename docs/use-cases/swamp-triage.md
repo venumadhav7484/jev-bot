@@ -23,11 +23,11 @@ Reports 91% lower cost and 14.8% faster alert triage; production use is self-rep
 
 ## Limits and reuse
 
-The linked article was not accessible through the initial web fetch. Accuracy was described informally, so false-negative impact remains unknown.
+The linked article was not accessible through the initial web fetch. Accuracy was described informally, so false-negative impact remains unknown. Author reports no missed real alert among 100 signals, without positive-class count or labeling protocol. This does not establish production recall. Article reports91%cost and14.8%latency reduction but gives no visible sample count, threshold or missed-incident rate. Operational failure paging does not catch every semantic false negative.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/](https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/](https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

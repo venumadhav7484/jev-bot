@@ -19,7 +19,7 @@ Jev classifies signals such as buybacks, insider trades and meaningful quarter-o
 
 ## Why and impact
 
-The author describes running across EDGAR filings for a few cents per day.
+Author reports approximately $2.75 for quarter-over-quarter comparisons across 100 companies and $0.15/day for filings across a roughly 1,000-company watchlist. These are workload-specific costs; separate LLM analysis remains necessary.
 
 ## Limits and reuse
 
@@ -28,6 +28,6 @@ Event detection is separate from price prediction. No labeled evaluation or comp
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Anot/status/2100425243269468583](https://x.com/Anot/status/2100425243269468583) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/Anot/status/2100425243269468583](https://x.com/Anot/status/2100425243269468583) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

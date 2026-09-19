@@ -28,6 +28,7 @@ Thread replies explicitly say image input was not supported. This demo does not 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/CompleteSkeptic/status/2099925687465570372](https://x.com/CompleteSkeptic/status/2099925687465570372) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/CompleteSkeptic/status/2099925687465570372](https://x.com/CompleteSkeptic/status/2099925687465570372) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://github.com/robault/skilldoom](https://github.com/robault/skilldoom) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

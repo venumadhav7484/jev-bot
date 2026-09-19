@@ -58,6 +58,7 @@ for extra in extras:
 
 out = sorted(register.values(), key=lambda r:r['url'])
 for row in out:
+    row.setdefault('review_status', 'not_reviewed')
     if row['url'] in access:
         row.update({k:v for k,v in access[row['url']].items() if k != 'url'})
     if row['url'] in reviews:

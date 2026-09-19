@@ -28,6 +28,6 @@ Teaser only. Paper was described as forthcoming; no results, safety guarantees o
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/stash_pomichter/status/2101149600044224698](https://x.com/stash_pomichter/status/2101149600044224698) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/stash_pomichter/status/2101149600044224698](https://x.com/stash_pomichter/status/2101149600044224698) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

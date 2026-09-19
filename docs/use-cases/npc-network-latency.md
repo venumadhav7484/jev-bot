@@ -28,7 +28,7 @@ No workload details or independent timings were verified. Do not generalize one 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `fetch_failed`; review: `not_reviewed`.
-- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `fetched`; review: `not_reviewed`.
+- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `nontext_not_inspected`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

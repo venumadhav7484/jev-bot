@@ -28,7 +28,7 @@ No quality dataset, error rates or user study supplied. Subjective style checks 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://writing.justslobo.com/](https://writing.justslobo.com/) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://askjev.justslobo.com/](https://askjev.justslobo.com/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://writing.justslobo.com/](https://writing.justslobo.com/) — access: `fetched`; review: `source_text_reviewed`.
+- [https://askjev.justslobo.com/](https://askjev.justslobo.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

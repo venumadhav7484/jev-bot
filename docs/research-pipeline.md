@@ -28,7 +28,7 @@ python3 scripts/evidence.py search "routing email" --limit 8
 
 `run` sends captured text to the TypeSafe API. Each successful batch is saved immediately. Restarting skips matching completed request hashes. Changed source context, prompts or models cause a new hash; old responses remain available for audit. The per-run input-token stop is soft: one in-flight window may exceed it. At most four calls are in flight, with bounded server-error retries. Ambiguous transport failures are not automatically retried because the server may already have processed the request.
 
-Triage index (local-only evidence) links to every category queue. Machine-readable summary (local-only evidence) separates triaged counts from editorial approval. Response files include returned model and usage, never request headers or API keys. The SQLite database is a rebuildable local retrieval artifact; no data is uploaded to S3.
+Triage index (local-only evidence) links to every category queue. Machine-readable summary (local-only evidence) separates triaged counts from editorial approval. Response files include returned model and usage, never request headers or API keys. The SQLite database is a rebuildable local retrieval artifact; S3 backup is a separate explicitly invoked operation with private receipts.
 
 ## Applying TypeSafe primitives
 
@@ -57,4 +57,4 @@ Comprehensive coverage means every accessible source is accounted for and every 
 - 118 initially captured messages have fewer than 30 body characters and a Discord attachment. Text-only classification cannot resolve their substantive content.
 - Model relation labels can miss explicit proposed use. Keep low-value and unrelated predictions available for review; do not let a classification remove evidence.
 - Thread context can extend beyond adjacent messages and quoted previews. Final case synthesis must inspect the whole relevant discussion.
-- The daily X automation covers only its saved X backlog, not Discord updates or completion of all editorial work.
+- The daily X automation is paused. Its saved scope covers only X follow-up, not Discord updates.

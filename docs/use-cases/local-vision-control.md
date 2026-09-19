@@ -28,6 +28,6 @@ Text labels still leave the device. No evidence here establishes the privacy beh
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/milindlabs/status/2100631847155994852?s=20](https://x.com/milindlabs/status/2100631847155994852?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/milindlabs/status/2100631847155994852?s=20](https://x.com/milindlabs/status/2100631847155994852?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

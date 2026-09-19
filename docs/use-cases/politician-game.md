@@ -28,6 +28,6 @@ No implementation or outcome evaluation; fictional scenario is not operational a
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://the-ledger.simonbalint03.workers.dev/](https://the-ledger.simonbalint03.workers.dev/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://the-ledger.simonbalint03.workers.dev/](https://the-ledger.simonbalint03.workers.dev/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

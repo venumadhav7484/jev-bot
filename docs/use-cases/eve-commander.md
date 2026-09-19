@@ -29,7 +29,7 @@ Not an integration running NPCs inside EVE Frontier. Reinforcement overuse, relu
 
 - Discord source — private provenance retained locally.
 - [https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md) — access: `fetched`; review: `article_reviewed`.
-- [https://github.com/Diabolacal/eo-map-carbon](https://github.com/Diabolacal/eo-map-carbon) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/Diabolacal/eo-map-carbon](https://github.com/Diabolacal/eo-map-carbon) — access: `fetched`; review: `not_reviewed`.
 - [Detailed benchmark protocol](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/COMMANDER_BENCHMARK.md) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `sections_reviewed`.
 - [Processed benchmark results](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/commander/summaries/latest.json) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `not_reviewed`.
 - [Benchmark harness](https://github.com/Diabolacal/eo-map-carbon/tree/main/experiments/typesafe/commander) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetch_failed`; review: `not_reviewed`.

@@ -28,6 +28,6 @@ Style classification cannot reliably establish authorship. Do not present the hi
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/guybrush1984/purelink](https://github.com/guybrush1984/purelink) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/guybrush1984/purelink](https://github.com/guybrush1984/purelink) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

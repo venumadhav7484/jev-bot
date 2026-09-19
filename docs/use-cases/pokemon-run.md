@@ -28,7 +28,8 @@ Do not equate this with the separate Showdown or livestream projects. Memory, na
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/AnxKhn/status/2100842364248178833](https://x.com/AnxKhn/status/2100842364248178833) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/AnxKhn/status/2100842364248178833](https://x.com/AnxKhn/status/2100842364248178833) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://github.com/anxkhn/JevPlaysPokemon](https://github.com/anxkhn/JevPlaysPokemon) — access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](https://github.com/anxkhn/JewPlaysPokemon) — discovered via [external source](https://x.com/AnxKhn/status/2100842364248178833); access: `fetch_failed`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

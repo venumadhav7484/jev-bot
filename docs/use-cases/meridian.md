@@ -28,6 +28,7 @@ Development-time anecdote, not a production benchmark. World state, available ac
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://simulaicra.com/](https://simulaicra.com/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://simulaicra.com/](https://simulaicra.com/) — access: `fetched`; review: `source_text_reviewed`.
+- [https://simulaicra.com/families/](https://simulaicra.com/families/) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

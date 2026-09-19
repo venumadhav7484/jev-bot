@@ -28,7 +28,7 @@ No review-quality metrics or repository-context coverage supplied.
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://jev-pr-judge.vercel.app/](https://jev-pr-judge.vercel.app/) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://jev-nu.vercel.app/](https://jev-nu.vercel.app/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://jev-pr-judge.vercel.app/](https://jev-pr-judge.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
+- [https://jev-nu.vercel.app/](https://jev-nu.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

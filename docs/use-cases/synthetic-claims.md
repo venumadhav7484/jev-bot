@@ -28,7 +28,7 @@ Linked preview omits full results. Synthetic labels do not establish real claims
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.linkedin.com/feed/update/urn:li:activity:7506507049023840256/](https://www.linkedin.com/feed/update/urn:li:activity:7506507049023840256/) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://www.linkedin.com/feed/update/urn:li:activity:7506507049023840256/](https://www.linkedin.com/feed/update/urn:li:activity:7506507049023840256/) — access: `fetched`; review: `not_reviewed`.
 - [dms.licdn.com](https://dms.licdn.com/playlist/vid/v2/D4E05AQFoReufv5nYKQ/thumbnail-with-play-button-overlay-high/B4EaCx4EGDIIC0-/0/1789690667514?e=2147483647&v=beta&t=zpyiDN3TE5dvjTBiq0t9P0Ycym6vbeJ6hecQanmb6iY) — access: `fetch_failed`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

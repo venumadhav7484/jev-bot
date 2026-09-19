@@ -28,6 +28,6 @@ Scoring rubric and business-outcome correlation not validated. Does not demonstr
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/vladdubchak_x/status/2100870244004683886?s=20](https://x.com/vladdubchak_x/status/2100870244004683886?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/vladdubchak_x/status/2100870244004683886?s=20](https://x.com/vladdubchak_x/status/2100870244004683886?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

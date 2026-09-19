@@ -23,11 +23,13 @@ The author reports roughly ten cents spent during prototype work.
 
 ## Limits and reuse
 
-Camera-based system does not imply native image input to Jev. Perception conversion and control quality need source inspection.
+Camera-based system does not imply native image input to Jev. Perception conversion and control quality need source inspection. README clarifies successful course evidence is one65-second run against three weaker greedy baselines; an earlier matched three-seed comparison showed no advantage. Separate no-reflex tunnel experiment remains unreliable despite21decisions/s throughput and best-run94%target visibility.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) — access: `fetched`; review: `readme_reviewed`.
+- [https://x.com/RomanSlack1/status/2100335978229690683](https://x.com/RomanSlack1/status/2100335978229690683) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://t.co/b2ytFvehTV](https://t.co/b2ytFvehTV) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

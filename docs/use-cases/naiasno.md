@@ -28,6 +28,6 @@ Transliterated Bulgarian remains a weakness: one reported comparison is 71% vers
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://naiasno.bg/chat/evals](https://naiasno.bg/chat/evals) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://naiasno.bg/chat/evals](https://naiasno.bg/chat/evals) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

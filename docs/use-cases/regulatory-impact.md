@@ -28,6 +28,6 @@ Continuous regulatory monitoring is proposed, not established. No legal complete
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ Consistency across questions and secret-answer containment were not tested. Dist
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://askjev.app/](https://askjev.app/) — access: `fetched`; review: `not_reviewed`.
+- [https://askjev.app/](https://askjev.app/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

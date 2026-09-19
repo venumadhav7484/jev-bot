@@ -28,6 +28,6 @@ Million-use language is product framing, not verified throughput. Distinct from 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.askjev.ai/](https://www.askjev.ai/) — access: `fetched`; review: `not_reviewed`.
+- [https://www.askjev.ai/](https://www.askjev.ai/) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

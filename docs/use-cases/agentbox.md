@@ -28,6 +28,6 @@ Daily-use status is self-reported. Repository documentation still needs implemen
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/DreamLab-AI/agentbox/blob/main/docs/adr/ADR-2091-live-skill-router.md](https://github.com/DreamLab-AI/agentbox/blob/main/docs/adr/ADR-2091-live-skill-router.md) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/DreamLab-AI/agentbox/blob/main/docs/adr/ADR-2091-live-skill-router.md](https://github.com/DreamLab-AI/agentbox/blob/main/docs/adr/ADR-2091-live-skill-router.md) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

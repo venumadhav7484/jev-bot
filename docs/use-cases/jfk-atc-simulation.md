@@ -1,0 +1,33 @@
+---
+id: jfk-atc-simulation
+title: "JFK simulation: voice agents with ATC decision checks"
+category: Additional reviewed applications
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# JFK simulation: voice agents with ATC decision checks
+
+## What
+
+Airport simulation combines pilot and air-traffic-controller voice agents with Jev decisions.
+
+## How Jev fits
+
+GPT realtime voice supplies conversation; Jev handles ATC choices and traffic conflicts over structured simulation state.
+
+## Why and impact
+
+Illustrates separating voice generation from bounded simulation decisions.
+
+## Limits and reuse
+
+No reviewed video, conflict-detection evaluation or real aviation validation. Simulator demonstration only.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://x.com/alessandro_a0/status/2100573356294607245?s=20](https://x.com/alessandro_a0/status/2100573356294607245?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

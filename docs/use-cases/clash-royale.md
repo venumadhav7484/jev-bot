@@ -28,7 +28,7 @@ A single match is not a skill rating. Game-state extraction and execution are ma
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://fixupx.com/ffsxdev/status/2100795422922924119](https://fixupx.com/ffsxdev/status/2100795422922924119) — access: `fetch_failed`; review: `not_reviewed`.
-- [Ben (@ffsxdev)](https://x.com/ffsxdev/status/2100795422922924119) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://fixupx.com/ffsxdev/status/2100795422922924119](https://fixupx.com/ffsxdev/status/2100795422922924119) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [Ben (@ffsxdev)](https://x.com/ffsxdev/status/2100795422922924119) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

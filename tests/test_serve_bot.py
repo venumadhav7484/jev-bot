@@ -32,6 +32,14 @@ class LocalServerBoundaries(unittest.TestCase):
         for path in ('/.env.local', '/research/evidence.sqlite3', '/docs/%2e%2e/.env.local'):
             self.assertEqual(self.request('GET', path)[0], 404)
 
+    def test_explorer_module_and_public_catalog_are_served(self):
+        code, module = self.request('GET', '/evidence.mjs')
+        self.assertEqual(code, 200)
+        self.assertIn(b'export function prepare', module)
+        code, catalog = self.request('GET', '/docs/bot-cases.json')
+        self.assertEqual(code, 200)
+        self.assertTrue(json.loads(catalog))
+
     def test_untrusted_origin_and_host_are_rejected(self):
         self.assertEqual(self.request('GET', '/', headers={'Host': 'attacker.example'})[0], 403)
         self.assertEqual(self.request('POST', '/api/answer', '{}', {'Origin': 'https://attacker.example', 'Content-Type': 'application/json'})[0], 403)

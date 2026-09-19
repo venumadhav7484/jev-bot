@@ -31,7 +31,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(403, b'{"error":"Local access only"}')
         path = unquote(urlsplit(self.path).path)
         static = {'/': ('web/index.html', 'text/html'), '/app.js': ('web/app.js', 'text/javascript'),
-                  '/style.css': ('web/style.css', 'text/css')}
+                  '/style.css': ('web/style.css', 'text/css'),
+                  '/evidence.mjs': ('web/evidence.mjs', 'text/javascript')}
         if path in static:
             name, kind = static[path]
             return self.send(200, (ROOT/name).read_bytes(), kind+'; charset=utf-8')

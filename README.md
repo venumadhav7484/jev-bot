@@ -18,12 +18,15 @@ python3 scripts/serve_bot.py
 
 Open **http://127.0.0.1:8765**. Describe an idea, or try the su-lekha example. Add details to the description to refine the result. No conversation history is saved. The server binds to loopback and serves only public assets; it is not a hosted production service.
 
+Use **Explore Jev use cases** to browse the full public catalog, filter six broad categories, search, or randomize the tiles. Case pages keep Jev’s role, reported value, limitations and source links together. Fit signals describe evidence types, not benchmark scores. Bot answers use decision cards, workflow steps and related-case tiles; technical details remain expandable. Navigation back to the bot preserves the current idea and result during the session.
+
 For optional Jev routing, put `jev_api_key` in local `.env.local`, then select the checkbox in the interface. Only the entered idea goes to TypeSafe. API usage applies. If the service fails, the interface reports a fallback to local keyword routing.
 
 ```sh
 python3 scripts/jev_bot.py "Route incoming invoices to the right queue"
 python3 scripts/jev_bot.py "Monitor sensitive information in AI applications" --jev
 python3 -m unittest discover -s tests -v
+node --test tests/test_web.mjs  # Optional UI data checks; Node.js 18+
 ```
 
 ## Frozen snapshot

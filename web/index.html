@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jev-bot · Idea to integration</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jev-bot · Idea to integration</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
 <body><main>
-<header><a class="brand" href="/">Jev<span> / </span>bot</a><span class="badge">LOCAL RESEARCH PREVIEW</span></header>
+<header><a class="brand" href="/">Jev<span> / </span>bot</a><a class="explore-link" href="#use-cases">EXPLORE JEV USE CASES <span aria-hidden="true">↗</span></a></header>
+<div id="bot-view">
 <section class="intro"><p class="eyebrow">FROM IDEA TO INTEGRATION</p><h1>Where could Jev<br>fit into your idea?</h1><p class="lede">Explore patterns from real implementations, see where they fail, and turn your idea into a testable design.</p></section>
 <form id="ask"><label for="idea">Describe your use case or idea</label><textarea id="idea" required minlength="3" maxlength="6000" rows="4" placeholder="I’m building su-lekha to monitor sensitive information in AI applications. Where could Jev help?"></textarea>
 <div class="examples"><button type="button" data-idea="I’m building su-lekha to monitor sensitive information in AI applications.">su-lekha</button><button type="button" data-idea="Route incoming invoices and support emails to the right queue.">Inbox routing</button><button type="button" data-idea="Apply semantic filters to database rows using SQL.">Semantic SQL</button><button type="button" data-idea="Use voice and video to decide which task to run.">Voice + video</button></div>
 <div class="submit-row"><label class="option"><input id="jev" type="checkbox"> Use Jev to classify this idea <small>Sends entered text to TypeSafe; API usage applies.</small></label><button id="submit" class="primary" type="submit">Explore integration <span>↗</span></button></div>
 </form>
 <p id="status" role="status" aria-live="polite"></p><div id="result"></div>
+</div>
+<div id="explorer-view" hidden></div>
+<div id="detail-view" hidden></div>
 <footer>Frozen capture: 19 Sep 2026, 10:08 IST. Source and media review remains incomplete.<br>Authored design proposals + attributed evidence. No benchmark guarantees. <a href="/docs/completion-status.md" target="_blank" rel="noopener">Coverage and gaps ↗</a></footer>
 </main></body></html>

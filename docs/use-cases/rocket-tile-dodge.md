@@ -29,6 +29,6 @@ Small author run, not independently inspected or reproduced; no seed/baseline/de
 
 - Discord source — private provenance retained locally.
 - [https://x.com/atomic_chat_hq/status/2100644221279424925?s=46](https://x.com/atomic_chat_hq/status/2100644221279424925?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://t.co/RbcCOIgVkj](https://t.co/RbcCOIgVkj) — access: `fetched`; review: `not_reviewed`.
+- [https://t.co/RbcCOIgVkj](https://t.co/RbcCOIgVkj) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-Browser library, CLI and MCP server from Ying-Kai-Liao/jev-browser.
+Browser automation separates LLM planning from Jev decisions and Playwright execution.
 
 ## How Jev fits
 
-LLM plans; Jev decides bounded actions. Author adds rate limiter because decisions outpace browser readiness and builds for Claude Code.
+Jev returns probability distributions used by browser-control tools rather than free-form text.
 
 ## Why and impact
 
-Illustrates pacing and observation requirements in fast control loops.
+The author reports 40/42 correct tasks in the latest run and roughly 14 seconds for a five-step checkout.
 
 ## Limits and reuse
 
-Author explicitly says Jev cannot handle whole workflow alone. No representative task success benchmark.
+Counting remains a reported failure; tiny pages show no token saving. These are author benchmarks, not independently reproduced results.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Ying-Kai-Liao/jev-browser/tree/main](https://github.com/Ying-Kai-Liao/jev-browser/tree/main) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Ying-Kai-Liao/jev-browser/tree/main](https://github.com/Ying-Kai-Liao/jev-browser/tree/main) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

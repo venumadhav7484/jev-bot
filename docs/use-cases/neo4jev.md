@@ -23,11 +23,11 @@ Demonstrates composition of semantic judgments with exact graph structure.
 
 ## Limits and reuse
 
-No general path-optimality or completeness result is established by the post.
+No general path-optimality or completeness result is established by the post. Source review: Excluded edges cannot be found; semantic goal Noul is not exact target verification. Sum of log probabilities prevents underflow but does not itself remove path-length bias. Multi-branch traversal may require multiple calls per depth, despite one call per visited-node hop. Live graph access does not prove Jev navigation when stand-ins are active.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/jexp/neo4jev](https://github.com/jexp/neo4jev) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/jexp/neo4jev](https://github.com/jexp/neo4jev) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

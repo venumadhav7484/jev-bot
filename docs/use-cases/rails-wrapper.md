@@ -23,12 +23,12 @@ Author reports live-API testing and RubyGems publication. Wrapper explicitly dis
 
 ## Limits and reuse
 
-Repository/API behavior not independently reproduced. Confidence policies need workload calibration; fail-closed transport logic does not make semantic judgments infallible.
+Repository/API behavior not independently reproduced. Confidence policies need workload calibration; fail-closed transport logic does not make semantic judgments infallible. Source review: Fail-closed helper requires explicit policy but can be bypassed through direct reads/SDK; it is not automatic protection of every side effect. Unknown model pricing remains unknown and successful-call logging can miss failures/retries.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/GenieRobot/typesafe-ai-rails](https://github.com/GenieRobot/typesafe-ai-rails) — access: `fetched`; review: `not_reviewed`.
-- [https://rubygems.org/gems/typesafe-ai-rails](https://rubygems.org/gems/typesafe-ai-rails) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/GenieRobot/typesafe-ai-rails](https://github.com/GenieRobot/typesafe-ai-rails) — access: `fetched`; review: `readme_reviewed`.
+- [https://rubygems.org/gems/typesafe-ai-rails](https://rubygems.org/gems/typesafe-ai-rails) — access: `fetched`; review: `provider_listing_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ This is not Jev alone outperforming two models. Attachment and team/result label
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.czechgames.com/games/codenames](https://www.czechgames.com/games/codenames) — access: `fetched`; review: `not_reviewed`.
+- [https://www.czechgames.com/games/codenames](https://www.czechgames.com/games/codenames) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

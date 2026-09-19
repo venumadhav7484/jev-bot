@@ -23,12 +23,12 @@ Makes prompt and schema changes comparable over time.
 
 ## Limits and reuse
 
-No evaluation was run here. Useful experiments need labeled cases, stable versions and held-out examples.
+No evaluation was run here. Useful experiments need labeled cases, stable versions and held-out examples. Source review: Evaluation tooling supports explicit labels and saved traces; seeded examples and simulated tests are not a representative accuracy benchmark.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/Dayhaysoos/status/2100968892591968320](https://x.com/Dayhaysoos/status/2100968892591968320) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [Jevals workbench repository](https://github.com/dayhaysoos/jevals) — discovered via [external source](https://x.com/Dayhaysoos/status/2100968892591968320); access: `fetched`; review: `not_reviewed`.
+- [Jevals workbench repository](https://github.com/dayhaysoos/jevals) — discovered via [external source](https://x.com/Dayhaysoos/status/2100968892591968320); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

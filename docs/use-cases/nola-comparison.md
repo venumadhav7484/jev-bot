@@ -23,11 +23,11 @@ Reproducible-source lead for latency/cost/quality investigation.
 
 ## Limits and reuse
 
-Results attachment and source pending review; no universal speed/quality claim inferred.
+Results attachment and source pending review; no universal speed/quality claim inferred. Source review: Provider rejects unsupported output types before network; broader types require generative fallback. Boolean 0.5 threshold needs workload validation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/nola-lang/nola-typesafe-test](https://github.com/nola-lang/nola-typesafe-test) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/nola-lang/nola-typesafe-test](https://github.com/nola-lang/nola-typesafe-test) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

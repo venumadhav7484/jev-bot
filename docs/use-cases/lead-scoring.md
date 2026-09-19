@@ -28,6 +28,6 @@ No quantified benchmark was supplied. The proposed business weights are applicat
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [Hugging Face one](https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD) — access: `fetched`; review: `not_reviewed`.
+- [Hugging Face one](https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

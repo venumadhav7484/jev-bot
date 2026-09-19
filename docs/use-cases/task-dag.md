@@ -29,6 +29,6 @@ Pairwise judgments can conflict or create cycles. Proposed reuse requires graph 
 
 - Discord source — private provenance retained locally.
 - [https://x.com/JoymFL/status/2101074155605225899](https://x.com/JoymFL/status/2101074155605225899) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [DAG input example](https://github.com/Joymfl/dag-jev/blob/main/input.txt) — discovered via [external source](https://x.com/JoymFL/status/2101074155605225899); access: `fetched`; review: `not_reviewed`.
+- [DAG input example](https://github.com/Joymfl/dag-jev/blob/main/input.txt) — discovered via [external source](https://x.com/JoymFL/status/2101074155605225899); access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

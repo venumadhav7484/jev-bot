@@ -23,7 +23,7 @@ The author estimates $0.30 monthly model cost at 1,000 messages per day.
 
 ## Limits and reuse
 
-An estimate excludes hosting and moderation oversight. The post does not establish that Jev itself generates profile prose or that automated sanctions are reliable.
+An estimate excludes hosting and moderation oversight. The post does not establish that Jev itself generates profile prose or that automated sanctions are reliable. Source review: Pardon feedback is in-context evidence, not model training or guaranteed prevention of false positives. Automatic penalties and character-like profile scores need task-specific error evaluation and human review; no moderation actions were performed in this review.
 
 ## Sources
 
@@ -32,6 +32,6 @@ An estimate excludes hosting and moderation oversight. The post does not establi
 - [https://x.com/brainstormity/status/2100702826196307977](https://x.com/brainstormity/status/2100702826196307977) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://x.com/brainstormity/status/2100842356484325574?s=20](https://x.com/brainstormity/status/2100842356484325574?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://x.com/brainstormity/status/2100471987860553931](https://x.com/brainstormity/status/2100471987860553931) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [Author-linked implementation artifact](https://github.com/brainstormity/Jev-Moderation-Bot) — discovered via [external source](https://x.com/brainstormity/status/2100471987860553931); access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](https://github.com/brainstormity/Jev-Moderation-Bot) — discovered via [external source](https://x.com/brainstormity/status/2100471987860553931); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

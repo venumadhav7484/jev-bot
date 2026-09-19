@@ -23,14 +23,14 @@ Reuses existing application capabilities instead of generating arbitrary executi
 
 ## Limits and reuse
 
-The demo does not make model confidence an authorization boundary; actions still need deterministic constraints.
+The demo does not make model confidence an authorization boundary; actions still need deterministic constraints. Source review: Selection changes UI presentation, not arbitrary action execution. Confidence/safety judgments need validation; deterministic affordance and confirmation gates supply control. Mock-default playground is separate from live Jev mode.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://noflow.casungo.workers.dev/](https://noflow.casungo.workers.dev/) — access: `fetched`; review: `metadata_only`.
-- [https://github.com/casungo/noflow-runtime](https://github.com/casungo/noflow-runtime) — access: `fetched`; review: `not_reviewed`.
-- [https://www.npmjs.com/package/noflow-runtime](https://www.npmjs.com/package/noflow-runtime) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://github.com/casungo/noflow-runtime](https://github.com/casungo/noflow-runtime) — access: `fetched`; review: `readme_reviewed`.
+- [https://www.npmjs.com/package/noflow-runtime](https://www.npmjs.com/package/noflow-runtime) — access: `access_failed`; review: `inaccessible_content_pending`.
 - [NoFlow | Buttons with opinions](https://noflow.casungo.workers.dev/?) — access: `fetched`; review: `metadata_only`.
 - [https://x.com/casungo/status/2101037798614499387](https://x.com/casungo/status/2101037798614499387) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 

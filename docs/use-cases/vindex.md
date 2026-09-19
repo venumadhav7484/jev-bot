@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-Screen prompts against application content policies.
+Vindex markets text-prompt policy screening with allow, review, block and webhook outcomes.
 
 ## How Jev fits
 
-Jev classifies policy fit; connectors apply configured allow, review, block or webhook consequences.
+This cached landing page does not name Jev or establish which model implements its decisions.
 
 ## Why and impact
 
-The author reports testing thousands of prompts from an earlier moderation system.
+The vendor reports roughly 100 ms decisions and a ten-week moderation-queue sample with 84% auto-allowed, 9% blocked and 7% sent to human review.
 
 ## Limits and reuse
 
-Promotional certainty about eliminating harmful content is unsupported. Classifier mistakes and policy gaps remain possible.
+The interactive landing-page example explicitly uses canned simulation results. The reported percentages describe one platform’s moderation queue, not general accuracy.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://getvindex.com/](https://getvindex.com/) — access: `fetched`; review: `not_reviewed`.
+- [https://getvindex.com/](https://getvindex.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

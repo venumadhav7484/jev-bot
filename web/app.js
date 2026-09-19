@@ -34,7 +34,7 @@ function render(r) {
   const next = section('Refine your idea', root); r.questions.forEach(t => next.append(node('p', t))); next.append(node('p', 'Add these details to your description above and explore again. Ideas stay in this page; no chat history is saved.'));
   const refs = section('Capability references', root); r.references.forEach(url => refs.append(link(url, url)));
   const method = r.router.method === 'jev_choice' ? `Jev routing: ${r.router.model}. Confidence ${(r.router.confidence * 100).toFixed(0)}% is not a correctness guarantee.` : 'Local keyword routing; no API call required.';
-  refs.append(node('p', method + (r.router.fallback_reason ? ' ' + r.router.fallback_reason : '')), node('p', `${r.coverage.curated_cases} case records; ${r.coverage.unreviewed_urls ?? 'unknown number of'} URLs still unreviewed. ${r.answer_method}`));
+  refs.append(node('p', method + (r.router.fallback_reason ? ' ' + r.router.fallback_reason : '')), node('p', `${r.coverage.curated_cases} case records; ${r.coverage.unreviewed_urls ?? 'unknown number of'} URLs await first review; ${r.coverage.urls_with_content_gaps ?? 'unknown number of'} URLs retain content gaps. ${r.answer_method}`));
 }
 document.querySelectorAll('[data-idea]').forEach(b => b.addEventListener('click', () => { $('idea').value = b.dataset.idea; $('idea').focus(); }));
 $('ask').addEventListener('submit', async e => {

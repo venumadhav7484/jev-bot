@@ -23,11 +23,11 @@ Shows Jev choosing or coordinating external computations.
 
 ## Limits and reuse
 
-Does not establish that Jev itself performs these algorithms, learns weights, or generates diffusion images. Implementation was not executed.
+Does not establish that Jev itself performs these algorithms, learns weights, or generates diffusion images. Implementation was not executed. Source review: Tool catalog and local keyword fallback are documented; a working Jev routing integration is not established by this README.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/gamesonrblx/JevML](https://github.com/gamesonrblx/JevML) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/gamesonrblx/JevML](https://github.com/gamesonrblx/JevML) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

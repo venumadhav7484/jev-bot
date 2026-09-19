@@ -23,13 +23,13 @@ The author leaves losing PnL visible and releases the front end for inspection.
 
 ## Limits and reuse
 
-This is explicitly a paper experiment with red PnL, not a profitable strategy or investment recommendation.
+This is explicitly a paper experiment with red PnL, not a profitable strategy or investment recommendation. Source review: Default mock/dry-run outcomes are not Jev live trading evidence. README claims real fills but supplies no independently verified PnL, profitability or risk guarantee.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/aowang/status/2100770166619652330](https://x.com/aowang/status/2100770166619652330) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://www.jev-trade.com/](https://www.jev-trade.com/) — access: `fetched`; review: `source_text_reviewed`.
-- [https://github.com/aowang-ai/jev-trade](https://github.com/aowang-ai/jev-trade) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/aowang-ai/jev-trade](https://github.com/aowang-ai/jev-trade) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

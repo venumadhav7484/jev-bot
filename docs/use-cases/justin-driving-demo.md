@@ -23,12 +23,12 @@ Shows rapid prototyping interest; build-time claim is not autonomous-driving per
 
 ## Limits and reuse
 
-No safety, real-world operation, reliability or equivalence to Tesla is established. Do not recommend deployment based on promotional analogy.
+No safety, real-world operation, reliability or equivalence to Tesla is established. Do not recommend deployment based on promotional analogy. Source review: Local geometry, candidate generation and braking surround Jev. Simulator behavior and aggressive rubric do not establish safe real-world autonomous driving.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/jpschroeder/status/2100347770867458384?s=20](https://x.com/jpschroeder/status/2100347770867458384?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [Author-linked implementation artifact](https://github.com/standardagents/jevpilot) — discovered via [external source](https://x.com/jpschroeder/status/2100347770867458384); access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](https://github.com/standardagents/jevpilot) — discovered via [external source](https://x.com/jpschroeder/status/2100347770867458384); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

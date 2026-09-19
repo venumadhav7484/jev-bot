@@ -23,11 +23,11 @@ Potentially reduces irrelevant context before further agent work.
 
 ## Limits and reuse
 
-No retention-quality evaluation supplied. Important constraints can be lost during compaction and need explicit preservation checks.
+No retention-quality evaluation supplied. Important constraints can be lost during compaction and need explicit preservation checks. Source review: Jev judges relevance from shaped context with result bodies omitted,so crucial details canbe missed. No measured continuation-quality improvement supplied. Deterministicfallback handlesAPIerrorsbutcanstillloseinformation;25%reduction gate measurescompression not correctness.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact](https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact](https://github.com/TheEpTic/hermes-plugins/tree/main/hermes-jev-compact) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

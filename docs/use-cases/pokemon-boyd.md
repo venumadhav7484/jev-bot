@@ -11,24 +11,24 @@ independently_reproduced: false
 
 ## What
 
-Run a public game stream with chat.
+A page presents Jev playing Pokémon Red and moderating chat.
 
 ## How Jev fits
 
-The author says Jev is both player and chat moderator; a web client and terminal spectator interface expose the run.
+The page attributes gameplay to Jev and log monitoring plus real-time harness construction to Opus 5.
 
 ## Why and impact
 
-Shows one product using decision judgments in two distinct roles.
+No measured gameplay outcome or cost is supplied by this captured page.
 
 ## Limits and reuse
 
-The post does not quantify campaign performance or moderation error rates; GitHub authentication is for chat access.
+The capture reports the model not answering and the stream connecting; it does not prove a successful live run.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/0xboyd/status/2100418365986578908](https://x.com/0xboyd/status/2100418365986578908) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [https://t.co/64naxTJlDg](https://t.co/64naxTJlDg) — access: `fetched`; review: `not_reviewed`.
+- [https://t.co/64naxTJlDg](https://t.co/64naxTJlDg) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

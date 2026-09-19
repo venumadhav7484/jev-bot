@@ -23,11 +23,11 @@ Potential .NET integration option.
 
 ## Limits and reuse
 
-Live API compatibility explicitly untested at announcement; distinct from Hawxy SDK.
+Live API compatibility explicitly untested at announcement; distinct from Hawxy SDK. Source review: Treat first live use as compatibility validation; repository/package availability differs. Debug logs redactheaders butnotstatebodies,totalretrybudgetoffdefault. Unknown-answer behavior needs code check; SDK contract tests are not Jevsemanticaccuracy evidence.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-](https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-](https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

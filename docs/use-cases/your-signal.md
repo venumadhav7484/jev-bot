@@ -23,11 +23,11 @@ A reusable pattern for preference-aware content selection.
 
 ## Limits and reuse
 
-Weights express user preferences; classification is not objective content quality. Browser-extension behavior requires separate inspection.
+Weights express user preferences; classification is not objective content quality. Browser-extension behavior requires separate inspection. Source review: Extension is not offline AI; visible post text including protected posts may leave the device. Local display policy remains separate from Jev relevance judgments; no measured general ranking quality.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/MithrilMan/your-signal](https://github.com/MithrilMan/your-signal) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/MithrilMan/your-signal](https://github.com/MithrilMan/your-signal) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

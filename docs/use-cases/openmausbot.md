@@ -23,12 +23,12 @@ Separates routing from agents' substantive work; no measured end-to-end savings 
 
 ## Limits and reuse
 
-Model capability descriptions, routing labels and fallback policy need independent validation.
+Model capability descriptions, routing labels and fallback policy need independent validation. Source review: Repository README documents adjacent agent infrastructure, not a demonstrated Jev use. Preserve source attribution for any claimed Jev integration; do not infer it from typed runtime events or presence in showcase.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/milindlabs/status/2100515910754750741?s=46](https://x.com/milindlabs/status/2100515910754750741?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

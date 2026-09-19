@@ -23,11 +23,11 @@ Shows how constrained structures can be assembled without ordinary token generat
 
 ## Limits and reuse
 
-Outputs remain simple. The author says the first Hello-world literal might have been hardcoded and earlier character-grid generation worked poorly. Proposed parallel search branches are not demonstrated. Syntactic validity is not program correctness.
+Outputs remain simple. The author says the first Hello-world literal might have been hardcoded and earlier character-grid generation worked poorly. Proposed parallel search branches are not demonstrated. Syntactic validity is not program correctness. Source review: Code creation comes from grammar assembly or separate generative candidates, not free-text Jev output. Syntax validity does not imply task correctness. Shell execution needs application permissions; optional generator adds cost. README demo with scripted Jev is not end-to-end live Jev validation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/rhighs/jev-code](https://github.com/rhighs/jev-code) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/rhighs/jev-code](https://github.com/rhighs/jev-code) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,13 +23,13 @@ Reported one-trip cost $0.01.
 
 ## Limits and reuse
 
-Environment and control boundaries require source inspection; no real-world flight/safety qualification. Distinct from Roman Slack’s MuJoCo prototype.
+Environment and control boundaries require source inspection; no real-world flight/safety qualification. Distinct from Roman Slack’s MuJoCo prototype. Source review: Code supplies mathematical state and enforces limits. Simulated navigation does not establish physical drone safety or broad success rate.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/arielweinberger/status/2100687687057285215?s=20](https://x.com/arielweinberger/status/2100687687057285215?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://t.co/gNQZIbRP7E](https://t.co/gNQZIbRP7E) — access: `fetched`; review: `not_reviewed`.
-- [Author-linked implementation artifact](https://github.com/arielweinberger/jev-autopilot) — discovered via [external source](https://x.com/arielweinberger/status/2100687687057285215); access: `fetched`; review: `not_reviewed`.
+- [https://t.co/gNQZIbRP7E](https://t.co/gNQZIbRP7E) — access: `fetched`; review: `readme_reviewed`.
+- [Author-linked implementation artifact](https://github.com/arielweinberger/jev-autopilot) — discovered via [external source](https://x.com/arielweinberger/status/2100687687057285215); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -1,9 +1,9 @@
 {
   "snapshot_date": "2026-09-19",
   "unit_tests": {
-    "passed": 29,
+    "passed": 36,
     "failed": 0,
-    "scope": "API validation, evidence policy, media provenance, backup exclusions, local server boundaries, intake idempotency and bot behavior."
+    "scope": "API validation, evidence policy, media provenance, backup exclusions, local server boundaries, intake idempotency, pilot citation/version/budget controls and bot evidence boundaries. Localhost tests required sandbox escalation."
   },
   "assistant_scenarios": {
     "passed": 11,
@@ -24,6 +24,15 @@
       "output_tokens": 101
     }
   },
-  "browser_check": "su-lekha response, proposed architecture, limitations, counterexamples and repository link visibly verified.",
-  "independent_answer_quality_benchmark": false
+  "browser_check": "Updated localhost preview verified: text-only media boundary, scripted-robotics counterexample, source links, 421 records, zero first-disposition queue and 305 explicit content gaps. Previous su-lekha check retained in history.",
+  "independent_answer_quality_benchmark": false,
+  "source_grounding_pilot": {
+    "sources": 30,
+    "successful_requests": 60,
+    "input_tokens": 206033,
+    "output_tokens": 8600,
+    "estimated_jev_usd": 0.008653386,
+    "independent_validation": false,
+    "editorial_speedup_established": false
+  }
 }

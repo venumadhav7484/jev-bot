@@ -23,11 +23,11 @@ Useful when review capacity is limited and semantic risk signals complement exac
 
 ## Limits and reuse
 
-The project explicitly does not review code correctness. Do not turn its green label into permission to merge.
+The project explicitly does not review code correctness. Do not turn its green label into permission to merge. Source review: Review score is policy weighting, not probability of a bug. Small private dataset and follow-up-fix proxy limit generalization; hunk ranking negative result must remain visible. No review generation or merge approval. Hard flags, excluded files and failed calls block green; diff-only context misses ticket intent.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/TinyFrontier/wince](https://github.com/TinyFrontier/wince) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/TinyFrontier/wince](https://github.com/TinyFrontier/wince) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

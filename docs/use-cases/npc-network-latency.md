@@ -23,12 +23,12 @@ Author reports up to 320 ms network overhead. This is a deployment constraint wo
 
 ## Limits and reuse
 
-No workload details or independent timings were verified. Do not generalize one route or test infrastructure to every deployment, and do not present the inaccessible PDF as reviewed.
+No workload details or independent timings were verified. Do not generalize one route or test infrastructure to every deployment, and do not present the inaccessible PDF as reviewed. Source review: Linked PDF host commit corrects warm latency estimate to 220–225 ms; three-call sample is too small for a general latency guarantee. PDF body remains uninspected.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `fetched`; review: `not_reviewed`.
-- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `nontext_not_inspected`; review: `not_reviewed`.
+- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `fetched`; review: `metadata_only`.
+- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `nontext_not_downloaded`; review: `nontext_content_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,11 +23,11 @@ Author reports 743 decisions in 9.3 seconds.
 
 ## Limits and reuse
 
-Self-assessment and retrieval aid, not hiring eligibility evidence. Full report was inaccessible through the web fetcher.
+Self-assessment and retrieval aid, not hiring eligibility evidence. Full report was inaccessible through the web fetcher. Source review: Benchmark uses model adjudication, not human labels; accuracy headline depends on metric and selected hard cases. No significant advantage over free lexical baseline established. Include explicit none/clarify Choice, literal field values, complete relevant state and threshold-boundary monitoring. Typed output still requires missing-key/transport checks; cannot promise no dropped answers.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://iambraun.com/jev/](https://iambraun.com/jev/) — access: `fetched`; review: `not_reviewed`.
+- [https://iambraun.com/jev/](https://iambraun.com/jev/) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

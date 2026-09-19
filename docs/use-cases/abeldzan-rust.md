@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-abeldzan/jev-rs supplies a community Rust client.
+The repository documents an async-first TypeSafe Rust client with an optional blocking client.
 
 ## How Jev fits
 
-Async-first interface for TypeSafe API according to repository preview.
+It exposes typed System One questions, reusable question collections, model discovery and configurable retries.
 
 ## Why and impact
 
-Additional integration option for Rust applications.
+Structured errors and retained HTTP metadata support integration diagnostics.
 
 ## Limits and reuse
 
-No source audit, compatibility or performance tests independently run.
+The crate is not yet published to crates.io; transient failures retry by default, and the billable live integration test is ignored unless explicitly requested.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/abeldzan/jev-rs](https://github.com/abeldzan/jev-rs) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/abeldzan/jev-rs](https://github.com/abeldzan/jev-rs) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

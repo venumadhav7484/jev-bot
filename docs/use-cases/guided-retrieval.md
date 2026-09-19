@@ -23,12 +23,12 @@ Targets useful evidence without reading every page.
 
 ## Limits and reuse
 
-No recall benchmark supplied. Stopping too early can miss conflicting evidence; typed outputs do not guarantee factual coverage.
+No recall benchmark supplied. Stopping too early can miss conflicting evidence; typed outputs do not guarantee factual coverage. Source review: Retrieval design preserves block-level citations and conflicts; captured page alone does not establish Jev implementation or measured retrieval accuracy.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/aipintodev/status/2101036073719570869](https://x.com/aipintodev/status/2101036073719570869) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [https://t.co/8d0Bc6oGQv](https://t.co/8d0Bc6oGQv) — access: `fetched`; review: `not_reviewed`.
+- [https://t.co/8d0Bc6oGQv](https://t.co/8d0Bc6oGQv) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

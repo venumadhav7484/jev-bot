@@ -23,11 +23,11 @@ Provides an operational dashboard example without claiming live incident handlin
 
 ## Limits and reuse
 
-Simulation only; no detection coverage or response-safety evidence.
+Simulation only; no detection coverage or response-safety evidence. Source review: Synthetic detection success does not establish real-traffic effectiveness or calibration. Keep earlier misses beside final results; repeated checkpoints are correlated. API failure is unknown/stale, not safe; stopping an attack is not remediation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/the-data-sherpa/project_blackout](https://github.com/the-data-sherpa/project_blackout) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/the-data-sherpa/project_blackout](https://github.com/the-data-sherpa/project_blackout) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

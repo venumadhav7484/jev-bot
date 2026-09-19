@@ -23,11 +23,11 @@ Offers a migration path for existing DSPy programs without rewriting every decis
 
 ## Limits and reuse
 
-Author-described tool and linked repository; attachment benchmark unreviewed. Do not assume arbitrary text generation or every DSPy signature can be replaced.
+Author-described tool and linked repository; attachment benchmark unreviewed. Do not assume arbitrary text generation or every DSPy signature can be replaced. Source review: Hybrid still incurs generative-model charges. Three-ticket experiment and modeled costs cannot establish general speedup or answer-quality equivalence.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/typesafeainate/dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/typesafeainate/dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

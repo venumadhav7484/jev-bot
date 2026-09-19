@@ -23,11 +23,11 @@ Provides an integration starting point and debugging reference.
 
 ## Limits and reuse
 
-Repository source still requires inspection; this announcement supplies no performance or reliability evidence.
+Repository source still requires inspection; this announcement supplies no performance or reliability evidence. Source review: README specifies loopback-only learning demo; a public API proxy needs authentication and rate limits to prevent quota abuse.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/jasondotsetHacked/jev-test-1](https://github.com/jasondotsetHacked/jev-test-1) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/jasondotsetHacked/jev-test-1](https://github.com/jasondotsetHacked/jev-test-1) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

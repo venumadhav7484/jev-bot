@@ -23,12 +23,12 @@ The author reports roughly 250 ms judgments and ongoing personal use.
 
 ## Limits and reuse
 
-Steering is not a security boundary. Retain hard permissions and independent completion checks; the author labels it early-stage. README reports 150 paired agent runs with six rule violations in control versus zero with Warden; this remains a project-maintained experiment. Offline pattern guards and steer/confirm/advise modes differ from probabilistic checks.
+Steering is not a security boundary. Retain hard permissions and independent completion checks; the author labels it early-stage. README reports 150 paired agent runs with six rule violations in control versus zero with Warden; this remains a project-maintained experiment. Offline pattern guards and steer/confirm/advise modes differ from probabilistic checks. Source review: Rule compliance improved on small authored traps; general code quality and destructive-action prevention not established. Most guards advise rather than block. Repeat stability is distinct from correctness; retrospective hold labels use model inference.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://pi.dev/packages/pi-warden](https://pi.dev/packages/pi-warden) — access: `fetched`; review: `not_reviewed`.
+- [https://pi.dev/packages/pi-warden](https://pi.dev/packages/pi-warden) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/DevMortimer/pi-warden](https://github.com/DevMortimer/pi-warden) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

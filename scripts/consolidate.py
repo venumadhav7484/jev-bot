@@ -17,8 +17,11 @@ def write_status():
     media = json.loads((pool/'sources/media-accounting.json').read_text())
     cp_path = pool/'sources/collection-checkpoint.json'
     cp = json.loads(cp_path.read_text())
-    cp['research_status'] = 'frozen_snapshot_bot_preview'
-    cp['s3_status'] = 'verified_private_backup' if summary['s3_uploaded'] else 'backup_requested_not_yet_verified'
+    cp.setdefault('research_status', 'frozen_snapshot_bot_preview')
+    if summary['s3_uploaded']:
+        cp['s3_status'] = 'verified_private_backup'
+    else:
+        cp.setdefault('s3_status', 'backup_requested_not_yet_verified')
     cp['s3_uploaded'] = summary['s3_uploaded']
     cp['review_progress'].update(curated_cases=summary['curated_cases'],
         editorial_uncatalogued_rows=summary['editorial_review']['unassigned_messages'],
@@ -27,7 +30,8 @@ def write_status():
         fully_reviewed_through_message_id=None, exhaustive=False)
     cp_path.write_text(json.dumps(cp, indent=2)+'\n')
     n, enabled = summary['curated_cases'], summary['default_retrieval_cases']
-    pending = summary['external_review_status_counts']['not_reviewed']
+    pending = summary['external_review_status_counts'].get('not_reviewed', 0)
+    gaps = summary['external_urls_with_content_gaps']
     text = f'''# Frozen snapshot and completion status
 
 Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source collection is paused while this snapshot becomes a usable system. The exact last-post link and capture cursor are preserved privately. Capture progress is separate from content-review progress.
@@ -37,10 +41,10 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 | Captured source | 3,226 main rows, 142 supplementary thread rows; 3,358 unique IDs; 14 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
 | Editorial accounting | All 3,358 IDs have case links or explicit dispositions; zero uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
 | Cases | {n} write-ups; {enabled} eligible for default retrieval; {n-enabled} held back | Further source validation can correct or merge cases |
-| External URLs | {summary['external_urls']} registered; {pending} not reviewed | Metadata-only and context-only dispositions are not technical validation |
+| External URLs | {summary['external_urls']} registered; {pending} await first disposition; {gaps} retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
 | Context screening | {summary['external_review_status_counts'].get('context_only_not_jev_evidence', 0)} links scoped as unrelated context; {summary['external_review_status_counts'].get('metadata_only', 0)} metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
 | X | 182 distinct posts: 42 reviewed, 128 media-pending, 8 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
-| Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs visually reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across 363 messages pending |
+| Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across {sum(r['remaining_attachments'] > 0 for r in media['entries'])} messages pending |
 | Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
 | S3 | {'Encrypted private snapshot uploaded and download/file hashes verified' if summary['s3_uploaded'] else 'Requested; no verified backup yet'} | Backup state is separate from evidence review |
 
@@ -49,6 +53,8 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 All original 2,994 pending messages were read and given explicit editorial decisions. That closes message accounting. It does not turn every message into a verified implementation. The case-linked count overlaps with unresolved evidence flags, which remain in the editorial ledger.
 
 External-source statuses distinguish full saved-text inspection, README inspection, visible post text, metadata shells, limited context screening, media gaps and access failures. Old attachment URL failures do not prove the images are inaccessible in the authenticated source UI. No community benchmark has been independently reproduced.
+
+The latest 296-URL backlog has a first disposition for every entry: 224 received text, artifact or relevance review at documented scope; 39 remain inaccessible and 33 non-text sources await content inspection. These 72 gaps were reclassified explicitly, not completed. Earlier metadata and media gaps also remain in the total above. The 30-source Jev pilot completed 60 calls and 130 draft claim checks; all 30 sources still needed deep review, so no reduction in editorial effort is established. [Pilot report](../docs/source-grounding-pilot.md).
 
 The original Jev triage experiment processed all 3,358 IDs with 420 successful requests for its final prompt. Its 13-item development sample matched 13 contribution labels and 11 relationship labels; it is not a representative accuracy estimate.
 
@@ -78,7 +84,7 @@ User chose to stop new source collection and consolidate a usable assistant. S3 
 
 ## Consolidated state
 
-All 3,358 IDs have editorial dispositions. {n} cases; {enabled} default eligible. {pending}/{summary['external_urls']} external URLs remain unreviewed. {media['attachments_reviewed']} attachments inspected; {media['attachments_pending']} pending. Existing source/media review notes remain authoritative. No independent community benchmark reproduction.
+All 3,358 IDs have editorial dispositions. {n} cases; {enabled} default eligible. {pending}/{summary['external_urls']} external URLs await first disposition; {gaps} retain explicit content gaps. {media['attachments_reviewed']} attachments inspected; {media['attachments_pending']} pending. Existing source/media review notes remain authoritative. No independent community benchmark reproduction.
 
 Local assistant: `python3 scripts/serve_bot.py`. Optional Jev sends entered ideas only. Public assets come from sanitized `docs/bot-cases.json`. Offline rebuild: `python3 scripts/consolidate.py`. Private backup: `python3 scripts/backup_private.py backup`; verified receipt under `research/storage/latest-backup.json` if present.
 
@@ -93,12 +99,20 @@ Local assistant: `python3 scripts/serve_bot.py`. Optional Jev sends entered idea
 
 Current detailed gaps: `resource-pool/completion-status.md`. S3 backup does not close evidence gaps.
 '''
-    (ROOT/'RESUME.md').write_text(resume)
+    resume_path = ROOT/'RESUME.md'
+    if resume_path.exists():
+        previous = resume_path.read_text()
+        # Storage approvals and active-work notes are operator-owned continuity.
+        markers = ('## Pending storage approval', '## Active authorized work')
+        positions = [previous.index(m) for m in markers if m in previous]
+        if positions:
+            resume += '\n' + previous[min(positions):]
+    resume_path.write_text(resume)
     readme = ROOT/'README.md'
     body = readme.read_text()
     start, end = '<!-- SNAPSHOT-START -->', '<!-- SNAPSHOT-END -->'
     if start in body and end in body:
-        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | 19 September 2026, 10:08:31 IST |\n| Messages | 3,358 unique IDs; all editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} unreviewed |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Local preview; 11 authored design families |\n| S3 | {'Private backup verified' if summary['s3_uploaded'] else 'Backup pending'} |\n\n'''
+        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | 19 September 2026, 10:08:31 IST |\n| Messages | 3,358 unique IDs; all editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Local preview; 11 authored design families |\n| S3 | {'Private backup verified' if summary['s3_uploaded'] else 'Backup pending'} |\n\n'''
         readme.write_text(body.split(start)[0]+start+table+end+body.split(end, 1)[1])
 
 

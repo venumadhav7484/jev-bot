@@ -23,11 +23,11 @@ Potential native Apple-platform integration tool.
 
 ## Limits and reuse
 
-Unofficial client; no adoption, compatibility matrix or reliability benchmark in captured message.
+Unofficial client; no adoption, compatibility matrix or reliability benchmark in captured message. Source review: Use authenticated backend for shipped apps; direct API-key mode is development-only. Platform/endpoint compatibility is documented, not live-verified. SDK ownership/package URL mismatch and two-level Score constraint differ from some other clients; model defaults and retries need application policy.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/alterhq/typesafe-sdk-swift](https://github.com/alterhq/typesafe-sdk-swift) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/alterhq/typesafe-sdk-swift](https://github.com/alterhq/typesafe-sdk-swift) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

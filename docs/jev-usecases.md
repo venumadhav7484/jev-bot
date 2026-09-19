@@ -1,6 +1,6 @@
 # Jev community use cases
 
-420 curated case records from the 2026-09-19 Discord snapshot. This is an expanding review, not an exhaustive catalog.
+421 curated case records from the 2026-09-19 Discord snapshot. This is an expanding review, not an exhaustive catalog.
 
 All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.
 
@@ -400,6 +400,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Flight-simulator control](use-cases/airplane-sim.md) | robotics | Author report; see case for inspected evidence |
 | [Jev Drone: MuJoCo autopilot experiment](use-cases/drone-sim.md) | robotics | Author report; see case for inspected evidence |
 | [Robot navigation benchmark teaser](use-cases/robotics-120-teaser.md) | robotics | Author report; see case for inspected evidence |
+| [Robotics demo: scripted state mistaken for vision](use-cases/scripted-robotics-vision-claim.md) | robotics | Author report; see case for inspected evidence |
 | [SO-101: vision-to-decision robotics simulation](use-cases/robot-arm.md) | robotics | Author report; see case for inspected evidence |
 | [Structured-state driving simulation](use-cases/driving-sim.md) | robotics | Author report; see case for inspected evidence |
 | [Vision extraction followed by typed verification](use-cases/sde-vision-cascade.md) | robotics | Author report; see case for inspected evidence |

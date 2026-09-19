@@ -99,3 +99,45 @@ Pi-heed's current README moves constraint capture into a main-model ledger; Jev 
 ## Preserve contradictions inside published evaluations
 
 The six-experiment document article gives different trace-checking denominators in its prose and table. The official batching cookbook reports a serial-latency comparison and a small difference in one probability mean despite broad no-change wording. Preserve these details; do not convert a headline multiplier into a workload guarantee. [Document experiments](use-cases/document-lab-experiments.md) · [Official batching cookbook](https://docs.typesafe.ai/cookbooks/parallel_questions).
+
+## September 19 source-audit synthesis
+
+The frozen source backlog now has an explicit first disposition for every registered URL. This means reviewed text, a scoped relevance decision, or a recorded content gap—not complete validation. The 296-entry backlog yielded 224 scoped reviews and 72 unresolved access/non-text entries. Existing X media, metadata shells and attachment gaps remain separate. Review notes retain dates, capture paths and hashes. No community experiment was rerun.
+
+### Choose the judgment before choosing the model
+
+The clearest reusable pattern is a bounded semantic decision inside code: relevance filtering, selecting a known action, scoring a specified rubric, deciding whether two facts conflict, or choosing among known workflows. The application supplies candidates and context, applies policy, executes effects and verifies outcomes. ReadyBase reserves critical facts before semantic reranking; BWMem records dropped memories so a later query can inspect them. These are useful recovery designs, not proof that relevance judgments never lose information. [ReadyBase](use-cases/readybase.md) · [BWMem](use-cases/bwmem.md).
+
+### Demonstrations can conceal scripted progress
+
+Source inspection found that the robotics demo described as raw-RGB Jev perception sends hardcoded step hints and the image string's length, with current joint positions and target metadata. It selects preset angles and declares completion after four steps even without an independently measured goal. The result demonstrates a decision API integrated into a scripted simulation; it does not demonstrate native vision. The text tournament's displayed explanation is also an authored criterion selected by Choice, not generated reasoning. These distinctions should appear in an answer's main explanation, not only its footnotes. [Robotics code](https://github.com/opaielsheikh/zero-shot-vision-robotics/blob/main/vision_robotics/agent.py) · [Tournament judge](https://github.com/opaielsheikh/ai-elo-ranker/blob/main/elo_ranker/judge.py).
+
+### Ranking results depend on the candidate set and metric
+
+The detailed reranking report gives Jev rubric and Cohere almost identical dataset-weighted nDCG@10, while the query-weighted average favors Cohere. ZeroEntropy costs less in its reported table. Jev's negation result is stronger, but that exploratory test uses fixed passage order. Only queries with a labeled relevant candidate enter the main ranking score, and passages are truncated. These are useful comparative results, not a universal best-reranker claim. [Benchmark analysis and raw-response links](https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job).
+
+The same report finds material changes after candidate reversal and criterion relabeling. High-confidence Choice answers are more stable on answer-present lists, but much less often label-supported after relevant passages are removed. Incomplete labels prevent interpreting every mismatch as a semantic error. Confidence is a distribution statistic; neither it nor a Noul threshold is a universal deployment accuracy guarantee. Test answer-absent inputs, order, labels and question type on a held-out workload. [Follow-up experiments](https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job#what-confidence-can-tell-me-about-correctness).
+
+### Benchmarks need denominator, labels and a matching control
+
+Several attractive numbers come from authored examples, tuned development sets, synthetic tasks, model-generated labels, or small internal samples. Tenet exposes per-rule examples and repeated threshold crossings; its speed comparison does not establish equal defect recall. AILANG's shipped package remains shadow-only: 14/20 Jev agreement versus 12/17 completed control calls with three timeouts. Agreement between models against a label is a reason to investigate, not proof the label is wrong. Dinostomp explicitly separates mechanical integrity from construct validity and its own planted-failure tests from independent validation. [Tenet](https://github.com/zoidsh/tenet) · [AILANG report](https://github.com/sunholo-data/ailang/blob/dev/design_docs/implemented/v0_40_1/m-ai-decide-system-one.md) · [Dinostomp](https://github.com/collapseindex/dinostomp).
+
+For Jev-bot, every benchmark recommendation should preserve dataset size, inclusion rules, comparator, quality metric, latency scope, cost basis and whether labels or thresholds were tuned. A missing field remains unknown. A schema-valid model response does not fill it in.
+
+### Safety judgments need independent enforcement
+
+Pi-Warden's matched experiment reduced recorded policy violations but did not improve task completion in that sample. The AI-control monitor's strong aggregate result hides weaker semantic-backdoor detection and adaptive escapes. Its own follow-ups contradict a broad immunity claim. Jev-axi documents fail-open guard behavior. These tools can prioritize review; their scores do not replace authorization, sandboxing, schema checks or deterministic constraints. [Pi-Warden](https://github.com/DevMortimer/pi-warden) · [Monitor experiment](https://www.lesswrong.com/posts/d7pQicW8EhpPBDRqz/a-non-generative-model-as-a-trusted-monitor-for-ai-control) · [Jev-axi](https://github.com/shiftynick/jev-axi).
+
+The inspected extraction-cascade example also illustrates a deterministic failure: building checks only from returned fields can leave an empty parsed object with no per-field questions, allowing a vacuous pass if the aggregate gate ignores its holistic question. Validate required fields and types before asking Jev about meaning; construct checks from the required schema. This is a source-code inference, not a reproduced service exploit. [Inspected cascade](https://docs.typesafe.ai/cookbooks/sde_cascade).
+
+### Real-time means the whole loop
+
+The commander experiment sustained its low-frequency cadence but missed every deadline at the higher tested rates. The drone reports show that state omissions, controller changes and queue behavior can dominate results. OCR, transcription, image interpretation and tool execution are separate components with their own latency and errors. Pausing simulation during inference does not establish real-time physical control. [Commander report](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/commander/summaries/latest.json) · [Drone case](use-cases/drone-sim.md) · [Computer-use case](use-cases/computer-use-aaron.md).
+
+### SDK guarantees and costs stay bounded
+
+Typed SDKs can validate answer IDs, option membership and distributions; this is structural validation. Runtime controls still need explicit deadlines, concurrency limits, request bounds and retry accounting. The Elixir SDK documents at-least-once retries and that local cancellation cannot undo remote processing. Shared-state batching amortizes text, but additional questions consume input tokens and may interact through shared context. A cost-only batch experiment does not establish answer quality. [Elixir SDK](https://github.com/nshkrdotcom/typesafe_sdk) · [Batching experiment](https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job).
+
+### Implications for this resource pipeline
+
+Keep source capture, model suggestions, assistant drafts and editorial decisions distinct. Exact quote matching proves that a passage exists, not that it supports a claim. Check required fields, dates and identifiers in code. Ask Jev focused support/contradiction questions; preserve uncertain results and missing media. Review consequential claims and source conflicts first, plus routine samples. Our 30-source pilot flagged every source for deep review, so it has not demonstrated lower editorial effort. Narrower flags need a separately labeled evaluation before scaling model-led approval. Pilot (local-only evidence).

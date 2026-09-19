@@ -23,12 +23,12 @@ The launch post reports about ten calls per second and roughly $7 per hour.
 
 ## Limits and reuse
 
-Thread replies explicitly say image input was not supported. This demo does not establish native vision, general gameplay strength or current availability of source code.
+Thread replies explicitly say image input was not supported. This demo does not establish native vision, general gameplay strength or current availability of source code. Source review: This source is an agent-integrated game wrapper, not evidence of Jev decisions or autonomous gameplay.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/CompleteSkeptic/status/2099925687465570372](https://x.com/CompleteSkeptic/status/2099925687465570372) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://github.com/robault/skilldoom](https://github.com/robault/skilldoom) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/robault/skilldoom](https://github.com/robault/skilldoom) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,11 +23,11 @@ Claims roughly 3.6x faster decisions and 21x lower cost on one Google-to-Wikiped
 
 ## Limits and reuse
 
-A single route does not establish general performance. The claimed absence of invented clicks depends on the supplied action space.
+A single route does not establish general performance. The claimed absence of invented clicks depends on the supplied action space. Source review: Single-task browser benchmark excludes browser overhead from inference column; long-horizon plans and arbitrary typing require upstream help. Enumerated refs prevent out-of-set IDs, not wrong valid actions.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/pumpkinredbean/bside](https://github.com/pumpkinredbean/bside) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/pumpkinredbean/bside](https://github.com/pumpkinredbean/bside) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

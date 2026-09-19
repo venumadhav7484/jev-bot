@@ -11,25 +11,25 @@ independently_reproduced: false
 
 ## What
 
-A user reports reproducing the TypeSafe security_incidents example through Gust and OpenRouter.
+An Elixir Gust example models security-alert analysis, triage, incident-state assessment and response selection through Jev decisions.
 
 ## How Jev fits
 
-Jev acts as the decision model for the existing evaluation task.
+Choice questions evaluate authorization, explanatory records and evidence strength; later stages consume previous choices. Response assessment is skipped for AUTO CLOSE or NOTIFY USER.
 
 ## Why and impact
 
-Author reports approximately 10× faster operation than a traditional model.
+The example encodes a prioritized response playbook, selecting a matching condition group and applicable action. No measured security effectiveness or deployment outcome is established by this cached code.
 
 ## Limits and reuse
 
-Model versions, sample count and quality parity are not established in the captured post; this project did not reproduce the evaluation.
+Missing input categories fall back to a sample incident, and absent incident evidence is instructed to choose the mildest value. Selected response actions are logged; this excerpt does not demonstrate execution of containment or validated enforcement.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/MarcioK/status/2101043696422494246](https://x.com/MarcioK/status/2101043696422494246) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [https://t.co/sxIAN4VBUo](https://t.co/sxIAN4VBUo) — access: `fetched`; review: `not_reviewed`.
-- [Author-linked implementation artifact](https://gist.github.com/marciok/673a02cfe1dd03055bec3b55b4a5d0f2) — discovered via [external source](https://x.com/MarcioK/status/2101043696422494246); access: `fetched`; review: `not_reviewed`.
+- [https://t.co/sxIAN4VBUo](https://t.co/sxIAN4VBUo) — access: `fetched`; review: `source_text_reviewed`.
+- [Author-linked implementation artifact](https://gist.github.com/marciok/673a02cfe1dd03055bec3b55b4a5d0f2) — discovered via [external source](https://x.com/MarcioK/status/2101043696422494246); access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

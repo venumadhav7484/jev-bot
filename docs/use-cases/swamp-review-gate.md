@@ -23,11 +23,11 @@ A semantic decision can gate expensive reviews after deterministic path filterin
 
 ## Limits and reuse
 
-Published extension plus author report; no reproduced trial. Question wording, polarity, threshold calibration and false-negative cost must be established before automation.
+Published extension plus author report; no reproduced trial. Question wording, polarity, threshold calibration and false-negative cost must be established before automation. Source review: Resource logging includes evaluated state; handle retention deliberately. Registry quality score does not establish inference correctness; retries can add calls.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://swamp-club.com/extensions/@swamp/typesafe-ai](https://swamp-club.com/extensions/@swamp/typesafe-ai) — access: `fetched`; review: `not_reviewed`.
+- [https://swamp-club.com/extensions/@swamp/typesafe-ai](https://swamp-club.com/extensions/@swamp/typesafe-ai) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

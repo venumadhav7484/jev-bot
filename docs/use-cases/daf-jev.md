@@ -23,12 +23,12 @@ Authors report up to about 18× batching speedup and fourfold token reduction ve
 
 ## Limits and reuse
 
-Toolkit and paper claims were not independently reproduced. Repeated confidence consistency is not equivalent to calibration against outcomes.
+Toolkit and paper claims were not independently reproduced. Repeated confidence consistency is not equivalent to calibration against outcomes. Source review: Zenodo abstract reports batching results, but PDF/artifacts require inspection; repeated-confidence consistency is not empirical calibration. Source review: Calibration utilities can accept ground truth, but supplied benchmark does not establish correctness calibration. Default fallback must be chosen per application; never infer API success from exit0 skip. API question/context limits still apply to batches.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/docxology/daf-jev](https://github.com/docxology/daf-jev) — access: `fetched`; review: `not_reviewed`.
-- [https://zenodo.org/records/22817425](https://zenodo.org/records/22817425) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/docxology/daf-jev](https://github.com/docxology/daf-jev) — access: `fetched`; review: `readme_reviewed`.
+- [https://zenodo.org/records/22817425](https://zenodo.org/records/22817425) — access: `fetched`; review: `provider_listing_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

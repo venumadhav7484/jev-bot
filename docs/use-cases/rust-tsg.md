@@ -23,12 +23,12 @@ A relevant implementation pattern for this knowledge base: use model judgments t
 
 ## Limits and reuse
 
-README and tsg documentation were read; code was not installed or benchmarked. tsg sends source passages and nearby context to TypeSafe. Its own documentation warns of semantic misses and incomplete scans.
+README and tsg documentation were read; code was not installed or benchmarked. tsg sends source passages and nearby context to TypeSafe. Its own documentation warns of semantic misses and incomplete scans. Source review: Semantic search can miss evidence; failed files/evaluations explicitly mark incomplete coverage. Demo rules are fictional, and returned source passages are review starting points.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg) — access: `fetched`; review: `readme_reviewed`.
 - [Rust TypeSafe client README](https://github.com/Twister915/typesafe-ai) — discovered via [external source](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg); access: `fetched`; review: `readme_reviewed`.
 - [tsg semantic search documentation](https://github.com/Twister915/typesafe-ai/blob/main/examples/tsg/README.md) — discovered via [external source](https://github.com/Twister915/typesafe-ai/tree/main/examples/tsg); access: `fetched`; review: `readme_reviewed`.
 

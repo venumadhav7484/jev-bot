@@ -23,11 +23,11 @@ Accessible SQL integration for local data processing.
 
 ## Limits and reuse
 
-Source review needed for concurrency, null/error behavior, data disclosure and claimed savings.
+Source review needed for concurrency, null/error behavior, data disclosure and claimed savings. Source review: Semantic full scan is not index; prefilter/materialize selected columns first. Cache lifetime only connection, keyedcontent/model/questions. Database rows leave machine; adversarial row text can steer judgments. Keep arithmetic/counting inSQL; live contract smoke does not establish classification quality or current competitor feature parity.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/mgaitan/sqlite-jev](https://github.com/mgaitan/sqlite-jev) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/mgaitan/sqlite-jev](https://github.com/mgaitan/sqlite-jev) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

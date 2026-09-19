@@ -23,11 +23,11 @@ Avoids model calls for cases already resolved by exact rules.
 
 ## Limits and reuse
 
-Do not represent this as autonomous remediation. No incident-resolution or false-negative benchmark was supplied.
+Do not represent this as autonomous remediation. No incident-resolution or false-negative benchmark was supplied. Source review: No automatic remediation. Alpha lacksstablecontract,signedrelease/SBOM,leaderelection;MongoDBrequiresreplicaset. Effectiveclusterpermissionsmustbeverified beyondchart. Typedprovider validation and deterministiccriticalfloor are reusableboundaries,not incident-accuracy proof.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/ddalcero/ruleraven](https://github.com/ddalcero/ruleraven) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/ddalcero/ruleraven](https://github.com/ddalcero/ruleraven) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

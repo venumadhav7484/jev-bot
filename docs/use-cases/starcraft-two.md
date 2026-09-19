@@ -23,11 +23,11 @@ The author later reports reaching the third mission.
 
 ## Limits and reuse
 
-Stream progress is not a standardized benchmark. Long-horizon planning and action-space quality remain unresolved.
+Stream progress is not a standardized benchmark. Long-horizon planning and action-space quality remain unresolved. Source review: Engine API Victory can misrepresent primary mission success; preserve Outlaws verification gate and negative attempts. No complete campaign/unlockpersistence/fullabilitycoverage. Stale observations,latency,pausedclock andadapter correctness limit autonomous claims; external outcomes not independently reproduced here.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/golergka/jev-plays-starcraft-2](https://github.com/golergka/jev-plays-starcraft-2) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/golergka/jev-plays-starcraft-2](https://github.com/golergka/jev-plays-starcraft-2) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

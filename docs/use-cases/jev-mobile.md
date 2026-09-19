@@ -23,11 +23,11 @@ Replaces a large model call on every tap with typed decisions and selective esca
 
 ## Limits and reuse
 
-The post is an author description, not a reproduced task benchmark. Sensitive actions still require application-level authorization.
+The post is an author description, not a reproduced task benchmark. Sensitive actions still require application-level authorization. Source review: Reported hardware validation covers narrow Keep/fixture scenarios, not arbitrary Android tasks. Reliability comes from journal/reconciliation and observable verification as well as Jev; optional recovery adds separate LLM cost. Health liveness is distinct from ready device/provider.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Friedjof/jev-mobile](https://github.com/Friedjof/jev-mobile) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Friedjof/jev-mobile](https://github.com/Friedjof/jev-mobile) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,11 +23,11 @@ The important pattern is validating the scorer and control setup, rather than tr
 
 ## Limits and reuse
 
-Integration is author-reported; no independent evaluation was run. Judge reliability and routing accuracy still need workload-specific tests.
+Integration is author-reported; no independent evaluation was run. Judge reliability and routing accuracy still need workload-specific tests. Source review: Evaluation tooling can expose label, scorer, threshold and drift problems. Small authored examples and self-planted failures are development evidence; evaluate held-out application cases and retain a separate construct-validity judgment.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/collapseindex/dinostomp](https://github.com/collapseindex/dinostomp) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/collapseindex/dinostomp](https://github.com/collapseindex/dinostomp) — access: `fetched`; review: `scoped_repository_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-Developer publishes a codebase search command-line tool and requests testers.
+Blink searches a codebase using Jev and an ensemble of filesystem walkers.
 
 ## How Jev fits
 
-Repository advertises fast source search with Jev; retrieval candidates, judging questions and output mechanics need README/code inspection.
+Jev scores file and folder names; walkers allocate toward likely paths. Results show the fraction of starting walkers ending at each file.
 
 ## Why and impact
 
-Potential reusable semantic search tool for developers.
+Saved traces retain every choice, probability and destination, while metadata records token usage and cost.
 
 ## Limits and reuse
 
-Announcement is not a benchmark; source and results still require review.
+Walker percentages are search-allocation outcomes, not calibrated correctness or content verification; name scoring may miss semantically relevant files. The documented tests use fake API responses.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/ellipsis-dev/blink](https://github.com/ellipsis-dev/blink) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/ellipsis-dev/blink](https://github.com/ellipsis-dev/blink) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

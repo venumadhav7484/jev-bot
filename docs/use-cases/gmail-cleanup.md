@@ -23,12 +23,12 @@ Author reports reduced time and cost without precise figures.
 
 ## Limits and reuse
 
-No false-deletion or retrieval-quality evaluation. Do not assume autonomous deletion is required; reversible labeling is a separate design choice.
+No false-deletion or retrieval-quality evaluation. Do not assume autonomous deletion is required; reversible labeling is a separate design choice. Source review: Probability.99 does not guarantee unimportant mail. Truncated body can hide critical context; sequence-number/UID mismatch can omit or misselect messages. EXPUNGE affects all deletion-flagged messages in selected mailbox, and Gmail removal semantics depend on settings, not blanket README claims. No deletion executed; use reviewed candidates and stable IDs, not unattended purge.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/JonnadulaS54850/status/2100778097322905627?s=20](https://x.com/JonnadulaS54850/status/2100778097322905627?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [https://t.co/kysSzlQZDZ](https://t.co/kysSzlQZDZ) — access: `fetched`; review: `not_reviewed`.
+- [https://t.co/kysSzlQZDZ](https://t.co/kysSzlQZDZ) — access: `fetched`; review: `code_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

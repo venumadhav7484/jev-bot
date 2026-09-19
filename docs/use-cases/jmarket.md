@@ -23,11 +23,11 @@ Explores a second opinion over a market interface; no financial outcome measured
 
 ## Limits and reuse
 
-No forecast calibration, profitability or live execution evidence. Do not treat model probabilities as tradable edge.
+No forecast calibration, profitability or live execution evidence. Do not treat model probabilities as tradable edge. Source review: Model/market disagreement is not evidence of profitable mispricing. Nested ladders require independent Noul questions, but consistency/calibration and real outcomes remain unvalidated; cached opinions can become stale.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/svmanth/jmarket](https://github.com/svmanth/jmarket) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/svmanth/jmarket](https://github.com/svmanth/jmarket) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

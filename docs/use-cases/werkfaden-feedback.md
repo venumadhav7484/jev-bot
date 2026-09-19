@@ -23,11 +23,11 @@ Provides focused feedback on unsupported assumptions.
 
 ## Limits and reuse
 
-Author says better data is still pending. Decomposition errors and incorrect judgments can mislead the revising model.
+Author says better data is still pending. Decomposition errors and incorrect judgments can mislead the revising model. Source review: Framework context-governance claims do not establish a Jev integration. It is explicitly an alpha preview, not a production-support guarantee.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Question86/Werkfaden](https://github.com/Question86/Werkfaden) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Question86/Werkfaden](https://github.com/Question86/Werkfaden) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

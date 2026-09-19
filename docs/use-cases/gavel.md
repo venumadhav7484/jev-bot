@@ -23,11 +23,11 @@ Provides an integration entry point for typed decisions inside an existing agent
 
 ## Limits and reuse
 
-Author explicitly cautions use at own risk. Installation, permissions and runtime behavior were not tested.
+Author explicitly cautions use at own risk. Installation, permissions and runtime behavior were not tested. Source review: Typed options prevent out-of-schema output, not wrong labels. Reported performance and context savings need linked methodology review; a five-question example reports600ms versus200ms single-call claim. Plugin/tool permissions and fallback strategy remain deployment dependencies.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/gregb100/gavel](https://github.com/gregb100/gavel) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/gregb100/gavel](https://github.com/gregb100/gavel) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,6 +28,6 @@ The article landing page was fetched, but the full benchmark details were not re
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) — access: `fetch_failed`; review: `not_reviewed`.
+- [https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) — access: `access_failed`; review: `inaccessible_content_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

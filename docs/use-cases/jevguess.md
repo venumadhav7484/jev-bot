@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-An Akinator-style game uses typed decisions.
+A bounded character-guessing demo has a 48-character catalog; its captured page is explicitly in offline fixture mode.
 
 ## How Jev fits
 
-Jev supplies judgments during character guessing.
+The described live mode uses Jev for candidate ranking and next-question selection; ordinary code maintains state, without submitting the secret target.
 
 ## Why and impact
 
-Demonstrates a bounded interactive question loop.
+A guess counts as a win only after player confirmation.
 
 ## Limits and reuse
 
-Distinct from reverse Akinator. Question-generation mechanism and accuracy are not established.
+No AI runs in the captured fixture mode; relative weights and confidence are explicitly not verified truth or game accuracy.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://jevguess.susonsapkota.com/](https://jevguess.susonsapkota.com/) — access: `fetched`; review: `not_reviewed`.
+- [https://jevguess.susonsapkota.com/](https://jevguess.susonsapkota.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,11 +23,11 @@ Illustrates bounded outputs in an entertainment interface.
 
 ## Limits and reuse
 
-No predictive ability or improved odds established. Never use as evidence for forecasting random outcomes.
+No predictive ability or improved odds established. Never use as evidence for forecasting random outcomes. Source review: Jev choice and self-rated luck do not predict lottery results or improve published odds. Treat as entertainment, not a financial recommendation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://lottowerk.purh.pw/](https://lottowerk.purh.pw/) — access: `fetched`; review: `not_reviewed`.
+- [https://lottowerk.purh.pw/](https://lottowerk.purh.pw/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

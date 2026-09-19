@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-Premo-Cloud/typesafe-sdk-java targets Java 17.
+An independent community Java client supports TypeSafe System One requests; it requires Java 17 or newer and Jackson.
 
 ## How Jev fits
 
-Mirrors Python/TypeScript SDK interfaces, uses Jackson and includes Spring Boot starter.
+The client exposes Noul, Choice and Score, batches questions over shared state, and offers Spring Boot configuration.
 
 ## Why and impact
 
-Reusable Java integration.
+The API intentionally follows official Python and JavaScript SDK conventions to make integrations read similarly.
 
 ## Limits and reuse
 
-Unofficial: provider declined taking ownership at that time due to capacity. No compatibility tests independently run.
+The project explicitly lacks TypeSafe affiliation or endorsement. Default retries cover connection failures and timeouts; the README describes stub-server tests, not a live reliability benchmark.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/Premo-Cloud/typesafe-sdk-java](https://github.com/Premo-Cloud/typesafe-sdk-java) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Premo-Cloud/typesafe-sdk-java](https://github.com/Premo-Cloud/typesafe-sdk-java) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

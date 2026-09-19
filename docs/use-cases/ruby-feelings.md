@@ -23,12 +23,12 @@ Reduces repetitive decision-model plumbing for application developers.
 
 ## Limits and reuse
 
-Probabilistic conditions should not silently replace deterministic invariants. API behavior and probability calibration were not independently tested.
+Probabilistic conditions should not silently replace deterministic invariants. API behavior and probability calibration were not independently tested. Source review: Ruby conditional ergonomics do not establish calibration on a new application; evaluate thresholds and uncertain branches. Source review: Explicit uncertain branch, bounded loop and recorded responses make probabilistic conditionals auditable. These defaults are library policy, not validated universal thresholds.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/obie/feelings](https://github.com/obie/feelings) — access: `fetched`; review: `not_reviewed`.
-- [https://obiefernandez.com/gems/feelings/](https://obiefernandez.com/gems/feelings/) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/obie/feelings](https://github.com/obie/feelings) — access: `fetched`; review: `readme_reviewed`.
+- [https://obiefernandez.com/gems/feelings/](https://obiefernandez.com/gems/feelings/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

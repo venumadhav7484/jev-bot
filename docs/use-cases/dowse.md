@@ -23,12 +23,12 @@ Direct precedent for Jev-bot's resource-selection layer.
 
 ## Limits and reuse
 
-No evaluation was reproduced. Retrieval coverage and citation faithfulness remain separate requirements.
+No evaluation was reproduced. Retrieval coverage and citation faithfulness remain separate requirements. Source review: Jev does not browse or write summaries. Reranking is opt-in and fail-open, so injection filtering is not a security boundary. Citation numbering preserves links but does not establish claim support. No measured retrieval or answer-quality improvement supplied.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/felixnjenga_/status/2100704201797939569](https://x.com/felixnjenga_/status/2100704201797939569) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [Author-linked implementation artifact](http://github.com/arttivhq/dowse) — discovered via [external source](https://x.com/felixnjenga_/status/2100704201797939569); access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](http://github.com/arttivhq/dowse) — discovered via [external source](https://x.com/felixnjenga_/status/2100704201797939569); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

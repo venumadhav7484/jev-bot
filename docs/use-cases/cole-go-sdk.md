@@ -23,11 +23,11 @@ Reusable integration plumbing.
 
 ## Limits and reuse
 
-Implementation and retry safety require source inspection; SDK availability is not model accuracy evidence.
+Implementation and retry safety require source inspection; SDK availability is not model accuracy evidence. Source review: Community SDK is not official and does not load.env. Retries lack idempotency and can duplicate billed evaluations after lost responses; confidence is distribution concentration, not correctness. Pin model instead of default moving alias for tuned thresholds.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/cole-gillespie/typesafe-go](https://github.com/cole-gillespie/typesafe-go) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/cole-gillespie/typesafe-go](https://github.com/cole-gillespie/typesafe-go) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

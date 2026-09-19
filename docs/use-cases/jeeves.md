@@ -23,13 +23,13 @@ Enables semantic moderation beyond literal regex matching.
 
 ## Limits and reuse
 
-Moderator actions remain consequential. No measured false-positive rate or adversarial robustness was established.
+Moderator actions remain consequential. No measured false-positive rate or adversarial robustness was established. Source review: Jev consumes image descriptions, not images; Gemini and hosting add costs. Generated syntax-valid rule code still needs semantic tests. Moderation false-positive/negative rates unmeasured; incomplete history/media and non-atomic external effects require operational review.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://fixupx.com/just_some_dev/status/2100757839056634080](https://fixupx.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [Astrid (@just_some_dev)](https://x.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [github.com/Infrawrench/Jeeves](https://github.com/Infrawrench/Jeeves) — access: `fetched`; review: `not_reviewed`.
+- [github.com/Infrawrench/Jeeves](https://github.com/Infrawrench/Jeeves) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

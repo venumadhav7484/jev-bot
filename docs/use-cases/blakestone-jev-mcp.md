@@ -23,11 +23,11 @@ Author reports thousands of test calls and positive behavior but no quantitative
 
 ## Limits and reuse
 
-Do not treat call count as validation. Host must distinguish Noul probability from separate Choice/Score confidence and handle uncertain responses.
+Do not treat call count as validation. Host must distinguish Noul probability from separate Choice/Score confidence and handle uncertain responses. Source review: Distribution concentration is not accuracy. Order sensitivity and max-over-windows inflation require review;small reported samples do not validate general thresholds. Movingdefaultalias,30–60stooltime and45smatchdeadline affect apps. Registration helper persists plaintextkeys despite broad environment-only wording; benchmarks not independently reproduced.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/blakestone-x/jev-mcp](https://github.com/blakestone-x/jev-mcp) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/blakestone-x/jev-mcp](https://github.com/blakestone-x/jev-mcp) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

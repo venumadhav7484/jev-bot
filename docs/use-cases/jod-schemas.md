@@ -23,11 +23,11 @@ Separates data-shape guarantees from probabilistic semantic judgments.
 
 ## Limits and reuse
 
-Early user reports missing API-key input path. Source review needed; schema validity does not guarantee semantic correctness.
+Early user reports missing API-key input path. Source review needed; schema validity does not guarantee semantic correctness. Source review: Schema validation protects shape, not truth or adversarial input. Historical aliases-only observation must not override successful pinned jev1.13 calls/currentdocs. Confidence not correctness; SDK retry behavior inherited. Installation/publish availability and skipped-live-test status need separate verification.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/mateonunez/jod](https://github.com/mateonunez/jod) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/mateonunez/jod](https://github.com/mateonunez/jod) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -53,6 +53,23 @@ class BotBoundaries(unittest.TestCase):
             result = jev_bot.answer('Route email', True, cases=[])
         self.assertEqual(result['fit'], 'Insufficient detail')
 
+    def test_native_vision_claim_is_counterevidence_not_support(self):
+        result = jev_bot.answer('Interpret camera images for robot vision')
+        self.assertEqual(result['pattern'], 'media')
+        self.assertNotIn('scripted-robotics-vision-claim', {c['id'] for c in result['support']})
+        counter = next(c for c in result['counterevidence'] if c['id'] == 'scripted-robotics-vision-claim')
+        self.assertIn('preset', counter['how'])
+        self.assertIn('step >= 4', counter['limits'])
+        self.assertIn('https://github.com/opaielsheikh/zero-shot-vision-robotics', counter['sources'])
+
+    def test_ranking_recommendation_preserves_order_and_missing_answer_limits(self):
+        result = jev_bot.answer('Rank candidates by relevance with a rubric')
+        self.assertEqual(result['pattern'], 'evaluation')
+        self.assertIn('missing answers', result['proposal']['caution'])
+        self.assertIn('not the probability', result['proposal']['caution'])
+        self.assertGreater(result['coverage']['urls_with_content_gaps'], 0)
+        self.assertFalse(result['coverage']['exhaustive'])
+
 
 if __name__ == '__main__':
     unittest.main()

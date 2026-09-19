@@ -77,6 +77,16 @@ stats['machine_triage']={'completed':len(set(triage)&set(by_id)), 'remaining':le
 stats['editorial_review'] = {'newly_reviewed_messages': len(editorial), 'unassigned_messages': sum(r['status'] == 'uncatalogued_source_row' for r in coverage), 'unresolved_evidence_statuses': dict(Counter(r['status'] for r in editorial.values() if r['status'] in {'media_context_unresolved', 'measurement_context_unresolved', 'reported_use_insufficient_detail'}))}
 stats['editorial_review']['evidence_flags_survive_case_assignment'] = True
 stats['external_review_status_counts'] = dict(Counter(r.get('review_status', 'not_reviewed') for r in links))
+gap_statuses = {
+    'not_reviewed', 'inaccessible_content_pending', 'nontext_content_pending',
+    'inaccessible_after_attempt', 'metadata_only', 'post_text_reviewed_media_pending',
+    'post_text_reviewed_media_blocked', 'catalog_reviewed_book_unavailable',
+}
+stats['external_unresolved_content_status_counts'] = {
+    k: v for k, v in stats['external_review_status_counts'].items() if k in gap_statuses
+}
+stats['external_urls_with_content_gaps'] = sum(stats['external_unresolved_content_status_counts'].values())
+stats['review_disposition_is_full_validation'] = False
 backup_path = ROOT/'research/storage/latest-backup.json'
 if backup_path.exists():
     backup = json.loads(backup_path.read_text())

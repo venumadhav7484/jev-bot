@@ -23,11 +23,11 @@ Author reports subjective usefulness for filtering repetitive content.
 
 ## Limits and reuse
 
-Style classification cannot reliably establish authorship. Do not present the highlights as proof someone used AI; no accuracy evaluation supplied.
+Style classification cannot reliably establish authorship. Do not present the highlights as proof someone used AI; no accuracy evaluation supplied. Source review: Authorship labels are fallible; thresholds were fitted on the same240 posts and five human posts falsely flagged. Local Ollama daemon can still proxy cloud models; fact-checking remains a separate model/search pipeline.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/guybrush1984/purelink](https://github.com/guybrush1984/purelink) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/guybrush1984/purelink](https://github.com/guybrush1984/purelink) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

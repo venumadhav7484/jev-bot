@@ -23,12 +23,12 @@ Potential screening step for unfamiliar code.
 
 ## Limits and reuse
 
-No adversarial detection coverage established. Do not replace sandboxing, provenance checks or deterministic controls with a probabilistic verdict.
+No adversarial detection coverage established. Do not replace sandboxing, provenance checks or deterministic controls with a probabilistic verdict. Source review: Clean scan means no detected high-severity finding among selected files, not safe software. Chunk/window context and skipped artifacts can hide behavior. Derived Noul confidence is application math, not API field. Default moving alias and thresholds require validation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/luantak/is-malicious](https://github.com/luantak/is-malicious) — access: `fetched`; review: `not_reviewed`.
-- [https://github.com/luantak/is-malicious/](https://github.com/luantak/is-malicious/) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/luantak/is-malicious](https://github.com/luantak/is-malicious) — access: `fetched`; review: `readme_reviewed`.
+- [https://github.com/luantak/is-malicious/](https://github.com/luantak/is-malicious/) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,11 +23,11 @@ Potential cost/latency control within multi-model applications.
 
 ## Limits and reuse
 
-No routing accuracy or savings evaluation supplied. Routing policy requires workload-specific labels and fallback behavior.
+No routing accuracy or savings evaluation supplied. Routing policy requires workload-specific labels and fallback behavior. Source review: Jev does not directly select the model in this design. User-supplied capability scores and prices are assumptions, not measured superiority; example latency/confidence are illustrative. Fallback must preserve eligibility constraints, and no routing-quality/cost benchmark is supplied.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/rajdhakad9826/routeKit](https://github.com/rajdhakad9826/routeKit) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/rajdhakad9826/routeKit](https://github.com/rajdhakad9826/routeKit) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

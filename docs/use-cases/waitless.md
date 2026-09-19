@@ -23,11 +23,11 @@ Ten author cases: corrected deterministic baseline 90%, Jev 100%, including one 
 
 ## Limits and reuse
 
-An optional diagnostic hint, not proof of root cause or a replacement for stabilization logic. Very small development sample.
+An optional diagnostic hint, not proof of root cause or a replacement for stabilization logic. Very small development sample. Source review: Jev does not stabilize the UI or automatically change waits. Compare against corrected90%baseline, not only weak50%baseline.10synthetic cases demonstrate integration, not production accuracy; independent real-app diagnostics still required.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor](https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor](https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

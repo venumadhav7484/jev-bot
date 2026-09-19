@@ -23,11 +23,11 @@ Avoids using a generative model for every recursive subtask.
 
 ## Limits and reuse
 
-No end-to-end quality or savings result supplied. Mixed judgment and generation paths need separate evaluation.
+No end-to-end quality or savings result supplied. Mixed judgment and generation paths need separate evaluation. Source review: Optional Jev is separate from generative calls and historical RLM results. Monty is not OS isolation; offline receipt verification does not reproduce original live-model quality.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/kubet/azdaja](https://github.com/kubet/azdaja) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/kubet/azdaja](https://github.com/kubet/azdaja) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

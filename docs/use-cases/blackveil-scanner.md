@@ -23,11 +23,11 @@ Potential semantic interpretation of existing checks.
 
 ## Limits and reuse
 
-No security-detection benchmark or architecture established; website marketing does not prove NIST compliance or security assurance.
+No security-detection benchmark or architecture established; website marketing does not prove NIST compliance or security assurance. Source review: This landing page does not establish a Jev integration. No active security scan or incident verification was performed.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://blackveilsecurity.com/](https://blackveilsecurity.com/) — access: `fetched`; review: `not_reviewed`.
+- [https://blackveilsecurity.com/](https://blackveilsecurity.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

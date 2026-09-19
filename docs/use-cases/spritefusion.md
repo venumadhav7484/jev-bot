@@ -23,12 +23,12 @@ Potential fit where tile or object choices come from an existing vocabulary.
 
 ## Limits and reuse
 
-The captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection.
+The captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection. Source review: Five-call terrain demo reports 319–375ms, not sub-100ms. Assets and collision logic come from other tools/code; Jev selects bounded terrain parameters.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `not_reviewed`.
+- [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `article_reviewed`.
 - [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

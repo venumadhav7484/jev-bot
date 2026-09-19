@@ -28,6 +28,6 @@ One request is not a latency distribution or recommendation-quality evaluation. 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://tryon.everyframe.studio/](https://tryon.everyframe.studio/) — access: `fetched`; review: `not_reviewed`.
+- [https://tryon.everyframe.studio/](https://tryon.everyframe.studio/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

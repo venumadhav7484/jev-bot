@@ -23,11 +23,11 @@ Persistent simulation can demonstrate emergent behavior from repeated bounded ch
 
 ## Limits and reuse
 
-No inspected code, stability, costs or quantitative behavior evaluation. Fictional simulation is not prediction of real societies.
+No inspected code, stability, costs or quantitative behavior evaluation. Fictional simulation is not prediction of real societies. Source review: Hierarchical options address category-size bias in this design; simulation behavior is not validation of human sociology or calibrated decisions.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://unwritten.4bin.ai/](https://unwritten.4bin.ai/) — access: `fetched`; review: `not_reviewed`.
+- [https://unwritten.4bin.ai/](https://unwritten.4bin.ai/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

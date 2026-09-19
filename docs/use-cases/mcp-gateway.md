@@ -23,12 +23,12 @@ Author reports 79% fewer input tokens on MCP-heavy tasks tested with 124 tools.
 
 ## Limits and reuse
 
-No independent task-success or latency comparison. Validate tool recall and the overhead of the additional routing call.
+No independent task-success or latency comparison. Validate tool recall and the overhead of the additional routing call. Source review: Tool selection is not user authorization or OS sandbox. Remote OAuth and Linux/Windows credential-store interoperability not live-validated. Fewer visible definitions may not save tokens when catalog caching exists; experimental thresholds and staged selection need local evaluation. Timeouts can follow executed mutations; verify before retry.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/vpkxvoice/status/2100995268133146698](https://x.com/vpkxvoice/status/2100995268133146698) — access: `fetched`; review: `visible_post_text_reviewed`.
-- [Author-linked implementation artifact](https://github.com/prasanth263/maza) — discovered via [external source](https://x.com/vpkxvoice/status/2100995268133146698); access: `fetched`; review: `not_reviewed`.
+- [Author-linked implementation artifact](https://github.com/prasanth263/maza) — discovered via [external source](https://x.com/vpkxvoice/status/2100995268133146698); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

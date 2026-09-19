@@ -23,11 +23,11 @@ Explores retrieval and visualization without requiring a generative model for ev
 
 ## Limits and reuse
 
-Does not demonstrate arbitrary native diagram generation. Exact grounding and source-reference checks were not inspected.
+Does not demonstrate arbitrary native diagram generation. Exact grounding and source-reference checks were not inspected. Source review: Landing-page flow diagrams are attributed to Jev decisions plus code, but captured loading state is not a verified run. Public demo questions are logged.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://s1s.iar.dev/](https://s1s.iar.dev/) — access: `fetched`; review: `not_reviewed`.
+- [https://s1s.iar.dev/](https://s1s.iar.dev/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

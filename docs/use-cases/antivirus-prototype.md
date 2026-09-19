@@ -23,11 +23,11 @@ Source lead for security research.
 
 ## Limits and reuse
 
-No inspected detection architecture, malware corpus, false positives or evasion evaluation; not deployable protection evidence.
+No inspected detection architecture, malware corpus, false positives or evasion evaluation; not deployable protection evidence. Source review: Jev sees extracted features, not native binary semantics. Unmeasured threat judgments must not be presented as proven antivirus protection; irreversible actions need deterministic controls and review.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/newuser7171/antivirus](https://github.com/newuser7171/antivirus) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/newuser7171/antivirus](https://github.com/newuser7171/antivirus) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

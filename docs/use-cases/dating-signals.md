@@ -23,11 +23,11 @@ An example of subjective classification presented as an interactive application.
 
 ## Limits and reuse
 
-Cannot establish another person’s intentions. Use as a playful reflection tool, not a factual determination about someone.
+Cannot establish another person’s intentions. Use as a playful reflection tool, not a factual determination about someone. Source review: Same captured application as Fed-speech comparison. No live result or benchmark inspected; dating judgments cannot establish another person’s intent.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://jevdating.pages.dev/](https://jevdating.pages.dev/) — access: `fetched`; review: `not_reviewed`.
+- [https://jevdating.pages.dev/](https://jevdating.pages.dev/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

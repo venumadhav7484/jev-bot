@@ -23,11 +23,11 @@ The strongest successful reported comparison used two LLM calls instead of five 
 
 ## Limits and reuse
 
-Uncached input fell only 17%; caching materially changes the economics. The strongest run is not an average across all workloads.
+Uncached input fell only 17%; caching materially changes the economics. The strongest run is not an average across all workloads. Source review: No LLM control-flow authority does not mean no semantic reasoning in writer. Defaultthreshold notcalibrated,filenameparsermissesspaces,truncationandoutputcapsfail. Scriptedtestsvalidateboundaries not liveaccuracy;READMEestablishes no net token saving and excludesproductioninjectiondefense/writeoperations.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/jvsteiner/jevex](https://github.com/jvsteiner/jevex) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/jvsteiner/jevex](https://github.com/jvsteiner/jevex) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

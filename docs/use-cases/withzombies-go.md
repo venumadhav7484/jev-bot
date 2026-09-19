@@ -11,23 +11,23 @@ independently_reproduced: false
 
 ## What
 
-Community Go client generated with coding-model assistance.
+jev-go is an unofficial standard-library Go client for TypeSafe System One.
 
 ## How Jev fits
 
-withzombies/jev-go wraps Jev API; exact functionality pending source inspection.
+It returns typed Noul, Choice and Score results, accepts an explicit API key, and exposes response metadata.
 
 ## Why and impact
 
-Potential Go integration option.
+A CLI example recommends approve, request changes or human review from a pull-request diff.
 
 ## Limits and reuse
 
-No parity, reliability or test evidence in announcement.
+Retries and logging are opt-in. The triage CLI defaults to the first 24,576 bytes, limits recommendations to evaluated input and does not submit reviews.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/withzombies/jev-go](https://github.com/withzombies/jev-go) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/withzombies/jev-go](https://github.com/withzombies/jev-go) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

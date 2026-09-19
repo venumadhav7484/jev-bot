@@ -31,6 +31,6 @@ README claims about 10Hz inference and no dropped frames lack a reproduced perfo
 - [https://www.reddit.com/r/developersIndia/s/kuHoZ1jHFc](https://www.reddit.com/r/developersIndia/s/kuHoZ1jHFc) — access: `fetched`; review: `metadata_only`.
 - [https://github.com/AmoghCreator/doom-jev](https://github.com/AmoghCreator/doom-jev) — access: `fetched`; review: `readme_reviewed`.
 - [r/developersIndia](https://www.reddit.com/r/developersIndia/) — access: `fetched`; review: `metadata_only`.
-- [share.redd.it](https://share.redd.it/preview/post/1wj7q3n?share=ziDSeWP5pPmqbkGKOHq6l) — access: `nontext_not_inspected`; review: `not_reviewed`.
+- [share.redd.it](https://share.redd.it/preview/post/1wj7q3n?share=ziDSeWP5pPmqbkGKOHq6l) — access: `nontext_not_downloaded`; review: `nontext_content_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

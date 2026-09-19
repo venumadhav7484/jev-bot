@@ -23,12 +23,12 @@ Multiple independent judgments can drive richer visible behavior. Author reports
 
 ## Limits and reuse
 
-Linked demo/code need inspection; no measured consistency or latency.
+Linked demo/code need inspection; no measured consistency or latency. Source review: Landing page describes probabilistic NPC decisions but captured zero-call loading state does not validate runtime behavior.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://x.com/haiderTheDev/status/2100419750459519156?s=20](https://x.com/haiderTheDev/status/2100419750459519156?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://t.co/1JAlFmT4GM](https://t.co/1JAlFmT4GM) — access: `fetched`; review: `not_reviewed`.
+- [https://t.co/1JAlFmT4GM](https://t.co/1JAlFmT4GM) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

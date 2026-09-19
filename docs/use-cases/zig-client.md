@@ -23,12 +23,12 @@ Integration option for Zig programs.
 
 ## Limits and reuse
 
-No source compatibility audit or runtime test performed.
+No source compatibility audit or runtime test performed. Source review: Compile-time and wire validity do not guarantee correct judgments. Budget for retries and inspect unknown usage; timeout requires concurrent IO. Community client support is distinct from official SDK support. This page documents integration mechanics, not task accuracy.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://mattneel.github.io/typesafe.zig](https://mattneel.github.io/typesafe.zig) — access: `fetched`; review: `not_reviewed`.
-- [https://mattneel.github.io/typesafe.zig/](https://mattneel.github.io/typesafe.zig/) — access: `fetched`; review: `not_reviewed`.
+- [https://mattneel.github.io/typesafe.zig](https://mattneel.github.io/typesafe.zig) — access: `fetched`; review: `documentation_reviewed`.
+- [https://mattneel.github.io/typesafe.zig/](https://mattneel.github.io/typesafe.zig/) — access: `fetched`; review: `documentation_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

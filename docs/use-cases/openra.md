@@ -23,11 +23,11 @@ Author reports fast responses but explicitly identifies poor refinery placement 
 
 ## Limits and reuse
 
-Useful failure case: representation and candidate design matter. No general strategic competence established.
+Useful failure case: representation and candidate design matter. No general strategic competence established. Source review: Fork README remains generic OpenRA documentation, so it does not establish Jev control behavior.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://github.com/kyleeasterly/OpenRAFormer2](https://github.com/kyleeasterly/OpenRAFormer2) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/kyleeasterly/OpenRAFormer2](https://github.com/kyleeasterly/OpenRAFormer2) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

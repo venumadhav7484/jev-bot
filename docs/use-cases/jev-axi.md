@@ -23,12 +23,12 @@ Reusable command-line adapter may reduce per-project wiring.
 
 ## Limits and reuse
 
-Early wrapper announcement; no task benchmarks or reliability evidence.
+Early wrapper announcement; no task benchmarks or reliability evidence. Source review: No demonstrated general coding-agent cost saving. Guarded execution is fail-open by default; confidence bands are uncalibrated application policy, and derived Noul confidence is wrapper math. Ranking/no-match judgment still fallible, cannot certify safety or complete source coverage.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.npmjs.com/package/jev-axi](https://www.npmjs.com/package/jev-axi) — access: `fetch_failed`; review: `not_reviewed`.
-- [https://github.com/shiftynick/jev-axi](https://github.com/shiftynick/jev-axi) — access: `fetched`; review: `not_reviewed`.
+- [https://www.npmjs.com/package/jev-axi](https://www.npmjs.com/package/jev-axi) — access: `access_failed`; review: `inaccessible_content_pending`.
+- [https://github.com/shiftynick/jev-axi](https://github.com/shiftynick/jev-axi) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

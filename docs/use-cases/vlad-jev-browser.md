@@ -31,7 +31,7 @@ Other IDEs explicitly untested; no representative success-rate or degradation st
 - [https://github.com/vlad-terin/jev-browser](https://github.com/vlad-terin/jev-browser) — access: `access_failed`; review: `inaccessible_content_pending`.
 - [https://jevboard.com/](https://jevboard.com/) — access: `browser_readable`; review: `landing_page_reviewed`.
 - [https://typesafe.ai/blog/introducing-system-one-models-and-jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — access: `fetched`; review: `official_article_reviewed`.
-- [https://docs.google.com/document/d/137TWXtW30vn6C1PnI9DT0kz0_Qotse1K3eBh4xJ-DD4/edit?usp=sharing](https://docs.google.com/document/d/137TWXtW30vn6C1PnI9DT0kz0_Qotse1K3eBh4xJ-DD4/edit?usp=sharing) — access: `fetched`; review: `metadata_only`.
+- [https://docs.google.com/document/d/137TWXtW30vn6C1PnI9DT0kz0_Qotse1K3eBh4xJ-DD4/edit?usp=sharing](https://docs.google.com/document/d/137TWXtW30vn6C1PnI9DT0kz0_Qotse1K3eBh4xJ-DD4/edit?usp=sharing) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [lh7-us.googleusercontent.com](https://lh7-us.googleusercontent.com/docs/AHkbwyLWkvceRNzR816WB4zlkAhCoWe-k-Ed5zQAO6bh9d5krn4IX1e3Wiyjie5hSloh5cJlNPLIB2M3f537AMNiA4_-CeKcgJKuaCVxhylofdUSZMUhYSFh=w1200-h630-p) — access: `public_image_extracted`; review: `image_reviewed`.
 - [https://github.com/vlad-terin/jev-browser/](https://github.com/vlad-terin/jev-browser/) — access: `access_failed`; review: `inaccessible_content_pending`.
 

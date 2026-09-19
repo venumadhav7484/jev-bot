@@ -3,7 +3,7 @@ id: robot-arm
 title: "SO-101: vision-to-decision robotics simulation"
 category: robotics
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,7 +28,7 @@ The offline demo is synthetic orchestration, not grasp proof. Physical motion st
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/ali_uraish/status/2100425130082238682?s=46](https://x.com/ali_uraish/status/2100425130082238682?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/ali_uraish/status/2100425130082238682?s=46](https://x.com/ali_uraish/status/2100425130082238682?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [SO101 simulation repository](https://github.com/AliUraish/Jev_SO101) — discovered via [external source](https://x.com/ali_uraish/status/2100425130082238682); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -3,7 +3,7 @@ id: per-word-redaction
 title: "PII redaction: one binary question per word"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,6 +28,6 @@ No privacy-recall benchmark; multiword entities/context and API disclosure need 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/danmana/status/2100550435094278475](https://x.com/danmana/status/2100550435094278475) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/danmana/status/2100550435094278475](https://x.com/danmana/status/2100550435094278475) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

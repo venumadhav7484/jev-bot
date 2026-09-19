@@ -1,5 +1,7 @@
 # Jev: comprehensive knowledge reference
 
+**Start with the [Jev master guide](jev-master-guide.md)** for the consolidated practical synthesis, including the latest reviewed community lessons and counterexamples. This reference retains the deeper API and historical source details.
+
 **Prepared:** 19 September 2026 · **Revision:** 5 · **Context:** Jev capabilities and integration reference
 
 This document focuses on understanding Jev: its capabilities, typed decisions, API, integration patterns, limitations, evidence and unanswered questions. It consolidates the substantive lessons, examples, demonstrations and claims in three supplied Jev transcripts, supplemented by the official documentation reviewed for the original research. **su-lekha is one illustrative use case**, alongside email triage, routing, document review, lead qualification and interactive simulations; it does not define the scope of this reference.

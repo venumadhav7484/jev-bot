@@ -3,7 +3,7 @@ id: pokemon-run
 title: "Pokémon campaign agent"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,12 +23,12 @@ Reported completion at level 40 for under $0.03 is an author claim.
 
 ## Limits and reuse
 
-Do not equate this with the separate Showdown or livestream projects. Memory, navigation aids and action constraints require source review. Source review: RAM-derived battle state is not visual perception. Reported Elite Four wins are specific retained runs, not broad campaign competence; illegal response stops instead of fallback.
+Do not equate this with the separate Showdown or livestream projects. Memory, navigation aids and action constraints require source review. Source review: RAM-derived battle state is not visual perception. Reported Elite Four wins are specific retained runs, not broad campaign competence; illegal response stops instead of fallback. Media review: Reviewed opening, middle and final frame samples. Video explicitly labels separate recorded wins, battle entrances captured separately and retained attempts; this is not an uninterrupted campaign. Final card reports four Elite Four matchup wins,109calls,403287input tokens and estimated$0.0233. At card's stated$0.042/million input-only rate, that token total gives about$0.01694, so cost arithmetic is inconsistent/unresolved. State includes calculated damage and type matchups; recorded probabilities are action preferences, not win odds.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/AnxKhn/status/2100842364248178833](https://x.com/AnxKhn/status/2100842364248178833) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/AnxKhn/status/2100842364248178833](https://x.com/AnxKhn/status/2100842364248178833) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://github.com/anxkhn/JevPlaysPokemon](https://github.com/anxkhn/JevPlaysPokemon) — access: `fetched`; review: `readme_reviewed`.
 - [Author-linked implementation artifact](https://github.com/anxkhn/JewPlaysPokemon) — discovered via [external source](https://x.com/AnxKhn/status/2100842364248178833); access: `access_failed`; review: `inaccessible_content_pending`.
 

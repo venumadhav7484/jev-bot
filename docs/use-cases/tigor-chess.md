@@ -3,7 +3,7 @@ id: tigor-chess
 title: "Tigor chess: human and Jev-versus-Jev modes"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -30,7 +30,7 @@ The README requires an origin whitelisted for CORS. Its completion percentage is
 - Discord source — private provenance retained locally.
 - [https://jev-chess.tgr.rs/](https://jev-chess.tgr.rs/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/enovikov11/tigor-ai/tree/main/games/5-jev-chess](https://github.com/enovikov11/tigor-ai/tree/main/games/5-jev-chess) — access: `fetched`; review: `readme_reviewed`.
-- [https://x.com/the_tigor/status/2100532795625832912](https://x.com/the_tigor/status/2100532795625832912) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/the_tigor/status/2100532795625832912](https://x.com/the_tigor/status/2100532795625832912) — access: `fetched`; review: `post_text_reviewed`.
 - [https://t.co/JBEKqzRvRx](https://t.co/JBEKqzRvRx) — access: `fetched`; review: `source_text_reviewed`.
 - [https://t.co/Xnyep0eaBN](https://t.co/Xnyep0eaBN) — access: `fetched`; review: `readme_reviewed`.
 

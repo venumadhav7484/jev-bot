@@ -3,7 +3,7 @@ id: permission-game
 title: "Permission-fatigue game: bounded approval decisions"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,6 +28,6 @@ Sample size and threat distribution absent. 85% game accuracy is not sufficient 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://llmgame.scalex.dev/](https://llmgame.scalex.dev/) — access: `fetched`; review: `metadata_only`.
+- [https://llmgame.scalex.dev/](https://llmgame.scalex.dev/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

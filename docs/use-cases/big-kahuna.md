@@ -3,7 +3,7 @@ id: big-kahuna
 title: "Big Kahuna: voice menu interaction"
 category: voice
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -15,19 +15,19 @@ Demonstrate a voice ordering experience.
 
 ## How Jev fits
 
-A linked demo attributes the decision component to Jev. Speech recognition, response generation and action execution require separate implementation evidence.
+Running speech transcript drives known menu-item judgments and code-owned cart totals; sampled UI reports29questions per evaluation. Speech recognition is a separate component.
 
 ## Why and impact
 
-Potential fit for selecting among known menu items; impact unmeasured in the captured post.
+Recorded order adds six named menu items, including vegetarian option; final sampled cart total$43.57.
 
 ## Limits and reuse
 
-Treat as a demonstration. Do not assume arbitrary speech generation is performed by Jev.
+One selected voice demo, nine sampled frames. No accuracy benchmark across accents/noise/corrections, no payment or fulfillment observed, no native Jev audio generation inferred.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/zain_hoda/status/2100992526417031678?s=20](https://x.com/zain_hoda/status/2100992526417031678?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/zain_hoda/status/2100992526417031678?s=20](https://x.com/zain_hoda/status/2100992526417031678?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

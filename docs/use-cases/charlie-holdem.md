@@ -3,7 +3,7 @@ id: charlie-holdem
 title: "Texas Hold’em: playable Jev bots"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,7 +28,7 @@ No objective skill or bankroll evaluation; distinct from casual $1000-to-$29000 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/imcharliegraham/status/2100954087605113072?s=20](https://x.com/imcharliegraham/status/2100954087605113072?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://x.com/imcharliegraham/status/2100954087605113072](https://x.com/imcharliegraham/status/2100954087605113072) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/imcharliegraham/status/2100954087605113072?s=20](https://x.com/imcharliegraham/status/2100954087605113072?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
+- [https://x.com/imcharliegraham/status/2100954087605113072](https://x.com/imcharliegraham/status/2100954087605113072) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -3,7 +3,7 @@ id: eve-commander
 title: "Synthetic EVE-inspired tactical commander"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ The author reports 220 live calls, roughly 240 ms median latency from Scotland, 
 
 ## Limits and reuse
 
-Not an integration running NPCs inside EVE Frontier. Reinforcement overuse, reluctance to select no target and inconsistent danger/posture judgments were reported. Source review: Do not describe Jev as controlling EVE/Carbon gameplay. Numeric battlefield benchmark and deterministic subordinate logic are separate from live game integration; metrics need detailed reports. Source inspection here covers README, not reproduced renderer or commander run. Source review: Synthetic commander study, not native game NPC deployment or live combat win rate. Code overrides ambiguous/unsafe outputs; no-pressure reinforcement still wrong. Stable choices are not correctness; continuous5/10Hz unsustainable in measured sequential setup and event-driven savings only estimates.
+Author benchmark not independently reproduced. Cross-field judgments can conflict. Scoped controller inspection: error/empty-answer branch retains last command without current-state target/capacity revalidation; stale-safe fallback is not established. Deterministic comparator is explicitly not ground truth. Existing report timing and consistency failures remain.
 
 ## Sources
 
@@ -32,6 +32,6 @@ Not an integration running NPCs inside EVE Frontier. Reinforcement overuse, relu
 - [https://github.com/Diabolacal/eo-map-carbon](https://github.com/Diabolacal/eo-map-carbon) — access: `fetched`; review: `readme_reviewed`.
 - [Detailed benchmark protocol](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/COMMANDER_BENCHMARK.md) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `sections_reviewed`.
 - [Processed benchmark results](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/commander/summaries/latest.json) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `structured_report_reviewed`.
-- [Benchmark harness](https://github.com/Diabolacal/eo-map-carbon/tree/main/experiments/typesafe/commander) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `metadata_only`.
+- [Benchmark harness](https://github.com/Diabolacal/eo-map-carbon/tree/main/experiments/typesafe/commander) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `scoped_repository_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

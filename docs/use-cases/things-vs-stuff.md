@@ -3,7 +3,7 @@ id: things-vs-stuff
 title: "Things versus Stuff: semantic combat rules"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,12 +23,12 @@ Natural-language inventions become gameplay mechanics. The README reports roughl
 
 ## Limits and reuse
 
-Players question balance in the Discord replies. Semantic plausibility does not guarantee fair mechanics. The README exposes decision traces and a headless playtest harness; neither was executed here.
+Players question balance in source replies; semantic plausibility does not guarantee fair mechanics. README exposes decision traces and a headless playtest harness. Live UI confirms a zero-call initial trace and invention controls; no judgment request, balancing experiment or headless harness was executed in this review.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://github.com/cpaczek/things-vs-stuff](https://github.com/cpaczek/things-vs-stuff) — access: `fetched`; review: `readme_reviewed`.
-- [https://things.iar.dev/](https://things.iar.dev/) — access: `fetched`; review: `metadata_only`.
+- [https://things.iar.dev/](https://things.iar.dev/) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

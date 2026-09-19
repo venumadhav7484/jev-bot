@@ -3,7 +3,7 @@ id: wordle-strategies
 title: "Wordle: action-space design comparison"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,7 +28,7 @@ One experiment illustrates representation sensitivity, not a universal solving g
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/sid19arya0/status/2100679099723223341?s=20](https://x.com/sid19arya0/status/2100679099723223341?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/sid19arya0/status/2100679099723223341?s=20](https://x.com/sid19arya0/status/2100679099723223341?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/7L6t4B6K7X](https://t.co/7L6t4B6K7X) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

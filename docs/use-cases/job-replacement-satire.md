@@ -3,7 +3,7 @@ id: job-replacement-satire
 title: "Job-replacement satire with selected text parts"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,7 +28,7 @@ Not labor-market forecasting. Sarcastic divine-model claims are not technical ev
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://will-ai-take-my-job.lol/](https://will-ai-take-my-job.lol/) — access: `fetched`; review: `metadata_only`.
+- [https://will-ai-take-my-job.lol/](https://will-ai-take-my-job.lol/) — access: `fetched`; review: `demo_interface_reviewed`.
 - [will-ai-take-my-job.lol](https://will-ai-take-my-job.lol/opengraph-image?954019b5187581c3) — access: `public_image_extracted`; review: `image_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -3,7 +3,7 @@ id: text-adventure-intent
 title: "Natural-language commands for a text adventure"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -15,20 +15,20 @@ A small adventure accepts varied phrasings of movement and inspection actions.
 
 ## How Jev fits
 
-Jev maps intent to permitted actions and identifies the input language; the surrounding game handles story text.
+README describes state-machine-filtered callable events, English intent cues, recent transcript/inventory and Choice selection. Host displays authored text in five languages; catchall records missing content and low confidence requests rephrasing.
 
 ## Why and impact
 
-Players can express an action naturally without learning exact commands.
+Natural-language input over bounded authored story; catchall logs guide new event authoring.
 
 ## Limits and reuse
 
-Briefly tested by the author. Story generation and localization should not be attributed to native Jev prose generation.
+README inspected, no live corpus accuracy reproduced. Offline tests use exact-name fallback, not model behavior. Text/localization authored; engine retains story-specific constants.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [text adventure](https://text-adventure.p11c.xyz/) — access: `fetched`; review: `source_text_reviewed`.
-- [here the repo](https://gitlab.com/porky11/text-adventure) — access: `fetched`; review: `metadata_only`.
+- [here the repo](https://gitlab.com/porky11/text-adventure) — access: `fetched`; review: `scoped_repository_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

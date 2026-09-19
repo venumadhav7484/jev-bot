@@ -3,7 +3,7 @@ id: doom-all-npcs
 title: "Doom: player and enemies controlled by Jev"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,12 +23,12 @@ Demonstrates multiple decision agents inside an existing simulation.
 
 ## Limits and reuse
 
-No controlled quality or cost comparison was provided; the game engine still implements mechanics.
+Recorded host inspector confirms player/enemy choices, but automated player dies during demonstration. No controlled quality, cost or level-completion comparison. Game engine still controls movement/aiming mechanics; multiplayer remains proposed.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://fixupx.com/dustin_podell/status/2100458335405588607](https://fixupx.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [Dustin Podell (@dustin_podell)](https://x.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://fixupx.com/dustin_podell/status/2100458335405588607](https://fixupx.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `demo_trace_reviewed`.
+- [Dustin Podell (@dustin_podell)](https://x.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

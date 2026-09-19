@@ -3,7 +3,7 @@ id: local-vision-control
 title: "Computer control with local vision and OCR"
 category: browser
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Separates perception from semantic decisions and can reduce image transmission i
 
 ## Limits and reuse
 
-Text labels still leave the device. No evidence here establishes the privacy behavior of the entire application or icon-only reliability.
+Text labels still leave the device. No evidence here establishes the privacy behavior of the entire application or icon-only reliability. Media review: Local CoreML/YOLO and OCR identify controls; Jev receives text labels and ranks clicks. Recording reaches X analytics, creates a Blender cylinder and opens favourite songs. Later server-creation flow repeatedly opens and closes dialogs without completing. About90ms per decision is author-reported, not end-to-end reliability or network-privacy proof.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/milindlabs/status/2100631847155994852?s=20](https://x.com/milindlabs/status/2100631847155994852?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/milindlabs/status/2100631847155994852?s=20](https://x.com/milindlabs/status/2100631847155994852?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

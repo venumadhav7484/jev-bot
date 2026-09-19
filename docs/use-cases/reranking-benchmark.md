@@ -3,7 +3,7 @@ id: reranking-benchmark
 title: "Jev versus dedicated rerankers"
 category: retrieval
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -29,7 +29,7 @@ There is no clean winner. Aggregation method changes the apparent result; do not
 
 - Discord source — private provenance retained locally.
 - [https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job](https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job) — access: `fetched`; review: `article_reviewed`.
-- [https://x.com/anessbelbati/status/2100398911911248050?s=20](https://x.com/anessbelbati/status/2100398911911248050?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/anessbelbati/status/2100398911911248050?s=20](https://x.com/anessbelbati/status/2100398911911248050?s=20) — access: `fetched`; review: `context_only_reviewed`.
 - [https://anessbelbati.com/lab/jev-reranking/](https://anessbelbati.com/lab/jev-reranking/) — access: `browser_readable`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

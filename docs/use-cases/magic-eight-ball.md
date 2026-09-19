@@ -3,7 +3,7 @@ id: magic-eight-ball
 title: "Magic-8-Jev: bounded-answer oracle"
 category: consumer
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -29,7 +29,7 @@ Entertainment only; fixed answers do not establish prediction or factual accurac
 
 - Discord source — private provenance retained locally.
 - [https://willprout.github.io/magic-8-ball/](https://willprout.github.io/magic-8-ball/) — access: `fetched`; review: `source_text_reviewed`.
-- [https://x.com/stbenjam/status/2100783751101846005?s=20](https://x.com/stbenjam/status/2100783751101846005?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/stbenjam/status/2100783751101846005?s=20](https://x.com/stbenjam/status/2100783751101846005?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/Kpu7gKeA24](https://t.co/Kpu7gKeA24) — access: `fetched`; review: `readme_reviewed`.
 - [Author-linked implementation artifact](https://github.com/stbenjam/jev-eight-ball) — discovered via [external source](https://x.com/stbenjam/status/2100783751101846005); access: `fetched`; review: `readme_reviewed`.
 

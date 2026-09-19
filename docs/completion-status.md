@@ -7,9 +7,9 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 | Captured source | 3,226 main rows, 142 supplementary thread rows; 3,358 unique IDs; 14 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
 | Editorial accounting | All 3,358 IDs have case links or explicit dispositions; zero uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
 | Cases | 440 write-ups; 361 eligible for default retrieval; 79 held back | Further source validation can correct or merge cases |
-| External URLs | 837 registered; 0 await first disposition; 206 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
-| Context screening | 178 links scoped as unrelated context; 57 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
-| X | 182 distinct posts: 65 reviewed, 105 media-pending, 8 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
+| External URLs | 837 registered; 0 await first disposition; 66 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
+| Context screening | 192 links scoped as unrelated context; 20 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
+| X | 182 distinct posts: 140 reviewed, 0 media-pending, 38 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 174 / 413 attachment URLs reviewed; 148 / 370 messages complete | 239 attachments across 222 messages pending |
 | Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
 | S3 | Requested; no verified backup yet | Backup state is separate from evidence review |

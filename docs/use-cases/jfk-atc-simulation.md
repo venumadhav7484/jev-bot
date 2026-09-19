@@ -3,7 +3,7 @@ id: jfk-atc-simulation
 title: "JFK simulation: voice agents with ATC decision checks"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Illustrates separating voice generation from bounded simulation decisions.
 
 ## Limits and reuse
 
-No reviewed video, conflict-detection evaluation or real aviation validation. Simulator demonstration only.
+Simulator only; no conflict-detection evaluation or real aviation validation. Media review: Reviewed full narration and opening/middle/final frame samples. JFK simulation uses JSON airport/aircraft state for clearances/conflict choices, separate voice models for radio. Visible simulator and inspector run; author says20–30minutes without conflict, but clip does not establish that duration or conflict-detection reliability. Later Agent Zero example returns billing/refund/urgency typed judgments. Neither is aviation safety validation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/alessandro_a0/status/2100573356294607245?s=20](https://x.com/alessandro_a0/status/2100573356294607245?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/alessandro_a0/status/2100573356294607245?s=20](https://x.com/alessandro_a0/status/2100573356294607245?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

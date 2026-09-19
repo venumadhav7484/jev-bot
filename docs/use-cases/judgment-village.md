@@ -3,7 +3,7 @@ id: judgment-village
 title: "Village NPCs: observable actions, attitudes and beliefs"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,12 +23,12 @@ Multiple independent judgments can drive richer visible behavior. Author reports
 
 ## Limits and reuse
 
-Linked demo/code need inspection; no measured consistency or latency. Source review: Landing page describes probabilistic NPC decisions but captured zero-call loading state does not validate runtime behavior.
+Recorded NPCs react to proximity, sword display and gossip, with visible action/belief probabilities and host-triggered consequences. This improves on earlier zero-call landing-page evidence. Displayed latency varies, including over one second; no controlled consistency or social-inference accuracy evaluation.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/haiderTheDev/status/2100419750459519156?s=20](https://x.com/haiderTheDev/status/2100419750459519156?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/haiderTheDev/status/2100419750459519156?s=20](https://x.com/haiderTheDev/status/2100419750459519156?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/1JAlFmT4GM](https://t.co/1JAlFmT4GM) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

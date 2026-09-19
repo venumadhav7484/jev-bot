@@ -13,7 +13,7 @@ DOCS = ROOT/'docs'
 mapping = {ROOT/'jev-knowledge-reference.md': DOCS/'jev-knowledge-reference.md'}
 names = ('jev-usecases.md', 'integration-patterns.md', 'jev-bot-answer-guide.md',
          'pending-and-ecosystem.md', 'storage-and-retrieval.md', 'use-case-template.md',
-         'community-evidence-findings.md', 'completion-status.md')
+         'community-evidence-findings.md', 'completion-status.md', 'jev-master-guide.md', 'review-backlog.md')
 mapping.update({ROOT/'resource-pool'/name:DOCS/name for name in names})
 mapping.update({p:DOCS/'use-cases'/p.name for p in (ROOT/'resource-pool/use-cases').glob('*.md')})
 mapping[ROOT/'research/README.md'] = DOCS/'research-pipeline.md'

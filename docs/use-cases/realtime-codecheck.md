@@ -28,10 +28,10 @@ Rule count and timing are author report, not correctness; code scope, batching a
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://youtu.be/goVDTUd7-J0](https://youtu.be/goVDTUd7-J0) — access: `fetched`; review: `metadata_only`.
+- [https://youtu.be/goVDTUd7-J0](https://youtu.be/goVDTUd7-J0) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://github.com/MrDesjardins/jevrealtimecodecheck](https://github.com/MrDesjardins/jevrealtimecodecheck) — access: `fetched`; review: `readme_reviewed`.
 - [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [Patrick Desjardins](https://www.youtube.com/channel/UCKBBbMaq3Q-MirzMecdJZCQ) — access: `fetched`; review: `context_only_not_jev_evidence`.
-- [Jev Demo with Cursor](https://www.youtube.com/watch?v=goVDTUd7-J0) — access: `fetched`; review: `metadata_only`.
+- [Jev Demo with Cursor](https://www.youtube.com/watch?v=goVDTUd7-J0) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

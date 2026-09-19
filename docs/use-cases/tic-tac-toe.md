@@ -3,7 +3,7 @@ id: tic-tac-toe
 title: "Elixir agents playing Tic Tac Toe"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Simple example of actor-based game orchestration with typed choices.
 
 ## Limits and reuse
 
-No optimal-play or win-rate evaluation supplied.
+Recorded self-play contains decisive wins for both sides, so perfect play is not established. No controlled move-optimality or win-rate evaluation; human pacing and fast mode differ.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/mikehostetler/status/2100946109308748079](https://x.com/mikehostetler/status/2100946109308748079) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/mikehostetler/status/2100946109308748079](https://x.com/mikehostetler/status/2100946109308748079) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

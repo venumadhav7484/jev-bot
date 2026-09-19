@@ -3,7 +3,7 @@ id: json-render
 title: "json-render: selecting UI components"
 category: interfaces
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Potential low-latency interface adaptation; milliseconds claim comes from the sh
 
 ## Limits and reuse
 
-No independent latency or component-validity test. Author discussion about contextual modals is a proposal, not a demonstrated feature.
+Three recorded UI examples show earlier experimental Jev render, with displayed totals below one second versus roughly 3.3–3.7s for default. No independent timing protocol, general component-validity test or actual login. Contextual modals remain proposed.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/ctatedev/status/2101022101750571357](https://x.com/ctatedev/status/2101022101750571357) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/ctatedev/status/2101022101750571357](https://x.com/ctatedev/status/2101022101750571357) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

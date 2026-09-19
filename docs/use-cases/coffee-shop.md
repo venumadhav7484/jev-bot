@@ -3,7 +3,7 @@ id: coffee-shop
 title: "Coffee-shop management simulation"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Explores repeated business tradeoffs in a game.
 
 ## Limits and reuse
 
-No real money or real business deployment established. Profit or bankruptcy in the simulator says nothing about commercial viability.
+No real money or real business deployment established. Profit or bankruptcy in the simulator says nothing about commercial viability. Media review: Reviewed opening/middle/final frame samples. Locals-first café starts$500 and ends with92coffees,81%happy customers,$347revenue,$655supplies/upgrades/bills and net cash gain–$308. This demonstrates simulated management choices with a negative cash outcome, not profit or real business viability.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/soya_da_yoot/status/2100451279222755616](https://x.com/soya_da_yoot/status/2100451279222755616) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/soya_da_yoot/status/2100451279222755616](https://x.com/soya_da_yoot/status/2100451279222755616) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -3,7 +3,7 @@ id: jevin-keyboard
 title: "Jev board: ambient keyboard interface"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Creative interactive application beyond chat.
 
 ## Limits and reuse
 
-Video/source unreviewed; no usability, latency or accessibility evaluation. Distinct from Jev idea directory.
+Recorded keyboard demo labels place as example and weather as sample. No live information mechanism, native Jev browsing, usability or accessibility evaluation established. It inserts draft text; sending is separate.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/zahlekhan/status/2100681083176226921](https://x.com/zahlekhan/status/2100681083176226921) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/zahlekhan/status/2100681083176226921](https://x.com/zahlekhan/status/2100681083176226921) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

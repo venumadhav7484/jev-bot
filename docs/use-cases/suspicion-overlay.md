@@ -3,7 +3,7 @@ id: suspicion-overlay
 title: "Live conversation: novelty suspicion meter"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -28,6 +28,6 @@ No ground truth or fair-person-assessment validation. Judgment is subjective, no
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/sybuilds/status/2100679413243474010?s=46](https://x.com/sybuilds/status/2100679413243474010?s=46) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/sybuilds/status/2100679413243474010?s=46](https://x.com/sybuilds/status/2100679413243474010?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

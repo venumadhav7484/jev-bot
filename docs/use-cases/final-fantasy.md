@@ -3,7 +3,7 @@ id: final-fantasy
 title: "Final Fantasy controller with planned human hints"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ Combines automated actions with a proposed human-guidance loop.
 
 ## Limits and reuse
 
-Audio hinting is not established as implemented. No sustained success rate or native Jev audio support.
+Recorded battle is won, then low-health recovery pauses because no observed route to the inn is available. This limits autonomous continuation despite successful local combat choices. Audio hinting remains planned; no sustained success rate or native Jev audio support established.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/nawtayei/status/2100607727978369138?s=20](https://x.com/nawtayei/status/2100607727978369138?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/nawtayei/status/2100607727978369138?s=20](https://x.com/nawtayei/status/2100607727978369138?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

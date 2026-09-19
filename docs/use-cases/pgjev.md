@@ -3,7 +3,7 @@ id: pgjev
 title: "pg-jev: semantic SQL predicates"
 category: data
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,12 +23,12 @@ The author reports 129 rows in about one second for $0.0009.
 
 ## Limits and reuse
 
-This is semantic evaluation, not an index replacement with constant cost. Avoid discriminatory inferred-personal-attribute predicates; use task-relevant evidence. Source review: Demo uses invented data. Reported cheap reruns rely on session cache; changing data/conditions needs evaluation and appropriate cache invalidation.
+Full-table semantic scans are not an index replacement with constant cost. Video shows 129 rows batched into four requests at roughly one second; 4.8ms repeat comes from session cache, not a fresh Jev call. Cache must include row content, condition, model and question version. No large-table scalability or accuracy benchmark reproduced. Demo uses invented data; avoid inferred-personal-attribute predicates for consequential decisions.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://pgjev.zachi.dev/](https://pgjev.zachi.dev/) — access: `fetched`; review: `source_text_reviewed`.
-- [https://x.com/iam_zachi/status/2100679300756435135](https://x.com/iam_zachi/status/2100679300756435135) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/iam_zachi/status/2100679300756435135](https://x.com/iam_zachi/status/2100679300756435135) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

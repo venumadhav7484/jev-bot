@@ -60,7 +60,7 @@ tests/                      Normalization, response and cache checks
 Python 3.10+ and the standard library are sufficient. The API runner currently uses Unix file locking (macOS/Linux).
 
 ```sh
-git clone https://github.com/Venuarremset/jev-bot.git
+git clone https://github.com/venumadhav7484/jev-bot.git
 cd jev-bot
 python3 -m unittest discover -s tests -v
 ```

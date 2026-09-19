@@ -28,6 +28,6 @@ Text-generation mechanism and fair-play state boundaries were not inspected. No 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://coup.clairbridge.tech/](https://coup.clairbridge.tech/) — access: `fetched`; review: `metadata_only`.
+- [https://coup.clairbridge.tech/](https://coup.clairbridge.tech/) — access: `browser_readable`; review: `demo_interface_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

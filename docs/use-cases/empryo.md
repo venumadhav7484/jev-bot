@@ -23,7 +23,7 @@ The article reports 102/102 error-triage decisions correct; fixing a regex also 
 
 ## Limits and reuse
 
-Three proposed jobs were rejected: raw grep-line ranking, review-loop pass/fail and next-tool prediction. This is an author benchmark, not independent reproduction. Source review: Generic model routing is not evidence of Jev support. Local execution does not imply no code egress when remote providers are selected; README privacy wording needs that qualification. Benchmark savings belong to this agent workflow, not Jev.
+Three proposed jobs were rejected: raw grep-line ranking, review-loop pass/fail and next-tool prediction. This is an author benchmark, not independent reproduction. Source review: Generic model routing is not evidence of Jev support. Local execution does not imply no code egress when remote providers are selected; README privacy wording needs that qualification. Benchmark savings belong to this agent workflow, not Jev. Reviewed diagrams enumerate skill selection from136skills, search reranking, API-error triage, destructive-action guard and UI pilot. Optional switches default off; fallbacks include keywords, PageRank/lexical, regex and generative vision. No quality or security benchmark in diagrams.
 
 ## Sources
 

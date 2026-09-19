@@ -23,7 +23,7 @@ Author says prototype works well; text entry has a reported rendering/input bug.
 
 ## Limits and reuse
 
-No retrieval benchmark or inspected media. Compare with lexical search and evaluate missed relevant passages before relying on results.
+No retrieval benchmark or inspected media. Compare with lexical search and evaluate missed relevant passages before relying on results. Reviewed UI shows relevance cards, saved passages and in-page highlighting. One matching comment does not establish exhaustive recall; author also reports a typing bug.
 
 ## Sources
 

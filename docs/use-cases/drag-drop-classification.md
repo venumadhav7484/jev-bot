@@ -3,7 +3,7 @@ id: drag-drop-classification
 title: "Drag-and-drop: automatic destination selection"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -15,7 +15,7 @@ UI demo suggests a destination category after a drag-and-drop operation.
 
 ## How Jev fits
 
-Jev classifies the dropped item; available categories and item representation are not specified in captured text.
+Jev suggests one of four host-defined destinations from dragged text or Markdown: expenses, project attachment, reference storage or later review. UI highlights suggestions before placement.
 
 ## Why and impact
 
@@ -23,11 +23,11 @@ Author describes applicability across products; linked preview says first reques
 
 ## Limits and reuse
 
-No latency measurements or classification accuracy. Preserve user correction and validate category fit before moving real data.
+Five sampled frames inspected. Displayed100% confidence is not classification accuracy. Real file movement and recovery untested; retain user override and validate before moving production data.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/tosa_now/status/2100230707297878339?s=20](https://x.com/tosa_now/status/2100230707297878339?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/tosa_now/status/2100230707297878339?s=20](https://x.com/tosa_now/status/2100230707297878339?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

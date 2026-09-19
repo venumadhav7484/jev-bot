@@ -23,7 +23,7 @@ Friday11pm plus25hours is Sunday midnight, but screenshot chooses Saturday at1.0
 
 ## Limits and reuse
 
-Illustrative results, not a representative benchmark. Surgeon UI reports a different result after reversing option order; raw repeated calls not inspected. Use deterministic date arithmetic and evaluate wording/ordering on held-out examples. A high confidence field does not guarantee correctness.
+Illustrative results, not a representative benchmark. Surgeon UI reports a different result after reversing option order; raw repeated calls not inspected. Use deterministic date arithmetic and evaluate wording/ordering on held-out examples. A high confidence field does not guarantee correctness. Earlier screenshot correction: a separate strawberry test ranks the correct count of three first at56%, despite its failure caption. A rope-ladder probe explicitly fixes the boat against vertical motion yet selects four unchanged rungs at69%; preserve that unusual premise. A five-foot-depth score returns4.98/9 with99%confidence, illustrating approximate numeric output.
 
 ## Sources
 

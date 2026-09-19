@@ -23,7 +23,7 @@ Author calls output instant but not detailed. Demonstrates constrained creative 
 
 ## Limits and reuse
 
-No numerical latency measurement or image-quality evaluation. Renderer and available parameters bound expressive range.
+No numerical latency measurement or image-quality evaluation. Renderer and available parameters bound expressive range. Screenshot corroborates typed pose/coat/scene/style/wind/dapple controls and Python-painted output; it does not demonstrate native image generation.
 
 ## Sources
 

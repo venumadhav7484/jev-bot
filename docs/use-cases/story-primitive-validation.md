@@ -23,7 +23,7 @@ Shows a reusable pattern: check question validity and evidence presence separate
 
 ## Limits and reuse
 
-This is the early July demo, not evidence that every later magic-eight-ball project shares its implementation. Video and screenshot contents were not inspected; no accuracy measurement is established.
+This is the early July demo, not evidence that every later magic-eight-ball project shares its implementation. Video and screenshot contents were not inspected; no accuracy measurement is established. Media review: Request screenshot corroborates separate is_yes_no and story_signal Noul validation gates; it does not establish gate accuracy. Media review: Sampled video visibly separates model score1.06/4 andconfidence.53 from application-defined labels for one story/question. No calibration benchmark; clip only sampled.
 
 ## Sources
 

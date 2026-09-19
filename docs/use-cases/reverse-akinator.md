@@ -23,11 +23,11 @@ Shows direct mapping from a game rule to a typed question.
 
 ## Limits and reuse
 
-Consistency across questions and secret-answer containment were not tested. Distinct from other unrelated AskJev sites.
+Consistency across questions and secret-answer containment were not tested. Distinct from other unrelated AskJev sites. Browser source review: Visible interface specifies independent yes/no questions and20-question daily game; full questions must carry context. No live answer accuracy test.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://askjev.app/](https://askjev.app/) — access: `fetched`; review: `metadata_only`.
+- [https://askjev.app/](https://askjev.app/) — access: `browser_readable`; review: `demo_interface_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -1,34 +1,34 @@
 ---
 id: npc-network-latency
-title: "MMO NPC experiment: network overhead limits responsiveness"
+title: "MMO NPC benchmark: useful context, framing failures and deployment mismatch"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
-# MMO NPC experiment: network overhead limits responsiveness
+# MMO NPC benchmark: useful context, framing failures and deployment mismatch
 
 ## What
 
-A developer reports testing Jev for NPC decisions in an MMO experiment.
+Author evaluates Jev against three NPC heuristic families on 46 hand-built scenarios, repeated five times, plus 110 defender prompt-variant calls. Project ultimately not adopted because hosted API conflicts with its self-hosted deployment requirement.
 
 ## How Jev fits
 
-A linked PDF is offered as the report; the Discord post identifies EU-to-test-infrastructure latency as a blocker. The PDF was inaccessible through the web tool.
+Batched Choice, Noul and Score assess temperament, routines and pursuit. Proposed event-driven overlay keeps deterministic heuristics active while awaiting results, then applies confidence and cross-question agreement gates. Deployment proposal was not adopted.
 
 ## Why and impact
 
-Author reports up to 320 ms network overhead. This is a deployment constraint worth preserving beside low model-latency claims.
+Routine matches 11/13 author-labeled sensible outcomes; contextual temperament judgments address information missing from HP-only rule. Defender Noul holds in all 11 scenarios under two framings; Choice changes policy but misses range and threat edge cases. Original 553 ms median included fresh TCP/TLS setup; corrected small sample reports 220-225 ms warm floor and 265 ms median including a 636 ms first call.
 
 ## Limits and reuse
 
-No workload details or independent timings were verified. Do not generalize one route or test infrastructure to every deployment, and do not present the inaccessible PDF as reviewed. Source review: Linked PDF host commit corrects warm latency estimate to 220–225 ms; three-call sample is too small for a general latency guarantee. PDF body remains uninspected.
+Report read, not reproduced. Hand-labeled scenarios are not representative production evaluation. Five repeats show no Noul boundary flips but 3/35 Choice flips, so not deterministic-output proof. Selected low-confidence examples do not establish calibration or validate 0.7 threshold. Corrected latency sample is small and report retains inconsistent later floor/whole-battery wording. Cost table assumes hypothetical prices, not actual Jev billing. Hosted measurements miss this project's 50 ms tick budget; cannot generalize to every route or deployment. Typed outputs can still be wrong.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `fetched`; review: `metadata_only`.
-- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `nontext_not_downloaded`; review: `nontext_content_pending`.
+- [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `public_content_recovered`; review: `report_reviewed`.
+- [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `public_image_extracted`; review: `image_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -28,7 +28,7 @@ Tasks differ because Jev does not do the first stage. No general superiority cla
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://yuwakisa.com/benchmarks/principle/](https://yuwakisa.com/benchmarks/principle/) — access: `fetched`; review: `metadata_only`.
+- [https://yuwakisa.com/benchmarks/principle/](https://yuwakisa.com/benchmarks/principle/) — access: `browser_readable`; review: `landing_page_reviewed`.
 - [https://yuwakisa.com/benchmarks/principle/report-s5xu-20260919/report](https://yuwakisa.com/benchmarks/principle/report-s5xu-20260919/report) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

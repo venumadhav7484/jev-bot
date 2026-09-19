@@ -19,15 +19,15 @@ The author compares Jev with Mistral and Gemini using separately tuned prompts f
 
 ## Why and impact
 
-The captured post reports up to 5.7x faster responses, 98% lower cost and 12 percentage points higher accuracy.
+Article reports mean0.59s and estimated$0.043 per1000decisions for the selected Jev configuration. Main50case development result48/50; additional21case result19/21. Faster/cheaper reported configuration does not establish a general accuracy advantage.
 
 ## Limits and reuse
 
-The article landing page was fetched, but the full benchmark details were not returned. Treat the numbers as the author's narrow-task report.
+Article reports prompt selection across132development cases with assistant-written expected labels. Headline48/50 for Jev is not held-out accuracy. On21additional,skewed records Jev19/21 equals Mistral and trails Gemini20/21; no general accuracy advantage established. High-reasoning chat baselines generate explanations,unlike Jev. Production deployment not claimed; no independent reproduction.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) — access: `access_failed`; review: `inaccessible_content_pending`.
+- [https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) — access: `browser_readable`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

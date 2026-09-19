@@ -23,7 +23,7 @@ Offers a migration path for existing DSPy programs without rewriting every decis
 
 ## Limits and reuse
 
-Author-described tool and linked repository; attachment benchmark unreviewed. Do not assume arbitrary text generation or every DSPy signature can be replaced. Source review: Hybrid still incurs generative-model charges. Three-ticket experiment and modeled costs cannot establish general speedup or answer-quality equivalence.
+Author-described tool and linked repository; attachment benchmark unreviewed. Do not assume arbitrary text generation or every DSPy signature can be replaced. Source review: Hybrid still incurs generative-model charges. Three-ticket experiment and modeled costs cannot establish general speedup or answer-quality equivalence. Media review: Attachment chart covers only3tickets: modeled cost$0.000377→$0.000263 and observed latency2.329s→1.958s. It is not a broad accuracy or production-cost benchmark.
 
 ## Sources
 

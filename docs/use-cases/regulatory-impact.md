@@ -23,11 +23,11 @@ Author reports 20 checks in 0.8 seconds for $0.001.
 
 ## Limits and reuse
 
-Continuous regulatory monitoring is proposed, not established. No legal completeness or compliance validation; qualified review remains necessary.
+Reviewed recording uses synthetic bank data and prepared public-source comparisons,not full instruction PDFs. Broad/focused inputs each display18agreements; thresholds are explicitly unvalidated display conventions.9publication scan and3inputcomparison are different denominators; no compliance validation or independent correctness test.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

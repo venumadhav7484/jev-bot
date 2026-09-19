@@ -15,6 +15,8 @@ def write_status():
     pool = ROOT/'resource-pool'
     summary = json.loads((pool/'coverage-summary.json').read_text())
     media = json.loads((pool/'sources/media-accounting.json').read_text())
+    x_queue = json.loads((pool/'sources/x-review-backlog.json').read_text())
+    x_counts = x_queue['counts']
     cp_path = pool/'sources/collection-checkpoint.json'
     cp = json.loads(cp_path.read_text())
     cp.setdefault('research_status', 'frozen_snapshot_bot_preview')
@@ -43,7 +45,7 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 | Cases | {n} write-ups; {enabled} eligible for default retrieval; {n-enabled} held back | Further source validation can correct or merge cases |
 | External URLs | {summary['external_urls']} registered; {pending} await first disposition; {gaps} retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
 | Context screening | {summary['external_review_status_counts'].get('context_only_not_jev_evidence', 0)} links scoped as unrelated context; {summary['external_review_status_counts'].get('metadata_only', 0)} metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
-| X | 182 distinct posts: 42 reviewed, 128 media-pending, 8 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
+| X | {len(x_queue['entries'])} distinct posts: {x_counts.get('reviewed', 0)} reviewed, {x_counts.get('pending_media', 0)} media-pending, {x_counts.get('pending_thread_expansion', 0)} thread-expansion pending, {x_counts.get('pending', 0)} pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across {sum(r['remaining_attachments'] > 0 for r in media['entries'])} messages pending |
 | Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
 | S3 | {'Encrypted private snapshot uploaded and download/file hashes verified' if summary['s3_uploaded'] else 'Requested; no verified backup yet'} | Backup state is separate from evidence review |
@@ -54,7 +56,7 @@ All original 2,994 pending messages were read and given explicit editorial decis
 
 External-source statuses distinguish full saved-text inspection, README inspection, visible post text, metadata shells, limited context screening, media gaps and access failures. Old attachment URL failures do not prove the images are inaccessible in the authenticated source UI. No community benchmark has been independently reproduced.
 
-The latest 296-URL backlog has a first disposition for every entry: 224 received text, artifact or relevance review at documented scope; 39 remain inaccessible and 33 non-text sources await content inspection. These 72 gaps were reclassified explicitly, not completed. Earlier metadata and media gaps also remain in the total above. The 30-source Jev pilot completed 60 calls and 130 draft claim checks; all 30 sources still needed deep review, so no reduction in editorial effort is established. [Pilot report](../docs/source-grounding-pilot.md).
+The earlier first pass through the 296-URL backlog assigned every entry a disposition: 224 received text, artifact or relevance review, 39 had access failures and 33 needed non-text inspection. Those were historical first-pass counts, not completed validations or current gap totals. Subsequent recovery reviews update the table above and preserve previous attempts in the source ledger. The 30-source Jev pilot completed 60 calls and 130 draft claim checks; all 30 sources still needed deep review, so no reduction in editorial effort is established. [Pilot report](../docs/source-grounding-pilot.md).
 
 The original Jev triage experiment processed all 3,358 IDs with 420 successful requests for its final prompt. Its 13-item development sample matched 13 contribution labels and 11 relationship labels; it is not a representative accuracy estimate.
 

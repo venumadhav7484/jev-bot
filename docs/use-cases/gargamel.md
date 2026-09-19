@@ -23,7 +23,7 @@ Author reports all their tests were correct, without a sample count.
 
 ## Limits and reuse
 
-Cannot establish a person’s identity or wrongdoing. No false-positive evaluation; unsuitable as sole basis for penalties.
+Screenshot exposes per-player statistics and confidence labels,not verified identity or wrongdoing. Author100%test claim lacks sample count,ground truth and false-positive evaluation; unsuitable as sole basis for penalties.
 
 ## Sources
 

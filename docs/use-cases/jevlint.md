@@ -23,11 +23,11 @@ Makes project-specific conventions available as repeated review checks.
 
 ## Limits and reuse
 
-The author's use of deterministic describes the surrounding workflow; semantic judgments still need evaluation and can vary.
+Rendered example probabilities are explicitly illustrative. File-level semantic checks need precision/recall evaluation and cannot replace compiler/tests or whole-program analysis. CLI distinguishes findings from configuration/API failures; dry-run permits payload review. Selected source files go to the Jev API.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://www.jevlint.com/](https://www.jevlint.com/) — access: `fetched`; review: `metadata_only`.
+- [https://www.jevlint.com/](https://www.jevlint.com/) — access: `browser_readable`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -1,33 +1,33 @@
 ---
 id: jev-boardgames
-title: "Board games: TicTacToe and ConnectFour"
+title: "Jev Plays: board-game choices with coded tactical assistance"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
-# Board games: TicTacToe and ConnectFour
+# Jev Plays: board-game choices with coded tactical assistance
 
 ## What
 
-Public demo lets users play two small board games against Jev.
+Rendered demo lists TicTacToe, ConnectFour, Battleship and Wordle modes.
 
 ## How Jev fits
 
-Model selects moves while host code enforces rules.
+Text board and candidate moves go to one Choice plus side judgments. Host code annotates threats, excludes moves allowing wins/forks and forces missed wins or blocks; override counts are displayed.
 
 ## Why and impact
 
-Clear separation between semantic choice and deterministic legality.
+Illustrates bounded model choice combined with deterministic tactical safeguards.
 
 ## Limits and reuse
 
-No optimal-play, win-rate or latency measurements; different project from Elixir TicTacToe.
+Landing-page architecture inspected; no game played or benchmark reproduced. Host supplies tactics beyond legal-move enforcement, so wins cannot be attributed solely to Jev. Distinct from Elixir TicTacToe project.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://jevboardgames.everpaper.app/](https://jevboardgames.everpaper.app/) — access: `fetched`; review: `metadata_only`.
+- [https://jevboardgames.everpaper.app/](https://jevboardgames.everpaper.app/) — access: `public_content_recovered`; review: `landing_page_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,7 +23,7 @@ Reported $1 analysis cost; potential personalized workflow improvement.
 
 ## Limits and reuse
 
-No before/after behavior evaluation, schema or accounting detail. Jev is analyzer, not established prose generator.
+No before/after behavior evaluation, schema or accounting detail. Jev is analyzer, not established prose generator. Screenshot totals45sessions:17completion only claimed,14supported by supplied checks,9partial/blocked,5unclear. These are model judgments, not independently labeled outcomes; another model writes the skill.
 
 ## Sources
 

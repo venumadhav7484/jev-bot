@@ -29,6 +29,6 @@ The author clarified that this runs server-side, not entirely on-device. End-to-
 
 - Discord source — private provenance retained locally.
 - [https://ui.shadcn.com/](https://ui.shadcn.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
-- [ui.shadcn.com](https://ui.shadcn.com/og?title=The%20Foundation%20for%20your%20Design%20System&description=Composable%2C%20accessible%20components%20with%20thoughtful%20defaults.%20Build%20your%20own%20component%20library%20with%20code%20you%20can%20customize%2C%20extend%2C%20and%20make%20your%20own.) — access: `nontext_not_downloaded`; review: `nontext_content_pending`.
+- [ui.shadcn.com](https://ui.shadcn.com/og?title=The%20Foundation%20for%20your%20Design%20System&description=Composable%2C%20accessible%20components%20with%20thoughtful%20defaults.%20Build%20your%20own%20component%20library%20with%20code%20you%20can%20customize%2C%20extend%2C%20and%20make%20your%20own.) — access: `public_image_extracted`; review: `image_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

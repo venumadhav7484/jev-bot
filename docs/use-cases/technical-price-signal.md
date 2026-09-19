@@ -23,7 +23,7 @@ Author reports processing 2,900 days for under $0.01 but no predictive signal, i
 
 ## Limits and reuse
 
-No dataset, baseline, train/test separation, cost ledger or scoring metric supplied. Historical memorization/leakage and domain calibration must be assessed. Fast cheap classification does not establish investable prediction.
+Screenshot reports SPY next-day AUC about0.508, Brier0.2538, log loss0.7012 and ECE0.0909; calibration bins total550observations, distinct from the author's2900days processed claim. No inspected dataset, baseline, split protocol or cost ledger. Historical leakage and domain calibration remain unresolved. These results do not establish investable prediction.
 
 ## Sources
 

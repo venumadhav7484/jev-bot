@@ -3,7 +3,7 @@ id: local-air-traffic
 title: "Local-view air-traffic simulation"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -29,7 +29,7 @@ Not the JFK voice simulation or later single-plane controller. No collision, thr
 
 - Discord source — private provenance retained locally.
 - [https://bsky.app/profile/leo.sylin.org/post/3mvp2qbuumk2s](https://bsky.app/profile/leo.sylin.org/post/3mvp2qbuumk2s) — access: `fetched`; review: `source_text_reviewed`.
-- [#TypeSafe](https://bsky.app/hashtag/TypeSafe) — access: `fetched`; review: `metadata_only`.
+- [#TypeSafe](https://bsky.app/hashtag/TypeSafe) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [https://github.com/lbotinelly/jev-little-airways/](https://github.com/lbotinelly/jev-little-airways/) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

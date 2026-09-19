@@ -3,7 +3,7 @@ id: noflow
 title: "NoFlow: registered UI action routing"
 category: interfaces
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -19,19 +19,19 @@ Registered UI actions and current state form Jev's choice set. Thresholds, fallb
 
 ## Why and impact
 
-Reuses existing application capabilities instead of generating arbitrary execution code.
+Recorded same-label interaction changes from trial to checkout when trial-used state changes; demonstrates state-aware selection among registered surfaces.
 
 ## Limits and reuse
 
-The demo does not make model confidence an authorization boundary; actions still need deterministic constraints. Source review: Selection changes UI presentation, not arbitrary action execution. Confidence/safety judgments need validation; deterministic affordance and confirmation gates supply control. Mock-default playground is separate from live Jev mode.
+Recorded examples display295ms and438ms, not a latency distribution. UI surface selection is not payment execution or authorization. Model confidence and warning controls are not sufficient security boundaries; deterministic permissions and confirmation remain necessary.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://noflow.casungo.workers.dev/](https://noflow.casungo.workers.dev/) — access: `fetched`; review: `metadata_only`.
+- [https://noflow.casungo.workers.dev/](https://noflow.casungo.workers.dev/) — access: `browser_readable`; review: `landing_page_reviewed`.
 - [https://github.com/casungo/noflow-runtime](https://github.com/casungo/noflow-runtime) — access: `fetched`; review: `readme_reviewed`.
-- [https://www.npmjs.com/package/noflow-runtime](https://www.npmjs.com/package/noflow-runtime) — access: `access_failed`; review: `inaccessible_content_pending`.
-- [NoFlow | Buttons with opinions](https://noflow.casungo.workers.dev/?) — access: `fetched`; review: `metadata_only`.
-- [https://x.com/casungo/status/2101037798614499387](https://x.com/casungo/status/2101037798614499387) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://www.npmjs.com/package/noflow-runtime](https://www.npmjs.com/package/noflow-runtime) — access: `browser_readable`; review: `readme_reviewed`.
+- [NoFlow | Buttons with opinions](https://noflow.casungo.workers.dev/?) — access: `browser_readable`; review: `landing_page_reviewed`.
+- [https://x.com/casungo/status/2101037798614499387](https://x.com/casungo/status/2101037798614499387) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -22,7 +22,7 @@ The EVE-inspired commander report describes a danger judgment that did not agree
 
 ## End-to-end latency matters
 
-An MMO developer reports EU network overhead preventing the intended responsiveness; the linked PDF remains inaccessible. Separately, the commander author's public-API experiment supported its 1–2 Hz cadence while missing 5–10 Hz deadlines. Jev-bot should ask about deployment location, update frequency and stale-answer handling before promising real-time behavior. [MMO latency report](use-cases/npc-network-latency.md) · [Commander case](use-cases/eve-commander.md).
+The recovered MMO report corrects its original 553 ms median: the harness opened a fresh TCP/TLS connection on every call. A small persistent-connection sample reports a 220–225 ms warm floor; its 265 ms median includes a 636 ms first call. This still misses that project's 50 ms tick budget. The project was not adopted because the developer requires self-hosted models. Separate commander measurements support a 1–2 Hz cadence but miss 5–10 Hz deadlines. Ask about connection reuse, cold versus warm calls, route, tick budget and stale-answer handling before promising real-time behavior. Neither report is independently reproduced. [MMO latency report](use-cases/npc-network-latency.md) · [Commander case](use-cases/eve-commander.md).
 
 ## Question representation belongs in the versioned design
 
@@ -141,3 +141,47 @@ Typed SDKs can validate answer IDs, option membership and distributions; this is
 ### Implications for this resource pipeline
 
 Keep source capture, model suggestions, assistant drafts and editorial decisions distinct. Exact quote matching proves that a passage exists, not that it supports a claim. Check required fields, dates and identifiers in code. Ask Jev focused support/contradiction questions; preserve uncertain results and missing media. Review consequential claims and source conflicts first, plus routine samples. Our 30-source pilot flagged every source for deep review, so it has not demonstrated lower editorial effort. Narrower flags need a separately labeled evaluation before scaling model-led approval. Pilot (local-only evidence).
+
+## Media review adds corrections, not automatic validation
+
+A caption calling a strawberry-count test a failure conflicts with its screenshot: the correct answer, three, ranks first at56%. Another later screenshot does show a wrong count under different wording. Keep both with their prompts instead of turning either into a universal verdict. A coin question returning3% also has a follow-up that selects the50–59% bin for an explicitly55% event; changing the schema changes what is measured. [Reasoning probes](use-cases/riddle-probes.md) · [Probability game](use-cases/almost-certain.md).
+
+Character and small-vocabulary chat experiments produce blank, repetitive or off-topic text while consuming many requests or repeated input tokens. They demonstrate host-orchestrated selection loops, not native free-form generation. A screenshot reports30calls for one short exchange; another255-token-vocabulary attempt consumes117,211inputtokens for20displayedtokens. Low single-call latency does not guarantee an efficient generative workflow. [Early chat workarounds](use-cases/chatjev-early.md).
+
+Chess reports differ materially across harnesses. One screenshot reports a single win and two draws against a nominal1900engine; its own text warns that three games do not establish a rating. Another interactive demo loses to a short mating sequence. The detailed lookahead project uses a distinct protocol and reports its own weaknesses. None can be used as a universal chess rating or a controlled comparison across projects. [Three-game report](use-cases/stockfish-three-game-report.md) · [Interactive chess](use-cases/tigor-chess.md) · [Lookahead study](use-cases/typesafe-chess.md).
+
+A model-assisted SAT/UNSAT report explicitly calls its answers advisory, not a kernel proof. Pantry allocation images show finite choices and requested basket sizes, but not optimality or dietary correctness. Semantic judgments can guide a search or propose candidates; exact verification belongs to separate code or qualified review. [SAT advisory](use-cases/sat-unsat-advisory.md) · [Pantry allocation](use-cases/pantry-allocation.md) · [Symbolic integration proposal](use-cases/symbolic-integration-routing.md).
+
+The memory-curation screenshot compares batched judgments with a slower generative baseline, but gives no quality comparison and mixes timeout, mean and percentile statistics. Snake screenshots show faster calls alongside worse task outcomes; one follow-up has different survival durations. Preserve both performance and quality boundaries before suggesting a substitution. [Memory curation](use-cases/memory-curation-henke.md) · [Snake](use-cases/snake-limits.md).
+
+## Rubric repair can change the pipeline more than the model
+
+The UGC comparison initially misses several grading floors despite fast calls. Its improved result applies scoring rules as deterministic code over Jev attribute booleans. It uses the same88-bio, model-derived gold set after development, so higher agreement does not establish independent accuracy. Jev-bot should distinguish model replacement, prompt revision, host-code changes and evaluation-set reuse before explaining why a result improved. [Before/after evidence](use-cases/ugc-classifier.md).
+
+## Attachment observations belong in retrieval with their limits
+
+Private evidence search now indexes individual attachment-review notes and appends them to associated cases. Each record retains message and attachment identity, review date, method, source link, completion status and the fact that visual inspection is not independent implementation validation. Standalone observations require research retrieval; partial videos, unread details and missing-message attempts remain incomplete. Sanitized case prose carries relevant lessons into the public bot; private screenshots and raw provenance remain excluded.
+
+## Distinguish model, application and measurement failures
+
+The Ledger's initial screenshots show a failed game request. The author later reports fixing an omitted API key; another screenshot displays a Noul result. Record the failure and recovery together. A gateway error is not evidence that Jev judged the game incorrectly, and a returned probability does not prove the judgment correct. [Game failure and repair](use-cases/politician-game.md).
+
+Orgtools reports both systems correct on five golden examples repeated three times, alongside a lower median latency. Repeats help describe variability; they do not turn five unique inputs into fifteen independent cases or establish calibration. Lemma selection reports better rankings on ten problems, while explicitly saying it is not yet faster. Keep ranking quality, latency and downstream task success separate. [Orgtools](use-cases/orgtools.md) · [Lemma selection](use-cases/lemma-selection.md).
+
+For each recommendation, preserve the observed result, its conditions, conflicting evidence, missing checks and a concrete validation step. Describe a proposed cause as an inference unless an inspected comparison isolates it. An issue board demonstrates integration, a linter warning demonstrates a proposed diagnostic, and a detector's confidence label demonstrates a model output; none alone proves correctness. [Semantic linting](use-cases/nouls-lsp.md) · [Detector limitations](use-cases/gargamel.md).
+
+## Recovered media can contradict the headline
+
+The Monad/Kuru post claims real orders, while its inspected recording explicitly says dry run and shows negative simulated P&L. The bot must retain that conflict and avoid claiming live execution or profit. A date probe asks whether months are past or future without supplying a reference date; its output cannot establish a training-data cutoff. [Trading evidence](use-cases/monad-kuru-trading.md) · [Date-probe source](https://x.com/tawfeksraj/status/2100909752918180217).
+
+## Cheap gates need independent signals and a fallback
+
+The newsletter example combines new-work, funding-obligation and counterparty judgments. A printer quote falls below the new-work threshold but its counterparty label keeps it in full review. API errors and uncertain results preserve the old path. This shows why one weak signal can discard useful work; five examples still do not establish a safe false-negative rate. Its savings table uses hypothetical skip rates, separate from measured per-call prices. [Newsletter gate](use-cases/newsletter-classifier.md).
+
+## Financial demos separate semantic matching from exact checks
+
+The reconciliation recording uses synthetic receipts, candidate selection and deterministic amount/currency checks. An ambiguous invoice reference remains unresolved instead of forcing a match. The exception demo retains a sanctions hold for human review and changes a late-settlement route after final-confirmation evidence arrives. These are workflow patterns, not validated compliance or permission to execute payments. [Reconciliation](use-cases/payment-reconciliation.md) · [Exception triage](use-cases/payment-exception-triage.md).
+
+## Reported confidence is not an evaluated safety gate
+
+The MMO report calls confidence calibrated because selected ambiguous scenarios score lower than controls. That observation is useful but does not measure probability calibration or validate its suggested 0.7 cutoff. Five repeats also include three Choice flips, despite broad deterministic wording. Preserve these scope limits beside the positive results. Noul and Choice produce different pursuit policies on the same states; typed outputs eliminate text parsing, not wrong decisions. [MMO benchmark](use-cases/npc-network-latency.md).

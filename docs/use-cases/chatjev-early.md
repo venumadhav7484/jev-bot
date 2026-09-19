@@ -23,7 +23,7 @@ Illustrates mismatch between conversational expectations and typed decision outp
 
 ## Limits and reuse
 
-Media and implementation remain unreviewed. Do not infer native text generation or broad chat ability from a displayed conversation.
+Selected screenshots reviewed; videos and implementation remain unreviewed. Do not infer native text generation or broad chat ability from a displayed conversation. Character-at-a-time screenshot reports30calls,86814tokens and101/118ms p50/p95 for one short exchange; not a generative reliability benchmark. Reviewed screenshots show blank, fragmented and repetitive replies. Separate next-letter playground ends after Assistant hole with32%confidence. Videos and complete implementations remain pending.
 
 ## Sources
 

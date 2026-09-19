@@ -3,7 +3,7 @@ id: terrablind
 title: "TerraBlind: Terraria intent decisions"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -30,7 +30,7 @@ An earlier post predates Jev access; only the later update claims integration. T
 - Discord source — private provenance retained locally.
 - [https://www.youtube.com/watch?v=g6CADbjBhlk](https://www.youtube.com/watch?v=g6CADbjBhlk) — access: `fetched`; review: `metadata_only`.
 - [https://github.com/Reisenbug/TerraBlind](https://github.com/Reisenbug/TerraBlind) — access: `fetched`; review: `readme_reviewed`.
-- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `metadata_only`.
-- [Reisenberg](https://www.youtube.com/channel/UCwLNRVlneK40hZr3lhjMgqw) — access: `fetched`; review: `metadata_only`.
+- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
+- [Reisenberg](https://www.youtube.com/channel/UCwLNRVlneK40hZr3lhjMgqw) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

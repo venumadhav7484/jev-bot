@@ -23,13 +23,13 @@ Author reports macro nDCG@10 0.692 for Jev rubric versus 0.691 Cohere with no cl
 
 ## Limits and reuse
 
-There is no clean winner. Aggregation method changes the apparent result; do not advertise universal superiority. Source review: Strong comparative evidence is workload-specific: macro ranking tie with Cohere, Cohere leads query-weighted average, ZeroEntropy cheaper. Candidate/order sensitivity and answer-absent confidence failures limit autonomous retrieval. Batching cost savings do not establish quality; validate support/contradiction judgments and thresholds on held-out application data.
+There is no clean winner. Aggregation method changes the apparent result; do not advertise universal superiority. Source review: Strong comparative evidence is workload-specific: macro ranking tie with Cohere, Cohere leads query-weighted average, ZeroEntropy cheaper. Candidate/order sensitivity and answer-absent confidence failures limit autonomous retrieval. Batching cost savings do not establish quality; validate support/contradiction judgments and thresholds on held-out application data. Browser source review: Rendered benchmark adds explicit GPU/API timing boundary differences, order diagnostics and missing batched per-query outputs. Never present its header 5905 questions as the denominator for the original-eight-dataset1617-query comparison.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
 - [https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job](https://anessbelbati.com/blog/i-gave-jev-a-rerankers-job) — access: `fetched`; review: `article_reviewed`.
 - [https://x.com/anessbelbati/status/2100398911911248050?s=20](https://x.com/anessbelbati/status/2100398911911248050?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
-- [https://anessbelbati.com/lab/jev-reranking/](https://anessbelbati.com/lab/jev-reranking/) — access: `fetched`; review: `metadata_only`.
+- [https://anessbelbati.com/lab/jev-reranking/](https://anessbelbati.com/lab/jev-reranking/) — access: `browser_readable`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

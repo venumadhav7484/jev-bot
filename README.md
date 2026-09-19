@@ -35,9 +35,9 @@ New source collection is paused at the boundary below. The exact last-post link 
 |---|---|
 | Capture cutoff | 19 September 2026, 10:08:31 IST |
 | Messages | 3,358 unique IDs; all editorially accounted for |
-| Cases | 421; 361 default eligible, 60 held back |
-| External evidence | 826 URLs; 0 await first disposition; 305 retain content gaps |
-| Media | 10 / 413 attachments inspected |
+| Cases | 440; 361 default eligible, 79 held back |
+| External evidence | 837 URLs; 0 await first disposition; 206 retain content gaps |
+| Media | 174 / 413 attachments inspected |
 | Bot | Local preview; 11 authored design families |
 | S3 | Backup pending |
 
@@ -54,6 +54,7 @@ New source collection is paused at the boundary below. The exact last-post link 
 - [Completion status](docs/completion-status.md) and [aggregate metrics](docs/metrics.json).
 - [Snapshot and update workflow](docs/system-workflow.md).
 - [Cached-source grounding pilot](docs/source-grounding-pilot.md): measured API usage, citation checks and review limits.
+- [Local media processing](docs/media-processing.md): frame extraction, local speech transcription, OCR and editorial review boundaries.
 - [Development checks](docs/development-checks.json): authored scenarios and a live API smoke test, with scope limits.
 
 The first assistant covers 11 authored design families: policy review, routing, semantic data filtering, media pipelines, bounded action selection, memory, evaluation, exact computation, financial evidence, clinical documents and generation boundaries. It can miss novel fits; the full catalog remains available for research. Related cases are analogies, not evidence that a new design will work. Development tests do not establish general answer accuracy.

@@ -29,6 +29,6 @@ Does not demonstrate native Jev vision. Planned animal-health checks must not be
 
 - Discord source — private provenance retained locally.
 - [https://docs.typesafe.ai/cookbooks/sde_cascade](https://docs.typesafe.ai/cookbooks/sde_cascade) — access: `fetched`; review: `official_cookbook_reviewed`.
-- [ts-docs.mintlify.app](https://ts-docs.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DExtraction%26title%3DSDE%2Bcascade%26description%3DUses%2Ba%2B2-stage%2Bstructured-data-extraction%2Bcascade%2B%2528mini%2B%25E2%2586%2592%2Bverify%2B%25E2%2586%2592%2Breasoning%2529%2Bto%2Bget%2Bmost%2Bof%2Bthe%2Bquality%2Bof%2Ba%2Bbig%2Breasoning%2Bmodel%2Bat%2Ba%2Bfraction%2Bof%2Bthe%2Bcost.%26theme%3Df0580ae664a0195833f0555d&w=1200&q=100) — access: `nontext_not_downloaded`; review: `nontext_content_pending`.
+- [ts-docs.mintlify.app](https://ts-docs.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DExtraction%26title%3DSDE%2Bcascade%26description%3DUses%2Ba%2B2-stage%2Bstructured-data-extraction%2Bcascade%2B%2528mini%2B%25E2%2586%2592%2Bverify%2B%25E2%2586%2592%2Breasoning%2529%2Bto%2Bget%2Bmost%2Bof%2Bthe%2Bquality%2Bof%2Ba%2Bbig%2Breasoning%2Bmodel%2Bat%2Ba%2Bfraction%2Bof%2Bthe%2Bcost.%26theme%3Df0580ae664a0195833f0555d&w=1200&q=100) — access: `public_image_extracted`; review: `image_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

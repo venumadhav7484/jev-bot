@@ -23,7 +23,7 @@ The author reports roughly 320 sessions, two million tokens, 14 seconds and $0.0
 
 ## Limits and reuse
 
-Preserve the count discrepancy. Classification agreement and whether labels were human-reviewed are unspecified.
+Preserve the count discrepancy. Classification agreement and whether labels were human-reviewed are unspecified. Schema includes role-tagged user/assistant/tool entries and tool errors. Conditional assumed-failure explanation must remain separate from the independent success verdict.
 
 ## Sources
 

@@ -3,7 +3,7 @@ id: monad-kuru-trading
 title: "Monad/Kuru: on-chain trading decision demo"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -11,7 +11,7 @@ independently_reproduced: false
 
 ## What
 
-Author reports a bot placing real orders on Kuru’s on-chain order book on Monad.
+Author claims a Jev-driven trading integration with Monad/Kuru; reviewed UI and recording display dry-run mode.
 
 ## How Jev fits
 
@@ -19,16 +19,16 @@ Jev receives an asset-pair price feed and selects buy/sell; host integration sub
 
 ## Why and impact
 
-Demonstrates typed decisions connected to transaction execution, not investment returns.
+Shows rapid bounded buy/sell decisions and a host trading interface; live transaction execution remains unverified.
 
 ## Limits and reuse
 
-No profitability, risk controls, unbiased backtest or transaction audit established. Never infer predictive edge from execution speed. The fetched demo page was connecting in dry-run mode with no blocks; its standing order forces buy/sell and offers no abstention. This observation does not independently confirm live execution.
+Recording explicitly says dry run and shows negative simulated P&L around -5.20% to -5.27%, conflicting with the post claim of real orders. No transaction audit, realized return, unbiased backtest or risk-control validation. Forced buy/sell offers no abstention; roughly 100 ms displayed average does not establish predictive edge.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/jarrodwatts/status/2100356151468585346](https://x.com/jarrodwatts/status/2100356151468585346) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/jarrodwatts/status/2100356151468585346](https://x.com/jarrodwatts/status/2100356151468585346) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://t.co/vwl2SUu4jm](https://t.co/vwl2SUu4jm) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

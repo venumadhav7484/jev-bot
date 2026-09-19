@@ -62,12 +62,19 @@ for c in sorted(cases, key=lambda c:(c['category'],c['title'])):
         evidence = source_status.get(u, {})
         label = extra['label'].replace('[', '(').replace(']', ')').replace('\n', ' ')
         links.append(f'- [{label}]({u}) — discovered via [external source]({extra["discovered_from_url"]}); access: `{evidence.get("access_status", "not_attempted")}`; review: `{evidence.get("review_status", "not_reviewed")}`.')
+    # External follow-ups can be reviewed after the frozen capture date.
+    # Do not backdate those case notes to the source snapshot.
+    review_dates = ['2026-09-19']
+    for url in urls:
+        date = source_status.get(canonical(url), {}).get('reviewed_on', '')
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
+            review_dates.append(date)
     text = f'''---
 id: {c['id']}
 title: {json.dumps(c['title'],ensure_ascii=False)}
 category: {c['category']}
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: {max(review_dates)}
 independently_reproduced: false
 source_message_ids: {json.dumps(ids)}
 ---

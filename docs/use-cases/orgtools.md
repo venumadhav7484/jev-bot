@@ -23,7 +23,7 @@ The author reports 0.15-second median classification versus 3.85 seconds for Gem
 
 ## Limits and reuse
 
-Only one workflow was converted at the time. The other approximately 15 candidate workflows were plans.
+Screenshot reports five golden examples repeated three times, with both systems15/15. This is a tiny development spike, not a held-out production-accuracy test. Comparing Jev distribution confidence with a generative model's self-reported confidence does not establish relative calibration. Only one workflow was converted; roughly15 further workflows were plans.
 
 ## Sources
 

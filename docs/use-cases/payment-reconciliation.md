@@ -15,19 +15,20 @@ Financial-services experiment reconciles payments with messy names and bundled i
 
 ## How Jev fits
 
-Jev supplies a settlement Noul judgment, follow-up Choice and urgency Score; host maps typed results into review workflow.
+Jev selects candidate ledger records and judges customer identity and ambiguity; host code checks exact amounts, currencies and documented fees. Ambiguous references remain unresolved and request remittance details.
 
 ## Why and impact
 
-Author reports 1.29 seconds and $0.00048 for an example, alongside separate regulatory-impact checks.
+Eight synthetic receipts in the recording: displayed 1.29 seconds, 11,360 input tokens and $0.00048. A documented $25 fee distinguishes the correct $50,000 invoice from a competing $49,975 invoice; equal amounts alone do not force a match.
 
 ## Limits and reuse
 
-No labeled reconciliation dataset, loss/error rate or production audit. Preserve deterministic amount checks and human review; do not treat model approval as payment authorization.
+Recorded synthetic examples, not a labeled evaluation or production audit. No measured loss/error rate. Proposed allocations require operator review; model approval is not payment authorization. Full request payloads and all collapsed judgments were not inspected.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
+- [Author reply demonstration video](https://x.com/Anot/status/2100761265517781273) — discovered via [external source](https://x.com/Anot/status/2100761008352493918); access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -23,7 +23,7 @@ A relevant implementation pattern for this knowledge base: use model judgments t
 
 ## Limits and reuse
 
-README and tsg documentation were read; code was not installed or benchmarked. tsg sends source passages and nearby context to TypeSafe. Its own documentation warns of semantic misses and incomplete scans. Source review: Semantic search can miss evidence; failed files/evaluations explicitly mark incomplete coverage. Demo rules are fictional, and returned source passages are review starting points.
+README and tsg documentation were read; code was not installed or benchmarked. tsg sends source passages and nearby context to TypeSafe. Its own documentation warns of semantic misses and incomplete scans. Source review: Semantic search can miss evidence; failed files/evaluations explicitly mark incomplete coverage. Demo rules are fictional, and returned source passages are review starting points. Reviewed terminal images show threshold.700, file/line passages and14/14units succeeding on demo food-truck ordinances. This supports interface behavior, not legal relevance precision/recall.
 
 ## Sources
 

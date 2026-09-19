@@ -23,7 +23,7 @@ One TechCrunch ticket-search example reports $0.003 and about 1.5 seconds versus
 
 ## Limits and reuse
 
-Handwavy single-task comparison; no controlled suite or measured cross-platform compatibility. Author notes poor icon handling; repository is macOS-focused. OCR portability is a design argument, not evidence of successful runs on every OS. Source review: Jev acts on extracted text and structured controls, not screenshots. Writing and final screenshot interpretation use separate generative models/costs. One-decision comparison does not establish equal task success or general speedup; perception engineering and stopping rules matter.
+Handwavy single-task comparison; no controlled suite or measured cross-platform compatibility. Author notes poor icon handling; repository is macOS-focused. OCR portability is a design argument, not evidence of successful runs on every OS. Source review: Jev acts on extracted text and structured controls, not screenshots. Writing and final screenshot interpretation use separate generative models/costs. One-decision comparison does not establish equal task success or general speedup; perception engineering and stopping rules matter. Author labels comparison handwavy: model latency.13-.38s versus5.2s, but capture/OCR makes end-to-end1.5s versus5.5s. Claimed cost multipliers depend on pricing, history and task-equivalence assumptions; none reproduced.
 
 ## Sources
 

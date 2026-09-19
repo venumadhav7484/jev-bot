@@ -27,6 +27,7 @@ class RetrievalPolicy(unittest.TestCase):
             ('proposal', 'curated_case', 'proposal', 0),
             ('raw', 'discord_message', 'unknown', 0),
             ('tool', 'curated_case', 'community_tool', 1),
+            ('media', 'media_review', 'observation', 0),
         ):
             body = 'routing ' + 'state ' * 300 + 'LIMIT: accuracy unverified. Source review: timeout fails open.'
             conn.execute('INSERT INTO evidence VALUES (?,?,?,?,?,?,?,?)',
@@ -44,6 +45,18 @@ class RetrievalPolicy(unittest.TestCase):
 
     def test_counterevidence_remains_retrievable(self):
         self.assertEqual(['failure'], [r['id'] for r in evidence.search_records('routing', purpose='counterevidence')])
+
+    def test_media_requires_research_and_preserves_partial_boundary(self):
+        self.assertEqual([], evidence.search_records('routing', kind='media_review'))
+        rows = evidence.search_records('routing', kind='media_review', purpose='research', full=True)
+        self.assertEqual(['media'], [r['id'] for r in rows])
+        body = evidence.media_context({'attachment_id': 'sample', 'status': 'video_sampled',
+                                      'complete': False, 'note': 'Only opening frame inspected.'},
+                                     'https://example.com/source')
+        self.assertIn('Inspection complete: False', body)
+        self.assertIn('not independent implementation validation', body)
+        self.assertIn('https://example.com/source', body)
+        self.assertIn('Only opening frame inspected.', body)
 
     def test_full_context_preserves_trailing_limits(self):
         rows = evidence.search_records('routing', full=True)

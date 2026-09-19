@@ -15,6 +15,14 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'research/media'
 
 
+def review_is_complete(review):
+    """A sampled clip or access attempt cannot close an attachment gap."""
+    return bool(review) and review.get('complete', True) is True and review.get('status') in {
+        'image_visually_reviewed', 'video_fully_reviewed', 'document_reviewed',
+        'file_content_reviewed', 'audio_fully_reviewed',
+    }
+
+
 def validate_review_provenance(messages, reviews):
     observed = set()
     for row in messages:
@@ -89,16 +97,18 @@ def main():
                 attachment['content_review'] = review
                 attachment['review_status'] = review['status']
             row['attachments'].append(attachment)
-        complete = sum('content_review' in r for r in row['attachments'])
+        complete = sum(review_is_complete(r.get('content_review')) for r in row['attachments'])
+        touched = any('content_review' in r for r in row['attachments'])
         row['case_ids'] = cases_for.get(row['message_id'], [])
         decision = editorial.get(row['message_id'], {})
         row['text_disposition'] = decision.get('status', 'cited_in_case' if row['case_ids'] else 'unclassified')
         row['text_disposition_reason'] = decision.get('reason', 'See associated curated case.')
         row['status'] = ('content_reviewed' if complete == len(row['attachments']) else
-                         'partially_reviewed' if complete else 'content_review_pending')
+                         'partially_reviewed' if touched else 'content_review_pending')
         # Text relevance and HTTP access never silently close a media review.
         row['remaining_attachments'] = len(row['attachments']) - complete
-    reviewed_urls = {a['url'] for r in messages for a in r['attachments'] if 'content_review' in a}
+    reviewed_urls = {a['url'] for r in messages for a in r['attachments']
+                     if review_is_complete(a.get('content_review'))}
     document = {'scope': 'Saved attachment URLs only; HEAD access is not visual, audio, video or file-content review.',
                 'unique_urls': len(urls), 'messages': len(messages), 'access_counts': dict(Counter(r['access_status'] for r in records)),
                 'content_review_counts': dict(Counter(r['status'] for r in messages)),

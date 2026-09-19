@@ -15,7 +15,7 @@ Public NetHack runner and live viewer expose Jev gameplay decisions.
 
 ## How Jev fits
 
-Structured gameplay/recovery loop retains recordings and action distributions for research.
+Jev selects multi-turn intentions from choices filtered by host code. Movement, targeting and some safety responses are deterministic; the runner exposes state, requests and action probabilities.
 
 ## Why and impact
 
@@ -23,7 +23,7 @@ Inspectable trajectories could support later policy training.
 
 ## Limits and reuse
 
-Author hopes to ascend; no completed ascension established. Policy training is future work, not evidence Jev updates weights online. A reported nearly 10,000-move run still at level one was later found to have a harness bug: moves were not advancing the game. Author planned a fix; no corrected completion confirmed. Source review: Captured page contains no server frame or completed outcome. Action confidence is not winning probability, and movement alone does not establish game progress. Source review: Hook coverage depends on host events; hidden reasoning and bypassed tools are unobservable. No plugin daily/byte/session quota by default. Completion judgments do not prove deployment. Source review: Gameplay activity and fewer loops are not win/progress proof. Negative experiments, false-positive evaluator and native final-score corrections must remain in recommendations. One validated crash path does not establish hardware resilience; availability/credit-exhaustion and archive limits remain operational constraints. Source review: Restartability does not establish game competence or bounded total spend. Accounting chunk limits reset indefinitely and cannot cap whole until-win run. Legacy replay arrays are reconstructions,not historical observations; retention depends on finite storage and services. No ascension demonstrated. Source review: Post-tool assessment cannot undo executed action or authenticate fabricated evidence. Merge state does not prove every historical acceptance item or live-provider demo complete. Defaults evolved in later PRs; current enforced/optional behavior needs those updates, not original body alone. Do not call R2/R3 automatic routing shipped from R1 transport. Source review: Broad advisory coverage is not mandatory enforcement, model switching or hidden-reasoning access. Completion assessment only checks supplied evidence. No default cumulative cost cap; attempts differ from successful/billedcalls. Synthetic evaluations/installation evidence do not prove universal host support or Directory approval. Source review: Root README and PR evidence have different scope/version. Do not infer automatic model routing or Jev-enforced approvals from general agent features; post-tool review and pre-action authorization remain distinct.
+Early recording shows dungeon levels 1 to 3, not ascension; author reports frequent stalls. A later nearly 10,000-move level-one run had a harness bug: moves did not advance game state. No corrected completion established. Do not merge these distinct runs into one outcome. Action confidence is not winning probability; future trajectory-based policy training does not mean Jev updates weights online.
 
 ## Sources
 
@@ -39,5 +39,6 @@ Author hopes to ascend; no completed ascension established. Policy training is f
 - Private artifact (provenance retained locally) — access: `access_failed`; review: `inaccessible_content_pending`.
 - Private artifact (provenance retained locally) — access: `access_failed`; review: `inaccessible_content_pending`.
 - [https://jev-nethack-live.poppybyte.chatgpt.site/](https://jev-nethack-live.poppybyte.chatgpt.site/) — access: `fetched`; review: `source_text_reviewed`.
+- [https://x.com/pj4533/status/2100624540938260919?s=20](https://x.com/pj4533/status/2100624540938260919?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

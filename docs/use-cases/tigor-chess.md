@@ -23,7 +23,7 @@ Separating move legality from move preference prevents a selected answer from in
 
 ## Limits and reuse
 
-The README requires an origin whitelisted for CORS. Its completion percentage is a project claim, not evidence of playing strength. Source code, gameplay and stale-response handling were not independently tested in this cached README review.
+The README requires an origin whitelisted for CORS. Its completion percentage is a project claim, not evidence of playing strength. Source code, gameplay and stale-response handling were not independently tested in this cached README review. Reviewed screenshot shows a loss to Qxf7 after blackNxf2, with .29confidence and290ms. One game, not a rating estimate.
 
 ## Sources
 

@@ -23,11 +23,11 @@ Author reports 288 judgments in one live run, median 259.9ms, zero errors and ze
 
 ## Limits and reuse
 
-One author-reported run, not a broad game-quality or latency benchmark. Video and complete action schema remain unreviewed; deterministic game code owns consequences.
+Reviewed recording displays12batchedrequests and288typedjudgments,with260msmedian andzero fallbacks; these are one-run author/display figures,not independent timings. Sampled frames show intent-driven guards and host-controlled movement. No broad game-quality evaluation or full action-schema audit.
 
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://x.com/AbdelStark/status/2100628873356693788?s=20](https://x.com/AbdelStark/status/2100628873356693788?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [https://x.com/AbdelStark/status/2100628873356693788?s=20](https://x.com/AbdelStark/status/2100628873356693788?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

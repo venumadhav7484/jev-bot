@@ -28,6 +28,6 @@ No measured analyzer accuracy or SDK performance. Test fakes validate integratio
 ## Sources
 
 - Discord source — private provenance retained locally.
-- [https://crates.io/crates/typesafe-client](https://crates.io/crates/typesafe-client) — access: `fetched`; review: `metadata_only`.
+- [https://crates.io/crates/typesafe-client](https://crates.io/crates/typesafe-client) — access: `browser_readable`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

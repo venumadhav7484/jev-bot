@@ -23,7 +23,7 @@ Brings decision feedback into normal development tooling.
 
 ## Limits and reuse
 
-Rule set, runtime behavior and measured quality were not inspected. Source review: Function-local context cannot establish whole-program bugs. Label sampling across score bands is useful for detecting misses; default thresholds and disabled false findings require task-specific review.
+Screenshot shows seven warnings and five informational findings across seven files, including partial failure, check-then-act and mixed abstraction. These are proposed diagnostics, not confirmed defects. Function-local context cannot establish whole-program bugs. Label sampling across score bands is useful for detecting misses; default thresholds and disabled false findings require task-specific review. No independent precision/recall evaluation.
 
 ## Sources
 

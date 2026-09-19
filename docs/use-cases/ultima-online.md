@@ -3,7 +3,7 @@ id: ultima-online
 title: "Ultima Online: combat and loot decisions"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -29,8 +29,8 @@ The linked video was not independently benchmarked. Game-state perception and mo
 
 - Discord source — private provenance retained locally.
 - [https://www.youtube.com/watch?v=cP-GWKteHKo](https://www.youtube.com/watch?v=cP-GWKteHKo) — access: `fetched`; review: `metadata_only`.
-- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `metadata_only`.
-- [John](https://www.youtube.com/channel/UCvD25CKcOKDMXi5t2jRrw2A) — access: `fetched`; review: `metadata_only`.
+- [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
+- [John](https://www.youtube.com/channel/UCvD25CKcOKDMXi5t2jRrw2A) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP](https://youtu.be/cP-GWKteHKo?is=CsXY7yacBVgPYhKP) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

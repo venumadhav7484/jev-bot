@@ -23,7 +23,7 @@ The author reports Jev being faster while Luna collected roughly twice as many a
 
 ## Limits and reuse
 
-Reported weakness is anticipating multi-move traps. Use as counterevidence against assuming bounded actions make long-horizon reasoning easy.
+Reported weakness is anticipating multi-move traps. Use as counterevidence against assuming bounded actions make long-horizon reasoning easy. First image shows13versus24apples over200steps each,zero invalid moves/errors. Second shows Jev dead at81steps14apples versus baseline28apples at200steps; second comparison is unequal survival duration.
 
 ## Sources
 

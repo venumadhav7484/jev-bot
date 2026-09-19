@@ -23,7 +23,7 @@ A low-stakes way to explore how wording and descriptions affect model judgment. 
 
 ## Limits and reuse
 
-Predicting a model value is not validating that value against real outcomes. Treat displayed percentages as model behavior.
+Predicting a model value is not validating that value against real outcomes. Treat displayed percentages as model behavior. Screenshot gives3% for a coin explicitly described as55%heads. Follow-up uses explicit0-9 probability bins and selects50-59% with100%confidence. Different schemas, not a controlled repeat; confidence over a bin is distinct from event probability. Preserve both results.
 
 ## Sources
 

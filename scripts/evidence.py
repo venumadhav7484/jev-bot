@@ -1,10 +1,12 @@
 """Build and query a local, citation-preserving SQLite evidence index."""
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 import re
 import sqlite3
+from audit_media import review_is_complete, validate_review_provenance
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / 'research/triage'
@@ -13,6 +15,18 @@ DB = ROOT / 'research/evidence.sqlite3'
 
 def jsonl(path):
     return [json.loads(line) for line in path.read_text().splitlines() if line.strip()] if path.exists() else []
+
+
+def media_context(review, source_url):
+    """Keep visual observations inseparable from their inspection boundary."""
+    return ('\n\n### Attachment review\n'
+            f'Source: {source_url}\nAttachment: {review["attachment_id"]}\n'
+            f'Status: {review["status"]}\n'
+            f'Inspection complete: {review_is_complete(review)}\n'
+            f'Date: {review.get("reviewed_on", "unspecified")}\n'
+            f'Method: {review.get("method", "unspecified")}\n'
+            'An inspected screenshot or recording is not independent implementation validation.\n'
+            f'{review.get("note", "No observation recorded.")}\n')
 
 
 def build():
@@ -30,6 +44,25 @@ def build():
     predictions = {r['message_id']: r for r in jsonl(WORK / 'predictions.jsonl')}
     coverage_path = ROOT / 'resource-pool/sources/message-coverage.json'
     coverage = {r['message_id']: r for r in json.loads(coverage_path.read_text())} if coverage_path.exists() else {}
+    media_path = ROOT / 'resource-pool/sources/media-reviews.json'
+    media = json.loads(media_path.read_text()) if media_path.exists() else []
+    if media:
+        queue = json.loads((WORK / 'media-backlog.json').read_text())['entries']
+        validate_review_provenance(queue, media)
+    media_by_message = {}
+    for review in media:
+        mid = review['message_id']
+        source = coverage[mid]['source_url']
+        body = media_context(review, source)
+        media_by_message.setdefault(mid, []).append(body)
+        rid = f'media:{mid}:{review["attachment_id"]}'
+        flags = {'inspection_complete': review_is_complete(review), 'independently_validated': False}
+        values = (rid, 'media_review', f'Attachment review: {review["status"]}', body,
+                  source, 'media_observation', 'see_case_evidence', json.dumps(flags),
+                  json.dumps([source]), json.dumps(coverage[mid].get('case_ids', [])),
+                  review['status'], hashlib.sha256(body.encode()).hexdigest(), 0)
+        conn.execute('INSERT INTO evidence VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', values)
+        conn.execute('INSERT INTO evidence_fts VALUES (?,?,?)', values[:1] + values[2:4])
     for row in jsonl(WORK / 'messages.jsonl'):
         pred = predictions.get(row['message_id'], {})
         curated = coverage.get(row['message_id'], {})
@@ -47,6 +80,8 @@ def build():
             path = ROOT / 'resource-pool/use-cases' / (row['id'] + '.md')
             body = path.read_text()
             links = re.findall(r'\]\((https?://[^)]+)\)', body)
+            for mid in row['message_ids'].split(','):
+                body += ''.join(media_by_message.get(mid, []))
             # Keep corrections and scope beside the case instead of hiding them
             # in an unsearched metadata table. Fetching alone adds no evidence.
             for url in dict.fromkeys(links):
@@ -136,7 +171,7 @@ def main():
     find = sub.add_parser('search')
     find.add_argument('query')
     find.add_argument('--limit', type=int, default=10)
-    find.add_argument('--kind', choices=('discord_message', 'curated_case', 'reference'))
+    find.add_argument('--kind', choices=('discord_message', 'curated_case', 'reference', 'media_review'))
     find.add_argument('--full', action='store_true', help='Return complete cases, including limitations and source review notes.')
     find.add_argument('--purpose', choices=('recommendation', 'counterevidence', 'tools', 'research'), default='recommendation',
                       help='Default suppresses raw messages, proposals and thin evidence. Research explicitly includes all records.')

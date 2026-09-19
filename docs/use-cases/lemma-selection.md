@@ -19,11 +19,11 @@ Jev judges which lemmas are promising for the current proof state.
 
 ## Why and impact
 
-Author reports it is not yet faster; improved pruning on harder proofs is a hypothesis.
+On ten problems, the screenshot reports Jev8/10 first choice and9/10 within the first five, versus variable-normalized BM252/10 and7/10. Author says Jev is not yet faster; improved pruning on harder proofs is a hypothesis.
 
 ## Limits and reuse
 
-Do not convert expected future speed into an observed result. A formal checker must establish proof validity.
+Random (one seed), token-overlap and raw BM25 baselines score0/10 in both reported columns. Small evaluation; corpus construction and wall-clock gains are not established. No independent reproduction. A formal checker must establish proof validity.
 
 ## Sources
 

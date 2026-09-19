@@ -27,7 +27,6 @@ Exact retention policy and information-loss measurements were not inspected. Sou
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/ljedrz/nachalnik/blob/master/kamchatka/examples/jev_assisted_compaction.rs](https://github.com/ljedrz/nachalnik/blob/master/kamchatka/examples/jev_assisted_compaction.rs) — access: `fetched`; review: `code_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

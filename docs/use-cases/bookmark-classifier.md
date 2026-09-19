@@ -27,7 +27,6 @@ No labeled categorization accuracy, duplicate policy or scale/cost results in pr
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.linkedin.com/feed/update/urn:li:activity:7506672882857574400/](https://www.linkedin.com/feed/update/urn:li:activity:7506672882857574400/) — access: `fetched`; review: `source_text_reviewed`.
 - [media.licdn.com](https://media.licdn.com/dms/image/v2/D4E22AQGsj7zmIbB-0A/feedshare-shrink_800/B4EaC0PNQAK8Ag-/0/1789730280798?e=2147483647&v=beta&t=gT9yclgmaMniJOj6hl92oCq8kj9mvkPMJPFWJRVUBBg) — access: `access_failed`; review: `inaccessible_content_pending`.
 

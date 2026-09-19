@@ -27,7 +27,6 @@ Synthetic/de-identified examples, not clinical deployment validation. Detection 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.linkedin.com/posts/raghuvadapally_𝗧𝗵𝗲-𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻-𝗦𝗵𝗮𝗽𝗲-𝗜𝘀-𝘁𝗵𝗲-activity-7506415829442424832-95UB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAC35IoB5xF9GSZM4IPL1dUi1CSkUPeBLSU](https://www.linkedin.com/posts/raghuvadapally_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%A4%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%A6%F0%9D%97%B5%F0%9D%97%AE%F0%9D%97%BD%F0%9D%97%B2-%F0%9D%97%9C%F0%9D%98%80-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2-activity-7506415829442424832-95UB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAC35IoB5xF9GSZM4IPL1dUi1CSkUPeBLSU) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [static.licdn.com](https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7) — access: `asset_no_text`; review: `excluded_asset`.
 

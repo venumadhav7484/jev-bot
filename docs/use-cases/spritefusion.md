@@ -27,7 +27,6 @@ The captured posts do not establish arbitrary image/code generation or guarantee
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `article_reviewed`.
 - [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 

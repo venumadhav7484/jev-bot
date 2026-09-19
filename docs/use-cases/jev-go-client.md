@@ -27,7 +27,6 @@ Community client, not established official SDK. Pin compatible API/model version
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Gaurav-Gosain/jev-go](https://github.com/Gaurav-Gosain/jev-go) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

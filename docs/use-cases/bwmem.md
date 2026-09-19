@@ -27,7 +27,6 @@ First-of-its-kind claim unverified; no workload size, recall comparison or indep
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.npmjs.com/package/@bitwarelabs/bwmem](https://www.npmjs.com/package/@bitwarelabs/bwmem) — access: `fetched`; review: `scoped_package_documentation_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

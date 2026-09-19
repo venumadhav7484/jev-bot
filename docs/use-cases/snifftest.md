@@ -27,7 +27,6 @@ Also reports 13/166 missing answers. Missing-output handling and rotation behavi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/DanRWilloughby/snifftest](https://github.com/DanRWilloughby/snifftest) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

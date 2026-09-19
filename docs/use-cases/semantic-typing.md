@@ -27,7 +27,6 @@ This is a game, not evidence of secure CAPTCHA design or bot resistance.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://captcha-from-hell.vercel.app/](https://captcha-from-hell.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

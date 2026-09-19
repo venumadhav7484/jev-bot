@@ -27,7 +27,6 @@ No representative tournament win rate or significance. Distinct from Charlie’s
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/danmana/status/2100975457759789492](https://x.com/danmana/status/2100975457759789492) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,6 +27,5 @@ No win rate, opponent rating or replay audit. Do not merge with separate one-gam
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

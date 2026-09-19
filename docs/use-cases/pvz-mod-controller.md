@@ -27,7 +27,6 @@ Comparison with RL requires matching modified rules, observations and success cr
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/ThexysaiXy/status/2100520866685833645](https://x.com/ThexysaiXy/status/2100520866685833645) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Musical feature extraction and rendering are separate from Jev. Author reports q
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/shannon_fano/status/2100639390468833379?s=46](https://x.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://fixupx.com/shannon_fano/status/2100639390468833379?s=46](https://fixupx.com/shannon_fano/status/2100639390468833379?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [shannon fano (@shannon_fano)](https://x.com/shannon_fano/status/2100639390468833379) — access: `fetched`; review: `demo_trace_reviewed`.

@@ -27,7 +27,6 @@ Simulated clinic dashboard inspected; all displayed booking/ROI/efficiency metri
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://gen-lang-client-0155046437.web.app/](https://gen-lang-client-0155046437.web.app/) — access: `fetched`; review: `demo_interface_reviewed`.
 - [https://satyabhan007.github.io/](https://satyabhan007.github.io/) — access: `fetched`; review: `page_reviewed`.
 - [https://www.linkedin.com/in/satyabhan-bhadoriya-777b28239?utm_source=share_via&utm_content=profile&utm_medium=member_android](https://www.linkedin.com/in/satyabhan-bhadoriya-777b28239?utm_source=share_via&utm_content=profile&utm_medium=member_android) — access: `access_failed`; review: `inaccessible_content_pending`.

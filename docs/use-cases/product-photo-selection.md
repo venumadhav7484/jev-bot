@@ -27,7 +27,6 @@ Production status is self-reported; parsing mechanism, candidate coverage and er
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://lovechild.in/products/batua-pocket-lipstick-rich-satin-finish-chai-khari](https://lovechild.in/products/batua-pocket-lipstick-rich-satin-finish-chai-khari) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

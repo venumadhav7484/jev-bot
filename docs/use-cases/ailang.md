@@ -27,7 +27,6 @@ Small internal sample, not a general benchmark. Keep explicit effects and fallba
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/sunholo-data/ailang-packages/tree/main/packages/decisions](https://github.com/sunholo-data/ailang-packages/tree/main/packages/decisions) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/sunholo-data/ailang/blob/dev/design_docs/implemented/v0_40_1/m-ai-decide-system-one.md](https://github.com/sunholo-data/ailang/blob/dev/design_docs/implemented/v0_40_1/m-ai-decide-system-one.md) — access: `fetched`; review: `implementation_report_reviewed`.
 

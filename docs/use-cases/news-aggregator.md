@@ -27,7 +27,6 @@ Replay supports Jev integration more directly than the previously inspected READ
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://news.aatf.ai/](https://news.aatf.ai/) — access: `fetched`; review: `landing_page_reviewed`.
 - [https://github.com/flyryan/ai-news-aggregator](https://github.com/flyryan/ai-news-aggregator) — access: `fetched`; review: `repository_documentation_reviewed`.
 - [https://news.aatf.ai/replay?date=2026-09-18](https://news.aatf.ai/replay?date=2026-09-18) — access: `fetched`; review: `demo_trace_reviewed`.

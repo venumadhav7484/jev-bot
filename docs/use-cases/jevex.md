@@ -27,7 +27,6 @@ Uncached input fell only 17%; caching materially changes the economics. The stro
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/jvsteiner/jevex](https://github.com/jvsteiner/jevex) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

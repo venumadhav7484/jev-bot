@@ -27,7 +27,6 @@ Generated speech is imagined by Fable, not Jev reasoning or evidence of faithful
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://looselyconnected.wordpress.com/2026/09/15/jev-addresses-the-council-at-rivendell/](https://looselyconnected.wordpress.com/2026/09/15/jev-addresses-the-council-at-rivendell/) — access: `fetched`; review: `article_reviewed`.
 - [Loosely Connected](http://looselyconnected.wordpress.com/) — access: `fetched`; review: `duplicate_context_reviewed`.
 - [jeje](https://looselyconnected.wordpress.com/author/) — access: `access_failed`; review: `inaccessible_content_pending`.

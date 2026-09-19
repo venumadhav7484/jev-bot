@@ -27,7 +27,6 @@ Requests are not retried, repeated awaits send another request, and gateway conf
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [Github](https://github.com/pithings/advocaat) — access: `fetched`; review: `readme_reviewed`.
 - [https://x.com/_pi0_/status/2100362008856010789](https://x.com/_pi0_/status/2100362008856010789) — access: `fetched`; review: `visible_post_text_reviewed`.
 

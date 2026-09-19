@@ -27,7 +27,6 @@ No source compatibility audit or runtime test performed. Source review: Compile-
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://mattneel.github.io/typesafe.zig](https://mattneel.github.io/typesafe.zig) — access: `fetched`; review: `documentation_reviewed`.
 - [https://mattneel.github.io/typesafe.zig/](https://mattneel.github.io/typesafe.zig/) — access: `fetched`; review: `documentation_reviewed`.
 

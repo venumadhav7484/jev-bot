@@ -27,7 +27,6 @@ Author benchmark not independently reproduced. Cross-field judgments can conflic
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md) — access: `fetched`; review: `article_reviewed`.
 - [https://github.com/Diabolacal/eo-map-carbon](https://github.com/Diabolacal/eo-map-carbon) — access: `fetched`; review: `readme_reviewed`.
 - [Detailed benchmark protocol](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/COMMANDER_BENCHMARK.md) — discovered via [external source](https://github.com/Diabolacal/eo-map-carbon/blob/main/experiments/typesafe/JEV_TACTICAL_COMMANDER.md); access: `fetched`; review: `sections_reviewed`.

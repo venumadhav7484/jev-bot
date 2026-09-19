@@ -27,7 +27,6 @@ No model inventory, routing criteria, quality loss or cost benchmark established
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/abcdmku/status/2100406369744482318?s=20](https://x.com/abcdmku/status/2100406369744482318?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

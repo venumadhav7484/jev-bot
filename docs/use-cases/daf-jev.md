@@ -27,7 +27,6 @@ Toolkit and paper claims were not independently reproduced. Repeated confidence 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/docxology/daf-jev](https://github.com/docxology/daf-jev) — access: `fetched`; review: `readme_reviewed`.
 - [https://zenodo.org/records/22817425](https://zenodo.org/records/22817425) — access: `fetched`; review: `provider_listing_reviewed`.
 

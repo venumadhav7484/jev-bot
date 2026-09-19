@@ -27,6 +27,5 @@ No exact accuracy table supplied. Korean prompting did not clearly improve this 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

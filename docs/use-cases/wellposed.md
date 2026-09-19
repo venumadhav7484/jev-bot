@@ -27,7 +27,6 @@ The 40-request corpus was generated and labeled by one model. Confidence gating 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/suraj-phanindra/wellposed](https://github.com/suraj-phanindra/wellposed) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

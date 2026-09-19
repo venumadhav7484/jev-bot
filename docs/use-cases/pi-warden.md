@@ -27,7 +27,6 @@ Steering is not a security boundary. Retain hard permissions and independent com
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://pi.dev/packages/pi-warden](https://pi.dev/packages/pi-warden) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/DevMortimer/pi-warden](https://github.com/DevMortimer/pi-warden) — access: `fetched`; review: `source_text_reviewed`.
 

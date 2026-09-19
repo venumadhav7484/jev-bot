@@ -27,6 +27,5 @@ No objective labels or controlled wording ablation. Define expressed urgency sep
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

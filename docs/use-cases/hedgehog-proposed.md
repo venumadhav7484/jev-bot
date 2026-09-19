@@ -27,7 +27,6 @@ The source does not establish a working Jev integration. Repository features mus
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/skyf0xx/hedgehog](https://github.com/skyf0xx/hedgehog) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

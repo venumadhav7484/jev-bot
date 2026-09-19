@@ -27,7 +27,6 @@ No objective skill or bankroll evaluation; distinct from casual $1000-to-$29000 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/imcharliegraham/status/2100954087605113072?s=20](https://x.com/imcharliegraham/status/2100954087605113072?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/imcharliegraham/status/2100954087605113072](https://x.com/imcharliegraham/status/2100954087605113072) — access: `fetched`; review: `demo_trace_reviewed`.
 

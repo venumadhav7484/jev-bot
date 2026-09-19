@@ -27,7 +27,6 @@ Seven sampled frames; underlying solver not inspected. Do not attribute the enti
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/_trou3/status/2100527857739215150](https://x.com/_trou3/status/2100527857739215150) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

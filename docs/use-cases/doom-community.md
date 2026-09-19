@@ -27,7 +27,6 @@ README claims about 10Hz inference and no dropped frames lack a reproduced perfo
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.reddit.com/r/developersIndia/s/kuHoZ1jHFc](https://www.reddit.com/r/developersIndia/s/kuHoZ1jHFc) — access: `fetched`; review: `metadata_only`.
 - [https://github.com/AmoghCreator/doom-jev](https://github.com/AmoghCreator/doom-jev) — access: `fetched`; review: `readme_reviewed`.
 - [r/developersIndia](https://www.reddit.com/r/developersIndia/) — access: `fetched`; review: `metadata_only`.

@@ -27,7 +27,6 @@ Stream progress is not a standardized benchmark. Long-horizon planning and actio
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/golergka/jev-plays-starcraft-2](https://github.com/golergka/jev-plays-starcraft-2) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

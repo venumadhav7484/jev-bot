@@ -27,7 +27,6 @@ Video exposes live directives, inventory and next-action probabilities; final sa
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/dparksdev/status/2100949987571974537?s=46&t=mUFddqq8RWeTtOazjuUS6g](https://x.com/dparksdev/status/2100949987571974537?s=46&t=mUFddqq8RWeTtOazjuUS6g) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

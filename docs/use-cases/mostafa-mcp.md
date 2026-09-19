@@ -27,7 +27,6 @@ No cross-host compatibility or performance testing independently performed. Sour
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/itsmostafa/typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Nineteen sampled frames show bridge failure, death/restart and late stall withou
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/chalkers/status/2100429696941080886?s=46&t=9d3OZDM6CF17OmY-xxEvPg](https://x.com/chalkers/status/2100429696941080886?s=46&t=9d3OZDM6CF17OmY-xxEvPg) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/chalkers/status/2100466530459017458?s=46&t=9d3OZDM6CF17OmY-xxEvPg](https://x.com/chalkers/status/2100466530459017458?s=46&t=9d3OZDM6CF17OmY-xxEvPg) — access: `fetched`; review: `demo_trace_reviewed`.
 

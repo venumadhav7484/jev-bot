@@ -27,7 +27,6 @@ The project was early-stage in its post. A passing judgment does not establish f
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/zoidsh/tenet](https://github.com/zoidsh/tenet) — access: `fetched`; review: `repository_documentation_reviewed`.
 - [https://github.com/zoidsh/tenetlint](https://github.com/zoidsh/tenetlint) — access: `fetched`; review: `duplicate_reviewed`.
 

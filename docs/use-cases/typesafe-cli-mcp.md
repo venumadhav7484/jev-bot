@@ -27,7 +27,6 @@ The README says 429 and 5xx failures retry twice; requests therefore need billin
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/y0usaf/typesafe-cli](https://github.com/y0usaf/typesafe-cli) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/y0usaf/typesafe-mcp](https://github.com/y0usaf/typesafe-mcp) — access: `fetched`; review: `source_text_reviewed`.
 

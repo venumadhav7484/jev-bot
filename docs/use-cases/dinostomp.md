@@ -27,7 +27,6 @@ Integration is author-reported; no independent evaluation was run. Judge reliabi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/collapseindex/dinostomp](https://github.com/collapseindex/dinostomp) — access: `fetched`; review: `scoped_repository_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Self-assessment and retrieval aid, not hiring eligibility evidence. Full report 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://iambraun.com/jev/](https://iambraun.com/jev/) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

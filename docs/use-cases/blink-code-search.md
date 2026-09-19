@@ -27,7 +27,6 @@ Walker percentages are search-allocation outcomes, not calibrated correctness or
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/ellipsis-dev/blink](https://github.com/ellipsis-dev/blink) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

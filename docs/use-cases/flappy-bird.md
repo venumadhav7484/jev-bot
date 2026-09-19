@@ -27,7 +27,6 @@ Strong deterministic lookahead, candidate pruning and safety overrides surround 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/leftspace35/status/2100713588381925520](https://x.com/leftspace35/status/2100713588381925520) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/KeskDin4pV](https://t.co/KeskDin4pV) — access: `fetched`; review: `readme_reviewed`.
 - [Author-linked implementation artifact](https://github.com/leftspace89/JevBird) — discovered via [external source](https://x.com/leftspace35/status/2100713588381925520); access: `fetched`; review: `readme_reviewed`.

@@ -27,7 +27,6 @@ This is a known development set tuned with Jev; Claude did not receive equivalen
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.linkedin.com/pulse/testing-ai-tariff-triage-cost-speed-accuracy-matthew-hartman-gqe3c/](https://www.linkedin.com/pulse/testing-ai-tariff-triage-cost-speed-accuracy-matthew-hartman-gqe3c/) — access: `fetched`; review: `source_text_reviewed`.
 - [media.licdn.com](https://media.licdn.com/dms/image/v2/D5612AQFnBBDxMgwizg/article-cover_image-shrink_720_1280/B56aC3DhijH0AQ-/0/1789777553384?e=2147483647&v=beta&t=fwWSrZAwUKNSBG9Eeg891nbUWVlXIb3iK5EK-8P6EaI) — access: `access_failed`; review: `inaccessible_content_pending`.
 

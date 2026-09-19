@@ -27,7 +27,6 @@ Five sampled frames inspected. Displayed100% confidence is not classification ac
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/tosa_now/status/2100230707297878339?s=20](https://x.com/tosa_now/status/2100230707297878339?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

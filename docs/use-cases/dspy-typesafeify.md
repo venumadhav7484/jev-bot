@@ -27,7 +27,6 @@ Author-described tool and linked repository; attachment benchmark unreviewed. Do
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/typesafeainate/dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

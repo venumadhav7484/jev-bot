@@ -27,7 +27,6 @@ Players question balance in source replies; semantic plausibility does not guara
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/cpaczek/things-vs-stuff](https://github.com/cpaczek/things-vs-stuff) — access: `fetched`; review: `readme_reviewed`.
 - [https://things.iar.dev/](https://things.iar.dev/) — access: `fetched`; review: `demo_trace_reviewed`.
 

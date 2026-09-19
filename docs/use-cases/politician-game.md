@@ -27,7 +27,6 @@ Screenshots show an initial502failure. Author later says an omitted API key was 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://the-ledger.simonbalint03.workers.dev/](https://the-ledger.simonbalint03.workers.dev/) — access: `browser_readable`; review: `landing_page_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

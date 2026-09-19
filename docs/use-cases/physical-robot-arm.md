@@ -27,7 +27,6 @@ No verified low-level controller, success distribution, autonomy scope or safety
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/zaidbul/status/2100949713138729135](https://x.com/zaidbul/status/2100949713138729135) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

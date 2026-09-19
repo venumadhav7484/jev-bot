@@ -27,7 +27,6 @@ No compatibility audit, benchmark or attribution/license review performed. Sourc
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/nshkrdotcom/typesafe_sdk](https://github.com/nshkrdotcom/typesafe_sdk) — access: `fetched`; review: `sdk_documentation_reviewed`.
 - [https://hex.pm/packages/typesafe_sdk](https://hex.pm/packages/typesafe_sdk) — access: `fetched`; review: `provider_listing_reviewed`.
 

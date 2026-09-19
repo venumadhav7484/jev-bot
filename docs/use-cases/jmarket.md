@@ -27,7 +27,6 @@ No forecast calibration, profitability or live execution evidence. Do not treat 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/svmanth/jmarket](https://github.com/svmanth/jmarket) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

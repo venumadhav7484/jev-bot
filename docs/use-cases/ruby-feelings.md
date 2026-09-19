@@ -27,7 +27,6 @@ Probabilistic conditions should not silently replace deterministic invariants. A
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/obie/feelings](https://github.com/obie/feelings) — access: `fetched`; review: `readme_reviewed`.
 - [https://obiefernandez.com/gems/feelings/](https://obiefernandez.com/gems/feelings/) — access: `fetched`; review: `source_text_reviewed`.
 

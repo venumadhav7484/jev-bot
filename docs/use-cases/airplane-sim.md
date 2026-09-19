@@ -27,7 +27,6 @@ One clear-skies, zero-wind simulation. A 26-second recording covers over two sim
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/arielweinberger/status/2100734952274907166](https://x.com/arielweinberger/status/2100734952274907166) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

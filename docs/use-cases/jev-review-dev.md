@@ -27,7 +27,6 @@ Repository and staged thresholds need inspection. No defect-recall or false-posi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/devagrawal09/status/2100341005690298687?s=20](https://x.com/devagrawal09/status/2100341005690298687?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://t.co/6Z9IMYI78b](https://t.co/6Z9IMYI78b) — access: `fetched`; review: `readme_reviewed`.
 

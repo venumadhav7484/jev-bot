@@ -27,7 +27,6 @@ Changing goal changes question semantics, so this is not a controlled cosmetic-l
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://console.typesafe.ai/playground?share=shr_123d2f855e843ed4d379bcbce56975845a8](https://console.typesafe.ai/playground?share=shr_123d2f855e843ed4d379bcbce56975845a8) — access: `fetched`; review: `metadata_only`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Video confirms per-shot rubrics and aggregate 88, with 50-judgment/1.52s/$0.0002
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/vladdubchak_x/status/2100870244004683886?s=20](https://x.com/vladdubchak_x/status/2100870244004683886?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

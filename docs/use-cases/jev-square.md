@@ -27,6 +27,5 @@ Media and collision success unreviewed; no evidence of online learning or genera
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ The reported notice-placement compliance experiment cannot be treated as Jev det
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/UNgethe/status/2100652324418945273?s=20](https://x.com/UNgethe/status/2100652324418945273?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/j9hsV64WW6](https://t.co/j9hsV64WW6) — access: `fetched`; review: `source_text_reviewed`.
 - [Author-linked implementation artifact](https://github.com/udirobert/elcaro) — discovered via [external source](https://x.com/UNgethe/status/2100652324418945273); access: `fetched`; review: `readme_reviewed`.

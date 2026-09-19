@@ -27,7 +27,6 @@ Do not omit the quality loss when quoting cost or speed. A fast incorrect move r
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/injaneity/status/2100290364657848538?s=20](https://x.com/injaneity/status/2100290364657848538?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/injaneity/status/2100290364657848538](https://x.com/injaneity/status/2100290364657848538) — access: `fetched`; review: `demo_trace_reviewed`.
 

@@ -9,7 +9,7 @@ function metric(value, label, note) { const el = node('div', null, 'metric'); el
 function expand(label, text, parent) { if (!text) return; const d = node('details'); d.append(node('summary', label), node('p', plain(text), 'preserve')); parent.append(d); }
 function sourceLinks(text, parent) {
   const urls = links(text);
-  if (!urls.length) parent.append(node('p', 'No public artifact link recorded. Discord source provenance remains private.', 'muted'));
+  if (!urls.length) parent.append(node('p', 'No public artifact link recorded.', 'muted'));
   for (const item of urls) {
     const a = link('', item.url, 'artifact'); a.append(node('span', `${item.kind} ↗`, 'eyebrow'), node('strong', item.label)); parent.append(a);
   }

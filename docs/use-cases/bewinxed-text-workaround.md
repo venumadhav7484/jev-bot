@@ -27,7 +27,6 @@ Video ends with 60 words/$0.59/195s, but output contains extensive repetition an
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/bewinxed/status/2100519569307640097?s=46](https://x.com/bewinxed/status/2100519569307640097?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [Author-linked implementation artifact](https://github.com/bewinxed/jevgpt) — discovered via [external source](https://x.com/bewinxed/status/2100519569307640097); access: `fetched`; review: `readme_reviewed`.
 

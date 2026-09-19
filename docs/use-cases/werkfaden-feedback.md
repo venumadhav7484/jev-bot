@@ -27,7 +27,6 @@ Author says better data is still pending. Decomposition errors and incorrect jud
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Question86/Werkfaden](https://github.com/Question86/Werkfaden) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

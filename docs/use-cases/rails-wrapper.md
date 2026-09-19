@@ -27,7 +27,6 @@ Repository/API behavior not independently reproduced. Confidence policies need w
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/GenieRobot/typesafe-ai-rails](https://github.com/GenieRobot/typesafe-ai-rails) — access: `fetched`; review: `readme_reviewed`.
 - [https://rubygems.org/gems/typesafe-ai-rails](https://rubygems.org/gems/typesafe-ai-rails) — access: `fetched`; review: `provider_listing_reviewed`.
 

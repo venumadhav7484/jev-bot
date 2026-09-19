@@ -27,7 +27,6 @@ Source inspection needed for permissions, validation, retries and output handlin
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/geilt/typesafe-cli](https://github.com/geilt/typesafe-cli) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

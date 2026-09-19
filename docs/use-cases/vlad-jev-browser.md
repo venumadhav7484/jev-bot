@@ -27,7 +27,6 @@ Other IDEs explicitly untested; no representative success-rate or degradation st
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/vlad-terin/jev-browser](https://github.com/vlad-terin/jev-browser) — access: `access_failed`; review: `inaccessible_content_pending`.
 - [https://jevboard.com/](https://jevboard.com/) — access: `browser_readable`; review: `landing_page_reviewed`.
 - [https://typesafe.ai/blog/introducing-system-one-models-and-jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — access: `fetched`; review: `official_article_reviewed`.

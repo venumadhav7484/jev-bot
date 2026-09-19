@@ -27,7 +27,6 @@ Eleven sampled frames; no human-label agreement benchmark.83% successful is the 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/danmana/status/2100545412780220877](https://x.com/danmana/status/2100545412780220877) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/VRQKvuxvJV](https://t.co/VRQKvuxvJV) — access: `fetched`; review: `demo_trace_reviewed`.
 

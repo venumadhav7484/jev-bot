@@ -27,6 +27,5 @@ Three images were inspected. Mixed-request handling worsens from 8/8 with no fal
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

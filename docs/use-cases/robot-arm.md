@@ -27,7 +27,6 @@ The offline demo is synthetic orchestration, not grasp proof. Physical motion st
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/ali_uraish/status/2100425130082238682?s=46](https://x.com/ali_uraish/status/2100425130082238682?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [SO101 simulation repository](https://github.com/AliUraish/Jev_SO101) — discovered via [external source](https://x.com/ali_uraish/status/2100425130082238682); access: `fetched`; review: `readme_reviewed`.
 

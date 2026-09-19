@@ -27,7 +27,6 @@ Only read the shared description; no challenge attacks were performed. This is d
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jevguard.vercel.app/](https://jevguard.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

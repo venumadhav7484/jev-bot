@@ -27,7 +27,6 @@ Recorded keyboard demo labels place as example and weather as sample. No live in
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/zahlekhan/status/2100681083176226921](https://x.com/zahlekhan/status/2100681083176226921) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

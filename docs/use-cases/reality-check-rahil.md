@@ -27,7 +27,6 @@ Three demonstration inputs,not an accuracy test. Retrieval and current-fact veri
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/Anot/status/2100822237221724317?s=20](https://x.com/Anot/status/2100822237221724317?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://t.co/9sO9bDyJTJ](https://t.co/9sO9bDyJTJ) — access: `fetched`; review: `source_text_reviewed`.
 

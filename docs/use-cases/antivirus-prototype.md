@@ -27,7 +27,6 @@ No inspected detection architecture, malware corpus, false positives or evasion 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/newuser7171/antivirus](https://github.com/newuser7171/antivirus) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

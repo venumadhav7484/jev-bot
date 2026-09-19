@@ -27,7 +27,6 @@ Source review needed for concurrency, null/error behavior, data disclosure and c
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/mgaitan/sqlite-jev](https://github.com/mgaitan/sqlite-jev) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

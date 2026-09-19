@@ -27,7 +27,6 @@ Video reaches 32/32 solved in 35 guesses with seven model calls; later guesses n
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/richardcsuwandi/status/2100603807894053252?s=20](https://x.com/richardcsuwandi/status/2100603807894053252?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

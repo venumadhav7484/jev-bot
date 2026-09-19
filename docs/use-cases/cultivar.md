@@ -27,7 +27,6 @@ In the thread, the author reports matching results/conclusions on a full-text-se
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/pinecone-io/cultivar](https://github.com/pinecone-io/cultivar) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

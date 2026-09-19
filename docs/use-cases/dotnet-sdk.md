@@ -27,7 +27,6 @@ Source inspection and version compatibility pending; guardrail examples do not e
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Hawxy/TypeSafeAI.Net](https://github.com/Hawxy/TypeSafeAI.Net) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

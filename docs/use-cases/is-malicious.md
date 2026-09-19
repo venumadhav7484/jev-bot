@@ -27,7 +27,6 @@ No adversarial detection coverage established. Do not replace sandboxing, proven
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/luantak/is-malicious](https://github.com/luantak/is-malicious) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/luantak/is-malicious/](https://github.com/luantak/is-malicious/) — access: `fetched`; review: `readme_reviewed`.
 

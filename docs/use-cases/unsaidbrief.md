@@ -27,7 +27,6 @@ Questions and probabilities need evaluation against human-reviewed briefs. Flags
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://unsaidbrief.space/](https://unsaidbrief.space/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

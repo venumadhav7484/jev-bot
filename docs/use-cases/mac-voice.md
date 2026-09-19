@@ -27,7 +27,6 @@ The project is WIP. A local desktop app can still transmit audio or screen conte
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/brudarko/jev-mac-voice](https://github.com/brudarko/jev-mac-voice) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

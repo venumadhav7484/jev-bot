@@ -27,7 +27,6 @@ The headline 99.97% token saving is explicitly directional and workflow-dependen
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [http://jevrouter.co/](http://jevrouter.co/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/BillionsBobby/JevRouter](https://github.com/BillionsBobby/JevRouter) — access: `fetched`; review: `readme_reviewed`.
 

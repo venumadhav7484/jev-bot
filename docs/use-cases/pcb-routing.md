@@ -27,7 +27,6 @@ Comparisons include different agent overhead and concurrency, and costs are API-
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [OpenAI pricing](https://developers.openai.com/api/docs/pricing) — access: `fetched`; review: `official_reference_reviewed`.
 - [Codex billing](https://learn.chatgpt.com/docs/pricing) — access: `fetched`; review: `official_reference_reviewed`.
 - [TypeSafe pricing example](https://docs.typesafe.ai/cookbooks/parallel_questions) — access: `fetched`; review: `official_documentation_reviewed`.

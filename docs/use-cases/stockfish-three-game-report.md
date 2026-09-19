@@ -27,6 +27,5 @@ PGN and engine settings not independently executed. Three games have large uncer
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

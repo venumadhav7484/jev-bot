@@ -27,7 +27,6 @@ Do not treat call count as validation. Host must distinguish Noul probability fr
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/blakestone-x/jev-mcp](https://github.com/blakestone-x/jev-mcp) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

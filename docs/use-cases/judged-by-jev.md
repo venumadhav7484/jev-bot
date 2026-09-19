@@ -27,7 +27,6 @@ Dataset size is not validated-label count; no bias, agreement or accuracy eviden
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/danielkhunter/status/2100456518751768775?s=20](https://x.com/danielkhunter/status/2100456518751768775?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

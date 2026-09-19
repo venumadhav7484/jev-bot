@@ -27,7 +27,6 @@ Counting remains a reported failure; tiny pages show no token saving. These are 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Ying-Kai-Liao/jev-browser/tree/main](https://github.com/Ying-Kai-Liao/jev-browser/tree/main) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

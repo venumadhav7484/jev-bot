@@ -27,7 +27,6 @@ Recorded full-map/grid-plus-facts run reaches dead end and repeats positions: 39
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/danmana/status/2100991925364969827](https://x.com/danmana/status/2100991925364969827) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Early, single-device project. Notifications appear before cancellation; SMS mess
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/ufec/jev-block-android-ad](https://github.com/ufec/jev-block-android-ad) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

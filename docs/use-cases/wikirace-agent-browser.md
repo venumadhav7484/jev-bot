@@ -27,7 +27,6 @@ One recorded route with sampled frames, no broad success metric. Generative harn
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/princecaarlo/status/2100313645116952701?s=20](https://x.com/princecaarlo/status/2100313645116952701?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

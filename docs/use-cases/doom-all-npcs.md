@@ -27,7 +27,6 @@ Recorded host inspector confirms player/enemy choices, but automated player dies
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fixupx.com/dustin_podell/status/2100458335405588607](https://fixupx.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `demo_trace_reviewed`.
 - [Dustin Podell (@dustin_podell)](https://x.com/dustin_podell/status/2100458335405588607) — access: `fetched`; review: `demo_trace_reviewed`.
 

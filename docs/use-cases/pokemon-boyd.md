@@ -27,7 +27,6 @@ The capture reports the model not answering and the stream connecting; it does n
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/0xboyd/status/2100418365986578908](https://x.com/0xboyd/status/2100418365986578908) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://t.co/64naxTJlDg](https://t.co/64naxTJlDg) — access: `fetched`; review: `source_text_reviewed`.
 

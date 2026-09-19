@@ -27,7 +27,6 @@ Ten mocked emails are smoke checks; handlers only assign destinations, not send 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/GiesN/typesafe-jev-workflow](https://github.com/GiesN/typesafe-jev-workflow) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

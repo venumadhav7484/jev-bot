@@ -27,7 +27,6 @@ No held-out corpus, false-positive rate or representative spam-defense evaluatio
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/j_lamberts/status/2100592556081832131?s=20](https://x.com/j_lamberts/status/2100592556081832131?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://t.co/LggLWicWm8](https://t.co/LggLWicWm8) — access: `fetched`; review: `source_text_reviewed`.
 

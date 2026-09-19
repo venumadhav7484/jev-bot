@@ -27,7 +27,6 @@ An estimate excludes hosting and moderation oversight. The post does not establi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/brainstormity/status/2100471987860553931?s=20](https://x.com/brainstormity/status/2100471987860553931?s=20) — access: `fetched`; review: `post_text_reviewed`.
 - [https://x.com/brainstormity/status/2100702826196307977](https://x.com/brainstormity/status/2100702826196307977) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://x.com/brainstormity/status/2100842356484325574?s=20](https://x.com/brainstormity/status/2100842356484325574?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.

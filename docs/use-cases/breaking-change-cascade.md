@@ -27,6 +27,5 @@ One run only. Missed breaking changes are not measured; token totals and cost ac
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

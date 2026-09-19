@@ -27,7 +27,6 @@ Video displays six-role staffing and model/access assignments, but no downstream
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/milindlabs/status/2100515910754750741?s=46](https://x.com/milindlabs/status/2100515910754750741?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — access: `fetched`; review: `readme_reviewed`.
 

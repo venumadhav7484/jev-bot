@@ -27,7 +27,6 @@ Exact judgments, operational actions and production outcomes are not disclosed.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://oliverdb.ai/](https://oliverdb.ai/) — access: `fetched`; review: `ecosystem_context_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

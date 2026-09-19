@@ -27,7 +27,6 @@ The linked article was not accessible through the initial web fetch. Accuracy wa
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/](https://blog.watson-labs.co.uk/typesafe-ai-alert-fatigue/) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

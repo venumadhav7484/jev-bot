@@ -27,7 +27,6 @@ The project explicitly lacks TypeSafe affiliation or endorsement. Default retrie
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Premo-Cloud/typesafe-sdk-java](https://github.com/Premo-Cloud/typesafe-sdk-java) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

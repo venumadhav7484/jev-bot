@@ -27,7 +27,6 @@ Source implementation not yet inspected. Use personal credentials from environme
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/nickthompson480/typesafe-ai-playground](https://github.com/nickthompson480/typesafe-ai-playground) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

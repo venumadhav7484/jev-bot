@@ -27,7 +27,6 @@ Task and harness not published. Counterexample to universal speedup; a fixed fli
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

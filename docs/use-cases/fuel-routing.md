@@ -27,7 +27,6 @@ The initial prompt may not reveal later task difficulty. Measure downstream comp
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/ashleyhindle/status/2100553892639473951?s=20](https://x.com/ashleyhindle/status/2100553892639473951?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

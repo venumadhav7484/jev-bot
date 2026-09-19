@@ -27,7 +27,6 @@ Prepared cart is not a completed purchase. No native Jev vision or autonomous pa
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/heykathan/status/2100680287042814326?s=20](https://x.com/heykathan/status/2100680287042814326?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

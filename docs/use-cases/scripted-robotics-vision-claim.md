@@ -27,7 +27,6 @@ Source inspected, not executed. task_completed becomes true on target_acquired O
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/opaielsheikh/zero-shot-vision-robotics](https://github.com/opaielsheikh/zero-shot-vision-robotics) — access: `fetched`; review: `source_code_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

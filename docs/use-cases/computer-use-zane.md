@@ -27,7 +27,6 @@ Do not infer native vision, task completion rate or cross-platform support from 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/injaneity/status/2100177865958682860?s=20](https://x.com/injaneity/status/2100177865958682860?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

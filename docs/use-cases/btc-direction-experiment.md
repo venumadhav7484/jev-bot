@@ -27,7 +27,6 @@ Author says prior backtests were biased and logging is still being built. Live p
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://lab.rokogrga.com/btc-jev](https://lab.rokogrga.com/btc-jev) — access: `fetched`; review: `demo_interface_reviewed`.
 - [https://github.com/WebGrga/btc-jev-signal](https://github.com/WebGrga/btc-jev-signal) — access: `fetched`; review: `readme_reviewed`.
 

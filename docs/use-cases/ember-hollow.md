@@ -27,7 +27,6 @@ Emergent behavior is a demonstration, not a validated model of real communities.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://lifelike.build/](https://lifelike.build/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

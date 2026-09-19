@@ -27,7 +27,6 @@ Not labor-market forecasting. Sarcastic divine-model claims are not technical ev
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://will-ai-take-my-job.lol/](https://will-ai-take-my-job.lol/) — access: `fetched`; review: `demo_interface_reviewed`.
 - [will-ai-take-my-job.lol](https://will-ai-take-my-job.lol/opengraph-image?954019b5187581c3) — access: `public_image_extracted`; review: `image_reviewed`.
 

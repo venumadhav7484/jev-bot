@@ -27,7 +27,6 @@ One run per provider; different batching and free-tier pacing affect comparison.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [GBrain](https://github.com/garrytan/gbrain) — access: `fetched`; review: `context_repository_reviewed`.
 - [https://github.com/garrytan/gbrain/pull/5178](https://github.com/garrytan/gbrain/pull/5178) — access: `fetched`; review: `pull_request_reviewed`.
 

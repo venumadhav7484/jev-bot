@@ -27,7 +27,6 @@ Only 24 documents, with model-generated reference labels. Agreement is not human
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://lindfors.no/blog/a-first-look-at-typesafes-jev/](https://lindfors.no/blog/a-first-look-at-typesafes-jev/) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

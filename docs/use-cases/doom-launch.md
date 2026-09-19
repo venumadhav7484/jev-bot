@@ -27,7 +27,6 @@ Structured game state comes from a harness; no native image input established. V
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/CompleteSkeptic/status/2099925687465570372](https://x.com/CompleteSkeptic/status/2099925687465570372) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://github.com/robault/skilldoom](https://github.com/robault/skilldoom) — access: `fetched`; review: `context_only_not_jev_evidence`.
 

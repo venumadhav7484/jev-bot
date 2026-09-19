@@ -27,7 +27,6 @@ Recorded synthetic examples, not a labeled evaluation or production audit. No me
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/Anot/status/2100761008352493918?s=20](https://x.com/Anot/status/2100761008352493918?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [Author reply demonstration video](https://x.com/Anot/status/2100761265517781273) — discovered via [external source](https://x.com/Anot/status/2100761008352493918); access: `public_media_extracted`; review: `demo_trace_reviewed`.
 

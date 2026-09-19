@@ -27,7 +27,6 @@ Command semantics, extraction guarantees and provider compatibility require sour
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `page_reviewed`.
 - [https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md](https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md) — access: `fetched`; review: `source_text_reviewed`.
 

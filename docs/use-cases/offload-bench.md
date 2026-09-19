@@ -27,7 +27,6 @@ Full numerical results were not deeply reviewed; synthetic tasks and agent overh
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/dnikolayev/typesafe-offload-bench](https://github.com/dnikolayev/typesafe-offload-bench) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md](https://github.com/dnikolayev/typesafe-offload-bench/blob/main/RESULTS.md) — access: `fetched`; review: `source_text_reviewed`.
 

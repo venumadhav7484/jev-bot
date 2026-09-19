@@ -27,7 +27,6 @@ No review-quality metrics or repository-context coverage supplied.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jev-pr-judge.vercel.app/](https://jev-pr-judge.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://jev-nu.vercel.app/](https://jev-nu.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 

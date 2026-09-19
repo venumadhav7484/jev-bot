@@ -27,7 +27,6 @@ Recorded UI inspected, no information-retention evaluation. Important caveats ma
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/tedkalaw/status/2100453504997531751](https://x.com/tedkalaw/status/2100453504997531751) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

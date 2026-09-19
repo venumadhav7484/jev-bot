@@ -27,7 +27,6 @@ A Discord user reports failing their own evaluations. A successful demo is not g
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/gregpr07/status/2100411066966749359?s=46](https://x.com/gregpr07/status/2100411066966749359?s=46) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://github.com/browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) — access: `fetched`; review: `readme_reviewed`.
 

@@ -27,7 +27,6 @@ Author benchmark on a390k-line repository finds no demonstrated general coding-a
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.npmjs.com/package/jev-axi](https://www.npmjs.com/package/jev-axi) — access: `browser_readable`; review: `readme_reviewed`.
 - [https://github.com/shiftynick/jev-axi](https://github.com/shiftynick/jev-axi) — access: `fetched`; review: `readme_reviewed`.
 

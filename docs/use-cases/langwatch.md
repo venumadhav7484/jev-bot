@@ -27,7 +27,6 @@ Captured evidence is an X embed, not a reproduced benchmark. Trace sensitivity, 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/_rchaves_/status/2101050389898338709?s=46](https://x.com/_rchaves_/status/2101050389898338709?s=46) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

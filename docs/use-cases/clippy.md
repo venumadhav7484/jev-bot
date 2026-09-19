@@ -27,7 +27,6 @@ Author questions trigger quality and production readiness. Hesitation is not pro
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/sotak/status/2100701152824185319](https://x.com/sotak/status/2100701152824185319) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

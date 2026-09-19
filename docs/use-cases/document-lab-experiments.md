@@ -27,7 +27,6 @@ Small author-labeled sets; no independent run. Trace diagnosis prose reports19/2
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://isaacflath.com/writing/six-things-i-tried-with-jev](https://isaacflath.com/writing/six-things-i-tried-with-jev) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

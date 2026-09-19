@@ -27,7 +27,6 @@ No systematic comparison; game rules and supplied state determine what can be in
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://bonechess.acadine.dev/](https://bonechess.acadine.dev/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

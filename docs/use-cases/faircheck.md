@@ -27,7 +27,6 @@ Counts do not prove complete, current or correct legal coverage. No independent 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fair-housing-guardrail.roberto-94c.workers.dev/](https://fair-housing-guardrail.roberto-94c.workers.dev/) — access: `browser_readable`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

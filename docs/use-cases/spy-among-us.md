@@ -27,7 +27,6 @@ No complete comparative score or evaluation methodology supplied.
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/pcp_liu/status/2100614050304458791](https://x.com/pcp_liu/status/2100614050304458791) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

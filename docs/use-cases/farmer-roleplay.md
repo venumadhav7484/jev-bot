@@ -27,7 +27,6 @@ One recorded loop, not evaluated long-horizon task completion. Media review: Rev
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/shogun_Dev/status/2101159950487572813](https://x.com/shogun_Dev/status/2101159950487572813) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/fJD86t3BK5](https://t.co/fJD86t3BK5) — access: `fetched`; review: `metadata_only`.
 - [https://t.co/9vjSjNTz5f](https://t.co/9vjSjNTz5f) — access: `fetched`; review: `metadata_only`.

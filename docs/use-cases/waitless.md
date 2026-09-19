@@ -27,7 +27,6 @@ An optional diagnostic hint, not proof of root cause or a replacement for stabil
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor](https://github.com/godhiraj-code/waitless/tree/poc/typesafe-smart-doctor) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

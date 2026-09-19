@@ -27,7 +27,6 @@ Announcement preview truncated; compatibility and tracing-data handling unreview
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/atharvaxdevs/status/2101037340773023745?s=46](https://x.com/atharvaxdevs/status/2101037340773023745?s=46) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

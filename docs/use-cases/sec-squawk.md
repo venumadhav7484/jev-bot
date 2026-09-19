@@ -27,7 +27,6 @@ Event detection is separate from price prediction. No labeled evaluation or comp
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/Anot/status/2100425243269468583](https://x.com/Anot/status/2100425243269468583) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

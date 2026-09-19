@@ -27,7 +27,6 @@ README claims host hook interception and escalation behavior; compatibility and 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/ClemensSchartmueller/jev-guard](https://github.com/ClemensSchartmueller/jev-guard) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

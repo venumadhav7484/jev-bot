@@ -27,7 +27,6 @@ Deterministic SQL parsing, backups and explicit approval remain necessary; misse
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/opaielsheikh/typesafe-migration-guard](https://github.com/opaielsheikh/typesafe-migration-guard) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Early user reports missing API-key input path. Source review needed; schema vali
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/mateonunez/jod](https://github.com/mateonunez/jod) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

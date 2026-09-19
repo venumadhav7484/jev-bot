@@ -27,7 +27,6 @@ One accelerated random battle cannot establish relative strategic strength. Fina
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/sid19arya0/status/2100458351440048258?s=20](https://x.com/sid19arya0/status/2100458351440048258?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

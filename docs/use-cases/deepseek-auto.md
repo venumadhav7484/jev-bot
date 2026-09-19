@@ -27,7 +27,6 @@ README explicitly says no sandbox/no approval and gate governs questions, not to
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://git.allen-software.com/allenh1/dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) — access: `fetched`; review: `scoped_repository_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

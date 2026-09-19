@@ -27,7 +27,6 @@ Source/version review pending; parity is author claim, not tested guarantee. Sou
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://pkg.go.dev/github.com/fgn/jevgo](https://pkg.go.dev/github.com/fgn/jevgo) — access: `fetched`; review: `api_documentation_reviewed`.
 - [https://github.com/fgn/jevgo](https://github.com/fgn/jevgo) — access: `fetched`; review: `readme_reviewed`.
 

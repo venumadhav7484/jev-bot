@@ -27,7 +27,6 @@ Twelve sampled frames, UI-reported counters, no independent quality metric or in
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/crossiBuilds/status/2100972788164985043](https://x.com/crossiBuilds/status/2100972788164985043) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

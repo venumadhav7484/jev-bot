@@ -27,7 +27,6 @@ Rendered architecture inspected, but judge says waiting for key and wall loading
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.askjev.ai/](https://www.askjev.ai/) — access: `fetched`; review: `demo_interface_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

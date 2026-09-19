@@ -27,7 +27,6 @@ Repository aliases should be deduplicated. Protocol behavior, permissions and en
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/tacticocc/Jevbridge](https://github.com/tacticocc/Jevbridge) — access: `fetched`; review: `duplicate_content_reviewed`.
 - [https://github.com/gamesonrblx/Jevbridge](https://github.com/gamesonrblx/Jevbridge) — access: `fetched`; review: `readme_reviewed`.
 

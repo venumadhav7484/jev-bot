@@ -27,7 +27,6 @@ One recorded example, no measured accuracy, production deployment or ledger post
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/its_d_i_m_a/status/2100961401183592885?s=20](https://x.com/its_d_i_m_a/status/2100961401183592885?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

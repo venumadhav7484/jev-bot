@@ -27,7 +27,6 @@ Recorded sequence includes reset and later two lines/score 200. No long-run scor
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fxtwitter.com/marcus_lowe/status/2100315518930661861?s=20](https://fxtwitter.com/marcus_lowe/status/2100315518930661861?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [Marcus Lowe (@marcus_lowe)](https://x.com/marcus_lowe/status/2100315518930661861) — access: `fetched`; review: `demo_trace_reviewed`.
 

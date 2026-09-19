@@ -27,7 +27,6 @@ Live API compatibility explicitly untested at announcement; distinct from Hawxy 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-](https://github.com/Biztactix-Ryan/TypeSafe.Sdk.C-) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Diagram and repository workflow are not evidence that self-review guarantees cor
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fixupx.com/ezbaze_/status/2100899085700026410](https://fixupx.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://github.com/Ezbaze/jevies](https://github.com/Ezbaze/jevies) — access: `fetched`; review: `readme_reviewed`.
 - [Ezbaze (@ezbaze_)](https://x.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `demo_trace_reviewed`.

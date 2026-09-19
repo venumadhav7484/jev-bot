@@ -27,7 +27,6 @@ Article reports prompt selection across132development cases with assistant-writt
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) — access: `browser_readable`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

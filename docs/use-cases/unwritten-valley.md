@@ -27,7 +27,6 @@ No inspected code, stability, costs or quantitative behavior evaluation. Fiction
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://unwritten.4bin.ai/](https://unwritten.4bin.ai/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Early recording shows dungeon levels 1 to 3, not ascension; author reports frequ
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/integrate-your-mind/jev-codex-plugin](https://github.com/integrate-your-mind/jev-codex-plugin) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/integrate-your-mind/jev-codex-plugin/tree/main/source/jev-workflows](https://github.com/integrate-your-mind/jev-codex-plugin/tree/main/source/jev-workflows) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/retsu-AI/qq](https://github.com/retsu-AI/qq) — access: `fetched`; review: `readme_reviewed`.

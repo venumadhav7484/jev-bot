@@ -27,7 +27,6 @@ A34-second recording was reviewed using a local speech transcript and34sampled f
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/oow2626/status/2101110230000230872?s=46](https://x.com/oow2626/status/2101110230000230872?s=46) — access: `browser_readable`; review: `post_and_transcript_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

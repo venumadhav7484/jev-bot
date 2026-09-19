@@ -27,7 +27,6 @@ Unofficial client; no adoption, compatibility matrix or reliability benchmark in
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/alterhq/typesafe-sdk-swift](https://github.com/alterhq/typesafe-sdk-swift) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

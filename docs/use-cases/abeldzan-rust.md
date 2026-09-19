@@ -27,7 +27,6 @@ The crate is not yet published to crates.io; transient failures retry by default
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/abeldzan/jev-rs](https://github.com/abeldzan/jev-rs) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

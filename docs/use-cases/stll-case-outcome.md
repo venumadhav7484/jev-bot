@@ -27,7 +27,6 @@ Native case-law support described as upcoming. Citation-polarity behavior appear
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/jan__kubica/status/2100636173249007696?s=20](https://x.com/jan__kubica/status/2100636173249007696?s=20) — access: `signed_in_browser_and_public_media`; review: `demo_trace_reviewed`.
 - [Author-linked workflow evidence](https://x.com/jan__kubica/status/2100636181142839584) — discovered via [external source](https://x.com/jan__kubica/status/2100636173249007696); access: `public_media_extracted`; review: `demo_trace_reviewed`.
 

@@ -27,7 +27,6 @@ Handwavy single-task comparison; no controlled suite or measured cross-platform 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/awlevin/status/2100262612428894676](https://x.com/awlevin/status/2100262612428894676) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://github.com/browser-use/macOS-use](https://github.com/browser-use/macOS-use) — access: `fetched`; review: `ecosystem_context_reviewed`.
 - [https://github.com/awlevin/typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) — access: `fetched`; review: `readme_reviewed`.

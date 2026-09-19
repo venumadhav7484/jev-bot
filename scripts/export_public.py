@@ -64,7 +64,8 @@ def sanitize(source, target):
     text=text.replace('Daily X review remains active','Daily X review is paused')
     text=text.replace('X has a daily retry queue','X has a paused daily retry queue')
     text=re.sub(r'(?m)^- Discord source \(private provenance retained locally\).*$', '- Discord source — private provenance retained locally.',text)
-    text=re.sub(r'(\n- Discord source — private provenance retained locally\.){2,}',r'\n- Discord source — private provenance retained locally.',text)
+    # Keep provenance in private records, without a placeholder bullet in public pages.
+    text=re.sub(r'(?m)^- Discord source — private provenance retained locally\.\n?', '', text)
     for value in private_ids:
         text=text.replace(value,'[private source identifier]')
     for value in sorted(private_artifacts, key=len, reverse=True):

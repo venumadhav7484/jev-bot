@@ -27,7 +27,6 @@ Three proposed jobs were rejected: raw grep-line ranking, review-loop pass/fail 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://empryo.com/blog/jev-and-the-harness](https://empryo.com/blog/jev-and-the-harness) — access: `fetched`; review: `article_reviewed`.
 - [https://empryo.com/download](https://empryo.com/download) — access: `fetched`; review: `related_tool_reviewed`.
 - [https://x.com/BniWael/status/2100195854904598745](https://x.com/BniWael/status/2100195854904598745) — access: `fetched`; review: `context_only_reviewed`.

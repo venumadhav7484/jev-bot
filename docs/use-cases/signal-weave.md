@@ -27,7 +27,6 @@ Author explicitly lacks workplace access to validate at scale. No production ben
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/waddle-zoo/signal-weave](https://github.com/waddle-zoo/signal-weave) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

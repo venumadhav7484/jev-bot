@@ -27,7 +27,6 @@ Moderator actions remain consequential. No measured false-positive rate or adver
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fixupx.com/just_some_dev/status/2100757839056634080](https://fixupx.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [Astrid (@just_some_dev)](https://x.com/just_some_dev/status/2100757839056634080) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [github.com/Infrawrench/Jeeves](https://github.com/Infrawrench/Jeeves) — access: `fetched`; review: `readme_reviewed`.

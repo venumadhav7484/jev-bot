@@ -27,7 +27,6 @@ Paper experiment; seven sampled frames are not independently verified PnL or str
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/aowang/status/2100770166619652330](https://x.com/aowang/status/2100770166619652330) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://www.jev-trade.com/](https://www.jev-trade.com/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/aowang-ai/jev-trade](https://github.com/aowang-ai/jev-trade) — access: `fetched`; review: `readme_reviewed`.

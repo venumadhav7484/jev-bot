@@ -27,7 +27,6 @@ No proof of soundness, completeness or reproducibility. Keep formal invariants d
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://en.wikipedia.org/wiki/Zebra_Puzzle](https://en.wikipedia.org/wiki/Zebra_Puzzle) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

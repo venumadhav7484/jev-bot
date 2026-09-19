@@ -27,7 +27,6 @@ Proof-of-concept packages, not verified general compatibility or browser success
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/jkudish/jev-mcp](https://github.com/jkudish/jev-mcp) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/jkudish/jev-browser](https://github.com/jkudish/jev-browser) — access: `fetched`; review: `readme_reviewed`.
 

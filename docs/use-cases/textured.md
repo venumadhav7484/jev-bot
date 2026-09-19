@@ -27,7 +27,6 @@ Jev interprets text and sets parameters; it does not hear or generate audio. Ini
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://textured.fyi/](https://textured.fyi/) — access: `fetched`; review: `demo_interface_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

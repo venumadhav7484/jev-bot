@@ -27,6 +27,5 @@ No win-rate metric, self-play skill rating or rules audit; Rimworld and Dwarf Fo
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

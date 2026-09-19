@@ -27,7 +27,6 @@ Speech transcription is a separate component. Topic scores do not establish fact
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/finetuningsingh/intelliprompter](https://github.com/finetuningsingh/intelliprompter) — access: `fetched`; review: `readme_reviewed`.
 - [https://finetuningsingh.github.io/intelliprompter/](https://finetuningsingh.github.io/intelliprompter/) — access: `fetched`; review: `source_text_reviewed`.
 

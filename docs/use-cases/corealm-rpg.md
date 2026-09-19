@@ -27,7 +27,6 @@ Illustrative author report; no controlled survival, economic or multiplayer benc
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/abcdmku/status/2100743097143493062](https://x.com/abcdmku/status/2100743097143493062) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [Corealm repository](https://github.com/abcdmku/Corealm2) — discovered via [external source](https://x.com/abcdmku/status/2100743097143493062); access: `fetched`; review: `context_only_not_jev_evidence`.
 

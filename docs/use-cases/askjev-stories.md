@@ -27,7 +27,6 @@ Demonstration does not establish probability calibration or a general reasoning 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://writing.justslobo.com/](https://writing.justslobo.com/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://askjev.justslobo.com/](https://askjev.justslobo.com/) — access: `fetched`; review: `source_text_reviewed`.
 

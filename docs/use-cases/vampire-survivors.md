@@ -27,7 +27,6 @@ State encoding, action cadence and full run outcome are not documented. Treat th
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/oldmoldycake](https://github.com/oldmoldycake) — access: `fetch_failed`; review: `profile_only_not_project_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

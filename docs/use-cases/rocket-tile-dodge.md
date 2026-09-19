@@ -27,7 +27,6 @@ Thirteen sampled frames from39.22seconds, UI-reported cost/timing. One run; no r
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/atomic_chat_hq/status/2100644221279424925?s=46](https://x.com/atomic_chat_hq/status/2100644221279424925?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/RbcCOIgVkj](https://t.co/RbcCOIgVkj) — access: `fetched`; review: `context_only_not_jev_evidence`.
 

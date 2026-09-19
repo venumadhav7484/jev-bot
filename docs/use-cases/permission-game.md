@@ -27,7 +27,6 @@ Sample size and threat distribution absent. 85% game accuracy is not sufficient 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://llmgame.scalex.dev/](https://llmgame.scalex.dev/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

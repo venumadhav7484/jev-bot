@@ -27,7 +27,6 @@ Camera-based system does not imply native image input to Jev. Perception convers
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/RomanSlack/jev-drone](https://github.com/RomanSlack/jev-drone) — access: `fetched`; review: `readme_reviewed`.
 - [https://x.com/RomanSlack1/status/2100335978229690683](https://x.com/RomanSlack1/status/2100335978229690683) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/b2ytFvehTV](https://t.co/b2ytFvehTV) — access: `fetched`; review: `readme_reviewed`.

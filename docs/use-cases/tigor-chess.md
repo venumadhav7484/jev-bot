@@ -27,7 +27,6 @@ The README requires an origin whitelisted for CORS. Its completion percentage is
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jev-chess.tgr.rs/](https://jev-chess.tgr.rs/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/enovikov11/tigor-ai/tree/main/games/5-jev-chess](https://github.com/enovikov11/tigor-ai/tree/main/games/5-jev-chess) — access: `fetched`; review: `readme_reviewed`.
 - [https://x.com/the_tigor/status/2100532795625832912](https://x.com/the_tigor/status/2100532795625832912) — access: `fetched`; review: `post_text_reviewed`.

@@ -27,7 +27,6 @@ Missing input categories fall back to a sample incident, and absent incident evi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/MarcioK/status/2101043696422494246](https://x.com/MarcioK/status/2101043696422494246) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://t.co/sxIAN4VBUo](https://t.co/sxIAN4VBUo) — access: `fetched`; review: `source_text_reviewed`.
 - [Author-linked implementation artifact](https://gist.github.com/marciok/673a02cfe1dd03055bec3b55b4a5d0f2) — discovered via [external source](https://x.com/MarcioK/status/2101043696422494246); access: `fetched`; review: `source_text_reviewed`.

@@ -27,7 +27,6 @@ Ten sampled frames, synthetic selected examples. Candidate generation can miss s
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://pg-redact.vercel.app/](https://pg-redact.vercel.app/) — access: `access_failed`; review: `inaccessible_content_pending`.
 - [https://github.com/rishi-raj-jain/pg-redact](https://github.com/rishi-raj-jain/pg-redact) — access: `fetched`; review: `readme_reviewed`.
 - [https://x.com/rishi_raj_jain_/status/2100606501501169726](https://x.com/rishi_raj_jain_/status/2100606501501169726) — access: `fetched`; review: `demo_trace_reviewed`.

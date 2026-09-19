@@ -27,7 +27,6 @@ Use the detailed source metrics, not a blanket replacement claim. The sample con
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.atisbo.dev/](https://www.atisbo.dev/) — access: `fetched`; review: `landing_page_reviewed`.
 - [www.atisbo.dev](https://www.atisbo.dev/opengraph-image) — access: `public_image_extracted`; review: `image_reviewed`.
 

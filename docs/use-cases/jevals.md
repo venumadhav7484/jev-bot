@@ -27,7 +27,6 @@ No evaluation was run here. Useful experiments need labeled cases, stable versio
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/Dayhaysoos/status/2100968892591968320](https://x.com/Dayhaysoos/status/2100968892591968320) — access: `fetched`; review: `demo_trace_reviewed`.
 - [Jevals workbench repository](https://github.com/dayhaysoos/jevals) — discovered via [external source](https://x.com/Dayhaysoos/status/2100968892591968320); access: `fetched`; review: `readme_reviewed`.
 

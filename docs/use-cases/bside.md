@@ -27,7 +27,6 @@ A single route does not establish general performance. The claimed absence of in
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/pumpkinredbean/bside](https://github.com/pumpkinredbean/bside) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Entertainment only; fixed answers do not establish prediction or factual accurac
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://willprout.github.io/magic-8-ball/](https://willprout.github.io/magic-8-ball/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://x.com/stbenjam/status/2100783751101846005?s=20](https://x.com/stbenjam/status/2100783751101846005?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/Kpu7gKeA24](https://t.co/Kpu7gKeA24) — access: `fetched`; review: `readme_reviewed`.

@@ -27,7 +27,6 @@ No false-positive or correctness evaluation supplied; comments must still be che
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/ari-becker/commentlint](https://github.com/ari-becker/commentlint) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

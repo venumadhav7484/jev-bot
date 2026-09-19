@@ -27,7 +27,6 @@ Replies explicitly challenge rising-market and execution assumptions. No out-of-
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/karuri945/status/2100562714376454654?s=20](https://x.com/karuri945/status/2100562714376454654?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

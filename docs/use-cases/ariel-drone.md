@@ -27,7 +27,6 @@ Environment and control boundaries require source inspection; no real-world flig
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/arielweinberger/status/2100687687057285215?s=20](https://x.com/arielweinberger/status/2100687687057285215?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://t.co/gNQZIbRP7E](https://t.co/gNQZIbRP7E) — access: `fetched`; review: `readme_reviewed`.
 - [Author-linked implementation artifact](https://github.com/arielweinberger/jev-autopilot) — discovered via [external source](https://x.com/arielweinberger/status/2100687687057285215); access: `fetched`; review: `readme_reviewed`.

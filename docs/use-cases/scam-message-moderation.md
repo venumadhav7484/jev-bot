@@ -27,7 +27,6 @@ Small curated examples only; no deletion/ban, precision/recall, adversarial corp
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/oxfrancesco_/status/2100595042385584622](https://x.com/oxfrancesco_/status/2100595042385584622) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

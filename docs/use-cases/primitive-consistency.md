@@ -27,7 +27,6 @@ Eighteen sampled frames do not review every scenario or establish representative
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/145k4/status/2100933101966758250?s=20](https://x.com/145k4/status/2100933101966758250?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

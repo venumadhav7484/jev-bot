@@ -27,6 +27,5 @@ Doors and walls cause pathing failures. No win-rate or cost accounting protocol;
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

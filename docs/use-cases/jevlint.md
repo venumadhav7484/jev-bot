@@ -27,7 +27,6 @@ Rendered example probabilities are explicitly illustrative. File-level semantic 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.jevlint.com/](https://www.jevlint.com/) — access: `browser_readable`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

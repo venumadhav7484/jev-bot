@@ -27,7 +27,6 @@ Demo claims are not production accuracy evidence. A numeric probability threshol
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://sysadarsh-zerosweep.vercel.app/](https://sysadarsh-zerosweep.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://sysadarsh-zerosweep.vercel.app//](https://sysadarsh-zerosweep.vercel.app//) — access: `fetched`; review: `source_text_reviewed`.
 - [https://github.com/sysadarsh/zerosweep](https://github.com/sysadarsh/zerosweep) — access: `fetched`; review: `readme_reviewed`.

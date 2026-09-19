@@ -27,7 +27,6 @@ No welfare, allergy or suitability validation. A model fit score must not be pre
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://dogapi.dog/](https://dogapi.dog/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

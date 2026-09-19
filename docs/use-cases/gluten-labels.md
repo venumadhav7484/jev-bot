@@ -27,7 +27,6 @@ Agreement with another model is not medical validation. Missing ingredients, cro
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/amr05008/glutenornot.com](https://github.com/amr05008/glutenornot.com) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [https://github.com/amr05008/jev-sandbox](https://github.com/amr05008/jev-sandbox) — access: `fetched`; review: `readme_reviewed`.
 

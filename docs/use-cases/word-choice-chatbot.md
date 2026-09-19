@@ -27,7 +27,6 @@ This is a workaround, not native generation. For Jev-bot, use a generative model
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/finetuningsingh/jev-chatbot](https://github.com/finetuningsingh/jev-chatbot) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

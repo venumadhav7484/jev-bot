@@ -27,7 +27,6 @@ Five examples do not establish false-negative safety. The 40/60/80% skip-rate sa
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://claude.ai/code/artifact/fc8bfe14-470c-4bd2-865c-8a28fb497f66](https://claude.ai/code/artifact/fc8bfe14-470c-4bd2-865c-8a28fb497f66) — access: `rendered_browser_accessible`; review: `article_reviewed`.
 - [fc8bfe14-470c-4bd2-865c-8a28fb497f66.frame.claudeusercontent.com](https://fc8bfe14-470c-4bd2-865c-8a28fb497f66.frame.claudeusercontent.com/_f/1789606771-aff8/_thumb.img) — access: `public_image_extracted`; review: `image_reviewed`.
 

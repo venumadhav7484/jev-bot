@@ -27,7 +27,6 @@ No safety, real-world operation, reliability or equivalence to Tesla is establis
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/jpschroeder/status/2100347770867458384?s=20](https://x.com/jpschroeder/status/2100347770867458384?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [Author-linked implementation artifact](https://github.com/standardagents/jevpilot) — discovered via [external source](https://x.com/jpschroeder/status/2100347770867458384); access: `fetched`; review: `readme_reviewed`.
 

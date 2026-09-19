@@ -27,7 +27,6 @@ Jev does not receive or directly generate an image modality here. Coherence rema
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/rivianpratama/JevPixelArt](https://github.com/rivianpratama/JevPixelArt) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

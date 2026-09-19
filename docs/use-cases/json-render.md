@@ -27,7 +27,6 @@ Three recorded UI examples show earlier experimental Jev render, with displayed 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/ctatedev/status/2101022101750571357](https://x.com/ctatedev/status/2101022101750571357) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

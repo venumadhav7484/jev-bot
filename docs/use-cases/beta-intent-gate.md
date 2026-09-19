@@ -27,7 +27,6 @@ Dataset, exact prompts and repeat logs unavailable in article. No universal accu
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://madppiper.substack.com/p/my-thoughts-on-jev-after-the-private](https://madppiper.substack.com/p/my-thoughts-on-jev-after-the-private) — access: `fetched`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

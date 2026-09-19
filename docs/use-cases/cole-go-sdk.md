@@ -27,7 +27,6 @@ Implementation and retry safety require source inspection; SDK availability is n
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/cole-gillespie/typesafe-go](https://github.com/cole-gillespie/typesafe-go) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

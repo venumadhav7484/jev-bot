@@ -27,7 +27,6 @@ Retries and logging are opt-in. The triage CLI defaults to the first 24,576 byte
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/withzombies/jev-go](https://github.com/withzombies/jev-go) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

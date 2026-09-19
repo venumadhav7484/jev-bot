@@ -27,7 +27,6 @@ Fails open on timeout/error and uncertainty. Reported Slack-webhook restriction 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Nyarlathoteppppp/pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

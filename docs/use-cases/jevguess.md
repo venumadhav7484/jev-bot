@@ -27,7 +27,6 @@ No AI runs in the captured fixture mode; relative weights and confidence are exp
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jevguess.susonsapkota.com/](https://jevguess.susonsapkota.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

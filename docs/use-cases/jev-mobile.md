@@ -27,7 +27,6 @@ The post is an author description, not a reproduced task benchmark. Sensitive ac
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Friedjof/jev-mobile](https://github.com/Friedjof/jev-mobile) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

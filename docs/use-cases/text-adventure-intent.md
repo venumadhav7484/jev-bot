@@ -27,7 +27,6 @@ README inspected, no live corpus accuracy reproduced. Offline tests use exact-na
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [text adventure](https://text-adventure.p11c.xyz/) — access: `fetched`; review: `source_text_reviewed`.
 - [here the repo](https://gitlab.com/porky11/text-adventure) — access: `fetched`; review: `scoped_repository_reviewed`.
 

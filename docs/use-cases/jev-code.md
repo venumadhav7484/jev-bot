@@ -27,7 +27,6 @@ Outputs remain simple. The author says the first Hello-world literal might have 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/rhighs/jev-code](https://github.com/rhighs/jev-code) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

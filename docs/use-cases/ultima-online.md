@@ -27,7 +27,6 @@ The linked video was not independently benchmarked. Game-state perception and mo
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.youtube.com/watch?v=cP-GWKteHKo](https://www.youtube.com/watch?v=cP-GWKteHKo) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [John](https://www.youtube.com/channel/UCvD25CKcOKDMXi5t2jRrw2A) — access: `fetched`; review: `context_only_not_jev_evidence`.

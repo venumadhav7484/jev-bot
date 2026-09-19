@@ -27,7 +27,6 @@ Report read, not reproduced. Hand-labeled scenarios are not representative produ
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/src/branch/main/typesafe-jev/report.pdf) — access: `public_content_recovered`; review: `report_reviewed`.
 - [git.sub-net.at](https://git.sub-net.at/Sub-Net-Public/llm-benchmark/-/summary-card) — access: `public_image_extracted`; review: `image_reviewed`.
 

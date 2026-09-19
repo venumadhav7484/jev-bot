@@ -27,7 +27,6 @@ An earlier post predates Jev access; only the later update claims integration. T
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.youtube.com/watch?v=g6CADbjBhlk](https://www.youtube.com/watch?v=g6CADbjBhlk) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://github.com/Reisenbug/TerraBlind](https://github.com/Reisenbug/TerraBlind) — access: `fetched`; review: `readme_reviewed`.
 - [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.

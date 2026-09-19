@@ -27,7 +27,6 @@ Prompt, task quality, caching, concurrency and billing assumptions require inspe
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/iammrduncan/typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) — access: `fetched`; review: `readme_reviewed`.
 - [https://x.com/iamMrDuncan/status/2100467548298899918](https://x.com/iamMrDuncan/status/2100467548298899918) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/H5rUhiN7EY](https://t.co/H5rUhiN7EY) — access: `fetched`; review: `readme_reviewed`.

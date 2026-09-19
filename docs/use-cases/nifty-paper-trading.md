@@ -27,6 +27,5 @@ Not HFT or live profit. No transaction costs, leakage controls, multiple regimes
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

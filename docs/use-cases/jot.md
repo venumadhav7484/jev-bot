@@ -27,7 +27,6 @@ The marketing claim of being first was not verified. Do not infer native free-te
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/runta-dev/jot](https://github.com/runta-dev/jot) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

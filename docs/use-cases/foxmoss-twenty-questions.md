@@ -27,7 +27,6 @@ The page provides no measured accuracy or itemized cost; gameplay was not indepe
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://20questions.foxmoss.com/](https://20questions.foxmoss.com/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

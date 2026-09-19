@@ -27,7 +27,6 @@ No verified predictive edge, executed return, risk calibration or stop-loss vali
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/brainstormity/status/2100772250181947507?s=20](https://x.com/brainstormity/status/2100772250181947507?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://x.com/brainstormity/status/2101008659639672833](https://x.com/brainstormity/status/2101008659639672833) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [https://x.com/brainstormity/status/2101008659639672833?s=20](https://x.com/brainstormity/status/2101008659639672833?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.

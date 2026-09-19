@@ -27,7 +27,6 @@ Do not reconcile with other claimed Elo without comparing harness, legal-move co
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/AliceRoselia/Typesafe_chess_eval](https://github.com/AliceRoselia/Typesafe_chess_eval) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

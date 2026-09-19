@@ -27,7 +27,6 @@ First test only; future CPU-player integration is a plan. No broad game-skill re
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/attractmodeio/status/2100723340021276739?s=46&t=Lue6-owbwjO2j3Lmk4ra-A](https://x.com/attractmodeio/status/2100723340021276739?s=46&t=Lue6-owbwjO2j3Lmk4ra-A) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

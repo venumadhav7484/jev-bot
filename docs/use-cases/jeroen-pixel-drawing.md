@@ -27,7 +27,6 @@ Video explicitly compares a completed 4,047-pixel Jev coloring with Haiku's 300-
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/j_lamberts/status/2100577481698734255?s=20](https://x.com/j_lamberts/status/2100577481698734255?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

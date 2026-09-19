@@ -27,7 +27,6 @@ Do not infer native audio/video input or investment forecasting ability from thi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://fedspeech.pages.dev/](https://fedspeech.pages.dev/) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

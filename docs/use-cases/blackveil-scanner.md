@@ -27,7 +27,6 @@ No security-detection benchmark or architecture established; website marketing d
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://blackveilsecurity.com/](https://blackveilsecurity.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

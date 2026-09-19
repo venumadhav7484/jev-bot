@@ -27,7 +27,6 @@ Recorded NPCs react to proximity, sword display and gossip, with visible action/
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/haiderTheDev/status/2100419750459519156?s=20](https://x.com/haiderTheDev/status/2100419750459519156?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://t.co/1JAlFmT4GM](https://t.co/1JAlFmT4GM) — access: `fetched`; review: `source_text_reviewed`.
 

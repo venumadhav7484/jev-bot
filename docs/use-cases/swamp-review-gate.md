@@ -27,7 +27,6 @@ Published extension plus author report; no reproduced trial. Question wording, p
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://swamp-club.com/extensions/@swamp/typesafe-ai](https://swamp-club.com/extensions/@swamp/typesafe-ai) — access: `fetched`; review: `source_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

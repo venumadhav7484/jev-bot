@@ -27,7 +27,6 @@ Public benchmark accuracy does not establish resistance to new adaptive attacks 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/_GauravGosain/status/2100111398277959715?s=20](https://x.com/_GauravGosain/status/2100111398277959715?s=20) — access: `fetched`; review: `context_only_reviewed`.
 - [https://github.com/Gaurav-Gosain/jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) — access: `fetched`; review: `source_text_reviewed`.
 - [Author-linked implementation artifact](https://github.com/Gaurav-Gosain/jev-go) — discovered via [external source](https://x.com/_GauravGosain/status/2100111398277959715); access: `fetched`; review: `readme_reviewed`.

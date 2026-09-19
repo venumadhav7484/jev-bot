@@ -27,7 +27,6 @@ No independent task-success or latency comparison. Validate tool recall and the 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/vpkxvoice/status/2100995268133146698](https://x.com/vpkxvoice/status/2100995268133146698) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [Author-linked implementation artifact](https://github.com/prasanth263/maza) — discovered via [external source](https://x.com/vpkxvoice/status/2100995268133146698); access: `fetched`; review: `readme_reviewed`.
 

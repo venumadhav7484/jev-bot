@@ -27,7 +27,6 @@ The $0.0017 run and recall figures are author results. Relevance alone does not 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.promptforce.ai/readybase](https://www.promptforce.ai/readybase) — access: `fetched`; review: `page_reviewed`.
 - [https://github.com/PromptForcePrime/readybase-public/releases/tag/v1.6.0](https://github.com/PromptForcePrime/readybase-public/releases/tag/v1.6.0) — access: `fetched`; review: `release_notes_reviewed`.
 - [https://promptforce.ai/rb-install.sh](https://promptforce.ai/rb-install.sh) — access: `fetched`; review: `source_text_reviewed`.

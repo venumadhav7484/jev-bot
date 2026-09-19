@@ -27,7 +27,6 @@ Recorded examples display295ms and438ms, not a latency distribution. UI surface 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://noflow.casungo.workers.dev/](https://noflow.casungo.workers.dev/) — access: `browser_readable`; review: `landing_page_reviewed`.
 - [https://github.com/casungo/noflow-runtime](https://github.com/casungo/noflow-runtime) — access: `fetched`; review: `readme_reviewed`.
 - [https://www.npmjs.com/package/noflow-runtime](https://www.npmjs.com/package/noflow-runtime) — access: `browser_readable`; review: `readme_reviewed`.

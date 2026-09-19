@@ -27,7 +27,6 @@ Signed-in author reply explicitly says no real money traded yet. Reviewed dashbo
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/_trou3/status/2100481938016669917](https://x.com/_trou3/status/2100481938016669917) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

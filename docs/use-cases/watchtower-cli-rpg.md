@@ -27,6 +27,5 @@ No code or sampled-outcome protocol inspected. Individual failed high-probabilit
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

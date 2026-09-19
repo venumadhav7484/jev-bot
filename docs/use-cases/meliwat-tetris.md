@@ -27,7 +27,6 @@ Nine sampled frames from25.88seconds; full harness and long-horizon performance 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/Meliwat93/status/2100404711283188181?s=20](https://x.com/Meliwat93/status/2100404711283188181?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/Meliwat93/status/2100404711283188181/video/1?s=46](https://x.com/Meliwat93/status/2100404711283188181/video/1?s=46) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/meliwat93/status/2100404711283188181?s=46](https://x.com/meliwat93/status/2100404711283188181?s=46) — access: `fetched`; review: `demo_trace_reviewed`.

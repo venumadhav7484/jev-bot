@@ -27,6 +27,5 @@ Screenshot reports SPY next-day AUC about0.508, Brier0.2538, log loss0.7012 and 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

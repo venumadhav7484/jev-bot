@@ -27,7 +27,6 @@ Simulation only; no detection coverage or response-safety evidence. Source revie
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/the-data-sherpa/project_blackout](https://github.com/the-data-sherpa/project_blackout) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

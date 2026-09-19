@@ -27,7 +27,6 @@ Earlier best-run figures were withdrawn; a contaminated comparison arm was disca
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://iambraun.com/jevreports/co-dm/](https://iambraun.com/jevreports/co-dm/) — access: `browser_readable`; review: `article_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

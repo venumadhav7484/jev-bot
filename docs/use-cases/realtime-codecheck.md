@@ -27,7 +27,6 @@ Rule count and timing are author report, not correctness; code scope, batching a
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://youtu.be/goVDTUd7-J0](https://youtu.be/goVDTUd7-J0) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 - [https://github.com/MrDesjardins/jevrealtimecodecheck](https://github.com/MrDesjardins/jevrealtimecodecheck) — access: `fetched`; review: `readme_reviewed`.
 - [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.

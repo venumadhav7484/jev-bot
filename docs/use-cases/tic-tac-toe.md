@@ -27,7 +27,6 @@ Recorded self-play contains decisive wins for both sides, so perfect play is not
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/mikehostetler/status/2100946109308748079](https://x.com/mikehostetler/status/2100946109308748079) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

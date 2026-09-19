@@ -27,7 +27,6 @@ Full-table semantic scans are not an index replacement with constant cost. Video
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://pgjev.zachi.dev/](https://pgjev.zachi.dev/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://x.com/iam_zachi/status/2100679300756435135](https://x.com/iam_zachi/status/2100679300756435135) — access: `fetched`; review: `demo_trace_reviewed`.
 

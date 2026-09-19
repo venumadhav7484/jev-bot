@@ -27,7 +27,6 @@ A legal action can still be strategically wrong. No win rate or general navigati
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://bsky.app/profile/withcaer.com/post/3mvt2y2d5dk2c](https://bsky.app/profile/withcaer.com/post/3mvt2y2d5dk2c) — access: `fetched`; review: `source_text_reviewed`.
 - [@typesafeai.bsky.social](https://bsky.app/profile/did:plc:xoa2hgn2azylagqqzb2s4ce3) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [#gamedev](https://bsky.app/hashtag/gamedev) — access: `fetched`; review: `context_only_not_jev_evidence`.

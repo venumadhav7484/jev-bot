@@ -27,7 +27,6 @@ Demo shows selected successful routes, not routing accuracy or improved conversi
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/digitalshane_/status/2100399951872205224?s=46&t=IUH0numJ2wxvHLmj8vkKzg](https://x.com/digitalshane_/status/2100399951872205224?s=46&t=IUH0numJ2wxvHLmj8vkKzg) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

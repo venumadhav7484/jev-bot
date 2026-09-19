@@ -27,6 +27,5 @@ Semantically equivalent Noul variants reportedly span 36–62% and cross a 0.50 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

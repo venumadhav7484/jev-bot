@@ -27,7 +27,6 @@ Author reports strong action bias: EVEN selected in 65/94 decisions and zero in 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/NicoSaraintaris/status/2100745151622664392](https://x.com/NicoSaraintaris/status/2100745151622664392) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/NicoSaraintaris/status/2100962598237749648](https://x.com/NicoSaraintaris/status/2100962598237749648) — access: `fetched`; review: `demo_trace_reviewed`.
 - [https://x.com/NicoSaraintaris/status/2100938146175152323](https://x.com/NicoSaraintaris/status/2100938146175152323) — access: `fetched`; review: `demo_trace_reviewed`.

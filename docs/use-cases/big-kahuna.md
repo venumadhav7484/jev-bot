@@ -27,7 +27,6 @@ One selected voice demo, nine sampled frames. No accuracy benchmark across accen
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/zain_hoda/status/2100992526417031678?s=20](https://x.com/zain_hoda/status/2100992526417031678?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

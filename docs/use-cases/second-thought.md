@@ -27,7 +27,6 @@ The threshold is application policy, not proof of safety. Never substitute proba
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/rodriveiga01/second-thought](https://github.com/rodriveiga01/second-thought) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

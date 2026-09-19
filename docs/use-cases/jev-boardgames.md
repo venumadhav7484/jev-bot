@@ -27,7 +27,6 @@ Landing-page architecture inspected; no game played or benchmark reproduced. Hos
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://jevboardgames.everpaper.app/](https://jevboardgames.everpaper.app/) — access: `public_content_recovered`; review: `landing_page_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

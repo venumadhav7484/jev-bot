@@ -27,7 +27,6 @@ Reported zero mismatches on 300 randomized v3.1 vectors and 154 v4 comparisons c
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/Red5d/jev-cvss](https://github.com/Red5d/jev-cvss) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

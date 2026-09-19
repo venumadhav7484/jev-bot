@@ -27,7 +27,6 @@ Preview truncated; dataset, full cost comparison, confidence intervals and priva
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/identityTorn/status/2100475121324728615?s=20](https://x.com/identityTorn/status/2100475121324728615?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

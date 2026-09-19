@@ -27,7 +27,6 @@ Specific run claim only. Environment memory access and action timing materially 
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/rherton/status/2101005942913729001?s=20](https://x.com/rherton/status/2101005942913729001?s=20) — access: `fetched`; review: `demo_trace_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

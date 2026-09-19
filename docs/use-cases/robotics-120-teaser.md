@@ -27,7 +27,6 @@ Teaser montage inspected; no readable benchmark results or rankings. Author link
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/stash_pomichter/status/2101149600044224698](https://x.com/stash_pomichter/status/2101149600044224698) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [Author-linked framework; benchmark results forthcoming](https://github.com/dimensionalOS/dimos) — discovered via [external source](https://x.com/stash_pomichter/status/2101149600044224698); access: `public_web_reader`; review: `readme_reviewed`.
 

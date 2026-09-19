@@ -27,7 +27,6 @@ README laundry and modem examples use sample data on a throwaway instance. A 0.3
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://github.com/AboveColin/HA-Jev](https://github.com/AboveColin/HA-Jev) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

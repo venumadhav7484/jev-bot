@@ -27,7 +27,6 @@ Recording explicitly says dry run and shows negative simulated P&L around -5.20%
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/jarrodwatts/status/2100356151468585346](https://x.com/jarrodwatts/status/2100356151468585346) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://t.co/vwl2SUu4jm](https://t.co/vwl2SUu4jm) — access: `fetched`; review: `source_text_reviewed`.
 

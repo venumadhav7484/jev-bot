@@ -27,6 +27,5 @@ Dataset and sample sizes absent. Claims about a 2024 knowledge boundary or unive
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Author explicitly calls it parody, not factual advice. Text rendering does not p
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://askjevves.com/](https://askjevves.com/) — access: `fetched`; review: `source_text_reviewed`.
 - [https://askjevves.com/ask?q=Is+this+the+jev+magic+8-ball%3F](https://askjevves.com/ask?q=Is+this+the+jev+magic+8-ball%3F) — access: `fetched`; review: `source_text_reviewed`.
 - [https://askjevves.com/?v=20](https://askjevves.com/?v=20) — access: `fetched`; review: `source_text_reviewed`.

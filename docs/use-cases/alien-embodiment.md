@@ -27,7 +27,6 @@ Changing sensory representation produced a run that avoided walls but starved. S
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/k3o_exp/status/2100065796240073215](https://x.com/k3o_exp/status/2100065796240073215) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

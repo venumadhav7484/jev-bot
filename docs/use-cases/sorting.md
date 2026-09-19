@@ -27,6 +27,5 @@ The author explicitly disowned the GIF's displayed timing as fabricated by the r
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -27,7 +27,6 @@ Author reports reward hacking toward wood and clarifies published shelter log ca
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://youtu.be/3G14OU00crI?si=ucI7ksLDTPisf1pD](https://youtu.be/3G14OU00crI?si=ucI7ksLDTPisf1pD) — access: `fetched`; review: `metadata_only`.
 - [YouTube](https://www.youtube.com/) — access: `fetched`; review: `context_only_not_jev_evidence`.
 - [Hyperion](https://www.youtube.com/channel/UCD19mqbVLsb11Di1qdvhMZQ) — access: `fetched`; review: `context_only_not_jev_evidence`.

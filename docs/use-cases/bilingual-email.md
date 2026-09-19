@@ -27,7 +27,6 @@ Reference labels are AI-generated and not human-verified. The result does not im
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://x.com/CompleteSkeptic/status/2100655158992719907?s=20](https://x.com/CompleteSkeptic/status/2100655158992719907?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

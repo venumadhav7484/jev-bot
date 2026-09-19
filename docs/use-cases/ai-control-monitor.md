@@ -27,7 +27,6 @@ Adaptive attacks reportedly degrade performance. AUROC is not an operational fal
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 - [https://www.lesswrong.com/posts/d7pQicW8EhpPBDRqz/a-non-generative-model-as-a-trusted-monitor-for-ai-control](https://www.lesswrong.com/posts/d7pQicW8EhpPBDRqz/a-non-generative-model-as-a-trusted-monitor-for-ai-control) — access: `fetched`; review: `article_reviewed`.
 - [https://x.com/exploding_grad/status/2100983340602179953](https://x.com/exploding_grad/status/2100983340602179953) — access: `fetched`; review: `visible_post_text_reviewed`.
 - [res.cloudinary.com](https://res.cloudinary.com/lesswrong-2-0/image/upload/f_auto,q_auto/v1/mirroredImages/d7pQicW8EhpPBDRqz/npi4f5j84gflixawyywv) — access: `public_image_extracted`; review: `image_reviewed`.

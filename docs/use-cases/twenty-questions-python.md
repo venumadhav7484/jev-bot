@@ -27,6 +27,5 @@ Attachment requires inspection. Keep out of default recommendations until implem
 
 ## Sources
 
-- Discord source — private provenance retained locally.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+
+# Private research inputs and generated evidence. Never publish these archives.
+/resource-pool/
+/research/
+/RESUME.md
+/jev-knowledge-reference.md
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+.DS_Store
+.venv/
+venv/
+node_modules/
+.codex/
+.agents/
+*.log
+
+# Public material is explicitly exported to docs/.

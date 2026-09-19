@@ -1,0 +1,33 @@
+---
+id: openmausbot
+title: "OpenMausBot: teammate and model selection"
+category: agents
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# OpenMausBot: teammate and model selection
+
+## What
+
+Choose which agents should handle a task.
+
+## How Jev fits
+
+Jev reads a task and selects teammates and their model assignments, according to the linked author demo.
+
+## Why and impact
+
+Separates routing from agents' substantive work; no measured end-to-end savings were supplied.
+
+## Limits and reuse
+
+Model capability descriptions, routing labels and fallback policy need independent validation.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://x.com/milindlabs/status/2100515910754750741?s=46](https://x.com/milindlabs/status/2100515910754750741?s=46) — access: `fetch_failed`; review: `not_reviewed`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

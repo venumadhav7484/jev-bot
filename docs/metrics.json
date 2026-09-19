@@ -1,0 +1,69 @@
+{
+  "research_status": "paused",
+  "coverage": {
+    "snapshot_date": "2026-09-19",
+    "main_channel_rows": 3226,
+    "thread_rows": 142,
+    "thread_count": 14,
+    "thread_rows_include_starters_and_parent_copies": true,
+    "external_urls": 809,
+    "access_status_counts": {
+      "fetched": 257,
+      "fetch_failed": 547,
+      "browser_readable": 2,
+      "asset_no_text": 1,
+      "excluded_preview_asset": 2
+    },
+    "curated_cases": 262,
+    "default_retrieval_cases": 246,
+    "message_coverage_status_counts": {
+      "cited_in_case": 350,
+      "uncatalogued_source_row": 2994,
+      "jev_role_questioned_in_thread": 2,
+      "awaiting_access": 3,
+      "jev_role_not_established": 5,
+      "other_model_not_jev": 1,
+      "planned_integration": 3
+    },
+    "exhaustive": false,
+    "independent_benchmarks_run": 0,
+    "s3_uploaded": false,
+    "machine_triage": {
+      "completed": 3358,
+      "remaining": 0,
+      "is_editorial_approval": false
+    }
+  },
+  "triage": {
+    "generated_at": "2026-09-19T07:24:31.382115+00:00",
+    "pipeline_version": "discord-triage-v3",
+    "captured_unique_messages": 3358,
+    "machine_triaged": 3358,
+    "machine_triage_remaining": 0,
+    "kinds": {
+      "implementation": 468,
+      "evaluation": 340,
+      "substantive_question": 433,
+      "limitation_or_correction": 394,
+      "tool_or_resource": 431,
+      "unclear": 141,
+      "community_reaction": 894,
+      "technical_detail": 221,
+      "unrelated": 36
+    },
+    "relations": {
+      "not_established": 1359,
+      "other_technology": 429,
+      "jev_discussion": 631,
+      "proposed_jev_use": 357,
+      "reported_jev_use": 582
+    },
+    "usage": {
+      "input_tokens": 4389184,
+      "output_tokens": 1327373,
+      "requests": 420
+    },
+    "editorially_approved_by_this_pipeline": 0,
+    "exhaustive": false
+  }
+}

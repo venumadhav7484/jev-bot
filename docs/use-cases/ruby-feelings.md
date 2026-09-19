@@ -1,0 +1,33 @@
+---
+id: ruby-feelings
+title: "Feelings: probabilistic conditions in Ruby"
+category: developer-tools
+evidence: author-reported
+reviewed_on: 2026-09-19
+independently_reproduced: false
+---
+
+# Feelings: probabilistic conditions in Ruby
+
+## What
+
+A Ruby library makes semantic judgments look like conditional expressions.
+
+## How Jev fits
+
+The feels construct wraps typed questions about values, inspired by Probably.
+
+## Why and impact
+
+Reduces repetitive decision-model plumbing for application developers.
+
+## Limits and reuse
+
+Probabilistic conditions should not silently replace deterministic invariants. API behavior and probability calibration were not independently tested.
+
+## Sources
+
+- Discord source — private provenance retained locally.
+- [https://github.com/obie/feelings](https://github.com/obie/feelings) — access: `fetched`; review: `not_reviewed`.
+
+Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

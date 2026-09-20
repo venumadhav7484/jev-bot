@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import sys
 import threading
+import time
 import unittest
 from unittest.mock import patch
 
@@ -44,12 +45,32 @@ class LocalServerBoundaries(unittest.TestCase):
         self.assertEqual(self.request('GET', '/', headers={'Host': 'attacker.example'})[0], 403)
         self.assertEqual(self.request('POST', '/api/answer', '{}', {'Origin': 'https://attacker.example', 'Content-Type': 'application/json'})[0], 403)
 
-    def test_json_contract_and_provider_opt_in(self):
-        with patch.object(serve_bot, 'answer', return_value={'fit': 'test'}) as mocked:
-            code, data = self.request('POST', '/api/answer', json.dumps({'idea': 'Route email'}), {'Content-Type': 'application/json'})
-            self.assertEqual(code, 200); self.assertEqual(json.loads(data)['fit'], 'test')
-            mocked.assert_called_once_with('Route email', False)
+    def test_json_contract_and_full_research_modes(self):
+        with patch.object(serve_bot, 'research_answer', return_value={'fit': 'test'}) as mocked:
+            code, data = self.request('POST', '/api/jobs', json.dumps({'idea': 'Route email','mode':'written','source':'s3'}), {'Content-Type': 'application/json'})
+            self.assertEqual(code, 202)
+            identifier = json.loads(data)['id']
+            for _ in range(100):
+                status, body = self.request('GET', '/api/jobs/'+identifier)
+                job=json.loads(body)
+                if job['status'] != 'running': break
+                time.sleep(.01)
+            self.assertEqual(job['result']['fit'], 'test')
+            self.assertEqual(mocked.call_args.args[:3], ('Route email','written','s3'))
         self.assertEqual(self.request('POST', '/api/answer', '{}', {'Content-Type': 'text/plain'})[0], 415)
+        self.assertEqual(self.request('POST', '/api/jobs', '{"idea":"hi"}', {'Content-Type': 'application/json'})[0], 400)
+
+    def test_provider_errors_are_not_exposed_in_jobs(self):
+        with patch.object(serve_bot, 'research_answer', side_effect=RuntimeError('private-key')):
+            _, data = self.request('POST', '/api/jobs', json.dumps({'idea':'Route email'}), {'Content-Type':'application/json'})
+            identifier=json.loads(data)['id']
+            for _ in range(100):
+                _, body=self.request('GET','/api/jobs/'+identifier)
+                job=json.loads(body)
+                if job['status'] != 'running': break
+                time.sleep(.01)
+            self.assertEqual(job['status'],'failed')
+            self.assertNotIn('private-key',body.decode())
 
 
 if __name__ == '__main__':

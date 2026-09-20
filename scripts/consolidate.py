@@ -47,7 +47,7 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 | Context screening | {summary['external_review_status_counts'].get('context_only_not_jev_evidence', 0)} links scoped as unrelated context; {summary['external_review_status_counts'].get('metadata_only', 0)} metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
 | X | {len(x_queue['entries'])} distinct posts: {x_counts.get('reviewed', 0)} reviewed, {x_counts.get('pending_media', 0)} media-pending, {x_counts.get('pending_thread_expansion', 0)} thread-expansion pending, {x_counts.get('pending', 0)} pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across {sum(r['remaining_attachments'] > 0 for r in media['entries'])} messages pending |
-| Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
+| Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
 | S3 | {'Encrypted private snapshot uploaded and download/file hashes verified' if summary['s3_uploaded'] else 'Requested; no verified backup yet'} | Backup state is separate from evidence review |
 
 ## What the counts mean
@@ -88,7 +88,7 @@ User chose to stop new source collection and consolidate a usable assistant. S3 
 
 All 3,358 IDs have editorial dispositions. {n} cases; {enabled} default eligible. {pending}/{summary['external_urls']} external URLs await first disposition; {gaps} retain explicit content gaps. {media['attachments_reviewed']} attachments inspected; {media['attachments_pending']} pending. Existing source/media review notes remain authoritative. No independent community benchmark reproduction.
 
-Local assistant: `python3 scripts/serve_bot.py`. Optional Jev sends entered ideas only. Public assets come from sanitized `docs/bot-cases.json`. Offline rebuild: `python3 scripts/consolidate.py`. Private backup: `python3 scripts/backup_private.py backup`; verified receipt under `research/storage/latest-backup.json` if present.
+Local assistant: `python3 scripts/serve_bot.py`. Jev modes send the idea and all exported research text in batches; optional GLM writing receives selected evidence. Public assets come from sanitized `docs/bot-cases.json`. Offline rebuild: `python3 scripts/consolidate.py`. Private backup: `python3 scripts/backup_private.py backup`; verified receipt under `research/storage/latest-backup.json` if present.
 
 ## Resume after this frozen version
 
@@ -114,7 +114,7 @@ Current detailed gaps: `resource-pool/completion-status.md`. S3 backup does not 
     body = readme.read_text()
     start, end = '<!-- SNAPSHOT-START -->', '<!-- SNAPSHOT-END -->'
     if start in body and end in body:
-        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | 19 September 2026, 10:08:31 IST |\n| Messages | 3,358 unique IDs; all editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Local preview; 11 authored design families |\n| S3 | {'Private backup verified' if summary['s3_uploaded'] else 'Backup pending'} |\n\n'''
+        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | 19 September 2026, 10:08:31 IST |\n| Messages | 3,358 unique IDs; all editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Full-library Jev; optional GLM 5.3 writing |\n| S3 | {'Private backup verified' if summary['s3_uploaded'] else 'Backup pending'} |\n\n'''
         readme.write_text(body.split(start)[0]+start+table+end+body.split(end, 1)[1])
 
 

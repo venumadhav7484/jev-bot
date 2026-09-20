@@ -11,8 +11,8 @@ Capture cutoff: **19 September 2026, 10:08:31 IST / 04:38:31 UTC**. New source c
 | Context screening | 192 links scoped as unrelated context; 20 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
 | X | 182 distinct posts: 140 reviewed, 0 media-pending, 38 thread-expansion pending, 4 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 174 / 413 attachment URLs reviewed; 148 / 370 messages complete | 239 attachments across 222 messages pending |
-| Bot | Local web/CLI assistant, 11 authored design families, attributed case cards, counterexamples and optional Jev routing | No free-form generative model, broad conversational memory or production validation |
-| S3 | Requested; no verified backup yet | Backup state is separate from evidence review |
+| Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
+| S3 | Encrypted private snapshot uploaded and download/file hashes verified | Backup state is separate from evidence review |
 
 ## What the counts mean
 

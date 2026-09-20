@@ -22,6 +22,10 @@ class BackupBoundaries(unittest.TestCase):
             (root/'research/key.pem').write_text('secret')
             (root/'research/storage/old.tar.gz').write_text('old backup')
             (root/'research/link').symlink_to(root/'research/body.md')
+            environment = root/'research/media-tools-venv'
+            (environment/'lib').mkdir(parents=True)
+            (environment/'pyvenv.cfg').write_text('home = /usr/bin')
+            (environment/'lib/installed.py').write_text('never-upload-this-secret')
             (root/'.env.local').write_text('AWS_SECRET_ACCESS_KEY=never-upload-this-secret')
             with patch.object(backup, 'ROOT', root), patch.object(backup, 'STORAGE', root/'research/storage'), patch.object(backup, 'INPUTS', ('research',)):
                 path, manifest = backup.package()

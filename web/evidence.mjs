@@ -47,6 +47,11 @@ export function links(text = '') {
   }
   return found;
 }
+export function referenceUrls(row, record) {
+  return links(record?.sources || row?.text || '').map(item => item.url)
+    .filter(url => !/\.(?:svg|png|jpg|css|woff2?)(?:[?#]|$)/i.test(url))
+    .sort((a, b) => Number(b.includes('github.com')) - Number(a.includes('github.com'))).slice(0, 2);
+}
 export function signal(row) {
   const role = row.evidence_role;
   // These editorial titles explicitly identify a failure or unresolved validity concern.

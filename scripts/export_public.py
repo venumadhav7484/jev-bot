@@ -13,7 +13,8 @@ DOCS = ROOT/'docs'
 mapping = {ROOT/'jev-knowledge-reference.md': DOCS/'jev-knowledge-reference.md'}
 names = ('jev-usecases.md', 'integration-patterns.md', 'jev-bot-answer-guide.md',
          'pending-and-ecosystem.md', 'storage-and-retrieval.md', 'use-case-template.md',
-         'community-evidence-findings.md', 'completion-status.md', 'jev-master-guide.md', 'review-backlog.md')
+         'community-evidence-findings.md', 'completion-status.md', 'jev-master-guide.md', 'review-backlog.md',
+         'bot-knowledge-flow.md', 'youtube-source-workflow.md')
 mapping.update({ROOT/'resource-pool'/name:DOCS/name for name in names})
 mapping.update({p:DOCS/'use-cases'/p.name for p in (ROOT/'resource-pool/use-cases').glob('*.md')})
 mapping[ROOT/'research/README.md'] = DOCS/'research-pipeline.md'
@@ -73,6 +74,27 @@ def sanitize(source, target):
     return text
 
 
+# Raw transcripts are never export candidates. Recheck promoted review integrity
+# on every rebuild, then pass only editorial summaries through sanitization.
+from youtube_sources import reviewed_exports
+from check_public import inspect
+reviewed = reviewed_exports(ROOT)
+prepared = {}
+for source, content in reviewed.items():
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_text(content)
+    target = DOCS/'youtube'/source.name
+    prepared[target] = sanitize(source, target)
+findings = inspect([(p.relative_to(ROOT).as_posix(), content.encode()) for p, content in prepared.items()])
+if findings:
+    raise ValueError('YouTube export failed the public-content guard; review local source summaries.')
+for source in reviewed:
+    mapping[source] = DOCS/'youtube'/source.name
+# Remove only this exporter's stale generated pages after reviews are withdrawn.
+for target in (DOCS/'youtube').glob('youtube-*.md'):
+    if target not in prepared:
+        target.unlink()
+
 public_records = []
 retrieval = {r['id']: r for r in map(json.loads, (ROOT/'resource-pool/retrieval-index.jsonl').read_text().splitlines())}
 for source,target in mapping.items():
@@ -84,6 +106,12 @@ for source,target in mapping.items():
         public_records.append({'id': row['id'], 'title': row['title'], 'category': row['category'],
                                'default_retrieval': row['default_retrieval'], 'evidence_role': row['evidence_role'],
                                'path': target.relative_to(ROOT).as_posix(), 'body': content})
+# Derived examples stay separate from source Markdown and the model's evidence.
+from case_designs import export_designs, source_hash
+for record in public_records:
+    record['design_source_hash'] = source_hash(record)
+design_count = export_designs(public_records, DOCS/'case-designs.json')
+print(f'Exported {design_count}/{len(public_records)} current teaching designs.')
 (DOCS/'bot-cases.json').write_text(json.dumps(public_records, ensure_ascii=False, indent=2)+'\n')
 summary=json.loads((ROOT/'resource-pool/coverage-summary.json').read_text())
 summary['machine_triage'].pop('summary',None)

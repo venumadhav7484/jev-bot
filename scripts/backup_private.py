@@ -41,6 +41,8 @@ def load_env(path):
 def eligible(path):
     relative = path.relative_to(ROOT)
     return (not path.is_symlink() and not set(relative.parts) & BLOCKED_PARTS
+            and not any((ROOT / parent / 'pyvenv.cfg').is_file()
+                        for parent in relative.parents if parent != Path('.'))
             and relative.parts[:2] != ('research', 'storage')
             and not path.name.startswith('.env')
             and path.suffix.lower() not in ('.pem', '.key', '.p12', '.pfx', '.pyc')

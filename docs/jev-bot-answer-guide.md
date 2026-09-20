@@ -1,6 +1,6 @@
 # Jev-bot answer guide
 
-A local research-preview assistant now implements a bounded version of this contract. It uses authored design templates and curated topical neighborhoods, then returns complete case fields and source links. Optional Jev Choice routes the entered idea; no generative answer model is configured. It is not an unrestricted conversational or production system.
+The assistant now evaluates every exported research document with Jev. Users choose typed judgments with source passages, or a written explanation from GLM 5.3 after Jev evaluation. Both modes accept current local research or a verified S3 snapshot. [Knowledge flow and scope](bot-knowledge-flow.md) describes exact inputs, source selection, caching and failure behavior.
 
 ## Input
 
@@ -42,9 +42,9 @@ Pilot on one supported integration in observation mode. Use seeded policy violat
 
 ## Local assistant and evaluation scope
 
-Run `python3 scripts/serve_bot.py` from the repository root, then open `http://127.0.0.1:8765`. Offline mode requires no credentials and reads only the sanitized public snapshot. The optional Jev checkbox sends the entered idea to TypeSafe for pattern classification; it does not upload the private archive. Follow-up details can be added to the same description; chat history is not persisted.
+Run `python3 scripts/serve_bot.py`, then open `http://127.0.0.1:8765`. Configure `jev_api_key` in `.env.local`; written mode additionally uses `glm_key` for GLM 5.3. Jev receives the entered idea and all exported Markdown research in lossless batches. The writing model receives selected evidence and Jev judgments. The UI reports coverage and any failures. Raw media and private operational files are excluded from model context.
 
-Eleven authored integration families cover policy review, routing, semantic data filtering, media pipelines, bounded action selection, memory, evaluation, exact computation, financial evidence, clinical documents and generation boundaries. This deliberately limited preview can miss novel fits. Source cards retain what/how/impact/limits and source review status. Counterexamples have a separate retrieval path. Related cases establish precedents, not proof that the proposed design will work.
+The old 11-family authored preview is retained through the CLI `--offline` flag. It is no longer the UI answer pipeline. Its tests remain legacy regression checks, not evaluation of the new full-library modes. Full-library checks exercise complete passage coverage, S3 checksum boundaries, missing-evidence behavior, provider failures and citation validation. These do not establish general answer accuracy.
 
 The private `scripts/evidence.py search --full` path additionally includes inspected-source review notes. Its abbreviated excerpts are not complete evidence. `--purpose counterevidence` and `--purpose tools` expose those evidence roles explicitly. Development retrieval and assistant checks test selected scenarios, citation resolution, abstention and evidence boundaries; they are not an independent reliability benchmark.
 

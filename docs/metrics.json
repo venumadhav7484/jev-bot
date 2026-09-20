@@ -55,7 +55,7 @@
     },
     "exhaustive": false,
     "independent_benchmarks_run": 0,
-    "s3_uploaded": false,
+    "s3_uploaded": true,
     "machine_triage": {
       "completed": 3358,
       "remaining": 0,
@@ -133,7 +133,8 @@
       "inaccessible_after_attempt": 4
     },
     "external_urls_with_content_gaps": 66,
-    "review_disposition_is_full_validation": false
+    "review_disposition_is_full_validation": false,
+    "s3_backup_completed_at": "2026-09-20T06:40:05.094561+00:00"
   },
   "triage": {
     "generated_at": "2026-09-19T07:24:31.382115+00:00",

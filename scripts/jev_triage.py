@@ -237,6 +237,8 @@ def evaluate(payload, key):
             with opener.open(req, timeout=40) as result:
                 response = json.loads(result.read())
             validate(payload, response)
+            if attempt:
+                response['_unreported_attempts'] = attempt
             return response
         except urllib.error.HTTPError as exc:
             if exc.code not in (429, 500, 502, 503, 504, 529) or attempt == 2:

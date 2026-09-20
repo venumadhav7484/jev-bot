@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jev-bot · Idea to integration</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jev-bot · Idea to integration</title><link rel="stylesheet" href="/style.css?v=20260920-progress"><script type="module" src="/app.js?v=20260920-progress"></script></head>
 <body><main>
-<header><a class="brand" href="/">Jev<span> / </span>bot</a><a class="explore-link" href="#use-cases">EXPLORE JEV USE CASES <span aria-hidden="true">↗</span></a></header>
+<header><a class="brand" href="/" title="Start fresh" aria-label="Jev / bot — start fresh">Jev<span> / </span>bot</a><a class="explore-link" href="#use-cases">EXPLORE JEV USE CASES <span aria-hidden="true">↗</span></a></header>
 <div id="bot-view">
 <section class="intro"><p class="eyebrow">FROM IDEA TO INTEGRATION</p><h1>Where could Jev<br>fit into your idea?</h1><p class="lede">Explore patterns from real implementations, see where they fail, and turn your idea into a testable design.</p></section>
-<form id="ask"><label for="idea">Describe your use case or idea</label><textarea id="idea" required minlength="3" maxlength="6000" rows="4" placeholder="I’m building su-lekha to monitor sensitive information in AI applications. Where could Jev help?"></textarea>
+<form id="ask"><label for="idea">Describe your idea</label><div class="idea-input"><textarea id="idea" required minlength="3" maxlength="6000" rows="4" placeholder="I’m building su-lekha to monitor sensitive information in AI applications. Where could Jev help?"></textarea>
+<input id="idea-file" type="file" accept=".txt,.md,.csv,.json" hidden><button id="attach-file" class="attach-file" type="button" aria-label="Attach a file" title="Attach a file"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 12 6-6a3 3 0 0 1 4.25 4.25L10 18.5a5 5 0 0 1-7.07-7.07l8.5-8.5a2 2 0 0 1 2.83 2.83L6 14a1 1 0 0 0 1.41 1.41L15 7.83"/></svg></button></div><p id="file-status" class="file-status" role="status" aria-live="polite"></p>
 <div class="examples"><button type="button" data-idea="I’m building su-lekha to monitor sensitive information in AI applications.">su-lekha</button><button type="button" data-idea="Route incoming invoices and support emails to the right queue.">Inbox routing</button><button type="button" data-idea="Apply semantic filters to database rows using SQL.">Semantic SQL</button><button type="button" data-idea="Use voice and video to decide which task to run.">Voice + video</button></div>
-<div class="submit-row"><label class="option"><input id="jev" type="checkbox"> Use Jev to classify this idea <small>Sends entered text to TypeSafe; API usage applies.</small></label><button id="submit" class="primary" type="submit">Explore integration <span>↗</span></button></div>
+
+<p class="mode-note" id="mode-note">Uses all published research. Answers can take a few minutes.</p>
+<div class="submit-row"><span id="connection-status" class="muted" role="status">Connecting…</span><button id="retry-connection" type="button" hidden>Retry connection</button><button id="submit" class="primary" type="submit" disabled>Explore integration <span>↗</span></button></div>
 </form>
 <p id="status" role="status" aria-live="polite"></p><div id="result"></div>
 </div>
 <div id="explorer-view" hidden></div>
 <div id="detail-view" hidden></div>
-<footer>Frozen capture: 19 Sep 2026, 10:08 IST. Source and media review remains incomplete.<br>Authored design proposals + attributed evidence. No benchmark guarantees. <a href="/docs/completion-status.md" target="_blank" rel="noopener">Coverage and gaps ↗</a></footer>
 </main></body></html>

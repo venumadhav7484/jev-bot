@@ -1,32 +1,64 @@
 # Jev-bot
 
-A local evidence assistant for one question:
+A public web app and local CLI for one question:
 
 > Describe your use case or idea. Where could Jev help, what else would you need, and what are the limits?
 
-The assistant proposes a bounded integration, retrieves related implementations and counterexamples, and preserves source links and limitations. It uses authored designs and attributed case extracts. Optional Jev Choice classifies the entered idea; no generative answer model is configured.
+The assistant evaluates the complete exported research library with Jev: every use case, guide, finding and recorded lesson. The public website combines Jev judgments with a GLM 5.3 visual design grounded in selected evidence. The local CLI also supports Jev-only judgments and a verified private S3 snapshot. See the [knowledge and answer flow](docs/bot-knowledge-flow.md).
 
 ## Try it
 
-Python 3.10+; standard library only. No key needed for offline mode.
+**[Open Jev-bot](https://dm6rtlrn56ej8.cloudfront.net/#bot)** · **[Browse 440 use cases](https://dm6rtlrn56ej8.cloudfront.net/#use-cases)**
+
+The hosted app needs no account or API key from visitors. Describe an idea, review its proposed workflow and example request, then leave feedback. The progress spinner runs until the answer arrives or the request fails.
+
+### Run locally
+
+Python 3.11+; standard library only. Full-library modes need `jev_api_key`; written mode also needs `glm_key`. The legacy CLI `--offline` preview needs no key.
 
 ```sh
 git clone https://github.com/venumadhav7484/jev-bot.git
 cd jev-bot
+cp .env.example .env.local
+# Add your own jev_api_key and glm_key to .env.local for web answers.
 python3 scripts/serve_bot.py
 ```
 
 Open **http://127.0.0.1:8765**. Describe an idea, or try the su-lekha example. Add details to the description to refine the result. No conversation history is saved. The server binds to loopback and serves only public assets; it is not a hosted production service.
 
-Use **Explore Jev use cases** to browse the full public catalog, filter six broad categories, search, or randomize the tiles. Case pages keep Jev’s role, reported value, limitations and source links together. Fit signals describe evidence types, not benchmark scores. Bot answers use decision cards, workflow steps and related-case tiles; technical details remain expandable. Navigation back to the bot preserves the current idea and result during the session.
+The public site has one answer flow: Jev reviews the library and GLM builds a visual proposed design with example inputs, copyable JSON and external sources. Users can type or import UTF-8 TXT, MD, CSV or JSON into the editable idea field (6,000 characters total; files up to 256 KB). Files are read in the browser; only the reviewed text is sent on submission. PDF, Word and images are not supported. Preview outputs are illustrative, not live inference.
 
-For optional Jev routing, put `jev_api_key` in local `.env.local`, then select the checkbox in the interface. Only the entered idea goes to TypeSafe. API usage applies. If the service fails, the interface reports a fallback to local keyword routing.
+Use **Explore Jev use cases** to browse the full public catalog, filter six broad categories, search, or randomize the tiles. Each case page includes a prebuilt visual workflow, two illustrative inputs with matching Jev JSON, expected application actions, and original public links. Project reports remain separate and expandable; weak evidence and reported failures stay visible. Examples are teaching adaptations, not original project code or guaranteed outputs. Browsing makes no model requests. Fit signals describe evidence types, not benchmark scores. Bot answers show a visual workflow, selectable example inputs and outputs, copyable Jev JSON, and external project links; supporting notes and usage details remain expandable. Navigation back to the bot preserves the current idea and result during the session.
+
+Put `jev_api_key` and, for written mode, `glm_key` in local `.env.local`. Jev receives your idea and all exported research text in bounded batches. GLM receives your idea, Jev judgments and selected passages. Each answer shows provider-reported input/output tokens and estimated USD per stage; written mode compares Jev with GLM 5.3 and shows a combined estimate. These stages perform different work. Local Jev cache hits add no new requests; missing usage or unreported attempts keep total cost unknown. API usage applies. Progress and actual coverage are shown; failed evaluations never silently become local-template answers. S3 mode uses the verified snapshot receipt and checksum-checked archive cache; AWS CLI and credentials are needed if that archive must be downloaded.
 
 ```sh
-python3 scripts/jev_bot.py "Route incoming invoices to the right queue"
-python3 scripts/jev_bot.py "Monitor sensitive information in AI applications" --jev
+python3 scripts/jev_bot.py "Route incoming invoices to the right queue" --mode evidence
+python3 scripts/jev_bot.py "Monitor sensitive information in AI applications" --mode written --source s3
+python3 scripts/jev_bot.py "Route support email" --offline
 python3 -m unittest discover -s tests -v
-node --test tests/test_web.mjs  # Optional UI data checks; Node.js 18+
+node --test tests/*.mjs  # Browser logic and catalog checks; Node.js 18+
+```
+
+## AWS hosting
+
+`python3 scripts/deploy_cloud.py` prepares an allowlisted site and Lambda bundle without contacting AWS. `python3 scripts/deploy_cloud.py --apply` deploys private S3, CloudFront, HTTP API Gateway, Lambda workers and DynamoDB; `python3 scripts/cloud_status.py` checks rollout and records its HTTPS URL. AWS deployment permissions and local API keys are required. Deployment receipts, bundles and the verification records stay in ignored `research/hosting/`.
+
+The hosted site is public: no login or access code. The deployment allows 10 simultaneous answers and 5,000 starts per UTC day, with a 15-minute worker limit. Capacity can be set with `--daily-limit` and `--max-concurrent`; subsequent deploys preserve those settings. Busy slots and the daily cap produce separate errors. The deployed library includes every exported research document; the older private S3 backup is not used as live context. Research updates require redeployment. No custom domain is purchased. Deployment submission alone is not a successful live-site check.
+
+## Response feedback
+
+Completed bot answers show thumbs up/down and an optional comment (up to 2,000 characters). Each answer accepts one rating and one comment; identical retries do not log duplicate feedback. Only completed, unexpired answer IDs are accepted. Feedback does not invoke Jev or GLM or consume answer capacity.
+
+Hosted feedback is recorded as structured `answer_feedback` events in the API Lambda CloudWatch log group (`/aws/lambda/jev-bot-hosted-api`), retained for 30 days. Events contain `job_id`, `submitted_at`, and `rating` or `comment`; no query text, answer body, IP address or browser identity is added. The job ID can be correlated with its private answer result during the existing one-day result lifetime. Feedback is also saved on that short-lived job to deduplicate retries. Local feedback goes to ignored `research/feedback/local.jsonl`.
+
+CloudWatch Logs Insights, with the API log group selected:
+
+```text
+fields @timestamp, job_id, rating, comment
+| filter event = "answer_feedback"
+| sort @timestamp desc
+| limit 100
 ```
 
 ## Frozen snapshot
@@ -41,8 +73,8 @@ New source collection is paused at the boundary below. The exact last-post link 
 | Cases | 440; 361 default eligible, 79 held back |
 | External evidence | 837 URLs; 0 await first disposition; 66 retain content gaps |
 | Media | 174 / 413 attachments inspected |
-| Bot | Local preview; 11 authored design families |
-| S3 | Backup pending |
+| Bot | Full-library Jev; optional GLM 5.3 writing |
+| S3 | Private backup verified |
 
 <!-- SNAPSHOT-END -->
 
@@ -62,19 +94,26 @@ New source collection is paused at the boundary below. The exact last-post link 
 - [Local media processing](docs/media-processing.md): frame extraction, local speech transcription, OCR and editorial review boundaries.
 - [Development checks](docs/development-checks.json): authored scenarios and a live API smoke test, with scope limits.
 
-The first assistant covers 11 authored design families: policy review, routing, semantic data filtering, media pipelines, bounded action selection, memory, evaluation, exact computation, financial evidence, clinical documents and generation boundaries. It can miss novel fits; the full catalog remains available for research. Related cases are analogies, not evidence that a new design will work. Development tests do not establish general answer accuracy.
+Both main answer modes evaluate every exported research document before selecting relevant passages. No fixed design-family neighborhood limits the search. Raw messages, unprocessed media, code and credentials in the private archive are not model context. Related cases remain analogies, not evidence that a proposed design will work. The older 11-family template preview remains available only through `--offline`; its tests do not establish general answer accuracy.
 
 ## How Jev is used
 
-The research pipeline used Choice to categorize contributions and their relationship to Jev, with independent Noul questions for evidence dimensions. All model suggestions remain subject to editorial review. The bot optionally uses one Choice question to map an idea to an authored integration family. Application code performs retrieval, applies evidence policy and assembles the response. [TypeSafe primitives](https://docs.typesafe.ai/primitives).
+The research pipeline used Choice to categorize contributions and their relationship to Jev, with independent Noul questions for evidence dimensions. All model suggestions remain subject to editorial review. The bot uses Noul questions to evaluate every passage for relevance and applicable cautions, then Choice and Noul questions to assess selected evidence. Application code loads the corpus, preserves source text, handles budgets and checks citation IDs. Optional GLM 5.3 produces the written explanation. [TypeSafe primitives](https://docs.typesafe.ai/primitives).
 
 ## Repository layout
 
 ```text
 docs/                       Sanitized public evidence and bot snapshot
-web/                        Local assistant interface
-scripts/jev_bot.py          Idea routing and evidence-backed design briefs
+web/                        Shared hosted and local browser interface
+scripts/jev_bot.py          CLI and legacy offline design preview
+scripts/research_answer.py  Full-library Jev evaluation and answer modes
+scripts/knowledge_corpus.py Local/S3 research-text loading
+scripts/answer_writer.py    GLM 5.3 cited explanation adapter
 scripts/serve_bot.py        Loopback-only web server
+scripts/cloud_bot.py        Hosted answer jobs and feedback endpoint
+scripts/cloud_stack.py      AWS infrastructure template
+scripts/deploy_cloud.py     Public asset and Lambda packaging/deployment
+scripts/case_designs.py     Resumable prebuilt teaching examples
 scripts/consolidate.py      Offline private-to-public snapshot rebuild
 scripts/stage_capture.py    New/edited-message intake; no automatic collection
 scripts/evidence.py         Private SQLite evidence search
@@ -82,6 +121,10 @@ scripts/jev_triage.py       Resumable Jev-assisted research triage
 scripts/backup_private.py   Private S3 snapshot and download verification
 tests/                     Boundary, retrieval, intake and response checks
 ```
+
+## Add YouTube transcripts
+
+Share transcript text and its video URL. The [transcript workflow](docs/youtube-source-workflow.md) preserves originals privately, extracts anchored claims, records source checks and contradictions, and exports reviewed summaries into the bot's local library. Unreviewed text is excluded. Local research is the default; S3 snapshots require a new backup to include later reviews. First reviewed video: [I Paired Jev With Astra](docs/youtube/youtube-2XFXe-oGnrI.md), including transcript corrections and unverified benchmark claims.
 
 ## Private research and backups
 
@@ -92,3 +135,11 @@ Research rebuild and incremental intake require the authorized local `resource-p
 S3 backup uses credentials from `.env.local`, creates an account-owned private bucket, blocks public access, enables encryption and versioning, and verifies downloaded archive and individual file hashes. Environment files and detected credentials are excluded. Bucket names, object keys and receipts remain local. Storage and transfer charges may apply. This backs up evidence; it does not host the bot.
 
 Never blindly stage private builder output. Use the allowlisted exporter, inspect public changes and run `python3 scripts/check_public.py --staged` before every push. The guard checks loaded local credential values and private provenance; it is not a complete secret detector. `.gitignore` alone is not a publication review.
+
+## Prebuild case examples
+
+`python3 scripts/case_designs.py --workers 3` prepares missing teaching designs from the sanitized public catalog with GLM. Private receipts in `research/case-designs/` preserve model usage and source fingerprints. Existing current designs are reused. Explicit rate-limit rejections back off; uncertain network failures are not automatically retried. `--retry-failed` explicitly retries failed attempts. Interruptions drain the current batch before stopping.
+
+`python3 scripts/check_case_requests.py` optionally sends the two sample requests per prepared case to Jev, caches private results, and reports differences from illustrative expectations. It executes no application actions. Agreement on authored examples is not a quality benchmark. Review discrepancies before publishing.
+
+Run `python3 scripts/export_public.py` to export validated examples to `docs/case-designs.json`. Changed source records invalidate their examples; deployment requires complete, current coverage. Generated JSON is separate from the factual Markdown knowledge corpus. No new source collection is performed by these commands.

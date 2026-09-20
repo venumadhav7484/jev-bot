@@ -231,10 +231,17 @@ def answer(idea, use_jev=False, cases=None):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('idea')
-    p.add_argument('--jev', action='store_true', help='Send only the entered idea to TypeSafe for optional pattern routing.')
+    p.add_argument('--jev', action='store_true', help='Compatibility flag; full-library Jev evaluation is now the default.')
+    p.add_argument('--mode', choices=['evidence', 'written'], default='evidence')
+    p.add_argument('--source', choices=['local', 's3'], default='local')
+    p.add_argument('--offline', action='store_true', help='Use the legacy authored-template preview without API calls.')
     p.add_argument('--output', type=Path)
     args = p.parse_args()
-    result = answer(args.idea, args.jev)
+    if args.offline:
+        result = answer(args.idea)
+    else:
+        from research_answer import answer as research_answer
+        result = research_answer(args.idea, args.mode, args.source)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, indent=2)+'\n')

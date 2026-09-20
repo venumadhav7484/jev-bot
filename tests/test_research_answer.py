@@ -94,9 +94,13 @@ class FullLibrary(unittest.TestCase):
     def test_real_library_includes_all_cases_and_core_guides(self):
         lib = corpus.load()
         paths = {d['path'] for d in lib['documents']}
-        self.assertEqual(lib['case_count'], 440)
-        self.assertEqual(sum(d['default_retrieval'] is False for d in lib['documents']), 79)
-        for path in ('jev-master-guide.md', 'jev-knowledge-reference.md', 'community-evidence-findings.md'):
+        published = json.loads((corpus.ROOT/'docs/bot-cases.json').read_text())
+        self.assertEqual(lib['case_count'], len(published))
+        self.assertEqual({d['path'] for d in lib['documents'] if d['path'].startswith('docs/use-cases/')},
+                         {r['path'] for r in published})
+        self.assertEqual(sum(d['default_retrieval'] is False for d in lib['documents']),
+                         sum(r['default_retrieval'] is False for r in published))
+        for path in ('jev-master-guide.md', 'jev-knowledge-reference.md', 'community-evidence-findings.md', 'incremental-findings.md'):
             self.assertIn('docs/'+path, paths)
 
 

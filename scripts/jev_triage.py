@@ -91,23 +91,32 @@ def normalize_text(raw):
     return body, quote_context, 'recognized_header'
 
 
-def corpus():
+def corpus(inputs=None):
     rows = {}
     config_path = SOURCES / 'collection-checkpoint.json'
     if not config_path.exists():
         raise ValueError('Private source inputs are not bundled. See README for research prerequisites.')
     guild_id = json.loads(config_path.read_text())['guild_id']
-    inputs = sorted(SOURCES.glob('discord-*.json'))
+    inputs = sorted(SOURCES.glob('discord-*.json')) if inputs is None else inputs
     for path in inputs:
         obj = json.loads(path.read_text())
         if not isinstance(obj, dict) or not isinstance(obj.get('messages'), list):
             continue
+        if obj.get('guild_id') is not None and str(obj['guild_id']) != guild_id:
+            raise ValueError('Capture source does not match the private checkpoint.')
         for source in obj['messages']:
             match = re.fullmatch(r'chat-messages-(\d+)-(\d+)', source['id'])
             if not match:
                 raise ValueError('Unrecognized captured message ID')
             channel, mid = match.groups()
-            body, quote, parse_status = normalize_text(source['text'])
+            if source.get('format') in ('discord_api', 'discord_browser'):
+                body = source['body'] if source['format'] == 'discord_browser' else source['text']
+                quote, parse_status = source.get('reply_context', ''), source['format']
+                embeds = source.get('api_metadata', {}).get('embeds', [])
+                if embeds:
+                    quote += '\nLink previews (not verified source content):\n' + json.dumps(embeds, ensure_ascii=False)
+            else:
+                body, quote, parse_status = normalize_text(source['text'])
             variant = {'snapshot': path.name, 'channel_id': channel, 'text': source['text'], 'links': source.get('links', [])}
             item = rows.setdefault(mid, {'message_id': mid, 'variants': []})
             item['variants'].append(variant)
@@ -377,13 +386,25 @@ def report(rows):
 
 
 def main():
+    global WORK
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=('prepare', 'run', 'report'))
     parser.add_argument('--max-requests', type=int, default=450)
     parser.add_argument('--max-input-tokens', type=int, default=5_000_000)
     parser.add_argument('--workers', type=int, choices=range(1, 5), default=4)
+    parser.add_argument('--batch-id', help='Triage one private staged capture in isolation; never promote or publish it.')
     args = parser.parse_args()
-    rows = corpus()
+    if args.batch_id:
+        if not re.fullmatch('[a-f0-9]{64}', args.batch_id):
+            parser.error('Expected a staged capture batch ID (64 hexadecimal characters).')
+        directory = ROOT/'research/incoming'/args.batch_id
+        manifest = json.loads((directory/'manifest.json').read_text())
+        if manifest['batch_id'] != args.batch_id:
+            parser.error('Staged manifest does not match batch ID.')
+        WORK = directory/'triage'
+        rows = corpus([directory/'capture.json'])
+    else:
+        rows = corpus()
     if args.command == 'run':
         WORK.mkdir(parents=True, exist_ok=True)
         with (WORK / 'run.lock').open('a') as lock:

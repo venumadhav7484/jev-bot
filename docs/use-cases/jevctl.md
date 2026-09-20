@@ -3,7 +3,7 @@ id: jevctl
 title: "jevctl: composable judgment CLI and agent plugin"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ Reusable toolkit may avoid building repeated API plumbing.
 
 ## Limits and reuse
 
-Command semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting.
+Command semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting. Later session-hook discussion warns frequent compaction can disrupt prompt-cache reuse. Reported 40–60% context reduction does not establish token billing savings or lossless task performance.
 
 ## Sources
 

@@ -72,7 +72,7 @@ for c in cases:
 
 thread_counts=Counter(r['id'].split('-')[2] for r in threads['messages'])
 access_counts=Counter(r.get('access_status','unknown') for r in links)
-stats=dict(snapshot_date='2026-09-19',main_channel_rows=len(main['messages']),thread_rows=len(threads['messages']),thread_count=len(thread_counts),thread_rows_include_starters_and_parent_copies=True,external_urls=len(links),access_status_counts=dict(access_counts),curated_cases=len(cases),default_retrieval_cases=sum(r['default_retrieval'] for r in retrieval),message_coverage_status_counts=dict(Counter(r['status'] for r in coverage)),exhaustive=False,independent_benchmarks_run=0,s3_uploaded=False)
+stats=dict(snapshot_date=CONFIG['snapshot_date'],main_channel_rows=len(main['messages']),thread_rows=len(threads['messages']),unique_messages=len(by_id),thread_count=len(thread_counts),thread_rows_include_starters_and_parent_copies=True,external_urls=len(links),access_status_counts=dict(access_counts),curated_cases=len(cases),default_retrieval_cases=sum(r['default_retrieval'] for r in retrieval),message_coverage_status_counts=dict(Counter(r['status'] for r in coverage)),exhaustive=False,independent_benchmarks_run=0,s3_uploaded=False)
 stats['machine_triage']={'completed':len(set(triage)&set(by_id)), 'remaining':len(set(by_id)-set(triage)), 'is_editorial_approval':False, 'summary':'research/triage/summary.json'}
 stats['editorial_review'] = {'newly_reviewed_messages': len(editorial), 'unassigned_messages': sum(r['status'] == 'uncatalogued_source_row' for r in coverage), 'unresolved_evidence_statuses': dict(Counter(r['status'] for r in editorial.values() if r['status'] in {'media_context_unresolved', 'measurement_context_unresolved', 'reported_use_insufficient_detail'}))}
 stats['editorial_review']['evidence_flags_survive_case_assignment'] = True
@@ -98,5 +98,5 @@ for p in sorted(list(POOL.rglob('*'))+[ROOT/'jev-knowledge-reference.md']):
     if not p.is_file() or p.name=='manifest.json':continue
     raw=p.read_bytes()
     manifest.append(dict(path=str(p.relative_to(ROOT)),bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()))
-(POOL/'manifest.json').write_text(json.dumps(dict(snapshot_date='2026-09-19',files=manifest),indent=2)+'\n')
+(POOL/'manifest.json').write_text(json.dumps(dict(snapshot_date=CONFIG['snapshot_date'],files=manifest),indent=2)+'\n')
 print(json.dumps(stats,indent=2))

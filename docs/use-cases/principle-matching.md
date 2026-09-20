@@ -3,7 +3,7 @@ id: principle-matching
 title: "Matching statements to a common principle"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-20
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ Author reports the highest result on that recognition task.
 
 ## Limits and reuse
 
-Tasks differ because Jev does not do the first stage. No general superiority claim follows; dataset and full report require review. Source review: Reported perfect recall accompanies 9.2% near-negative false positives. It is a scoped benchmark result, not error-free general reasoning.
+Tasks differ because Jev does not do the first stage. No general superiority claim follows; dataset and full report require review. Source review: Reported perfect recall accompanies 9.2% near-negative false positives. It is a scoped benchmark result, not error-free general reasoning. Follow-up links the same scoped recognition benchmark; it still does not establish superiority across general reasoning tasks.
 
 ## Sources
 

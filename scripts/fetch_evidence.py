@@ -17,6 +17,7 @@ import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from jev_triage import dump
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'research/external'
@@ -87,11 +88,19 @@ def retrieve(url):
                 'body_sha256': hashlib.sha256(raw).hexdigest()}
 
 
-def fetch(entry):
+def fetch(entry, refresh=False, out=None):
     url = entry['url']
-    path = OUT / (hashlib.sha256(url.encode()).hexdigest() + '.json')
-    if path.exists():
+    directory = OUT if out is None else Path(out)
+    directory.mkdir(parents=True, exist_ok=True)
+    path = directory / (hashlib.sha256(url.encode()).hexdigest() + '.json')
+    if path.exists() and not refresh:
         return json.loads(path.read_text())['status']
+    previous = json.loads(path.read_text()) if path.exists() else None
+    if previous:
+        version = hashlib.sha256(path.read_bytes()).hexdigest()
+        archive = directory/'versions'/path.stem/(version+'.json')
+        if not archive.exists():
+            dump(archive, previous)
     record = {'url': url, 'attempted_at': datetime.now(timezone.utc).isoformat(),
               'review_status': 'pending_content_review', 'attempts': []}
     candidates = [url]
@@ -111,7 +120,17 @@ def fetch(entry):
         except (OSError, ValueError, urllib.error.URLError) as error:
             record['attempts'].append({'url': candidate, 'status': 'access_failed', 'error': str(error)[:250]})
             record['status'] = 'access_failed'
-    path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\n')
+    # Compare extracted text and outbound links, excluding capture timestamps.
+    if record.get('status') == 'text_fetched':
+        record['content_sha256'] = hashlib.sha256(json.dumps(
+            {k: record.get(k) for k in ('text', 'links', 'truncated', 'final_url')},
+            sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    if previous:
+        record['previous_capture_sha256'] = version
+        record['changed_since_previous'] = (
+            any(record.get(k) != previous.get(k) for k in ('text', 'links', 'truncated', 'final_url'))
+            if record.get('status') == previous.get('status') == 'text_fetched' else None)
+    dump(path, record)
     return record['status']
 
 
@@ -119,6 +138,7 @@ def main():
     parser = argparse.ArgumentParser(__doc__)
     parser.add_argument('--limit', type=int, default=1000)
     parser.add_argument('--workers', type=int, default=8)
+    parser.add_argument('--refresh', action='store_true', help='Re-fetch selected URLs and preserve prior captures.')
     args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     rows = json.loads((ROOT / 'resource-pool/sources/external-links.json').read_text())
@@ -126,7 +146,7 @@ def main():
     from collections import Counter
     counts = Counter()
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:
-        for index, status in enumerate(executor.map(fetch, rows), 1):
+        for index, status in enumerate(executor.map(lambda row: fetch(row, refresh=args.refresh), rows), 1):
             counts[status] += 1
             if index % 50 == 0:
                 print(json.dumps({'processed': index, 'statuses': counts}), flush=True)

@@ -8,7 +8,7 @@ The assistant evaluates the complete exported research library with Jev: every u
 
 ## Try it
 
-**[Open Jev-bot](https://dm6rtlrn56ej8.cloudfront.net/#bot)** · **[Browse 440 use cases](https://dm6rtlrn56ej8.cloudfront.net/#use-cases)**
+**[Open Jev-bot](https://dm6rtlrn56ej8.cloudfront.net/#bot)** · **[Browse 466 use cases](https://dm6rtlrn56ej8.cloudfront.net/#use-cases)**
 
 The hosted app needs no account or API key from visitors. Describe an idea, review its proposed workflow and example request, then leave feedback. The progress spinner runs until the answer arrives or the request fails.
 
@@ -61,18 +61,18 @@ fields @timestamp, job_id, rating, comment
 | limit 100
 ```
 
-## Frozen snapshot
+## Published snapshot
 
-New source collection is paused at the boundary below. The exact last-post link and thread cursors are retained privately, so a later pass can resume with overlap and deduplication. Scheduled X reviews remain paused.
+The latest published main-channel capture boundary appears below. The exact last-post link and thread cursors are retained privately, so a later pass can resume with overlap and deduplication. Scheduled X reviews remain paused.
 
 <!-- SNAPSHOT-START -->
 | Layer | Frozen snapshot |
 |---|---|
-| Capture cutoff | 19 September 2026, 10:08:31 IST |
-| Messages | 3,358 unique IDs; all editorially accounted for |
-| Cases | 440; 361 default eligible, 79 held back |
-| External evidence | 837 URLs; 0 await first disposition; 66 retain content gaps |
-| Media | 174 / 413 attachments inspected |
+| Capture cutoff | 20 September 2026, 22:25:06 IST / 16:55:06 UTC |
+| Messages | 4183 unique IDs; 4183 editorially accounted for |
+| Cases | 466; 386 default eligible, 80 held back |
+| External evidence | 1083 URLs; 219 await first disposition; 285 retain content gaps |
+| Media | 174 / 570 attachments inspected |
 | Bot | Full-library Jev; optional GLM 5.3 writing |
 | S3 | Private backup verified |
 
@@ -85,6 +85,7 @@ New source collection is paused at the boundary below. The exact last-post link 
 - **[Jev master guide](docs/jev-master-guide.md):** start here for the consolidated capabilities, strengths, failures, effective designs, evaluation lessons, tools, costs and remaining unknowns.
 - [Capability reference](docs/jev-knowledge-reference.md): primitives, APIs, integration patterns and official sources.
 - [Use-case catalog](docs/jev-usecases.md): what, how, why, reported impact, limitations and artifact links.
+- [Latest implementation lessons and leads](docs/incremental-findings.md).
 - [Community findings](docs/community-evidence-findings.md): strengths, failures, conflicting evidence and lessons.
 - [Answer guide and su-lekha proposal](docs/jev-bot-answer-guide.md).
 - [Completion status](docs/completion-status.md) and [aggregate metrics](docs/metrics.json).
@@ -116,6 +117,9 @@ scripts/deploy_cloud.py     Public asset and Lambda packaging/deployment
 scripts/case_designs.py     Resumable prebuilt teaching examples
 scripts/consolidate.py      Offline private-to-public snapshot rebuild
 scripts/stage_capture.py    New/edited-message intake; no automatic collection
+scripts/collect_discord.py  Optional read-only Discord bot history collector
+scripts/plan_delta_review.py Reuse prior source reviews and cases in private batch packets
+scripts/research_flow.py    Jev comparison, source refresh, GLM drafts and grounding checks
 scripts/evidence.py         Private SQLite evidence search
 scripts/jev_triage.py       Resumable Jev-assisted research triage
 scripts/backup_private.py   Private S3 snapshot and download verification
@@ -135,6 +139,58 @@ Research rebuild and incremental intake require the authorized local `resource-p
 S3 backup uses credentials from `.env.local`, creates an account-owned private bucket, blocks public access, enables encryption and versioning, and verifies downloaded archive and individual file hashes. Environment files and detected credentials are excluded. Bucket names, object keys and receipts remain local. Storage and transfer charges may apply. This backs up evidence; it does not host the bot.
 
 Never blindly stage private builder output. Use the allowlisted exporter, inspect public changes and run `python3 scripts/check_public.py --staged` before every push. The guard checks loaded local credential values and private provenance; it is not a complete secret detector. `.gitignore` alone is not a publication review.
+
+## Optional Discord API collection
+
+The research pause remains in effect until a collection run is requested. This collector is optional and is not part of the public website or an automatic schedule. It requires the private source checkpoint and archives.
+
+1. Create a bot in the Discord Developer Portal and enable **Message Content Intent**. A server administrator or member with **Manage Server** must install it in the source server. Restrict its channel access to the intended source; it needs **View Channel** and **Read Message History**, not send, moderation or administrator permissions.
+2. Save its bot token as `discord_bot_token` in ignored `.env.local` (or `DISCORD_BOT_TOKEN` in the process environment). A browser login is not a bot credential. Never share the token in chat or commit it.
+3. Install the optional dependency in a virtual environment, then explicitly run collection:
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-discord.txt
+.venv/bin/python scripts/collect_discord.py --limit 100
+# Use --limit 0 to fetch all new main-channel messages through the run's start time.
+```
+
+`discord.py` handles pagination and API rate limits. The collector visits the main text channel, known public threads, and discovered active/archived public threads. Thread replies are additional to the main-channel limit. It revisits 20 messages at/before each saved cursor for edits; older edits, deleted messages and inaccessible/private threads are not exhaustively covered. New threads are read after the global capture boundary. It saves original message text, attachment metadata, embeds and available reply context under ignored `research/discord-captures/`, then stages a capture under `research/incoming/`. Media files are not downloaded or interpreted. API-format overlap can appear as edited against older browser-format captures; review these as format changes rather than presumed author edits.
+
+Each run fixes its upper time boundary, records coverage, preserves partial output on failure, and leaves both frozen capture and review checkpoints unchanged. A bounded run explicitly reports `partial` when more main-channel messages remain. Repeated runs use the frozen checkpoint until a reviewed snapshot is promoted; they do not silently advance past pending evidence. No model is called by collection.
+
+Use the printed `staged_batch` to prepare or explicitly run Jev triage in a separate private output directory:
+
+```sh
+python3 scripts/jev_triage.py prepare --batch-id BATCH_ID
+python3 scripts/jev_triage.py run --batch-id BATCH_ID --max-requests 20 --workers 4
+python3 scripts/plan_delta_review.py --batch-id BATCH_ID
+```
+
+The incremental research runner reuses existing case context, fetches public sources
+into a private batch cache, asks Jev what changed, generates provisional GLM notes,
+validates exact citations, and checks grounding with Jev. Start with a bounded sample:
+
+```sh
+python3 scripts/research_flow.py run --batch-id BATCH_ID --limit 12 --workers 4
+python3 scripts/research_flow.py report --batch-id BATCH_ID
+# Once the sample is reviewed, expand the persisted selection:
+python3 scripts/research_flow.py extend --batch-id BATCH_ID --limit 0
+python3 scripts/research_flow.py run --batch-id BATCH_ID --limit 0 --workers 4
+```
+
+`run` makes paid Jev and GLM calls and fetches unauthenticated public source text.
+Completed request hashes are reused. `--refresh` re-fetches sources while preserving
+old versions; changed evidence invalidates draft and grounding checks. Failed or
+uncertain model calls are not retried automatically. Local repairs only restore
+unambiguous exact citation references, source whitespace, or JSON framing; trailing
+writer prose stays flagged for review. Every message remains in a private routine or
+exception queue. Media, inaccessible sources, unsupported claims and uncalibrated
+model judgments never become automatic verification or publication. Review approved
+changes in `resource-pool/cases.tsv`, then rebuild with `scripts/consolidate.py` and
+run the public-content checks before deployment.
+
+`run` sends the staged text and available context to Jev and incurs API usage. Overlap rows are included for review; request/token limits may leave work pending. Cached successful batches are reused on another run with the same batch ID. Predictions remain unverified review suggestions. Collection and triage neither promote sources nor rebuild, deploy or change the public knowledge base. Review the private receipt and queue before promoting a snapshot.
 
 ## Prebuild case examples
 

@@ -33,3 +33,8 @@ Community tooling is useful for implementation discovery. A published wrapper do
 | jev.directory | Community submissions | [Directory](https://jev.directory/) |
 
 For evaluated application claims, follow a directory to the original author's evidence rather than citing the directory as independent verification.
+
+
+## 20 September incremental findings
+
+[New implementation lessons and grouped leads](incremental-findings.md) cover the next 825 captured messages, including retrieval, evaluation failures, uncertainty, guarded actions and unresolved proposals. These scoped reports do not establish independent benchmark validation.

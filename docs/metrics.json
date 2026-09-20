@@ -1,18 +1,20 @@
 {
-  "research_status": "frozen_capture_active_evidence_review",
+  "research_status": "captured_delta_curated_with_explicit_evidence_gaps",
   "coverage": {
-    "snapshot_date": "2026-09-19",
-    "main_channel_rows": 3226,
+    "snapshot_date": "2026-09-20",
+    "main_channel_rows": 4051,
     "thread_rows": 142,
+    "unique_messages": 4183,
     "thread_count": 14,
     "thread_rows_include_starters_and_parent_copies": true,
-    "external_urls": 837,
+    "external_urls": 1083,
     "access_status_counts": {
-      "fetched": 699,
-      "access_failed": 37,
+      "fetched": 872,
+      "access_failed": 39,
       "browser_readable": 25,
       "public_image_extracted": 32,
       "rendered_browser_accessible": 1,
+      "not_attempted": 71,
       "public_content_recovered": 2,
       "public_web_reader": 2,
       "fetch_failed": 6,
@@ -21,27 +23,27 @@
       "public_media_extracted": 30,
       "signed_in_browser_and_public_media": 1
     },
-    "curated_cases": 440,
-    "default_retrieval_cases": 361,
+    "curated_cases": 466,
+    "default_retrieval_cases": 386,
     "message_coverage_status_counts": {
-      "cited_in_case": 1074,
+      "cited_in_case": 1133,
       "excluded_social_or_logistics": 1068,
       "ecosystem_jev_not_established": 221,
       "media_context_unresolved": 89,
-      "proposed_integration": 377,
+      "proposed_integration": 408,
       "other_model_context": 50,
       "launch_claims_secondary": 2,
       "excluded_unrelated_media": 1,
       "provenance_correction": 15,
-      "reported_use_insufficient_detail": 103,
+      "reported_use_insufficient_detail": 372,
       "measurement_context_unresolved": 25,
       "substantive_question": 29,
       "capability_discussion": 158,
       "official_resource_reference": 16,
       "jev_role_questioned_in_thread": 2,
-      "limitation_discussion": 21,
-      "substantive_discussion": 35,
-      "duplicate_source_reference": 8,
+      "limitation_discussion": 54,
+      "substantive_discussion": 407,
+      "duplicate_source_reference": 48,
       "unsubstantiated_claim": 2,
       "tool_reference": 36,
       "representation_discussion": 6,
@@ -51,22 +53,23 @@
       "jev_role_not_established": 5,
       "other_model_not_jev": 1,
       "planned_integration": 3,
+      "context_only_not_jev_evidence": 21,
       "dated_service_limits": 2
     },
     "exhaustive": false,
     "independent_benchmarks_run": 0,
     "s3_uploaded": true,
     "machine_triage": {
-      "completed": 3358,
+      "completed": 4183,
       "remaining": 0,
       "is_editorial_approval": false
     },
     "editorial_review": {
-      "newly_reviewed_messages": 3004,
+      "newly_reviewed_messages": 3829,
       "unassigned_messages": 0,
       "unresolved_evidence_statuses": {
         "media_context_unresolved": 89,
-        "reported_use_insufficient_detail": 104,
+        "reported_use_insufficient_detail": 373,
         "measurement_context_unresolved": 25
       },
       "evidence_flags_survive_case_assignment": true
@@ -81,8 +84,9 @@
       "landing_page_reviewed": 13,
       "image_reviewed": 32,
       "article_reviewed": 19,
-      "sections_reviewed": 7,
+      "sections_reviewed": 34,
       "demo_interface_reviewed": 9,
+      "not_reviewed": 219,
       "metadata_only": 20,
       "official_reference_reviewed": 2,
       "official_documentation_reviewed": 5,
@@ -128,44 +132,49 @@
     "external_unresolved_content_status_counts": {
       "inaccessible_content_pending": 33,
       "catalog_reviewed_book_unavailable": 1,
+      "not_reviewed": 219,
       "metadata_only": 20,
       "post_text_reviewed_media_pending": 8,
       "inaccessible_after_attempt": 4
     },
-    "external_urls_with_content_gaps": 66,
+    "external_urls_with_content_gaps": 285,
     "review_disposition_is_full_validation": false,
     "s3_backup_completed_at": "2026-09-20T06:40:05.094561+00:00"
   },
   "triage": {
-    "generated_at": "2026-09-19T07:24:31.382115+00:00",
+    "generated_at": "2026-09-20T18:45:06.741333+00:00",
     "pipeline_version": "discord-triage-v3",
-    "captured_unique_messages": 3358,
-    "machine_triaged": 3358,
+    "captured_unique_messages": 4183,
+    "machine_triaged": 4183,
     "machine_triage_remaining": 0,
     "kinds": {
-      "implementation": 468,
-      "evaluation": 340,
-      "substantive_question": 433,
-      "limitation_or_correction": 394,
-      "tool_or_resource": 431,
-      "unclear": 141,
-      "community_reaction": 894,
-      "technical_detail": 221,
-      "unrelated": 36
+      "implementation": 582,
+      "community_reaction": 1087,
+      "technical_detail": 276,
+      "tool_or_resource": 629,
+      "evaluation": 393,
+      "substantive_question": 538,
+      "limitation_or_correction": 459,
+      "unclear": 179,
+      "unrelated": 40
     },
     "relations": {
-      "not_established": 1359,
-      "other_technology": 429,
-      "jev_discussion": 631,
-      "proposed_jev_use": 357,
-      "reported_jev_use": 582
+      "reported_jev_use": 811,
+      "not_established": 1653,
+      "jev_discussion": 799,
+      "other_technology": 498,
+      "proposed_jev_use": 422
     },
     "usage": {
-      "input_tokens": 4389184,
-      "output_tokens": 1327373,
-      "requests": 420
+      "input_tokens": 5562914,
+      "output_tokens": 1653329,
+      "requests": 524
     },
     "editorially_approved_by_this_pipeline": 0,
-    "exhaustive": false
+    "exhaustive": false,
+    "batch_provenance": [
+      "prior frozen snapshot",
+      "8c8ffa6c24f99e9f6bb27fcef442d31713aa4704cf24f4725e11e99b11e45df1"
+    ]
   }
 }

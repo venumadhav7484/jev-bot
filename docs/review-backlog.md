@@ -1,4 +1,12 @@
-# Remaining evidence review — paused checkpoint
+# Remaining evidence review
+
+Main-channel update through 20 September 2026, 16:55:06 UTC is accounted for. Current register: 285 external content gaps among 1083 URLs; 396 of 570 saved attachment URLs uninspected. These counts overlap and are not counts of missing use cases.
+
+The latest batch adds source leads alongside 26 curated cases and four updates. Fourteen known thread archives and one new thread were saved; reconciliation and eight additional discovered-thread expansions remain pending. Capture and fully-reviewed cursors remain separate. No recurring collection or source-review automation was enabled. [Latest lessons and leads](incremental-findings.md) · [Current completion status](completion-status.md).
+
+The following retained checkpoint describes the earlier 66-gap backlog; it is historical, not the current total.
+
+# Historical evidence backlog — before the latest delta
 
 Updated 20 September 2026. User requested wrap-up. No new source collection, automatic reviews, API work or S3 upload is scheduled by this checkpoint.
 

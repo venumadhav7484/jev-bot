@@ -1,0 +1,2 @@
+# Optional, isolated research collector; not required by the public app.
+discord.py>=2.5,<3

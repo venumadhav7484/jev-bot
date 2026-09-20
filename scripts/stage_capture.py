@@ -15,8 +15,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def fingerprint(row):
-    return hashlib.sha256(json.dumps({'text': row['text'], 'links': row.get('links', [])},
-                                     sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    value = {'text': row['text'], 'links': row.get('links', [])}
+    if row.get('format') in ('discord_api', 'discord_browser'):
+        value.update(format=row['format'], body=row.get('body'), reply_context=row.get('reply_context', ''),
+                     api_metadata=row.get('api_metadata', {}))
+    return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 
 def stage(document, root=ROOT):

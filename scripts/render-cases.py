@@ -16,6 +16,7 @@ for row in messages:
     # A synthetic thread starter can reuse the parent ID without its content.
     by_id.setdefault(row['id'].split('-')[-1], row)
 source_status = {r['url']:r for r in json.loads((POOL/'sources/external-links.json').read_text())}
+editorial = json.loads((POOL/'sources/editorial-review.json').read_text())
 def canonical(url):
     p=urlsplit(url)
     if p.hostname in ('x.com','twitter.com','fixupx.com','fxtwitter.com','fixvx.com','jf.x.com'):
@@ -33,7 +34,7 @@ for c in cases:
     assert all(i in by_id for i in c['message_ids'].split(',')), c['id']
 out = POOL/'use-cases'
 out.mkdir(exist_ok=True)
-index = ['# Jev community use cases', '', f'{len(cases)} curated case records from the 2026-09-19 Discord snapshot. This is an expanding review, not an exhaustive catalog.', '', 'All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.', '', '[Collection coverage](sources/discord-coverage.md) · [Storage and retrieval](storage-and-retrieval.md)', '', '| Case | Category | Evidence |', '|---|---|---|']
+index = ['# Jev community use cases', '', f"{len(cases)} curated case records from the {CONFIG['snapshot_date']} Discord snapshot. This is an expanding review, not an exhaustive catalog.", '', 'All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.', '', '[Collection coverage](sources/discord-coverage.md) · [Storage and retrieval](storage-and-retrieval.md)', '', '| Case | Category | Evidence |', '|---|---|---|']
 for c in sorted(cases, key=lambda c:(c['category'],c['title'])):
     ids = c['message_ids'].split(',')
     links = []
@@ -64,7 +65,16 @@ for c in sorted(cases, key=lambda c:(c['category'],c['title'])):
         links.append(f'- [{label}]({u}) — discovered via [external source]({extra["discovered_from_url"]}); access: `{evidence.get("access_status", "not_attempted")}`; review: `{evidence.get("review_status", "not_reviewed")}`.')
     # External follow-ups can be reviewed after the frozen capture date.
     # Do not backdate those case notes to the source snapshot.
-    review_dates = ['2026-09-19']
+    # Preserve existing editorial dates; a newer capture is not a new review.
+    existing = out/(c['id']+'.md')
+    previous_date = re.search(r'^reviewed_on: (\d{4}-\d{2}-\d{2})$', existing.read_text(), re.M) if existing.exists() else None
+    review_dates = [previous_date[1]] if previous_date else []
+    for mid in ids:
+        decision = editorial.get(mid, {})
+        if c['id'] in decision.get('case_ids', []):
+            date = decision.get('reviewed_at', '')[:10]
+            if re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
+                review_dates.append(date)
     for url in urls:
         date = source_status.get(canonical(url), {}).get('reviewed_on', '')
         if re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
@@ -74,7 +84,7 @@ id: {c['id']}
 title: {json.dumps(c['title'],ensure_ascii=False)}
 category: {c['category']}
 evidence: author-reported
-reviewed_on: {max(review_dates)}
+reviewed_on: {max(review_dates, default='unknown')}
 independently_reproduced: false
 source_message_ids: {json.dumps(ids)}
 ---

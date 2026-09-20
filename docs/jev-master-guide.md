@@ -1,10 +1,10 @@
 # Jev master guide: capabilities, field lessons and effective use
 
-**Consolidated:** 20 September 2026. **Evidence boundary:** the captured Discord source ends on 19 September 2026 at 04:38:31 UTC. Official interface and pricing statements below reflect documentation reviewed on 19 September, not a fresh product audit.
+**Consolidated:** 20 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Thread expansion remains incomplete. Official interface and pricing statements below retain their dated review scope.
 
 This is the main practical synthesis of this project's Jev research: what Jev does, where it appears useful, where attempts fail, how to build around it, and how to judge claims. It brings together the technical reference, community cases, corrections, inspected artifacts and our own pipeline experiments. Case links preserve supporting repositories, demos, articles and public posts; private provenance stays local.
 
-**Coverage is substantial, but incomplete.** The catalog contains 440 write-ups, including proposals, tools and counterexamples—not 440 validated applications. Of these, 361 are eligible for default retrieval and 79 are held back. All 3,358 captured message IDs have editorial dispositions. Of 837 external URLs, 66 retain content gaps; 239 of 413 attachments still need inspection. No community benchmark has been independently reproduced. These gaps can change conclusions. [Completion status](completion-status.md).
+**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,183 captured message IDs have editorial dispositions. Of 1083 external URLs, 285 retain content gaps; 396 of 570 attachments still need inspection. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
 
 ## Guide map
 
@@ -264,3 +264,8 @@ There is no defensible universal accuracy, latency, savings, calibration or busi
 For each new finding, retain the dated source, actual Jev role, what was observed, what the author claimed, what contradicted it and what remains untested. Update the authoritative case first; then revise the corresponding lesson here and any affected bot design or test. Keep capture progress separate from review progress. Recheck official capabilities and prices when product versions or deployment decisions change.
 
 This guide is the single entry point and synthesis, not a replacement for the underlying evidence. Use the [technical reference](jev-knowledge-reference.md) for API details, the [case catalog](jev-usecases.md) for individual applications and artifact links, the [community findings](community-evidence-findings.md) for additional corrections, and the [completion report](completion-status.md) for unresolved work.
+
+
+## 20 September incremental findings
+
+[New implementation lessons and grouped leads](incremental-findings.md) cover the next 825 captured messages, including retrieval, evaluation failures, uncertainty, guarded actions and unresolved proposals. These scoped reports do not establish independent benchmark validation.

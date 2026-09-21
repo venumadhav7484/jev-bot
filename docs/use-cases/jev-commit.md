@@ -3,7 +3,7 @@ id: jev-commit
 title: "jev-commit: check messages against staged changes"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-21
 independently_reproduced: false
 ---
 
@@ -23,11 +23,11 @@ A bounded semantic check can catch discrepancies conventional formatting checks 
 
 ## Limits and reuse
 
-Do not attribute deterministic secret blocking to Jev. API errors fail open, hooks can be bypassed, and capped files can omit middle hunks. Cost estimates are arithmetic, not billed measurements; false-alarm labels include assumptions.
+Do not attribute deterministic secret blocking to Jev. API errors fail open, hooks can be bypassed, and capped files can omit middle hunks. Cost estimates are arithmetic, not billed measurements; false-alarm labels include assumptions. Latest source review: The author describes warning-only semantic checks and a separate private-key check on added lines. Reported 200 ms and four cents per thousand checks are not independently measured. A commit-msg hook is bypassable; it does not prove every commit was checked or every secret was caught. Some captured replies are truncated and the video remains unreviewed.
 
 ## Sources
 
 - [github.com](https://github.com/valentynkit/jev-commit) — access: `fetched`; review: `sections_reviewed`.
-- [x.com](https://x.com/valentynkit/status/2101247446936346711?s=20) — access: `not_attempted`; review: `not_reviewed`.
+- [x.com](https://x.com/valentynkit/status/2101247446936346711?s=20) — access: `fetched`; review: `post_text_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

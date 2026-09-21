@@ -3,7 +3,7 @@ id: feedwall
 title: "Feedwall: personal feed rules"
 category: filtering
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-21
 independently_reproduced: false
 ---
 
@@ -28,6 +28,6 @@ README reviewed, not installed. Errors keep posts visible. The trailer uses inve
 ## Sources
 
 - [github.com](https://github.com/abhixhek/feedwall) — access: `fetched`; review: `sections_reviewed`.
-- [x.com](https://x.com/thenightshipper/status/2101241514492092666v0.2) — access: `not_attempted`; review: `not_reviewed`.
+- [x.com](https://x.com/thenightshipper/status/2101241514492092666v0.2) — access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -3,7 +3,7 @@ id: jev-builder
 title: "Jev Builder: compose requests from text"
 category: interfaces
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-21
 independently_reproduced: false
 ---
 
@@ -27,7 +27,7 @@ Template availability and robustness probes do not establish task accuracy. The 
 
 ## Sources
 
-- [collapseindex.github.io](https://collapseindex.github.io/jev-builder/) — access: `not_attempted`; review: `not_reviewed`.
+- [collapseindex.github.io](https://collapseindex.github.io/jev-builder/) — access: `fetched`; review: `demo_interface_reviewed`.
 - [github.com](https://github.com/collapseindex/jev-builder) — access: `fetched`; review: `sections_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

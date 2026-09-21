@@ -1,10 +1,10 @@
 # Jev master guide: capabilities, field lessons and effective use
 
-**Consolidated:** 20 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Thread expansion remains incomplete. Official interface and pricing statements below retain their dated review scope.
+**Consolidated:** 21 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Thread expansion remains incomplete. Official interface and pricing statements below retain their dated review scope.
 
 This is the main practical synthesis of this project's Jev research: what Jev does, where it appears useful, where attempts fail, how to build around it, and how to judge claims. It brings together the technical reference, community cases, corrections, inspected artifacts and our own pipeline experiments. Case links preserve supporting repositories, demos, articles and public posts; private provenance stays local.
 
-**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,183 captured message IDs have editorial dispositions. Of 1083 external URLs, 285 retain content gaps; 396 of 570 attachments still need inspection. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
+**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,187 captured message IDs have editorial dispositions. Of 1085 external URLs, 125 retain explicit content gaps; 371 of 570 attachments still need inspection. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
 
 ## Guide map
 
@@ -269,3 +269,49 @@ This guide is the single entry point and synthesis, not a replacement for the un
 ## 20 September incremental findings
 
 [New implementation lessons and grouped leads](incremental-findings.md) cover the next 825 captured messages, including retrieval, evaluation failures, uncertainty, guarded actions and unresolved proposals. These scoped reports do not establish independent benchmark validation.
+
+## 13. Lessons from the latest source review
+
+Reviewed source text adds practical distinctions below. These are scoped documentation reviews and attributed experiments, not independently reproduced benchmarks. A text review does not inspect its embedded video, prove production behavior or validate every linked file.
+
+### Design the decision before choosing the model
+
+Preston's author found that a seven-way relationship classifier hid overlapping labels: two conventions could both make the same choice and deliberately omit the same thing. Independent yes/no questions exposed that overlap. Use Choice for exclusive routes; use separate predicates when multiple properties may hold. Preserve an explicit undecided outcome rather than turning a failed confidence check into `false`. Measure accepted-answer precision and coverage separately for each question. [Working with Jev](https://rodrigopsasaki.com/blog/working-with-jev).
+
+The same report separates candidate retrieval from judgment. Sending roughly the same 22,000-token collection in 21 concurrent requests shortened visible waiting but still repeated the input. Its reported stage improvement from 19.4 to 8.7 seconds did not eliminate duplicated work. Cache acquisition, retrieve candidates, share state across independent questions and measure total calls and tokens as well as wall time. Those numbers describe one author's workload, not a general speed guarantee. [Preston report](https://rodrigopsasaki.com/blog/working-with-jev).
+
+Polar Llama reports that grouping many rows under one semantic question diluted isolated violations; arithmetic aggregates belonged in code. Its experiments favored explicit field names and wider context in some tasks. JevNQL likewise leaves arithmetic to DataFusion. Moving a top-k operation ahead of a semantic filter can change the result: optimize only when the query's meaning is preserved. [Polar Llama](https://github.com/pnthn-ai/polar_llama), [JevNQL](https://github.com/Adityakhalkar/JevNQL).
+
+### Fast screening must preserve exceptions
+
+Revolve documents several different failure policies. Its safety and instruction gates can fail open; its event router leaves uncertain or failed judgments undelivered. Its instruction gate stops blocking after three refusals. These are application policies, not properties of Jev. For a research queue, retain every original item, record an explicit unresolved state and make dropped or delayed work recoverable. Do not inherit an agent helper's fail-open behavior without checking its suitability. [Revolve integration](https://porky11.gitlab.io/revolve-agent/docs/jev.html).
+
+A probability threshold is useful only at the branch where it is enforced. The log-triage documentation places suppress/watch outcomes before its confidence floor; the claimed review boundary therefore needs checking for those paths. Hunch documents fail-open validators and a spam-drop example. These are reasons to test each outcome and failure path, including false negatives, rather than treating a helper's reassuring name as a guarantee. [Log triage](https://github.com/jyatesdotdev/jev-logtriage/tree/main), [Hunch](https://github.com/carldaws/hunch).
+
+Pi Jev Sentinel's author distinguishes task alignment, risk and deterministic execution policy, and explicitly says prompt injection is not solved. Its examples report model probabilities, not measured detection rates. The author also notes that secrets printed through other commands can evade an `.env` exclusion. Keep credentials out of model state through application controls; a semantic screening result is neither permission nor a complete data-loss defense. [Sentinel report](https://x.com/harsh_w98/status/2101366309875548252).
+
+### Keep the actual model and fallback visible
+
+Jevbridge's documented `auto` mode can choose native Jev, a different LLM or a local heuristic. Its heuristic includes words from the question in its evidence and is explicitly a smoke-test backend. A typed response shape does not establish that Jev produced the answer. Record the backend and distinguish fixtures from live calls. [Jevbridge](https://www.github.com/tacticocc/jevbridge).
+
+The LocalJev article describes a stand-in built before its author obtained a Jev key. Its 2.4-second ticket result and local-model benchmark concern open models behind a compatible API. They are not measurements of hosted Jev. Similarly, the Laya Vision model card describes a separate experimental model; its action head received no training gradient and must not be used as a learned safety gate. [LocalJev article](https://www.digitaldias.com/blog/2026-09-19-jev-before-the-waitlist), [Laya Vision card](https://huggingface.co/thaitea/laya-vision-smolvlm-256m).
+
+The circular-maze author initially requested no game logic, then added a calculated move when model confidence was low. Reported successful play therefore includes deterministic assistance. Evaluate the raw decision path and the assisted system separately. SeeFood similarly depends on upstream image labels or captions; a misleading caption can degrade the final Jev decision. [Maze experiment](https://www.viswakumar.com/blog/jev_system_one_model), [SeeFood](https://github.com/wescrockett/seefood).
+
+### Compare quality and latency on the same workload
+
+OpenRouter reports a five-model comparison on 200 synthetic requests across 30 task types. Jev was over five times faster than the next-fastest model and second-cheapest, with accuracy within a handful of cases of the others. The report also discloses different reasoning settings and provider routing. This supports a narrow routing experiment, not a claim of equal accuracy everywhere. [OpenRouter evaluation thread](https://x.com/OpenRouter/status/2101412965765529853).
+
+The Jev-versus-classical-ML report shows a mixed picture: Jev's raw IMDb score exceeds the best reported classical score, while Bank Marketing and Online Shoppers favor classical methods. The three training seeds share a fixed holdout; repeated Jev requests use a cache, so zero standard deviation is not independent repeatability. Adjusted binary results use labeled policy data. Tiny holdouts, missing request diagnostics and unavailable latency summaries limit conclusions. [Benchmark and artifacts](https://quicqdev.github.io/Jev-vs-ML?v=d4f60e6).
+
+A production-adoption report preserves losses alongside wins: 61/69 model-routing answers for both Jev and its LLM baseline; 65% versus 70% on 20 UI prompts; and 779 versus 800 correctly filled static fields for Jev versus script. The author keeps weaker paths in shadow and documents schema drift and an uncapped backfill caught before execution. Use per-path flags, bounded backfills, pinned models, rollback and ongoing labeled failures. Shadow mode still sends data and spends tokens. [Adoption report](https://x.com/yonyoniz/status/2101241236107542549).
+
+Linkmap's author reports 679 proposed links but only 287 retained by an editor. Its roughly $67 full comparison-model run was extrapolated, while rubric development incurred a separate reported $15. Agreement with another model is not independently established accuracy, and proposal throughput is not publication throughput. Count editing, rejected proposals, development and fallback costs. [Linkmap report](https://x.com/stas_sorokin_/status/2101389998608281849).
+
+A separate production-judge report provides an important counterexample: its author found only 2 of 12 genuine contradictions in 36 human-labeled pairs, with ten misses assigned probabilities at or below 0.13. The same report describes stronger fixed-label classification and weaker publication-quality and PR-review results. Low probability therefore cannot be treated as proof that no conflict exists. For research curation, test false-negative rates against labeled cases and retain spot checks of records that screening would discard. The underlying fixtures were not independently reproduced here. [Production-judge comparison](https://x.com/drewdil/status/2100684145286684872).
+
+### What this changes in our research flow
+
+Use deterministic collection and deduplication first; keep immutable source text and dated versions. Use Jev for explicit, independently answerable screening questions and routing. Retain uncertain, contradictory, media-dependent and failed records in a review queue. Source fetching, video inspection, claim attribution and editorial acceptance remain separate steps. Cache reviewed evidence by content hash so unchanged material needs no new model call.
+
+The current review saved 219 scoped source dispositions without new Jev or GLM requests. This demonstrates an offline review path, not measured review-time savings. The public model context receives these curated lessons after export and deployment; private raw captures and review ledgers are not silently supplied to visitors' queries.

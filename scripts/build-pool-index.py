@@ -81,6 +81,7 @@ gap_statuses = {
     'not_reviewed', 'inaccessible_content_pending', 'nontext_content_pending',
     'inaccessible_after_attempt', 'metadata_only', 'post_text_reviewed_media_pending',
     'post_text_reviewed_media_blocked', 'catalog_reviewed_book_unavailable',
+    'media_pending', 'video_content_pending', 'post_text_partially_reviewed',
 }
 stats['external_unresolved_content_status_counts'] = {
     k: v for k, v in stats['external_review_status_counts'].items() if k in gap_statuses

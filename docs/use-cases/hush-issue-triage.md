@@ -3,7 +3,7 @@ id: hush-issue-triage
 title: "Hush: issue triage with abstention"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-21
 independently_reproduced: false
 ---
 
@@ -23,10 +23,10 @@ The author reports a first issue falling below thresholds, so no action was post
 
 ## Limits and reuse
 
-Latency and cost are author reports; one issue does not validate calibration or routing quality. Maintainers must label representative issues and measure missed cases as well as false actions.
+The inspected README reports an 800-issue evaluation with 78% default precision, rising to 88% when question labels are excluded; these are author results, not independently reproduced. Duplicate search is capped at 40 candidates. PR handling uses metadata rather than full diffs, and its three-PR sample is too small for a broad claim. Abstention and maintainer review remain important.
 
 ## Sources
 
-- [Hush repository](https://github.com/emreozyoruk/hush) — discovered via Discord source (private provenance retained locally); access: `not_attempted`; review: `not_reviewed`.
+- [Hush repository](https://github.com/emreozyoruk/hush) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

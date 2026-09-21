@@ -4,13 +4,13 @@ Published-library capture boundary: **20 September 2026, 22:25:06 IST / 16:55:06
 
 | Layer | Current state | Remaining scope |
 |---|---|---|
-| Captured source | 4051 main rows, 142 supplementary thread rows; 4183 unique IDs; 14 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
-| Editorial accounting | 4183 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
+| Captured source | 4051 main rows, 146 supplementary thread rows; 4187 unique IDs; 15 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
+| Editorial accounting | 4187 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
 | Cases | 466 write-ups; 386 eligible for default retrieval; 80 held back | Further source validation can correct or merge cases |
-| External URLs | 1083 registered; 219 await first disposition; 285 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
-| Context screening | 192 links scoped as unrelated context; 20 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
-| X | 211 distinct posts: 140 reviewed, 0 media-pending, 38 thread-expansion pending, 33 pending | Text review does not inspect video/images; scheduled review remains paused |
-| Attachments | 174 / 570 attachment URLs reviewed; 148 / 511 messages complete | 396 attachments across 363 messages pending |
+| External URLs | 1085 registered; 0 await first disposition; 125 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
+| Context screening | 211 links scoped as unrelated context; 37 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
+| X | 228 distinct posts: 140 reviewed, 15 media-pending, 38 thread-expansion pending, 35 pending | Text review does not inspect video/images; scheduled review remains paused |
+| Attachments | 199 / 570 attachment URLs reviewed; 171 / 511 messages complete | 371 attachments across 340 messages pending |
 | Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
 | S3 | Encrypted private snapshot uploaded and download/file hashes verified | Backup state is separate from evidence review |
 

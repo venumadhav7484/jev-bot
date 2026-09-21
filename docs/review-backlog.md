@@ -1,10 +1,12 @@
 # Remaining evidence review
 
-Main-channel update through 20 September 2026, 16:55:06 UTC is accounted for. Current register: 285 external content gaps among 1083 URLs; 396 of 570 saved attachment URLs uninspected. These counts overlap and are not counts of missing use cases.
+Reviewed fixed main-channel window through 20 September 2026, 16:55:06 UTC; four recovered thread messages also have editorial dispositions. Current register: 125 explicit external content gaps among 1085 URLs; 371 of 570 attachment URLs uninspected. Counts overlap. Scoped reviews do not establish full validation.
 
-The latest batch adds source leads alongside 26 curated cases and four updates. Fourteen known thread archives and one new thread were saved; reconciliation and eight additional discovered-thread expansions remain pending. Capture and fully-reviewed cursors remain separate. No recurring collection or source-review automation was enabled. [Latest lessons and leads](incremental-findings.md) · [Current completion status](completion-status.md).
+All 219 previously undispositioned URLs received scoped review notes; two additional links recovered from threads were reviewed. Four new actual message IDs were merged from fifteen saved thread archives. Eight additional thread expansions and wrapper-ID provenance checks remain pending. Main capture cutoff remains unchanged. No source-review schedule was enabled.
 
-The following retained checkpoint describes the earlier 66-gap backlog; it is historical, not the current total.
+Public summaries now include fixed-label successes, contradiction-detection failures, backend/fallback distinctions, batching limits and benchmark qualifications. Remaining inaccessible pages, member-only content and unviewed videos are not labeled verified. [Latest synthesis](jev-master-guide.md#13-lessons-from-the-latest-source-review) · [Current counts](completion-status.md).
+
+Next: finish signed-in thread and attachment inspection, recover available original artifacts, and update case records only when evidence supports changes. Preserve unresolved records where content cannot be obtained.
 
 # Historical evidence backlog — before the latest delta
 

@@ -23,7 +23,7 @@ A bounded semantic check can catch discrepancies conventional formatting checks 
 
 ## Limits and reuse
 
-Do not attribute deterministic secret blocking to Jev. API errors fail open, hooks can be bypassed, and capped files can omit middle hunks. Cost estimates are arithmetic, not billed measurements; false-alarm labels include assumptions. Latest source review: The author describes warning-only semantic checks and a separate private-key check on added lines. Reported 200 ms and four cents per thousand checks are not independently measured. A commit-msg hook is bypassable; it does not prove every commit was checked or every secret was caught. Some captured replies are truncated and the video remains unreviewed.
+The complete supplied GIF shows semantic findings warning while a first commit succeeds; a second private-key-shaped example is blocked by the application belt. Its displayed 22/24 ms and $0.00001 per request are demonstration values, not an independently reproduced detection or billing benchmark. Do not attribute deterministic secret blocking to Jev. API errors fail open, hooks can be bypassed, and capped files can omit middle hunks. Cost estimates from the README are arithmetic; false-alarm labels include assumptions.
 
 ## Sources
 

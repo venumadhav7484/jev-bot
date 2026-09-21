@@ -69,10 +69,10 @@ The latest published main-channel capture boundary appears below. The exact last
 | Layer | Frozen snapshot |
 |---|---|
 | Capture cutoff | 20 September 2026, 22:25:06 IST / 16:55:06 UTC |
-| Messages | 4187 unique IDs; 4187 editorially accounted for |
+| Messages | 4193 unique IDs; 4193 editorially accounted for |
 | Cases | 466; 386 default eligible, 80 held back |
-| External evidence | 1085 URLs; 0 await first disposition; 125 retain content gaps |
-| Media | 199 / 570 attachments inspected |
+| External evidence | 1086 URLs; 0 await first disposition; 125 retain content gaps |
+| Media | 430 / 571 attachments inspected |
 | Bot | Full-library Jev; optional GLM 5.3 writing |
 | S3 | Private backup verified |
 

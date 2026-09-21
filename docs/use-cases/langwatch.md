@@ -15,7 +15,7 @@ LangWatch Instant Evals applies custom judgments to stored production traces, in
 
 ## How Jev fits
 
-The product page describes per-row Jev questions, probabilities, exports and a bounded query interface. Long traces may be shortened and marked as digests.
+The product page describes per-row Jev questions, probabilities, exports and a bounded SQL interface. The supplied SQL illustration uses eval(conversation_bounded(...), a frustration predicate), grouped by conversation. Long traces may be shortened and marked as digests.
 
 ## Why and impact
 
@@ -23,7 +23,7 @@ Makes trace exploration and candidate evaluation sets easier to build. Speed, ag
 
 ## Limits and reuse
 
-The newer product-page evidence supersedes the earlier embed-only source scope. Its 300-conversation comparison is small; no independent benchmark reproduction. Shortened traces can omit decisive context, and probabilities are not factual validation.
+The newer product-page evidence supersedes the earlier embed-only source scope. Promotional artwork reports about 20 seconds for 10,000 conversations at about 600 tokens each; it supplies no reproducible trace or accuracy labels. Its separate 300-conversation comparison is small. Shortened traces can omit decisive context; probabilities do not establish factual correctness. No independent benchmark reproduction.
 
 ## Sources
 

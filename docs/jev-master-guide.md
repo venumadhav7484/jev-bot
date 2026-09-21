@@ -1,10 +1,10 @@
 # Jev master guide: capabilities, field lessons and effective use
 
-**Consolidated:** 21 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Thread expansion remains incomplete. Official interface and pricing statements below retain their dated review scope.
+**Consolidated:** 21 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Known saved-thread expansions and message-ID reconciliation are complete for this fixed window; undiscovered threads remain outside verified coverage. Official interface and pricing statements below retain their dated review scope.
 
 This is the main practical synthesis of this project's Jev research: what Jev does, where it appears useful, where attempts fail, how to build around it, and how to judge claims. It brings together the technical reference, community cases, corrections, inspected artifacts and our own pipeline experiments. Case links preserve supporting repositories, demos, articles and public posts; private provenance stays local.
 
-**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,187 captured message IDs have editorial dispositions. Of 1085 external URLs, 125 retain explicit content gaps; 371 of 570 attachments still need inspection. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
+**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,193 captured message IDs have editorial dispositions. Of 1086 external URLs, 125 retain explicit content gaps; 141 of 571 attachments still need complete inspection. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
 
 ## Guide map
 
@@ -315,3 +315,14 @@ A separate production-judge report provides an important counterexample: its aut
 Use deterministic collection and deduplication first; keep immutable source text and dated versions. Use Jev for explicit, independently answerable screening questions and routing. Retain uncertain, contradictory, media-dependent and failed records in a review queue. Source fetching, video inspection, claim attribution and editorial acceptance remain separate steps. Cache reviewed evidence by content hash so unchanged material needs no new model call.
 
 The current review saved 219 scoped source dispositions without new Jev or GLM requests. This demonstrates an offline review path, not measured review-time savings. The public model context receives these curated lessons after export and deployment; private raw captures and review ledgers are not silently supplied to visitors' queries.
+
+
+## 14. Lessons from recovered recordings and screenshots
+
+The recovered jev-commit recording separates semantic warnings from deterministic enforcement. A commit with contradiction/debug findings succeeds; a private-key-shaped example is blocked by the application belt. Choose explicitly which findings warn, hold or block, and test bypass and failure paths. A fast model response alone does not enforce a policy. [jev-commit](https://github.com/valentynkit/jev-commit).
+
+The shell-vetting CTF screenshot shows a direct read blocked but a script-write followed by script execution displaying a synthetic flag. This observed multi-step bypass reinforces the need to reason across actions and enforce containment outside the model. It is not an independently repeated attack. [Challenge case](use-cases/terminal-guard-ctf.md).
+
+OpenPoke's displayed 33/36 agreement is agreement with another model, not labeled accuracy. Its initial 95.3% email suppression led to quarantine rather than silent dropping. Include unresolved items, quarantine work, fallback calls and total pipeline cost when evaluating a screening stage. Its small synthetic-email comparison does not establish production savings. [OpenPoke evidence](use-cases/openpoke-meets-jev.md).
+
+The LangWatch SQL illustration is a concrete bounded-trace evaluation pattern. Promotional throughput artwork is a separate evidence class: a stated 10,000 conversations in about 20 seconds provides no reproducible trace or accuracy labels. Preserve truncation and digest indicators so a judgment on shortened context is not confused with inspection of the entire conversation. [LangWatch](use-cases/langwatch.md).

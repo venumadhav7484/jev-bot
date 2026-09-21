@@ -23,7 +23,7 @@ Useful adversarial-testing concept for probabilistic guardrails.
 
 ## Limits and reuse
 
-Only read the shared description; no challenge attacks were performed. This is distinct from the jev-guard harness repository and not evidence of secure containment.
+The saved challenge screenshot shows a direct flag-read command blocked, followed by an allowed script-write and script-execution sequence that displays the synthetic flag. This is observed demonstration evidence of a multi-step bypass, not an independently repeated attack. Per-command judgments cannot establish secure containment without stateful controls. This project is distinct from the jev-guard harness repository and the Android APK app.
 
 ## Sources
 

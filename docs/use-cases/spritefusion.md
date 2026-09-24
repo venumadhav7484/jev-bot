@@ -3,7 +3,7 @@ id: spritefusion
 title: "Sprite Fusion: real-time level construction"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-24
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ Potential fit where tile or object choices come from an existing vocabulary.
 
 ## Limits and reuse
 
-The captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection. Source review: Five-call terrain demo reports 319–375ms, not sub-100ms. Assets and collision logic come from other tools/code; Jev selects bounded terrain parameters. Sampled video shows character traversing terrain but contains no API trace; visual progress does not establish universal map playability.
+The captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection. Source review: Five-call terrain demo reports 319–375ms, not sub-100ms. Assets and collision logic come from other tools/code; Jev selects bounded terrain parameters. Sampled video shows character traversing terrain but contains no API trace; visual progress does not establish universal map playability. Later article repost describes the same constrained terrain-generation pattern; it does not add a new measured run or remove the earlier playability and latency limits.
 
 ## Sources
 

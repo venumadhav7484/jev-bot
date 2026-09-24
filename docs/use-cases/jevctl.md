@@ -3,7 +3,7 @@ id: jevctl
 title: "jevctl: composable judgment CLI and agent plugin"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-24
 independently_reproduced: false
 ---
 
@@ -23,11 +23,12 @@ Reusable toolkit may avoid building repeated API plumbing.
 
 ## Limits and reuse
 
-Command semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting. Later session-hook discussion warns frequent compaction can disrupt prompt-cache reuse. Reported 40–60% context reduction does not establish token billing savings or lossless task performance.
+Command semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting. Later session-hook discussion warns frequent compaction can disrupt prompt-cache reuse. Reported 40–60% context reduction does not establish token billing savings or lossless task performance. Later announcements repeat the same CLI and plugin capabilities. Extraction remains candidate selection, and the site’s shell example uses conditional control flow; a nonzero status in a pipe alone is not enforcement. Download counts and illustrative reduction cards add no independent correctness evidence.
 
 ## Sources
 
-- [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `page_reviewed`.
+- [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `landing_page_reviewed`.
 - [https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md](https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md) — access: `fetched`; review: `source_text_reviewed`.
+- [GitHub - Nasrallah-AL/jev-cli: Command-line tool for TypeSafe's Jev...](https://github.com/Nasrallah-AL/jev-cli) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -39,15 +39,15 @@ for s in sources:
     pid=post_id(s['url'])
     if not pid:continue
     missing_media=any(value in s.get('review_status','') for value in ('media_blocked', 'media_pending'))
-    if pid not in entries and s.get('access_status') not in ('fetch_failed','response_unmatched','not_attempted') and not missing_media:continue
+    if pid not in entries and s.get('access_status') not in ('fetch_failed','access_failed','response_unmatched','not_attempted') and s.get('review_status','not_reviewed') != 'not_reviewed' and not missing_media:continue
     if pid not in entries:
         entries[pid]={
             'post_id':pid,'url':s['url'],'status':'pending_media' if missing_media else 'pending',
-            'blocker':'Post text read; video displayed Unable to play media.' if missing_media else 'Public web fetch failed; full X post and linked evidence not inspected.',
-            'first_recorded_on':'2026-09-19','last_attempted_on':s.get('reviewed_on',s.get('checked_on','2026-09-19')),
+            'blocker':'Post text reviewed; media inspection remains incomplete.' if missing_media else 'Full post, replies and linked evidence remain uninspected; access status is recorded separately.',
+            'first_recorded_on':CONFIG['snapshot_date'],'last_attempted_on':s.get('reviewed_on',s.get('checked_on')),
             'followup_attempts':0,'next_retry_on':None,'review_notes':[],
             'discovered_artifact_urls':[],
-            'attempt_history':[{'date':'2026-09-19','stage':'initial_collection','outcome':s.get('access_status'),'review_status':s.get('review_status','not_reviewed')}],
+            'attempt_history':[{'date':CONFIG['snapshot_date'],'stage':'source_register_discovery','outcome':s.get('access_status'),'review_status':s.get('review_status','not_reviewed')}],
         }
     r=entries[pid]
     r['source_urls']=sorted(set(r.get('source_urls',[])+[s['url']]))

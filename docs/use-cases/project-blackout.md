@@ -3,7 +3,7 @@ id: project-blackout
 title: "Project Blackout: simulated SIEM risk assessment"
 category: security
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-24
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ Provides an operational dashboard example without claiming live incident handlin
 
 ## Limits and reuse
 
-Simulation only; no detection coverage or response-safety evidence. Source review: Synthetic detection success does not establish real-traffic effectiveness or calibration. Keep earlier misses beside final results; repeated checkpoints are correlated. API failure is unknown/stale, not safe; stopping an attack is not remediation.
+Simulation only; no detection coverage or response-safety evidence. Source review: Synthetic detection success does not establish real-traffic effectiveness or calibration. Keep earlier misses beside final results; repeated checkpoints are correlated. API failure is unknown/stale, not safe; stopping an attack is not remediation. Later source repost still explicitly calls this a SIEM simulation. It adds no observed real-traffic validation.
 
 ## Sources
 

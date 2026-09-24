@@ -1,4 +1,44 @@
-# New implementation lessons — 20 September 2026
+# Incremental implementation lessons
+
+## 24 September 2026: new evidence and corrections
+
+The new fixed window ends on 24 September at 11:03:05 UTC; the last included main-channel post is at 10:59:08 UTC. It adds 990 unique messages: 932 main-channel posts and 58 thread replies. All 23 previously known thread cursors were revisited and 12 newly discovered threads captured. This is a bounded browser capture, not proof of exhaustive server history or recovery of every old edit.
+
+Editorial synthesis adds 44 case records and updates nine existing records. Nine of the new cases remain excluded from default case recommendations because their source, measurement or safety evidence needs further work. Other announcements, proposals and discussion remain discovery leads rather than automatically becoming case studies. Existing evidence gaps persist; new media and unreviewed sources add further work. [Current accounting](completion-status.md).
+
+### What changed our understanding
+
+| Question | New evidence | Practical consequence |
+|---|---|---|
+| Does faster batching preserve the same judgments? | [five-lines](use-cases/five-lines.md) reports drifting margins as batches grow; [jevgrep](use-cases/jevgrep.md) reports better results with named state entries. | Test per-item changes and difficult boundary cases, not only throughput or aggregate accuracy. |
+| Does semantic search always beat lexical search? | [askgrep](use-cases/askgrep.md) loses to BM25 on its small SWE-bench comparison and reacts to query wording. | Keep a lexical baseline, inspect missed evidence and support exact follow-up reads. |
+| Did replacing the model produce the improvement? | [Biyuya](use-cases/biyuya-expense-tree.md) reports almost no improvement from a model swap; changing taxonomy traversal improves its synthetic test. | Separate model, state and workflow changes in the comparison. |
+| Are impressive benchmark labels accurate? | [Legal RAG comparison](use-cases/sovereign-rag-benchmark.md) corrects misnamed baseline components after a code challenge. | Verify executed baselines before repeating model rankings, timings or projected bills. |
+| Is a compacted context lossless? | [jev-compaction](use-cases/jev-compaction.md) preserves original bytes, but recovering a needed segment still depends on retrieval. [jevtrim](use-cases/jevtrim.md) reports about 96% of full-context accuracy, not 96% absolute accuracy. | Measure downstream answers, omitted constraints, recovery and prompt-cache effects. |
+| Does cheap routing make an agent cheaper? | [Foreman](use-cases/opencode-foreman.md) reports higher overall token use because the workflow adds stages. | Count every writer, review, repair and fallback call. |
+| Is described bypass behavior active? | [Peaks](use-cases/peaks-notes.md) describes novelty routing but defaults to shadow mode, where the writer still runs. | Distinguish intended architecture from current operating mode and observed savings. |
+| Is a confident guard enough? | [Rakitsu](use-cases/rakitsu-enforced-gate.md) reports an agent claiming safety after a failed judgment call; an application gate rejects it. | Require validated tool results. Missing answers must not become approvals. |
+| Can injection defense ignore evidence quality? | [Wikipedia deletion study](use-cases/jagged-wikipedia-study.md) finds a false factual claim more disruptive than a direct hostile instruction in its small follow-up. | Test poisoned evidence separately from instruction-following attacks. |
+| Does a selected action carry authority? | [safe-upgrade](use-cases/tenuo-safe-upgrade.md) separates eligible choices, workflow execution and scoped permissions. | Validate selection, permissions and action effects independently. |
+| Is one confidence formula portable? | [jevkit](use-cases/jevkit.md) needs labelled local outcomes; [jev-trust](use-cases/jev-trust.md) retains unresolved field and formula questions. | Identify the exact returned statistic; measure policy errors and review load on the target workload. |
+| Does simulation show native physical reasoning? | [LIBERO](use-cases/jev-libero.md) supplies physics previews; [robot joint choices](use-cases/robot-joint-preview.md) supplies computed candidate effects. | Attribute perception, geometry and execution to the components doing them. |
+
+### Patterns with a clear division of work
+
+- **Generate candidates, judge, then execute in code.** [CSV repairs](use-cases/jev-clean.md), [animation edits](use-cases/motion-studio.md), [file viewers](use-cases/filelathe.md) and [creature anatomy](use-cases/jev-creature-forge.md) constrain what Jev can select. A typed answer still needs schema checks, bounds and a recovery path.
+- **Screen before waking a writer.** [Agenti](use-cases/agenti-feed-gate.md) retains a fallback when its feed gate fails. [Paper Radar](use-cases/jev-paper-radar.md) collects labels for missed and selected papers. Fewer writer calls are a useful operational metric; they do not establish recall or zero total cost.
+- **Keep failures and incomplete coverage visible.** [Jevernetes](use-cases/jevernetes.md) distinguishes partial log coverage from a clean result. [Kassad](use-cases/kassad.md) preserves integration and provider failures. Parse answers by field name and retain failed requests for recovery.
+- **Use semantic tests for what exact checks miss.** [Subtitle QC](use-cases/jev-subtitle-qc.md), [pytest-jev](use-cases/pytest-jev.md) and [OpenAPI Sentinel](use-cases/jev-oas-sentinel.md) add meaning-based review. They do not replace cue IDs, schema checks or independently labelled false-pass tests. Cached judgments are not fresh independent measurements.
+- **Treat test selection as a recall problem.** [jgrep](use-cases/jgrep-test-selection.md) uses historically edited tests as a proxy for affected tests. Measure important omitted tests and preserve broader checks where the proxy fails.
+- **Keep the evaluation unit explicit.** [Decision Fabric](use-cases/enterprise-decision-fabric.md) shows rankings change when counting unique cases versus repeated calls. Separate model mistakes, policy mistakes and label revisions; do not describe call-weighted agreement as unique-case accuracy.
+
+### Pipeline observations from this update
+
+Jev screened all 990 new messages in 124 successful requests. A separate 195-message candidate flow fetched public text, generated provisional GLM notes and ran citation/grounding checks. Its final queues contained 194 exceptions and one routine provisional record. Neither queue is editorial approval. Authored summaries above retain corrections and caveats; invalid drafts were not promoted.
+
+This run does **not** establish editorial speedup. Automated access, exact quotation checks and model agreement cannot independently validate source claims. Remaining project leads, uninspected media and inaccessible sources are retained privately with their original evidence and explicit dispositions. Scheduled collection remains off.
+
+## 20 September 2026: earlier update
 
 This update accounts for 825 newly captured main-channel messages through 20 September, 22:25 IST. Reposts, proposals and unresolved sources remain distinct from inspected implementation reports. The 26 new case pages and four updated cases are curated summaries, not independent reproductions. Thread expansion and media review remain incomplete.
 

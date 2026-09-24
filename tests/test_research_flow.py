@@ -150,19 +150,23 @@ class FlowTests(unittest.TestCase):
     def test_rebuild_status_uses_checkpoint_counts_and_preserves_review_cursor(self):
         pool = self.work/'resource-pool'
         summary = dict(s3_uploaded=False,curated_cases=2,default_retrieval_cases=1,
-                       editorial_review={'unassigned_messages':1},external_review_status_counts={},
-                       external_urls_with_content_gaps=0,external_urls=0,
+                       editorial_review={'unassigned_messages':1},external_review_status_counts={'not_reviewed':1,'sections_reviewed':1},
+                       external_unresolved_content_status_counts={'not_reviewed':1},
+                       external_urls_with_content_gaps=1,external_urls=2,
                        message_coverage_status_counts={'cited_in_case':2,'uncatalogued_source_row':1},
                        unique_messages=3,main_channel_rows=2,thread_rows=1,thread_count=1)
         media = dict(content_review_counts={},attachments_reviewed=0,attachments_pending=0,
                      unique_urls=0,messages=0,entries=[])
-        checkpoint = dict(capture_high_water_timestamp_utc='2027-01-02T03:04:05+00:00',
+        checkpoint = dict(snapshot_date='2027-01-02',capture_high_water_timestamp_utc='2027-01-02T03:04:05+00:00',
                           capture_high_water_message_id='200',capture_high_water_url='https://example.org/200',
                           earliest_captured_message_id='100',review_progress={'fully_reviewed_through_message_id':'150'})
         dump(pool/'coverage-summary.json',summary)
         dump(pool/'sources/media-accounting.json',media)
         dump(pool/'sources/x-review-backlog.json',{'counts':{},'entries':[]})
         dump(pool/'sources/collection-checkpoint.json',checkpoint)
+        dump(pool/'sources/external-links.json',[
+            {'url':'https://example.org/pending','review_status':'not_reviewed'},
+            {'url':'https://example.org/read','review_status':'sections_reviewed'}])
         (self.work/'README.md').write_text('<!-- SNAPSHOT-START --><!-- SNAPSHOT-END -->')
         with patch.object(consolidate,'ROOT',self.work):
             consolidate.write_status()
@@ -172,6 +176,9 @@ class FlowTests(unittest.TestCase):
         self.assertIn('1 uncatalogued',text)
         saved = json.loads((pool/'sources/collection-checkpoint.json').read_text())
         self.assertEqual(saved['review_progress']['fully_reviewed_through_message_id'],'150')
+        backlog=json.loads((pool/'sources/remaining-review-backlog.json').read_text())
+        self.assertEqual([r['url'] for r in backlog['entries']],['https://example.org/pending'])
+        self.assertIn('1 explicit content gaps among 2 URLs',(pool/'review-backlog.md').read_text())
 
 
 if __name__ == '__main__':

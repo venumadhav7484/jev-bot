@@ -37,11 +37,39 @@ def write_status():
     n, enabled = summary['curated_cases'], summary['default_retrieval_cases']
     pending = summary['external_review_status_counts'].get('not_reviewed', 0)
     gaps = summary['external_urls_with_content_gaps']
+    backlog_path = pool/'sources/remaining-review-backlog.json'
+    gap_statuses = set(summary['external_unresolved_content_status_counts'])
+    external = json.loads((pool/'sources/external-links.json').read_text())
+    # Rebuild the current queue; old dated recovery receipts remain elsewhere.
+    backlog_path.write_text(json.dumps({
+        'scope': 'Current explicit content gaps. Scoped reviews can have additional uninspected sections; media and reply queues are separate.',
+        'snapshot_date': cp['snapshot_date'],
+        'entries': [row for row in external if row.get('review_status', 'not_reviewed') in gap_statuses],
+    }, indent=2)+'\n')
     cutoff = datetime.fromisoformat(cp['capture_high_water_timestamp_utc'])
     cutoff_label = cutoff.astimezone(ZoneInfo('Asia/Kolkata')).strftime('%d %B %Y, %H:%M:%S IST') + ' / ' + cutoff.astimezone(ZoneInfo('UTC')).strftime('%H:%M:%S UTC')
     unique = summary.get('unique_messages', sum(summary['message_coverage_status_counts'].values()))
     unassigned = summary['editorial_review']['unassigned_messages']
     accounted = unique - unassigned
+    backup_label = ('Verified private backup from ' + summary.get('s3_backup_completed_at', 'unknown date')[:10]
+                    if summary['s3_uploaded'] else 'No verified private backup')
+    (pool/'review-backlog.md').write_text(f'''# Remaining evidence review
+
+Capture boundary: **{cutoff_label}**. The current source register contains {gaps} explicit content gaps among {summary['external_urls']} URLs. {media['attachments_pending']} of {media['unique_urls']} captured attachment URLs still need complete inspection. These sets overlap; do not add them to estimate missing cases.
+
+The catalog has {n} case records. Case inclusion and first-pass message dispositions do not establish independent validation. Fetched text can remain unreviewed, and a scoped README review does not cover every linked result file or video. [Current counts](completion-status.md) · [Latest lessons](incremental-findings.md).
+
+Known Discord source thread cursors were reconciled for the saved window. This does not resolve separate X reply/media work or establish coverage of undiscovered threads, deleted messages or arbitrary old edits. Scheduled reviews remain paused.
+
+## Next evidence work
+
+1. Review unresolved sources tied to material claims and corrections first; preserve dated versions and benchmark denominators.
+2. Inspect new and previously pending attachments, retaining partial-review status for samples or unreadable content.
+3. Revisit access failures through available original sources; keep missing or paywalled evidence unresolved.
+4. Merge supported project updates into the editorial case source, then rebuild and check public exports.
+
+The private machine-readable source and attachment queues retain exact links, provenance and earlier attempts. Access is separate from inspection; inspection is separate from independent reproduction.
+''')
     text = f'''# Snapshot and completion status
 
 Published-library capture boundary: **{cutoff_label}**. Staged incoming batches remain separate until promotion. The exact last-post link and capture cursor are preserved privately. Capture progress is separate from content-review progress.
@@ -56,7 +84,7 @@ Published-library capture boundary: **{cutoff_label}**. Staged incoming batches 
 | X | {len(x_queue['entries'])} distinct posts: {x_counts.get('reviewed', 0)} reviewed, {x_counts.get('pending_media', 0)} media-pending, {x_counts.get('pending_thread_expansion', 0)} thread-expansion pending, {x_counts.get('pending', 0)} pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across {sum(r['remaining_attachments'] > 0 for r in media['entries'])} messages pending |
 | Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
-| S3 | {'Encrypted private snapshot uploaded and download/file hashes verified' if summary['s3_uploaded'] else 'Requested; no verified backup yet'} | Backup state is separate from evidence review |
+| S3 | {backup_label} | Older backup does not include later capture or curation; backup state is separate from evidence review |
 
 ## What the counts mean
 
@@ -121,7 +149,7 @@ Current detailed gaps: `resource-pool/completion-status.md`. S3 backup does not 
     body = readme.read_text()
     start, end = '<!-- SNAPSHOT-START -->', '<!-- SNAPSHOT-END -->'
     if start in body and end in body:
-        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | {cutoff_label} |\n| Messages | {unique} unique IDs; {accounted} editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Full-library Jev; optional GLM 5.3 writing |\n| S3 | {'Private backup verified' if summary['s3_uploaded'] else 'Backup pending'} |\n\n'''
+        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | {cutoff_label} |\n| Messages | {unique} unique IDs; {accounted} editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Full-library Jev; optional GLM 5.3 writing |\n| S3 | {backup_label}; later updates not included |\n\n'''
         readme.write_text(body.split(start)[0]+start+table+end+body.split(end, 1)[1])
 
 

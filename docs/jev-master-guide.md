@@ -1,10 +1,12 @@
 # Jev master guide: capabilities, field lessons and effective use
 
-**Consolidated:** 21 September 2026. **Main-channel evidence boundary:** 20 September 2026 at 16:55:06 UTC. Known saved-thread expansions and message-ID reconciliation are complete for this fixed window; undiscovered threads remain outside verified coverage. Official interface and pricing statements below retain their dated review scope.
+**Consolidated:** 24 September 2026. **Main-channel evidence boundary:** 24 September 2026 at 10:59:08 UTC, within the fixed collection window ending 11:03:05 UTC. All previously known thread cursors and twelve newly discovered threads were revisited in this update; undiscovered threads and arbitrary older edits remain outside verified coverage. Official interface and pricing statements below retain their dated review scope.
 
 This is the main practical synthesis of this project's Jev research: what Jev does, where it appears useful, where attempts fail, how to build around it, and how to judge claims. It brings together the technical reference, community cases, corrections, inspected artifacts and our own pipeline experiments. Case links preserve supporting repositories, demos, articles and public posts; private provenance stays local.
 
-**Coverage is substantial, but incomplete.** The catalog contains 466 write-ups, including tools and counterexamples; 386 are default eligible and 80 held back. All 4,193 captured message IDs have editorial dispositions. Of 1086 external URLs, 125 retain explicit content gaps; 141 of 571 attachments still need complete inspection. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Completion status](completion-status.md).
+**Coverage is substantial, but incomplete.** The catalog contains 510 write-ups, including tools and counterexamples; 421 are default eligible and 89 held back. The captured corpus contains 5,183 unique message IDs. Editorial accounting includes first-pass discussion and unresolved-source dispositions; it is not full claim verification. The September 24 update adds unreviewed sources and media to the earlier backlog. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Current source and media counts](completion-status.md).
+
+**New field lessons:** batching can change margins; lexical search can beat semantic ranking; workflow design can matter more than a model swap; extra agent stages can increase total cost; and checking hostile instructions is different from checking poisoned evidence. Read the [September 24 synthesis](incremental-findings.md#24-september-2026-new-evidence-and-corrections) for the supporting cases and their limits.
 
 ## Guide map
 

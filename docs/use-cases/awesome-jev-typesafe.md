@@ -3,7 +3,7 @@ id: awesome-jev-typesafe
 title: "Awesome Jev: classify and search a project directory"
 category: retrieval
 evidence: author-reported
-reviewed_on: 2026-09-21
+reviewed_on: 2026-09-24
 independently_reproduced: false
 ---
 
@@ -23,7 +23,7 @@ Direct example of Jev organizing a research collection while code owns the index
 
 ## Limits and reuse
 
-Directory counts vary by snapshot; listing is not a security review or independent project validation. Claims about first-of-kind status are unsupported. Credentials and reranking must be isolated from public browser assets in any adaptation. Latest source review: The directory and launch post have different dated counts. Typed project tagging and source links aid discovery; model judgments that a repository really calls Jev do not independently verify execution. Performance claims remain attributed to individual projects, and directory membership is not an endorsement.
+Directory counts vary by snapshot; listing is not a security review or independent project validation. Claims about first-of-kind status are unsupported. Credentials and reranking must be isolated from public browser assets in any adaptation. Latest source review: The directory and launch post have different dated counts. Typed project tagging and source links aid discovery; model judgments that a repository really calls Jev do not independently verify execution. Performance claims remain attributed to individual projects, and directory membership is not an endorsement. Repeated directory announcements consolidated as one source. Directory entries, stars and search classifications are discovery aids, not independent validations of the listed projects.
 
 ## Sources
 

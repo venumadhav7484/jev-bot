@@ -10,6 +10,16 @@
     "design_source_hash": "7bcae5cdb96388ee3072cde11cf88d945ebc782abed8020006810157a8661468"
   },
   {
+    "id": "jevtrim",
+    "title": "jevtrim: compare relevance selection at matched context budgets",
+    "category": "retrieval",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jevtrim.md",
+    "body": "---\nid: jevtrim\ntitle: \"jevtrim: compare relevance selection at matched context budgets\"\ncategory: retrieval\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jevtrim: compare relevance selection at matched context budgets\n\n## What\n\nA context-selection experiment compares Jev judgments with embedding retrieval across conversation segmentations and token budgets.\n\n## How Jev fits\n\nJev scores chunks; Python selects within the budget; a separate reader answers questions. The README distinguishes question-conditioned compaction from one compaction per conversation.\n\n## Why and impact\n\nOn 486 LoCoMo questions from ten conversations, the author reports Jev ahead in 14 of 16 raw conditioned cells. The best 35%-budget result was 0.644 accuracy versus 0.671 for full context: about 96% of baseline accuracy, not 96% absolute accuracy.\n\n## Limits and reuse\n\nMatched budgets help comparison but do not establish general coding-memory quality. Segmentation and reader performance still affect results; coarsest chunks lose some comparisons. Source claims, not independently reproduced; recorded selection can replay deterministically, live Jev judgments are not deterministic.\n\n## Sources\n\n- [GitHub - pdrpinto/jevtrim: Jev as a context judge, benchmarked: sel...](https://github.com/pdrpinto/jevtrim) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "4376de310267d45d778cc0aaaf16c0bf150d47a6e612cd2831e23c7bfc09cca4"
+  },
+  {
     "id": "antivirus-prototype",
     "title": "Antivirus classifier repository",
     "category": "Additional reviewed applications",
@@ -40,6 +50,16 @@
     "design_source_hash": "8007f6ec73a499113887a20c722ddfb80973823ce93f394e6882d6509b247966"
   },
   {
+    "id": "jevx",
+    "title": "JevX: identify heuristic decisions worth evaluating",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jevx.md",
+    "body": "---\nid: jevx\ntitle: \"JevX: identify heuristic decisions worth evaluating\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# JevX: identify heuristic decisions worth evaluating\n\n## What\n\nAn early CLI/MCP project looks for hand-written heuristics that might benefit from bounded semantic judgments.\n\n## How Jev fits\n\nThe author targets keyword routing, error categories and hard-coded candidate selection, proposing Jev-based replacements and using application tests to decide whether a change stays.\n\n## Why and impact\n\nA discovery aid for locating possible integration points in an existing codebase.\n\n## Limits and reuse\n\nA heuristic is not wrong merely because it is simple. Replacing deterministic rules adds latency, cost and probabilistic failure modes. Existing tests may miss those changes; add labelled counterexamples and retain deterministic behavior when it is adequate. Early-stage claims, no independent benefit measurement.\n\n## Sources\n\n- [JevX](https://jevx.live/) — access: `fetched`; review: `not_reviewed`.\n- [GitHub - vij-sameerb5/JevX: When and Where Actually to use Jev in y...](https://github.com/vij-sameerb5/JevX) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "c7658a5eccf6e6f87b782d834c51bbdfe550f1c0a2fc967cac7d67f16d6bf922"
+  },
+  {
     "id": "jev-guard",
     "title": "Jev-guard: proposed automatic command approvals",
     "category": "security",
@@ -60,6 +80,16 @@
     "design_source_hash": "80543be71d8199387770e6a6454329075ec36df759fa0be617d6eece5a96896d"
   },
   {
+    "id": "robot-joint-preview",
+    "title": "Robot joint choices: code previews motion before Jev selects",
+    "category": "robotics",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/robot-joint-preview.md",
+    "body": "---\nid: robot-joint-preview\ntitle: \"Robot joint choices: code previews motion before Jev selects\"\ncategory: robotics\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Robot joint choices: code previews motion before Jev selects\n\n## What\n\nAn apple-pickup demonstration is described initially as replacing inverse kinematics with Jev.\n\n## How Jev fits\n\nA later explanation says code temporarily rotates each joint in simulation, computes distance/orientation error and collision flags, restores the pose and supplies scored alternatives. Jev chooses positive, negative or hold for joints and a gripper action.\n\n## Why and impact\n\nThe clarified architecture shows bounded candidate selection over computed motion evidence.\n\n## Limits and reuse\n\nThe headline alone overstates the model’s role: simulation and geometry compute the candidate effects. Media, physical execution and robust collision prevention were not inspected. No proof of general inverse-kinematics solving or hardware safety.\n\n## Sources\n\n- [https://x.com/CaloriePaper/status/2102049098123944349](https://x.com/CaloriePaper/status/2102049098123944349) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "d381a5fb9aa3ada61622068e7b8b8f8605314f8acbce870640fa36e5dd74b14c"
+  },
+  {
     "id": "pvz-mod-controller",
     "title": "Modified Plants vs Zombies: structured-state decisions",
     "category": "Additional reviewed applications",
@@ -68,6 +98,16 @@
     "path": "docs/use-cases/pvz-mod-controller.md",
     "body": "---\nid: pvz-mod-controller\ntitle: \"Modified Plants vs Zombies: structured-state decisions\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Modified Plants vs Zombies: structured-state decisions\n\n## What\n\nJev controls a Total Death-inspired PvZ mod with altered wave budgets and unit balance.\n\n## How Jev fits\n\nConsumes structured game state, picks loadout, collects sun and places plants without screenshots or task-specific training according to author.\n\n## Why and impact\n\nShows action selection over explicit simulation state.\n\n## Limits and reuse\n\nComparison with RL requires matching modified rules, observations and success criteria. Preview truncated; repository promised, not yet verified. Media review: Recording selects Survival Endless, chooses plants, collects sun and places plants, including repeated same-row and forward placements. Scene resets around66s; no completed wave or level shown. Modified waves/health/plants prevent matched comparison with cited RL run;250ms warm decisions remains author report.\n\n## Sources\n\n- [https://x.com/ThexysaiXy/status/2100520866685833645](https://x.com/ThexysaiXy/status/2100520866685833645) — access: `fetched`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "a2f8cf5a8ea49b0d85ab4aeddb990ea0ee296fa72d6797a8da3ed0f01db88c85"
+  },
+  {
+    "id": "agenti-feed-gate",
+    "title": "Agenti: wake the writing model only for useful feed updates",
+    "category": "filtering",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/agenti-feed-gate.md",
+    "body": "---\nid: agenti-feed-gate\ntitle: \"Agenti: wake the writing model only for useful feed updates\"\ncategory: filtering\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Agenti: wake the writing model only for useful feed updates\n\n## What\n\nScheduled feed watchers put a typed relevance judgment before their main writing model.\n\n## How Jev fits\n\nRuntime fetches and deduplicates entries; Jev screens new entries against the watch question. Matches and uncertain cases reach the writer; provider errors send new entries through the writer fallback.\n\n## Why and impact\n\nAuthor reports most quiet runs avoided the main model. Adding the first 300 words to title-only state changed an example from an uncertain score to stronger relevance.\n\n## Limits and reuse\n\nPost and later article use different run totals; do not combine them. Zero main-model calls or credits does not mean zero Jev requests or total cost. The article records unrelated run failures and an outage fallback. Small before/after window; missed relevant items and threshold quality were not independently measured.\n\n## Sources\n\n- [Why a Heartbeat's quiet checks are nearly free: decision models —...](https://agenti.chat/en/docs/decision-model) — access: `fetched`; review: `article_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "671dfb700c0b0f6018e63066cd632ebdaca6f2a2107e600b0c2c7f80bff8ebc3"
   },
   {
     "id": "synthetic-email-filter",
@@ -190,6 +230,16 @@
     "design_source_hash": "3ff7cf79942a15264395879073ef3235407f2a1cccbb3a0201cdd8b7a32437c6"
   },
   {
+    "id": "five-lines",
+    "title": "five-lines: parser rules plus semantic code review",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/five-lines.md",
+    "body": "---\nid: five-lines\ntitle: \"five-lines: parser rules plus semantic code review\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# five-lines: parser rules plus semantic code review\n\n## What\n\nA Rust pull-request reviewer separates countable refactoring rules from questions requiring interpretation.\n\n## How Jev fits\n\nTree-sitter finds changed methods and structural preconditions. Jev answers Nouls for semantic rules; application thresholds raise, flag for inspection or suppress findings. The updated README batches named methods in shared state.\n\n## Why and impact\n\nAuthor reports 34 labelled judgments remained correct while changing batch size, with 7.6 seconds for separate requests versus 1.0 second for one batch. The README chooses eight methods as a speed/margin compromise.\n\n## Limits and reuse\n\nOne small author-labelled seed set, not an independent benchmark. Compliant examples moved toward the reporting threshold as batches grew; the largest reported question shift was 0.24. This checks structural style, not program correctness. Parser limits and unsupported-language fallback remain.\n\n## Sources\n\n- [https://github.com/jamescazzetta/five-lines](https://github.com/jamescazzetta/five-lines) — access: `fetched`; review: `sections_reviewed`.\n- [Christian Clausen's ten refactoring rules](https://www.oreilly.com/library/view/five-lines-of/9781617298318/) — access: `not_attempted`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "b7c3e4d5c27a4f0ee672cc80a3e5fe6652976f968ad6ea37cf7f713b55a86bd1"
+  },
+  {
     "id": "news-aggregator",
     "title": "AI news relevance filtering",
     "category": "content",
@@ -258,6 +308,16 @@
     "path": "docs/use-cases/yingkai-browser.md",
     "body": "---\nid: yingkai-browser\ntitle: \"Browser automation: LLM planner with paced Jev actions\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Browser automation: LLM planner with paced Jev actions\n\n## What\n\nBrowser automation separates LLM planning from Jev decisions and Playwright execution.\n\n## How Jev fits\n\nJev returns probability distributions used by browser-control tools rather than free-form text.\n\n## Why and impact\n\nThe author reports 40/42 correct tasks in the latest run and roughly 14 seconds for a five-step checkout.\n\n## Limits and reuse\n\nCounting remains a reported failure; tiny pages show no token saving. These are author benchmarks, not independently reproduced results.\n\n## Sources\n\n- [https://github.com/Ying-Kai-Liao/jev-browser/tree/main](https://github.com/Ying-Kai-Liao/jev-browser/tree/main) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "2e94f1c1f390d8f1d0c808fb0853c9641ece886a7d78c3a2e902b9d73f49ddbf"
+  },
+  {
+    "id": "jevernetes",
+    "title": "Jevernetes: log triage with visible coverage gaps",
+    "category": "operations",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jevernetes.md",
+    "body": "---\nid: jevernetes\ntitle: \"Jevernetes: log triage with visible coverage gaps\"\ncategory: operations\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jevernetes: log triage with visible coverage gaps\n\n## What\n\nA Kubernetes log tool uses Jev to surface important, routine and review-needed events.\n\n## How Jev fits\n\nLocal collection supplies redacted log text and source metadata; offline mode uses local rules. The current README describes bounded Rust ingestion and coverage reporting, while an older Python companion supports a separate legacy interface.\n\n## Why and impact\n\nShows a practical investigation queue with context, scoped exceptions, cost visibility and export to a coding agent.\n\n## Limits and reuse\n\nBest-effort redaction is not a guarantee that confidential content is removed. Partial coverage must remain visible instead of becoming a clean cluster verdict. The announcement’s kubectl/dashboard framing differs from the current Rust path; no production incident-detection or tuning benefit was independently measured.\n\n## Sources\n\n- [GitHub - sunil-sadasivan/jevernetes: Live Kubernetes log analysis, ...](https://github.com/sunil-sadasivan/jevernetes) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "d4d17ca684d38f3a0b9872cea00516561b69aa777315d389cd7625d3b2fd5c8b"
   },
   {
     "id": "jkudish-tools",
@@ -350,6 +410,16 @@
     "design_source_hash": "3c24ece6d7f667ff90ba225c4c0772edb002b7dd69be46ae5882552ab1a4f46b"
   },
   {
+    "id": "agenteval-decision-client",
+    "title": "AgentEval: preserve typed answers and provider provenance",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/agenteval-decision-client.md",
+    "body": "---\nid: agenteval-decision-client\ntitle: \"AgentEval: preserve typed answers and provider provenance\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# AgentEval: preserve typed answers and provider provenance\n\n## What\n\nA proposed AgentEval integration treats Jev as a decision evaluator rather than a prose-generating client.\n\n## How Jev fits\n\nThe report describes a direct/OpenRouter client feeding a decision-evaluation interface, persisting probabilities and returned model IDs. Dry-run samples show request bodies before sending.\n\n## Why and impact\n\nAuthor reports 13 successful live calls. The intended 440-case comparison was future work at posting time, not a completed evaluation.\n\n## Limits and reuse\n\nA pull request is not proof of a released or merged feature. Wire-format notes distinguish zero-indexed Score levels and the absence of a Noul confidence field. No outcome accuracy or false-pass benchmark from this post.\n\n## Sources\n\n- [Decision evals (ADR-033): TypeSafe Jev as a third evaluator kind; s...](https://github.com/AgentEvalHQ/AgentEval/pull/257) — access: `fetched`; review: `not_reviewed`.\n- [.NET: Add IDecisionClient (experimental), DecisionLoopEvaluator, an...](https://github.com/microsoft/agent-framework/pull/8563) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "3efb58975497396eb0e57b76a25004719350c287a9dcfe6cdd940f791045f6ec"
+  },
+  {
     "id": "pgjev",
     "title": "pg-jev: semantic SQL predicates",
     "category": "data",
@@ -376,8 +446,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/signal-weave.md",
-    "body": "---\nid: signal-weave\ntitle: \"Signal Weave: context cards over BI dashboards\"\ncategory: operations\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Signal Weave: context cards over BI dashboards\n\n## What\n\nA thin layer adds operational context cards over Apache Superset.\n\n## How Jev fits\n\nJev provides typed decisions over business-intelligence signals.\n\n## Why and impact\n\nIntended to make BI analysis and action selection easier.\n\n## Limits and reuse\n\nAuthor explicitly lacks workplace access to validate at scale. No production benefit established. Source review: Hidden source refs in decision matrix invalidate treating it as discovery accuracy. Synthetic labels and imperfect diagnostic recall need real time-split holdout. Jev selects catalog metrics; code compiles bounded SELECT SQL. SQLite idempotency supports restart,not distributedmulti-replica guarantees; no automatic delivery authority.\n\n## Sources\n\n- [https://github.com/waddle-zoo/signal-weave](https://github.com/waddle-zoo/signal-weave) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "181b76952480298a3c26ead083321061803425c2b02a5f3cea799dcb540714f8"
+    "body": "---\nid: signal-weave\ntitle: \"Signal Weave: context cards over BI dashboards\"\ncategory: operations\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Signal Weave: context cards over BI dashboards\n\n## What\n\nA thin layer adds operational context cards over Apache Superset.\n\n## How Jev fits\n\nJev provides typed decisions over business-intelligence signals.\n\n## Why and impact\n\nIntended to make BI analysis and action selection easier.\n\n## Limits and reuse\n\nAuthor explicitly lacks workplace access to validate at scale. No production benefit established. Source review: Hidden source refs in decision matrix invalidate treating it as discovery accuracy. Synthetic labels and imperfect diagnostic recall need real time-split holdout. Jev selects catalog metrics; code compiles bounded SELECT SQL. SQLite idempotency supports restart,not distributedmulti-replica guarantees; no automatic delivery authority. Later repository repost emphasizes that obtaining adequate context remains difficult. It adds no independent production evaluation and does not resolve the earlier synthetic-label and hidden-reference limitations.\n\n## Sources\n\n- [https://github.com/waddle-zoo/signal-weave](https://github.com/waddle-zoo/signal-weave) — access: `fetched`; review: `readme_reviewed`.\n- [https://x.com/brandonsovran/status/2102230518469181529?s=46](https://x.com/brandonsovran/status/2102230518469181529?s=46) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "019fbf8b58a3d27206c67addbaf321e0cc21063b2ac8bf1861b0a60dcfd80f8a"
   },
   {
     "id": "reaper",
@@ -580,6 +650,26 @@
     "design_source_hash": "9d0d7241a9247c9e2600579181a8b94e4aa0e31a8216ec23ebf6fab92f265239"
   },
   {
+    "id": "jev-trust",
+    "title": "jev-trust: logging outcomes and inspecting calibration claims",
+    "category": "experiments",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/jev-trust.md",
+    "body": "---\nid: jev-trust\ntitle: \"jev-trust: logging outcomes and inspecting calibration claims\"\ncategory: experiments\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jev-trust: logging outcomes and inspecting calibration claims\n\n## What\n\nA Python middleware project records typed answers, later labels, domain statistics and signed audit logs.\n\n## How Jev fits\n\nThe wrapper computes author-defined confidence adjustments from observed bins or aggregate calibration statistics. A later documented mode asks both polarities and flags disagreements.\n\n## Why and impact\n\nProvides a concrete pattern for retaining predictions and joining them to later outcomes instead of assuming one threshold works in every domain.\n\n## Limits and reuse\n\nReported calibration numbers and adjustment formulas remain unverified. Before reusing them, audit whether the measured field is a selected-option probability, a Noul probability or the API confidence statistic; these are not interchangeable. Small bins, signatures and polarity agreement do not prove future correctness, independence of evidence or safety. Held from default recommendations pending field/formula and raw-artifact review.\n\n## Sources\n\n- [jev-trust](https://pypi.org/project/jev-trust/) — access: `fetched`; review: `scoped_package_documentation_reviewed`.\n- [nautilus-compass/sdks/jev-trust at main · chunxiaoxx/nautilus-compass](https://github.com/chunxiaoxx/nautilus-compass/tree/main/sdks/jev-trust) — access: `fetched`; review: `sections_reviewed`.\n- [Independent two-study validation of hosted Jev (jev-1.13.0) — cal...](https://github.com/chunxiaoxx/nautilus-compass/discussions/59) — access: `fetched`; review: `not_reviewed`.\n- [https://compass.nautilus.social/dcr.html](https://compass.nautilus.social/dcr.html) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "99342bda52434b60b88fadfc47fd0040a65d892c973777ad3005a4f7e2cb610a"
+  },
+  {
+    "id": "jevgrep",
+    "title": "jevgrep: ordered log filtering with named state entries",
+    "category": "filtering",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jevgrep.md",
+    "body": "---\nid: jevgrep\ntitle: \"jevgrep: ordered log filtering with named state entries\"\ncategory: filtering\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jevgrep: ordered log filtering with named state entries\n\n## What\n\nA command-line filter asks whether each log line matches a user-supplied condition.\n\n## How Jev fits\n\nOne Noul refers to each named line in shared state. Micro-batches and concurrent requests preserve output order; an optional Claude stage explains selected lines.\n\n## Why and impact\n\nAuthor reports mean F1 rising from about 0.75 with array-index references to 0.90 with named keys on 195 labelled lines and three questions. This is evidence to test state addressing, not a universal preferred batch size.\n\n## Limits and reuse\n\nFuzzy definitions and lines describing themselves still cause errors. The README says lines longer than 500 characters are truncated for judgment but printed in full, so decisive text can be unseen. Timing includes buffering; reported speed/cost and model comparisons are author measurements, not reproduced here.\n\n## Sources\n\n- [GitHub - allebee/jevgrep: grep by meaning: pipe in any text, ask a ...](https://github.com/allebee/jevgrep) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "5e5c8fd848ffb807cae1b2dd704991ba777dda7b5cea4c48a49974bc3b126418"
+  },
+  {
     "id": "jevies",
     "title": "Jevies: reviewing decision-model questions",
     "category": "quality",
@@ -588,6 +678,16 @@
     "path": "docs/use-cases/jevies.md",
     "body": "---\nid: jevies\ntitle: \"Jevies: reviewing decision-model questions\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Jevies: reviewing decision-model questions\n\n## What\n\nA helper project uses Jev to design and review other Jev decisions.\n\n## How Jev fits\n\nReviewed diagram separates human/LLM drafting from typed question-type/form suggestions, Choice overlap checks, Score anchors/order and answerability/test-coverage review. Results saved and compared before revision.\n\n## Why and impact\n\nPotential feedback loop for schema and prompt quality.\n\n## Limits and reuse\n\nDiagram and repository workflow are not evidence that self-review guarantees correctness; correlated errors require independent labels and held-out evaluation.\n\n## Sources\n\n- [https://fixupx.com/ezbaze_/status/2100899085700026410](https://fixupx.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `demo_trace_reviewed`.\n- [https://github.com/Ezbaze/jevies](https://github.com/Ezbaze/jevies) — access: `fetched`; review: `readme_reviewed`.\n- [Ezbaze (@ezbaze_)](https://x.com/ezbaze_/status/2100899085700026410) — access: `fetched`; review: `demo_trace_reviewed`.\n- [x.com/CompleteSkeptic/status/2099925682726002904](https://x.com/CompleteSkeptic/status/2099925682726002904) — access: `fetched`; review: `context_only_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "11185e6c3871fdb380f0879d79fdcbc953be6f574e0e0703bf8abd1987f77c11"
+  },
+  {
+    "id": "jev-tool-discovery-router",
+    "title": "Tool discovery router: expose a shortlist with a full-list fallback",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-tool-discovery-router.md",
+    "body": "---\nid: jev-tool-discovery-router\ntitle: \"Tool discovery router: expose a shortlist with a full-list fallback\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Tool discovery router: expose a shortlist with a full-list fallback\n\n## What\n\nA Jev router sits before external MCP tool-schema discovery.\n\n## How Jev fits\n\nThe agent states a needed capability; Jev compares names and descriptions. A confident selected tool exposes its schema, while uncertainty falls back to the full list. The author describes none-of-the-above, large-inventory tournaments and timeout handling.\n\n## Why and impact\n\nCan reduce the tool surface supplied to a writing model while preserving a recovery path.\n\n## Limits and reuse\n\nAuthor explicitly had not measured actual token savings or compaction frequency. A shortlist can exclude the needed tool, and a 0.90 threshold is application policy rather than a guarantee. Read-only restrictions, tool permissions and session recovery must be enforced outside the judgment.\n\n## Sources\n\n- [GitHub - jackbarunz/jev-tool-router: Jev-powered MCP tool routing f...](https://github.com/jackbarunz/jev-tool-router) — access: `fetched`; review: `not_reviewed`.\n- [https://x.com/Barunz5/status/2101778790103810282?s=20](https://x.com/Barunz5/status/2101778790103810282?s=20) — access: `fetched`; review: `not_reviewed`.\n- [https://t.co/aOoAvWIREc](https://t.co/aOoAvWIREc) — access: `not_attempted`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "f19a102cb0523d0f5e7072c123bc025c30d13854cb65901e1dedccebdb9d0f6a"
   },
   {
     "id": "swift-sdk",
@@ -658,6 +758,16 @@
     "path": "docs/use-cases/tweet-trading-sentiment.md",
     "body": "---\nid: tweet-trading-sentiment\ntitle: \"Asset tweets: sentiment-to-action prototype\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Asset tweets: sentiment-to-action prototype\n\n## What\n\nJev-backed system fetches recent asset tweets and returns BUY, SELL or HOLD.\n\n## How Jev fits\n\nAuthor reports about 577 BTC tweets, a BUY suggestion, strong HOLD probability and stop-loss display.\n\n## Why and impact\n\nText sentiment feeds a financial decision interface. Later author cites one selected 15-hour BTC price rise after a BUY suggestion.\n\n## Limits and reuse\n\nNo verified predictive edge, executed return, risk calibration or stop-loss validity. One selected price move does not validate strategy; retain as experimental counterevidence, not investment guidance.\n\n## Sources\n\n- [https://x.com/brainstormity/status/2100772250181947507?s=20](https://x.com/brainstormity/status/2100772250181947507?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.\n- [https://x.com/brainstormity/status/2101008659639672833](https://x.com/brainstormity/status/2101008659639672833) — access: `fetched`; review: `visible_post_text_reviewed`.\n- [https://x.com/brainstormity/status/2101008659639672833?s=20](https://x.com/brainstormity/status/2101008659639672833?s=20) — access: `fetched`; review: `visible_post_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "fe3a626d4351a4160cabd5b913f775ae437b3e4acd76205eeaa88af3db0bd985"
+  },
+  {
+    "id": "clash-royale-yolo-state",
+    "title": "Clash Royale: YOLO/CV supplies state, Jev chooses moves",
+    "category": "games",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/clash-royale-yolo-state.md",
+    "body": "---\nid: clash-royale-yolo-state\ntitle: \"Clash Royale: YOLO/CV supplies state, Jev chooses moves\"\ncategory: games\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Clash Royale: YOLO/CV supplies state, Jev chooses moves\n\n## What\n\nA separate community game controller reports an early winning streak and later 98% wins near 500 trophies.\n\n## How Jev fits\n\nThe author clarifies that images go through YOLOv9 troop detection and a computer-vision pipeline. Jev receives the resulting JSON state, not screenshots.\n\n## Why and impact\n\nConcrete perception/judgment separation: maintain image extraction outside the text-only decision step.\n\n## Limits and reuse\n\nInitial streak and later percentage describe different reports, not a fixed benchmark. Match count, opponent distribution, complete recordings and independent replay remain unresolved. Do not merge this implementation with another author’s earlier near-win demo or infer general player ranking.\n\n## Sources\n\n- [https://x.com/atp_se7en/status/2101871442417905792?s=46](https://x.com/atp_se7en/status/2101871442417905792?s=46) — access: `access_failed`; review: `inaccessible_content_pending`.\n- [https://x.com/atp_se7en/status/2102107698557026683?s=20](https://x.com/atp_se7en/status/2102107698557026683?s=20) — access: `fetched`; review: `not_reviewed`.\n- [Related public project or article](https://x.com/atp_se7en/status/2101871442417905792) — discovered via Discord source (private provenance retained locally); access: `access_failed`; review: `inaccessible_content_pending`.\n- [Related public project or article](https://x.com/atp_se7en/status/2102107698557026683) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "f7ff4434ec1184bd8ce33667455ca63e250fe6d3f61b280e62258be3334a6492"
   },
   {
     "id": "flappy-bird",
@@ -910,6 +1020,16 @@
     "design_source_hash": "01d06ce60681406cea9f35e4393332a576e8360fe71ad5e210c5dd08123421b2"
   },
   {
+    "id": "enterprise-decision-fabric",
+    "title": "Decision Fabric: separate model errors from policy errors",
+    "category": "engineering",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/enterprise-decision-fabric.md",
+    "body": "---\nid: enterprise-decision-fabric\ntitle: \"Decision Fabric: separate model errors from policy errors\"\ncategory: engineering\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Decision Fabric: separate model errors from policy errors\n\n## What\n\nAn experimental .NET workflow keeps semantic contracts, typed evidence, deterministic policy and execution separate.\n\n## How Jev fits\n\nJev answers shared-state questions; application gates decide approval, review, denial or escalation. A read-only inspector exposes raw answers and policy reasons for labelled agent-action cases.\n\n## Why and impact\n\nAuthor reports Jev matched 100 of 111 unique case labels and Claude 102. Weighting repeated calls reverses the ranking, showing why the unit of evaluation matters. Both systems exposed a contract gap: an action can be reversible yet highly consequential.\n\n## Limits and reuse\n\nSynthetic cases, one annotator and labels revised after a Jev pilot. Five repeats in one session do not prove long-term stability. Sample has no real side effects, tenancy or production authentication. Upstream identity, authorization and data-access controls are assumed; model judgments do not replace them.\n\n## Sources\n\n- [GitHub - ghubnab99/jev-enterprise-decision-fabric: Architecture for...](https://github.com/ghubnab99/jev-enterprise-decision-fabric) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "f8632b055d0b110e35f7040290754771e11ceeaa0567db19a9b3d4ac72e1305b"
+  },
+  {
     "id": "infer-code-review",
     "title": "Static analysis plus semantic edit review",
     "category": "quality",
@@ -938,6 +1058,16 @@
     "path": "docs/use-cases/tenet.md",
     "body": "---\nid: tenet\ntitle: \"Tenet: natural-language code review rules\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Tenet: natural-language code review rules\n\n## What\n\nCheck agent-written commits against repository conventions.\n\n## How Jev fits\n\nDevelopers define rules in .tenet/config.yml; Jev judges bounded changed-line windows. Code applies thresholds, localizes findings, records clean receipts and feeds results into an agent correction loop.\n\n## Why and impact\n\nTargets semantic conventions that ordinary syntax linting misses.\n\n## Limits and reuse\n\nThe project was early-stage in its post. A passing judgment does not establish functional correctness or replace tests. Source review: Diff-only semantic lint complements tests and whole-program review. Calibrate on held-out examples, inspect repeated threshold crossings, and do not equate faster calls with equal defect recall. Exemptions/baselines and hook bypasses limit enforcement.\n\n## Sources\n\n- [https://github.com/zoidsh/tenet](https://github.com/zoidsh/tenet) — access: `fetched`; review: `repository_documentation_reviewed`.\n- [https://github.com/zoidsh/tenetlint](https://github.com/zoidsh/tenetlint) — access: `fetched`; review: `duplicate_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "0b48a82afd040b53b296adce8061b16c2e11341c61a284a6a4c22b387e37ea86"
+  },
+  {
+    "id": "minecraft-jev-distillation",
+    "title": "Minecraft combat: use Jev labels to train a local classifier",
+    "category": "games",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/minecraft-jev-distillation.md",
+    "body": "---\nid: minecraft-jev-distillation\ntitle: \"Minecraft combat: use Jev labels to train a local classifier\"\ncategory: games\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Minecraft combat: use Jev labels to train a local classifier\n\n## What\n\nAn author reports training local LightGBM classifiers to imitate Jev combat decisions in Minecraft.\n\n## How Jev fits\n\nJev supplies decisions for a labelled dataset; the local model controls the real-time combat loop. The report offers per-tick inputs and comparison views.\n\n## Why and impact\n\nThe author reports approximately 300 ms remote calls from Australia versus approximately 1 ms local decisions. This moves network latency outside the live loop.\n\n## Limits and reuse\n\nThis trains a separate model, not Jev itself. Agreement with the teacher is not proof of good combat decisions, and teacher mistakes can transfer. Saved page text inspected; recording, training data, performance distribution and generalization not independently verified.\n\n## Sources\n\n- [https://aibengineering.github.io/minecraft-jev-distillation/](https://aibengineering.github.io/minecraft-jev-distillation/) — access: `fetched`; review: `post_text_reviewed_media_pending`.\n- [https://x.com/aibengineering/status/2102535795953619127?s=20](https://x.com/aibengineering/status/2102535795953619127?s=20) — access: `fetched`; review: `not_reviewed`.\n- [Related public project or article](https://aibengineering.github.io/minecraft-jev-distillation) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `post_text_reviewed_media_pending`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "fdc27001b63f6d3908bc3d7681923866dcc1affff3bc48ac94deecda5f884515"
   },
   {
     "id": "moddi-2048",
@@ -1098,6 +1228,16 @@
     "path": "docs/use-cases/unwritten-valley.md",
     "body": "---\nid: unwritten-valley\ntitle: \"Unwritten: continuously simulated valley\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Unwritten: continuously simulated valley\n\n## What\n\nLiving-valley website runs character decisions through Jev.\n\n## How Jev fits\n\nAuthor says all inhabitants’ choices have been running live since previous day.\n\n## Why and impact\n\nPersistent simulation can demonstrate emergent behavior from repeated bounded choices.\n\n## Limits and reuse\n\nNo inspected code, stability, costs or quantitative behavior evaluation. Fictional simulation is not prediction of real societies. Source review: Hierarchical options address category-size bias in this design; simulation behavior is not validation of human sociology or calibrated decisions.\n\n## Sources\n\n- [https://unwritten.4bin.ai/](https://unwritten.4bin.ai/) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "d777fd5ab0ffbbb76e68d1341c141fcacb0d1a5ae81b8036f23d691992e648c2"
+  },
+  {
+    "id": "jgrep-test-selection",
+    "title": "jgrep: select potentially affected tests from a diff",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jgrep-test-selection.md",
+    "body": "---\nid: jgrep-test-selection\ntitle: \"jgrep: select potentially affected tests from a diff\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jgrep: select potentially affected tests from a diff\n\n## What\n\nA semantic grep tool extends code-chunk screening to selecting test files that might be affected by a change.\n\n## How Jev fits\n\nOne Noul per candidate asks whether supplied diff evidence affects that test; shared-state requests contain up to 16 chunks. Code returns file locations and probabilities.\n\n## Why and impact\n\nAuthor reports selecting 12% of tests with 92% recall over 60 commits from five repositories, using historically edited tests as the reference set.\n\n## Limits and reuse\n\nTests edited by a patch author are an imperfect proxy for every test that should run. Whole-library checks such as bundle size were missed. This is a subset-selection aid, not evidence that omitted tests are safe to skip in every release. Distinct project from allebee/jevgrep.\n\n## Sources\n\n- [GitHub - kyu1204/jgrep: grep for what code does, not what it's call...](https://github.com/kyu1204/jgrep) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "349e8d574d31d9c030683b94f50fecc1562003ac0311f230f735c2af8b90a348"
   },
   {
     "id": "alessandro-browser",
@@ -1630,6 +1770,16 @@
     "design_source_hash": "750743720b26fc47b4bd420997964bf761a5db295102856dd2385b63c676c53e"
   },
   {
+    "id": "jev-compaction",
+    "title": "jev-compaction: retain original bytes with expandable pointers",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-compaction.md",
+    "body": "---\nid: jev-compaction\ntitle: \"jev-compaction: retain original bytes with expandable pointers\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jev-compaction: retain original bytes with expandable pointers\n\n## What\n\nA context manager uses Jev judgments to retain or hide segments of coding-agent tool output without rewriting their text.\n\n## How Jev fits\n\nOne request asks segment-level relevance, type, role, lifetime and injection questions. Application code stores original bytes, inserts pointers, tracks stale outputs, retrieves by lexical shortlist plus Jev reranking and weighs token savings against prompt-cache disruption.\n\n## Why and impact\n\nAuthor reports unchanged resolution counts of 20/23 in a small paired SWE-bench run, fewer later-needed code segments hidden when using role information and lower request size. The newer design explicitly prices cache invalidation instead of assuming it never happens.\n\n## Limits and reuse\n\nExact byte recovery does not prove lossless task performance: the agent must know to recover omitted evidence. One run per arm, a small task set and planted injection tests are not general guarantees. The original claim that the prefix never invalidates cache is narrower than the later work-area rewrite design.\n\n## Sources\n\n- [GitHub - Waxmell114514/awesome-jev-compaction: A context compactor ...](https://github.com/Waxmell114514/awesome-jev-compaction) — access: `not_attempted`; review: `not_reviewed`.\n- [https://github.com/Waxmell114514/jev-compaction](https://github.com/Waxmell114514/jev-compaction) — access: `fetched`; review: `sections_reviewed`.\n- [https://waxmell114514.github.io/jev-compaction/](https://waxmell114514.github.io/jev-compaction/) — access: `fetched`; review: `not_reviewed`.\n- [Related public project or article](https://waxmell114514.github.io/jev-compaction) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "c5a2f7d037d140144c6feb19575cd42e3a5df9cc9237c660a370332c08c11d86"
+  },
+  {
     "id": "schema-sensitivity",
     "title": "Choice labels and ordering can change probabilities",
     "category": "quality",
@@ -1690,6 +1840,16 @@
     "design_source_hash": "fa9cd7fdaf49818bc710a878d0b122546864116dcc083fad4ea3cb4a924122e3"
   },
   {
+    "id": "jev-ultralightspeed",
+    "title": "Jev Ultralightspeed: throughput claims need batch-quality checks",
+    "category": "developer-tools",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/jev-ultralightspeed.md",
+    "body": "---\nid: jev-ultralightspeed\ntitle: \"Jev Ultralightspeed: throughput claims need batch-quality checks\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jev Ultralightspeed: throughput claims need batch-quality checks\n\n## What\n\nA batch-processing wrapper groups large offline judgment workloads around the existing Jev model.\n\n## How Jev fits\n\nThe reported comparison changes request packing and concurrency while keeping model and question fixed. It targets many independent rows, not one interactive response.\n\n## Why and impact\n\nAuthor reports 30,000 judgments processed in 56 seconds instead of about 30 minutes and the same 89.2% agreement with labels. These are workload-specific author figures, not a new faster Jev model.\n\n## Limits and reuse\n\nQuality depends on how row references, context limits, concurrency and retries are handled. Equal aggregate agreement can hide changed individual answers. Runner, denominator, hardware/network conditions and raw labels need full audit before treating the speed multiplier or zero accuracy loss as established.\n\n## Sources\n\n- [GitHub - collapseindex/jev-ultralightspeed: BRRRRRRRRRRRRRRRRRRRRRR](https://github.com/collapseindex/jev-ultralightspeed) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "961a9ad09ba554b81a94efe18550096b4121d89fab59f8cf0ffe179390ef391c"
+  },
+  {
     "id": "minecraft-ascii",
     "title": "Minecraft: ASCII perception versus symbolic state",
     "category": "Additional reviewed applications",
@@ -1748,6 +1908,16 @@
     "path": "docs/use-cases/olaf-dry-run-trading.md",
     "body": "---\nid: olaf-dry-run-trading\ntitle: \"Trading dry run: short gain claim without validation\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Trading dry run: short gain claim without validation\n\n## What\n\nAuthor feeds real trading data to a simulated run and reports$17 gained within minutes.\n\n## How Jev fits\n\nJev produces decisions on supplied market observations; actual execution not demonstrated.\n\n## Why and impact\n\nShows fast experimental decision loop, not profitable live strategy.\n\n## Limits and reuse\n\nReplies explicitly challenge rising-market and execution assumptions. No out-of-sample result, trading-cost accounting or downside analysis.\n\n## Sources\n\n- [https://x.com/karuri945/status/2100562714376454654?s=20](https://x.com/karuri945/status/2100562714376454654?s=20) — access: `fetched`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "c2a3f5da41555041eba36bbe7849b7e87c6073f9b7c62bc01e6b4436a4dda086"
+  },
+  {
+    "id": "pytest-jev",
+    "title": "pytest-jev: semantic assertions with explicit uncertainty failures",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/pytest-jev.md",
+    "body": "---\nid: pytest-jev\ntitle: \"pytest-jev: semantic assertions with explicit uncertainty failures\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# pytest-jev: semantic assertions with explicit uncertainty failures\n\n## What\n\nA pytest plugin turns meaning-based assertions into typed Jev questions.\n\n## How Jev fits\n\nAll claims about a text share a request. Code interprets probability mass and thresholds, fails uncertain answers and caches results for repeated tests.\n\n## Why and impact\n\nUseful for testing properties that exact substring checks miss. Author reports matching one Claude configuration on 12 example tests; this small demonstration does not establish general judge reliability.\n\n## Limits and reuse\n\nCached reruns test the saved judgment rather than making a fresh independent observation. A confident semantic pass can still be wrong; keep deterministic schema checks and human-labelled false-pass tests. Published speed/cost projections depend on cache and workload.\n\n## Sources\n\n- [GitHub - allebee/pytest-jev: Semantic assertions for pytest: test w...](https://github.com/allebee/pytest-jev) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "8ce2d63fe2997986f8cbf3a73653ecf6dab4ff616a27bc2d7bc30314f9365b27"
   },
   {
     "id": "nifty-paper-trading",
@@ -1880,6 +2050,16 @@
     "design_source_hash": "9aa7511d20b6d240b05a88a1804dfb84818b8b16f61d837d275061017cfe2ecc"
   },
   {
+    "id": "jevometry",
+    "title": "Jevometry: study output distributions under explicit assumptions",
+    "category": "experiments",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/jevometry.md",
+    "body": "---\nid: jevometry\ntitle: \"Jevometry: study output distributions under explicit assumptions\"\ncategory: experiments\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jevometry: study output distributions under explicit assumptions\n\n## What\n\nA toolkit analyses geometry and sensitivity of Jev output distributions.\n\n## How Jev fits\n\nThe author describes parameter perturbation, information-loss and dependency analysis, with Fisher-information and Cramér–Rao calculations under statistical conditions.\n\n## Why and impact\n\nOffers an exploratory way to inspect how typed output distributions move when system inputs or parameters change.\n\n## Limits and reuse\n\nDistribution geometry and theoretical bounds do not establish factual correctness or trustworthy action. The required statistical assumptions, numerical implementation and reproducibility remain unverified. Held as an experimental lead.\n\n## Sources\n\n- [GitHub - Kunyanli230/Jevometry: an Information-Geometric Analysis T...](https://github.com/Kunyanli230/Jevometry) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "15bbe20a9df1fee94d6af969f8128b1b06c377f1cdf0b06f4973f7c117dac134"
+  },
+  {
     "id": "visitor-page-routing",
     "title": "Website visitors: intent-to-page routing",
     "category": "Additional reviewed applications",
@@ -1908,6 +2088,26 @@
     "path": "docs/use-cases/hedgehog-proposed.md",
     "body": "---\nid: hedgehog-proposed\ntitle: \"Hedgehog: proposed Jev integration into a coding builder\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Hedgehog: proposed Jev integration into a coding builder\n\n## What\n\nA builder author expresses interest in adding TypeSafe to Hedgehog.\n\n## How Jev fits\n\nThe inspected repository describes dependency graphs, mechanical phase gates and deterministic scaffolding. The Discord post proposes TypeSafe integration without specifying an implemented Jev decision.\n\n## Why and impact\n\nPotential placement is a bounded judgment inside an existing orchestration workflow; that placement is an editorial proposal.\n\n## Limits and reuse\n\nThe source does not establish a working Jev integration. Repository features must not be attributed to Jev. Keep this case out of demonstrated-integration retrieval.\n\n## Sources\n\n- [https://github.com/skyf0xx/hedgehog](https://github.com/skyf0xx/hedgehog) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "78ffe5d8da2116bc607c7967656e21c28f73a0a04f32e72b8d08c7784a66446f"
+  },
+  {
+    "id": "redteam-observatory",
+    "title": "Observatory: inspect guardrail false positives and missed attacks",
+    "category": "security",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/redteam-observatory.md",
+    "body": "---\nid: redteam-observatory\ntitle: \"Observatory: inspect guardrail false positives and missed attacks\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Observatory: inspect guardrail false positives and missed attacks\n\n## What\n\nAn experimental workbench helps authors define, test and share Jev guardrail policies.\n\n## How Jev fits\n\nUsers compare policies with matched attack and legitimate-behavior examples. The interface separates authored expectations, native model answers, application decisions and missing results.\n\n## Why and impact\n\nEncourages inspection of both missed attacks and unnecessary blocking instead of trusting one aggregate score.\n\n## Limits and reuse\n\nSynthetic test exploration is not a security certification. Public page text describes behavior, but live runs, implementation and test-label quality were not independently evaluated. A displayed chart or saved artifact is not proof of deployed enforcement.\n\n## Sources\n\n- [Observatory — Put your AI’s rules to the test.](https://redteam-observatory.wizard.chatgpt.site/) — access: `fetched`; review: `landing_page_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "8e85bcc583654ac4a0a2b83521c4104b25f102b6dd8ac7c2c3c04a3153fe34d7"
+  },
+  {
+    "id": "codeeagle-jev",
+    "title": "CodeEagle: propose candidates before asking for a judgment",
+    "category": "retrieval",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/codeeagle-jev.md",
+    "body": "---\nid: codeeagle-jev\ntitle: \"CodeEagle: propose candidates before asking for a judgment\"\ncategory: retrieval\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# CodeEagle: propose candidates before asking for a judgment\n\n## What\n\nA project uses optional Jev steps for speaker adjudication, topic relationships and search reranking, with a reusable Go client.\n\n## How Jev fits\n\nDeterministic or inexpensive logic proposes candidates; focused questions judge supplied evidence; application thresholds decide whether to accept or leave an item unidentified.\n\n## Why and impact\n\nThe author reports narrower yes/no questions worked better for the intended relation task than broad multi-way classification, and reranking improved three of five example queries. Leaving an uncertain speaker unnamed avoids silently assigning a wrong identity.\n\n## Limits and reuse\n\nThe reported six-way accuracy and binary AUC are different metrics and tasks, not directly comparable percentages. Small local corpora, repeat-call variation and inaccurate state fields remain. A sharply separated distribution is not by itself a calibration result; no independent reproduction.\n\n## Sources\n\n- [CodeEagle/docs/jev.md at main · imyousuf/CodeEagle](https://github.com/imyousuf/CodeEagle/blob/main/docs/jev.md) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "9574f876a68434ca4082bc26774394766b3a894b9d9189a40907dfaaa292fb04"
   },
   {
     "id": "hollow-knight-probe",
@@ -1970,6 +2170,16 @@
     "design_source_hash": "1fb119fa97817812337b50113f1cc5052601aa830fa1966eb395b6030024c067"
   },
   {
+    "id": "jev-trip",
+    "title": "Jev Trip: generative planning with bounded screening",
+    "category": "consumer",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-trip.md",
+    "body": "---\nid: jev-trip\ntitle: \"Jev Trip: generative planning with bounded screening\"\ncategory: consumer\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jev Trip: generative planning with bounded screening\n\n## What\n\nA one-day travel planner explores a division between open-ended itinerary creation and bounded judgments.\n\n## How Jev fits\n\nA writing model proposes and revises the plan. Jev screens places, compares transport candidates and reviews supplied plan evidence. Code owns route calculations, timings, validation and execution constraints.\n\n## Why and impact\n\nProvides a concrete hybrid pattern: let the writer propose a plan, then use typed checks and deterministic constraints before presenting it.\n\n## Limits and reuse\n\nEarly experiment; no measured travel-plan quality or verified real-world availability. Jev cannot infer current opening hours, journey times or booking facts absent from state. Preserve fallback and review for conflicting or missing information.\n\n## Sources\n\n- [GitHub - liaoyuhua/jev-trip: Two Minds, One Trip.](https://github.com/liaoyuhua/jev-trip) — access: `fetched`; review: `not_reviewed`.\n- [Jev Trip — Two Minds, One Trip](https://jev-trip.vercel.app/?utm_source=chatgpt.com) — access: `fetched`; review: `not_reviewed`.\n- [GitHub - liaoyuhua/jev-trip: Two Minds, One Trip.](https://github.com/liaoyuhua/jev-trip?utm_source=chatgpt.com) — access: `fetched`; review: `not_reviewed`.\n- [Jev Trip — Two Minds, One Trip](https://jev-trip.vercel.app/) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "18efad9d2f2c2a2a17119330b2db1ef0f6db1dde76e7cfea6ddb8a5ca188e4bc"
+  },
+  {
     "id": "pr-judge",
     "title": "PR Judge: typed pull-request verdicts",
     "category": "quality",
@@ -1998,6 +2208,16 @@
     "path": "docs/use-cases/fedspeech.md",
     "body": "---\nid: fedspeech\ntitle: \"FedSpeech: live subtitle analysis\"\ncategory: voice\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# FedSpeech: live subtitle analysis\n\n## What\n\nAnalyze a live press conference through subtitles.\n\n## How Jev fits\n\nThe author describes feeding subtitles into Jev and displaying analysis. Exact questions and upstream subtitle acquisition were not disclosed in the post.\n\n## Why and impact\n\nDemonstrates decisions over a changing text stream; no measured outcome was supplied.\n\n## Limits and reuse\n\nDo not infer native audio/video input or investment forecasting ability from this demo. Source review: Past-conference transcript analysis is not live market prediction. Captured zero-call UI supplies no benchmark. Text and optional keys transit the site backend/providers; do not infer privacy from model type.\n\n## Sources\n\n- [https://fedspeech.pages.dev/](https://fedspeech.pages.dev/) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "fa46a4fe92284ae69193e2a98baf1c88c4778852e423cc1cfe6f07ca1679fb48"
+  },
+  {
+    "id": "filelathe",
+    "title": "Filelathe: select a viewer, generate only when needed",
+    "category": "interfaces",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/filelathe.md",
+    "body": "---\nid: filelathe\ntitle: \"Filelathe: select a viewer, generate only when needed\"\ncategory: interfaces\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Filelathe: select a viewer, generate only when needed\n\n## What\n\nA file-viewing application separates deterministic type detection, bounded layout selection and optional generated viewers.\n\n## How Jev fits\n\nKnown player matches resolve in code first. Jev chooses catalog layout candidates or invent-versus-inspect for unknown input. Haiku generates only within the invention catalog; validation, one repair and Text/Hex fallback remain in the host.\n\n## Why and impact\n\nShows how bounded model decisions can reduce how often a generative step is needed while keeping an inspectable fallback.\n\n## Limits and reuse\n\nJev selects candidates; it does not invent an emulator or generate the Spec. Catalog/schema checks do not prove arbitrary generated viewer behavior is safe. README architecture inspected; live app, full code and security not audited. Measure actual traffic before claiming savings.\n\n## Sources\n\n- [Filelathe — open XM, PDF, CSV, images & more in your browser](https://filelathe.com/) — access: `fetched`; review: `not_reviewed`.\n- [https://github.com/rhelmer/filelathe#jev-vs-haiku](https://github.com/rhelmer/filelathe#jev-vs-haiku) — access: `fetched`; review: `sections_reviewed`.\n- [GitHub - rhelmer/filelathe](https://github.com/rhelmer/filelathe) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "193a5824d4f75cf54a5359407324a391245b455e62c65e64bbcc81720945fbb9"
   },
   {
     "id": "doom-launch",
@@ -2216,8 +2436,8 @@
     "default_retrieval": true,
     "evidence_role": "community_tool",
     "path": "docs/use-cases/daf-jev.md",
-    "body": "---\nid: daf-jev\ntitle: \"daf-jev: composable Python decision toolkit\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# daf-jev: composable Python decision toolkit\n\n## What\n\nA Python toolkit wraps Jev with builders, gates, routing, evaluation, calibration, CLI, skill and MCP interfaces.\n\n## How Jev fits\n\nTyped API calls feed reusable decision-composition helpers and concurrent corpus evaluation.\n\n## Why and impact\n\nAuthors report up to about 18× batching speedup and fourfold token reduction versus sequential calls in their tests.\n\n## Limits and reuse\n\nToolkit and paper claims were not independently reproduced. Repeated confidence consistency is not equivalent to calibration against outcomes. Source review: Zenodo abstract reports batching results, but PDF/artifacts require inspection; repeated-confidence consistency is not empirical calibration. Source review: Calibration utilities can accept ground truth, but supplied benchmark does not establish correctness calibration. Default fallback must be chosen per application; never infer API success from exit0 skip. API question/context limits still apply to batches.\n\n## Sources\n\n- [https://github.com/docxology/daf-jev](https://github.com/docxology/daf-jev) — access: `fetched`; review: `readme_reviewed`.\n- [https://zenodo.org/records/22817425](https://zenodo.org/records/22817425) — access: `fetched`; review: `provider_listing_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "b63ab325a3f59fa146fe4dba9facbf8e65a3fb0dd69eb491deaca277eb376bfe"
+    "body": "---\nid: daf-jev\ntitle: \"daf-jev: composable Python decision toolkit\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# daf-jev: composable Python decision toolkit\n\n## What\n\nA Python toolkit wraps Jev with builders, gates, routing, evaluation, calibration, CLI, skill and MCP interfaces.\n\n## How Jev fits\n\nTyped API calls feed reusable decision-composition helpers and concurrent corpus evaluation.\n\n## Why and impact\n\nAuthors report up to about 18× batching speedup and fourfold token reduction versus sequential calls in their tests.\n\n## Limits and reuse\n\nToolkit and paper claims were not independently reproduced. Repeated confidence consistency is not equivalent to calibration against outcomes. Source review: Zenodo abstract reports batching results, but PDF/artifacts require inspection; repeated-confidence consistency is not empirical calibration. Source review: Calibration utilities can accept ground truth, but supplied benchmark does not establish correctness calibration. Default fallback must be chosen per application; never infer API success from exit0 skip. API question/context limits still apply to batches. September 23 author update reports v0.6 integration with Generalized Notation Notation for typed, rendered Bayesian graphs. This is an integration claim, not evidence that separately elicited Jev probabilities satisfy a coherent joint distribution; graph checks and empirical outcomes remain necessary.\n\n## Sources\n\n- [https://github.com/docxology/daf-jev](https://github.com/docxology/daf-jev) — access: `fetched`; review: `readme_reviewed`.\n- [https://zenodo.org/records/22817425](https://zenodo.org/records/22817425) — access: `fetched`; review: `provider_listing_reviewed`.\n- [Jev in Practice: A Composable Python Toolkit for TypeSafe's System ...](https://zenodo.org/records/22921974) — access: `fetched`; review: `not_reviewed`.\n- [GitHub - ActiveInferenceInstitute/Generalized_Notation_Notation: Me...](https://github.com/ActiveInferenceInstitute/Generalized_Notation_Notation) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "77b8faa76bcec9459cedc51bf756aa719cfcf84cfb984901056898d872cd8525"
   },
   {
     "id": "legal-response-gate",
@@ -2288,6 +2508,16 @@
     "path": "docs/use-cases/terminal-guard-ctf.md",
     "body": "---\nid: terminal-guard-ctf\ntitle: \"JevGuard: shell-vetting CTF\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# JevGuard: shell-vetting CTF\n\n## What\n\nA challenge app places Jev before commands in an isolated sandbox.\n\n## How Jev fits\n\nParticipants can vary the vetter and test whether command decisions can be bypassed.\n\n## Why and impact\n\nUseful adversarial-testing concept for probabilistic guardrails.\n\n## Limits and reuse\n\nThe saved challenge screenshot shows a direct flag-read command blocked, followed by an allowed script-write and script-execution sequence that displays the synthetic flag. This is observed demonstration evidence of a multi-step bypass, not an independently repeated attack. Per-command judgments cannot establish secure containment without stateful controls. This project is distinct from the jev-guard harness repository and the Android APK app.\n\n## Sources\n\n- [https://jevguard.vercel.app/](https://jevguard.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "5b9b1434b2bb86c7227f49c96025173a876d7ac2ed89ba237c2719ff04ce13bb"
+  },
+  {
+    "id": "jagged-wikipedia-study",
+    "title": "Wikipedia deletion study: false facts versus hostile instructions",
+    "category": "limitations",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jagged-wikipedia-study.md",
+    "body": "---\nid: jagged-wikipedia-study\ntitle: \"Wikipedia deletion study: false facts versus hostile instructions\"\ncategory: limitations\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Wikipedia deletion study: false facts versus hostile instructions\n\n## What\n\nA source-backed author study varies input design for judging whether Wikipedia deletion discussions ended in deletion.\n\n## How Jev fits\n\nThe harness removes bolded votes, compares judgments with the recorded closing decision and changes one input treatment at a time. A separate follow-up isolates an injected instruction from an injected false claim.\n\n## Why and impact\n\nIn 24 baseline-correct deletion discussions, a false claim that the administrator kept the page changed all 24 answers, while a bare instruction changed one. This distinguishes trusting poisoned evidence from directly following a command.\n\n## Limits and reuse\n\nOne task and model period. Main set has 486 discussions rather than planned 500; the 24-case follow-up was not preregistered. Version attribution was by elimination through the gateway, not a pinned returned version. Results do not establish universal injection rates, date-math ability or cross-question logical consistency. No independent reproduction.\n\n## Sources\n\n- [jagged · Ousama](https://byousama.pages.dev/projects/jagged/) — access: `fetched`; review: `not_reviewed`.\n- [GitHub - zkousama/jagged: A pre-registered test of which parts of T...](https://github.com/zkousama/jagged) — access: `fetched`; review: `sections_reviewed`.\n- [https://x.com/zkousama/status/2102467818881216922](https://x.com/zkousama/status/2102467818881216922) — access: `fetched`; review: `not_reviewed`.\n- [Related public project or article](https://byousama.pages.dev/projects/jagged) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "a1f5d141f40c8ff9c6fc6bd4cd65b7beccc9dbdb605f0f4f6f2bc2461e5abc36"
   },
   {
     "id": "eve-commander",
@@ -2446,8 +2676,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/jevctl.md",
-    "body": "---\nid: jevctl\ntitle: \"jevctl: composable judgment CLI and agent plugin\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# jevctl: composable judgment CLI and agent plugin\n\n## What\n\nCLI exposes typed judgment workflows with probabilities and exit codes.\n\n## How Jev fits\n\nCommands cover evidence verification, screening, classification, regex extraction, matching, routing, retrieval, transcript compaction and concurrent batches; supports multiple provider routes and Claude Code plugin.\n\n## Why and impact\n\nReusable toolkit may avoid building repeated API plumbing.\n\n## Limits and reuse\n\nCommand semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting. Later session-hook discussion warns frequent compaction can disrupt prompt-cache reuse. Reported 40–60% context reduction does not establish token billing savings or lossless task performance.\n\n## Sources\n\n- [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `page_reviewed`.\n- [https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md](https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "a31083350580880a2fc96aa2f4aa841b4f10c1b9b1a39f9c0942f84fe4198c3d"
+    "body": "---\nid: jevctl\ntitle: \"jevctl: composable judgment CLI and agent plugin\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jevctl: composable judgment CLI and agent plugin\n\n## What\n\nCLI exposes typed judgment workflows with probabilities and exit codes.\n\n## How Jev fits\n\nCommands cover evidence verification, screening, classification, regex extraction, matching, routing, retrieval, transcript compaction and concurrent batches; supports multiple provider routes and Claude Code plugin.\n\n## Why and impact\n\nReusable toolkit may avoid building repeated API plumbing.\n\n## Limits and reuse\n\nCommand semantics, extraction guarantees and provider compatibility require source review. Screening is fallible; compaction must be evaluated for lost context. Compaction docs say Jev sees tool-output size notes rather than full outputs and may abridge old state to fit its budget. Keeping retained text verbatim does not prove important content was never dropped. Source review: Closed spans prevent fabricated extraction strings but can select wrong candidate or omit missing spans. Source support judgments are not correctness proof. Exit status blocks downstream commands only with correct shell control flow; a pipe alone does not stop later consumers. Compaction can lose needed evidence even without rewriting. Later session-hook discussion warns frequent compaction can disrupt prompt-cache reuse. Reported 40–60% context reduction does not establish token billing savings or lossless task performance. Later announcements repeat the same CLI and plugin capabilities. Extraction remains candidate selection, and the site’s shell example uses conditional control flow; a nonzero status in a pipe alone is not enforcement. Download counts and illustrative reduction cards add no independent correctness evidence.\n\n## Sources\n\n- [https://jevcli.vectorz.app/](https://jevcli.vectorz.app/) — access: `fetched`; review: `landing_page_reviewed`.\n- [https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md](https://github.com/Nasrallah-AL/jev-cli/blob/main/docs/compact.md) — access: `fetched`; review: `source_text_reviewed`.\n- [GitHub - Nasrallah-AL/jev-cli: Command-line tool for TypeSafe's Jev...](https://github.com/Nasrallah-AL/jev-cli) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "1fc1d42d96ec8f363c14bec63a4eb3dde3c11cb1a5b3a9f2755dd313bffced3b"
   },
   {
     "id": "dating-signals",
@@ -2528,6 +2758,16 @@
     "path": "docs/use-cases/sec-squawk.md",
     "body": "---\nid: sec-squawk\ntitle: \"SEC filings: semantic event screening\"\ncategory: finance-experiments\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# SEC filings: semantic event screening\n\n## What\n\nDetect filing events and changes for a market-information feed.\n\n## How Jev fits\n\nJev classifies signals such as buybacks, insider trades and meaningful quarter-over-quarter differences from supplied filings.\n\n## Why and impact\n\nAuthor reports approximately $2.75 for quarter-over-quarter comparisons across 100 companies and $0.15/day for filings across a roughly 1,000-company watchlist. These are workload-specific costs; separate LLM analysis remains necessary.\n\n## Limits and reuse\n\nEvent detection is separate from price prediction. No labeled evaluation or complete filing coverage was supplied.\n\n## Sources\n\n- [https://x.com/Anot/status/2100425243269468583](https://x.com/Anot/status/2100425243269468583) — access: `fetched`; review: `visible_post_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "7725afe8ab81e28d746d38afdaf5aca93bdb8f259fabe29627fc9e5caf29bf2f"
+  },
+  {
+    "id": "biyuya-expense-tree",
+    "title": "Biyuya: changing taxonomy traversal versus swapping models",
+    "category": "business",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/biyuya-expense-tree.md",
+    "body": "---\nid: biyuya-expense-tree\ntitle: \"Biyuya: changing taxonomy traversal versus swapping models\"\ncategory: business\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Biyuya: changing taxonomy traversal versus swapping models\n\n## What\n\nAn author compares three expense-classification workflows over a purpose-based tree of 630 categories.\n\n## How Jev fits\n\nThe comparison keeps test expenses fixed and separates a Jev replacement inside the old workflow from a redesigned level-by-level category traversal.\n\n## Why and impact\n\nOn 3,600 AI-generated expenses, author reports 54.5% exact accuracy for the original model, 54.2% for the Jev swap and 58.5% for Jev with the new traversal. The design change, rather than the model swap alone, produced the reported gain.\n\n## Limits and reuse\n\nSynthetic generated expenses and category labels may not represent real users. Raw labels, full runner and calibration evidence were not supplied in this captured post; attached demonstration remains uninspected. Faster classification does not establish accounting correctness.\n\n## Sources\n\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "4e92b1b13eba6e5190fbeae0bf7775b397e59df9eb7a7232aff77e0177a31912"
   },
   {
     "id": "clippy",
@@ -2670,14 +2910,24 @@
     "design_source_hash": "7e08aacb113948aba5c45e13be656241ddf69eee8c64b377e7745b6eb7828ef1"
   },
   {
+    "id": "jev-creature-forge",
+    "title": "Creature Forge: typed traits become deterministic SVG anatomy",
+    "category": "creative",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-creature-forge.md",
+    "body": "---\nid: jev-creature-forge\ntitle: \"Creature Forge: typed traits become deterministic SVG anatomy\"\ncategory: creative\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Creature Forge: typed traits become deterministic SVG anatomy\n\n## What\n\nA creative prototype builds a creature from explicit prompt facts and bounded semantic decisions.\n\n## How Jev fits\n\nChoice, Noul and Score questions fill an inspectable genome in stages. Code owns constraints, anatomy and rendering; per-part provenance distinguishes literal input, model inference, rules and local edits.\n\n## Why and impact\n\nAn example of visual output without asking Jev to generate an image or SVG text. Existing genomes can render and replay without another model call.\n\n## Limits and reuse\n\nFinite parts and approximate geometry limit expression. Reported constraint checks on a small prompt sample are not semantic-accuracy or visual-quality measures. Live demo/media not inspected; valid typed anatomy can still represent the prompt poorly.\n\n## Sources\n\n- [GitHub - Amine-LG/jev-creature-forge: Typed semantic creature compi...](https://github.com/Amine-LG/jev-creature-forge) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "1c625c48109d8426725cb7a55b5175f6127227a4462c2daaaa9c1963dab3c443"
+  },
+  {
     "id": "jevrouter",
     "title": "JevRouter: tool shortlist",
     "category": "agents",
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/jevrouter.md",
-    "body": "---\nid: jevrouter\ntitle: \"JevRouter: tool shortlist\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# JevRouter: tool shortlist\n\n## What\n\nJevRouter proposes routing among models, tools and subagents with Jev.\n\n## How Jev fits\n\nIts benchmark compares Jev serial routing against DeepSeek V4.1 Flash on first-five-tool-call predictions for ten tasks.\n\n## Why and impact\n\nThe page reports 38% position-wise hits versus 24% baseline, 1.58 versus 8.65 seconds per task and lower estimated cost.\n\n## Limits and reuse\n\nThe headline 99.97% token saving is explicitly directional and workflow-dependent; it compares a different baseline from the tool-call benchmark.\n\n## Sources\n\n- [http://jevrouter.co/](http://jevrouter.co/) — access: `fetched`; review: `source_text_reviewed`.\n- [https://github.com/BillionsBobby/JevRouter](https://github.com/BillionsBobby/JevRouter) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "e809daa7386fd70da346e13cdd60bd9fbccd0f229a809bfd55e135ad1209f12c"
+    "body": "---\nid: jevrouter\ntitle: \"JevRouter: tool shortlist\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# JevRouter: tool shortlist\n\n## What\n\nJevRouter proposes routing among models, tools and subagents with Jev.\n\n## How Jev fits\n\nIts benchmark compares Jev serial routing against DeepSeek V4.1 Flash on first-five-tool-call predictions for ten tasks.\n\n## Why and impact\n\nThe page reports 38% position-wise hits versus 24% baseline, 1.58 versus 8.65 seconds per task and lower estimated cost.\n\n## Limits and reuse\n\nThe headline 99.97% token saving is explicitly directional and workflow-dependent; it compares a different baseline from the tool-call benchmark. September 24 README adds mixed-primitive evaluation, sequence search, explicit decision receipts and execution feedback. Its decompose/thread configuration reports 44% positional tool hits on the cited small routing evaluation; this remains distinct from end-to-end task success. The dashboard correctly leaves outcomes uncollected until host feedback exists. Repeated announcements and repository stars do not add independent validation.\n\n## Sources\n\n- [http://jevrouter.co/](http://jevrouter.co/) — access: `fetched`; review: `source_text_reviewed`.\n- [https://github.com/BillionsBobby/JevRouter](https://github.com/BillionsBobby/JevRouter) — access: `fetched`; review: `sections_reviewed`.\n- [JevRouter — Faster Agent Decisions](https://www.jevrouter.co/) — access: `fetched`; review: `duplicate_landing_page`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "5ede1c508c8f4488b359ca1c06cf3e68d2aa487afceea58e86e6cc65d9cdbb7e"
   },
   {
     "id": "swamp-review-gate",
@@ -2820,6 +3070,16 @@
     "design_source_hash": "5cacca7786e5ac7529d4067b86918394c0fa24874e7f208aba1542a483f2025a"
   },
   {
+    "id": "jev-clean",
+    "title": "jev-clean: judge proposed data repairs, execute them locally",
+    "category": "data",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-clean.md",
+    "body": "---\nid: jev-clean\ntitle: \"jev-clean: judge proposed data repairs, execute them locally\"\ncategory: data\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jev-clean: judge proposed data repairs, execute them locally\n\n## What\n\nAn experimental CSV-cleaning tool separates candidate generation, semantic judgment and deterministic mutation.\n\n## How Jev fits\n\nProfilers and local code propose bounded repairs. Jev answers applicability and ordered-risk questions; policy checks full distributions and deterministic eligibility before an executor commits or rejects a batch. Every outcome gets an evidence-linked audit record.\n\n## Why and impact\n\nOffers an inspectable pattern for accepted, rejected and abstained repairs, with replay and rollback. The model does not write arbitrary cleaning code or silently mutate the original table.\n\n## Limits and reuse\n\nExperimental single-CSV scope with schema and policy inputs. Mocked tests validate application behavior, not live judgment accuracy. Audit hashes establish correspondence to saved evidence, not truth or safety; median/mode imputation can still distort meaning. No independent data-quality evaluation.\n\n## Sources\n\n- [GitHub - Kunyanli230/jev-clean](https://github.com/Kunyanli230/jev-clean) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "30682d8948bb345b1cc64724082689f35fc4ad011f30c55b59ec99281f11b172"
+  },
+  {
     "id": "sat-unsat-advisory",
     "title": "SAT/UNSAT: advisory judgments compared with Z3",
     "category": "quality",
@@ -2828,6 +3088,16 @@
     "path": "docs/use-cases/sat-unsat-advisory.md",
     "body": "---\nid: sat-unsat-advisory\ntitle: \"SAT/UNSAT: advisory judgments compared with Z3\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# SAT/UNSAT: advisory judgments compared with Z3\n\n## What\n\nScreenshot reports a small comparison of TypeSafe judgments with Z3 satisfiability results.\n\n## How Jev fits\n\nSix examples span easy formulas, pigeonhole cases and quantified arithmetic. Full questions and code are not visible.\n\n## Why and impact\n\nReport claims agreement across six rows, with Z3 faster on easy cases and TypeSafe faster on harder cases including one timeout. Potential triage signal before exact checking.\n\n## Limits and reuse\n\nAssistant-generated report screenshot, not reproduced logs. It explicitly calls answers advisory rather than kernel proof. No proof certificates, representative test set or timing fairness audit. Never treat probabilistic SAT/UNSAT judgments as formal verification.\n\n## Sources\n\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "5d133bdab85ffeba22902fadd02009038083f82591bdbfdbeccc86f29d946ab6"
+  },
+  {
+    "id": "jev-oas-sentinel",
+    "title": "OpenAPI Sentinel: review semantic changes hidden in prose",
+    "category": "developer-tools",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-oas-sentinel.md",
+    "body": "---\nid: jev-oas-sentinel\ntitle: \"OpenAPI Sentinel: review semantic changes hidden in prose\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# OpenAPI Sentinel: review semantic changes hidden in prose\n\n## What\n\nAn OpenAPI-diff tool checks consumer-facing behavior changes that structural schema comparison may miss.\n\n## How Jev fits\n\nStructural checks and CI policy remain deterministic. Changed operation fragments go to Jev for bounded judgments about retries, pagination, ordering, authorization descriptions or error semantics.\n\n## Why and impact\n\nAdds a semantic review layer around existing API-contract checks, with CLI, GitHub Action, SARIF output and a no-key dry run.\n\n## Limits and reuse\n\nThis is an author-reported implementation. A small semantic-routing benchmark does not establish complete breaking-change recall. Described authorization semantics are not actual authorization enforcement; missing cross-operation context and unchanged external code can remain invisible.\n\n## Sources\n\n- [GitHub - ShuhanSun/jev-oas-sentinel: Catch breaking API behavior hi...](https://github.com/ShuhanSun/jev-oas-sentinel) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "0e33c8ca3e55839de40cdbbdda4dfac3ead667f6ae937f5e77feba30a6d542c2"
   },
   {
     "id": "election-modifier",
@@ -2860,6 +3130,16 @@
     "design_source_hash": "518c476fa188e7a50cd65588b36f6d6d0239110ef5fc963170a2bb6a9f3499f2"
   },
   {
+    "id": "peaks-notes",
+    "title": "Peaks: novelty routing with shadow-mode audits",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/peaks-notes.md",
+    "body": "---\nid: peaks-notes\ntitle: \"Peaks: novelty routing with shadow-mode audits\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Peaks: novelty routing with shadow-mode audits\n\n## What\n\nA conversation-summary tool compares each new chunk with an evolving topic state.\n\n## How Jev fits\n\nJev labels information as new, known or changed; a separate writer updates summaries and names topics. Original sources and an audit journal remain. The README’s default hook runs in shadow mode, letting the writer inspect every turn while recording routing decisions.\n\n## Why and impact\n\nIllustrates how to measure a possible bypass policy before allowing it to skip work. Active mode describes sampled audits of bypassed chunks.\n\n## Limits and reuse\n\nThe announcement describes the intended active flow; the README says the current hook does not yet obtain those skipped-writer savings. Optional evaluator absence means no semantic verdict. Source preservation and atomic summary commits do not prove important content was retained.\n\n## Sources\n\n- [GitHub - RankOneLabs/peaks-notes: Conversation summary](https://github.com/RankOneLabs/peaks-notes) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "f5b0776e99be8205602489ad7dc1f8c91c0a733fb6d8f1104de29757467f0a07"
+  },
+  {
     "id": "jev-align",
     "title": "jev-align: optimize decision criteria with labels",
     "category": "quality",
@@ -2876,8 +3156,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/spritefusion.md",
-    "body": "---\nid: spritefusion\ntitle: \"Sprite Fusion: real-time level construction\"\ncategory: games\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Sprite Fusion: real-time level construction\n\n## What\n\nGenerate a level through constrained spatial decisions.\n\n## How Jev fits\n\nThe author links a writeup of a live game-level experiment using Jev.\n\n## Why and impact\n\nPotential fit where tile or object choices come from an existing vocabulary.\n\n## Limits and reuse\n\nThe captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection. Source review: Five-call terrain demo reports 319–375ms, not sub-100ms. Assets and collision logic come from other tools/code; Jev selects bounded terrain parameters. Sampled video shows character traversing terrain but contains no API trace; visual progress does not establish universal map playability.\n\n## Sources\n\n- [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `article_reviewed`.\n- [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "b32e2293a62de63f3f3e0eb5935bdfceff9beaf4554ee7ea2974fe56b1e16be5"
+    "body": "---\nid: spritefusion\ntitle: \"Sprite Fusion: real-time level construction\"\ncategory: games\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Sprite Fusion: real-time level construction\n\n## What\n\nGenerate a level through constrained spatial decisions.\n\n## How Jev fits\n\nThe author links a writeup of a live game-level experiment using Jev.\n\n## Why and impact\n\nPotential fit where tile or object choices come from an existing vocabulary.\n\n## Limits and reuse\n\nThe captured posts do not establish arbitrary image/code generation or guarantee playable maps; exact constraints require article inspection. Source review: Five-call terrain demo reports 319–375ms, not sub-100ms. Assets and collision logic come from other tools/code; Jev selects bounded terrain parameters. Sampled video shows character traversing terrain but contains no API trace; visual progress does not establish universal map playability. Later article repost describes the same constrained terrain-generation pattern; it does not add a new measured run or remove the earlier playability and latency limits.\n\n## Sources\n\n- [https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev](https://www.spritefusion.com/blog/generating-game-level-in-real-time-with-jev) — access: `fetched`; review: `article_reviewed`.\n- [https://x.com/HugoDuprez/status/2100953089003921543?s=20](https://x.com/HugoDuprez/status/2100953089003921543?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "033369c3fe3db1a87b4dd0b7b817c547635f8a703bbc56ed4602441309957fa7"
   },
   {
     "id": "jeeves",
@@ -2948,6 +3228,16 @@
     "path": "docs/use-cases/football-selfplay.md",
     "body": "---\nid: football-selfplay\ntitle: \"Football self-play\"\ncategory: games\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Football self-play\n\n## What\n\nTwo Jev-controlled players compete in a football-game prototype.\n\n## How Jev fits\n\nEach controller selects actions; both input feeds are visible in the shared demo. Only one player slot per side is Jev-controlled; remaining teammates use ordinary game AI. Host calculates reachable passes and exact aim/power.\n\n## Why and impact\n\nPreview reports ten completed passes and a touchdown.\n\n## Limits and reuse\n\nFirst test only; future CPU-player integration is a plan. No broad game-skill result. Initial controller completed zero passes; action-space and catch-facing changes preceded the reported 6/8 and 4/6 passes across 246 calls averaging 234ms. Media review: Reviewed63 sampled frames. False Start match shows both typed input panels, passing, catches, incomplete passes and final Red Zone win6–0. Only one controlled slot per side; ordinary game AI controls teammates and host computes reachable passes/aim. Single self-play result does not isolate model skill or independently verify aggregate pass/call statistics.\n\n## Sources\n\n- [https://x.com/attractmodeio/status/2100723340021276739?s=46&t=Lue6-owbwjO2j3Lmk4ra-A](https://x.com/attractmodeio/status/2100723340021276739?s=46&t=Lue6-owbwjO2j3Lmk4ra-A) — access: `fetched`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "bc6ee9fabac6cb63c526d63be1d53ced148436a9c81c0e99df600d2460a56f90"
+  },
+  {
+    "id": "kassad",
+    "title": "Kassad: stage-wide guardrail questions with measured failure paths",
+    "category": "security",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/kassad.md",
+    "body": "---\nid: kassad\ntitle: \"Kassad: stage-wide guardrail questions with measured failure paths\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Kassad: stage-wide guardrail questions with measured failure paths\n\n## What\n\nA .NET guardrails library groups stage policies into one Jev request and maps typed answers to application verdicts.\n\n## How Jev fits\n\nASP.NET middleware and an HTTP handler consume allow, flag, review or block decisions. The author links a harness over named injection, toxicity and claim datasets, with threshold-specific measures.\n\n## Why and impact\n\nThe source report preserves practical integration problems: invalid requests, unordered Choice keys, run-to-run variation and a WAF rejection on one prompt.\n\n## Limits and reuse\n\nReported datasets do not by themselves establish guardrail effectiveness or correct labels. Parse keys by name, retain failed calls as failures and measure the enforced policy, not only model answers. One reported 403 does not establish a general provider limit or root cause. No security certification or independent reproduction.\n\n## Sources\n\n- [GitHub - jacob-berendsohn/kassad](https://github.com/jacob-berendsohn/kassad) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "2775b32d261f2fdc0c13141229b949776a497e2ac3324ff8a3485750fb9e2681"
   },
   {
     "id": "ats-experiment",
@@ -3126,8 +3416,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/postneedle.md",
-    "body": "---\nid: postneedle\ntitle: \"Postneedle: feedback while drafting a post\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Postneedle: feedback while drafting a post\n\n## What\n\nFive readings give feedback on a draft’s style before publication.\n\n## How Jev fits\n\nOne request asks Nouls about AI-like wording, humblebrag, engagement bait, lack of substance and conflict. False criteria describe near misses; code changes the UI indicator.\n\n## Why and impact\n\nA small example of contrasting criteria and batched feedback without generating replacement text.\n\n## Limits and reuse\n\nTested by its author on roughly 40 self-written English/Spanish posts. A stylistic score cannot establish authorship or how readers will react. Reported latency/cost are environment-specific; broader validation is absent.\n\n## Sources\n\n- [postneedle.com](https://postneedle.com/) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "b53e73cbfd95f12d66f0d7cb4d3fe75d779798f83eec6e4bc4e8c6ce2a3d1c6c"
+    "body": "---\nid: postneedle\ntitle: \"Postneedle: feedback while drafting a post\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Postneedle: feedback while drafting a post\n\n## What\n\nFive readings give feedback on a draft’s style before publication.\n\n## How Jev fits\n\nOne request asks Nouls about AI-like wording, humblebrag, engagement bait, lack of substance and conflict. False criteria describe near misses; code changes the UI indicator.\n\n## Why and impact\n\nA small example of contrasting criteria and batched feedback without generating replacement text.\n\n## Limits and reuse\n\nTested by its author on roughly 40 self-written English/Spanish posts. A stylistic score cannot establish authorship or how readers will react. Reported latency/cost are environment-specific; broader validation is absent. September 21 update adds account-level text analysis and a Choice over authored verdict sentences. Author reports up to 0.37 drift with ten posts per request and a closer match with five; batch size must be tested on the actual workload. Quoted/media-dependent posts are excluded from the displayed aggregate. Neither style scores nor selected verdicts establish AI authorship.\n\n## Sources\n\n- [postneedle.com](https://postneedle.com/) — access: `fetched`; review: `sections_reviewed`.\n- [@CompleteSkeptic: signal 69/100 | Postneedle](https://postneedle.com/@CompleteSkeptic) — access: `fetched`; review: `demo_interface_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "0d75954ab28dc66e3bed1cd75024d2804f0fbb1ec03639733353a0e6affe98e6"
   },
   {
     "id": "cloaked-fields",
@@ -3200,14 +3490,24 @@
     "design_source_hash": "cb8f8af040f7c2b2c8f5d127054bf20359bd45cf2a9ff2542e044a4cac838f2f"
   },
   {
+    "id": "askgrep",
+    "title": "askgrep: semantic code search with a lexical counterexample",
+    "category": "retrieval",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/askgrep.md",
+    "body": "---\nid: askgrep\ntitle: \"askgrep: semantic code search with a lexical counterexample\"\ncategory: retrieval\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# askgrep: semantic code search with a lexical counterexample\n\n## What\n\nA Rust CLI scores source-code chunks against a natural-language predicate and returns file locations.\n\n## How Jev fits\n\nOne chunk and one question travel in each request; requests run concurrently and content-based results can be reused. The author rejected packing chunks as Choice options after weaker results. A separate writer can inspect retrieved code.\n\n## Why and impact\n\nThe tool makes exhaustive chunk scoring affordable on its measured code tree. Its README also reports a loss: on nine SWE-bench Lite instances, recall@10 was 0.56 versus 1.00 for BM25.\n\n## Limits and reuse\n\nScanning every chunk does not guarantee finding every relevant fact. Literal wording versus an abstract synonym changed recall substantially on a different 120-chunk test. Small, task-specific author evaluations; one model-labelled comparison is explicitly void. Use lexical search and inspect misses, rather than assuming semantic ranking always wins.\n\n## Sources\n\n- [GitHub - fajarhide/askgrep: grep for the questions you cannot write...](https://github.com/fajarhide/askgrep) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "2be62e52055c81d000424d649878f5e9cab8efe550f6dc7e1e1540d0c13a101c"
+  },
+  {
     "id": "project-blackout",
     "title": "Project Blackout: simulated SIEM risk assessment",
     "category": "security",
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/project-blackout.md",
-    "body": "---\nid: project-blackout\ntitle: \"Project Blackout: simulated SIEM risk assessment\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Project Blackout: simulated SIEM risk assessment\n\n## What\n\nA simulated SIEM demonstrates Jev risk decisions.\n\n## How Jev fits\n\nEvents become inputs for risk assessment in a security-monitoring interface.\n\n## Why and impact\n\nProvides an operational dashboard example without claiming live incident handling.\n\n## Limits and reuse\n\nSimulation only; no detection coverage or response-safety evidence. Source review: Synthetic detection success does not establish real-traffic effectiveness or calibration. Keep earlier misses beside final results; repeated checkpoints are correlated. API failure is unknown/stale, not safe; stopping an attack is not remediation.\n\n## Sources\n\n- [https://github.com/the-data-sherpa/project_blackout](https://github.com/the-data-sherpa/project_blackout) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "14d1f13ee6567bdbca287a61981806b74fc1376a20b9b7b73d51938bd24ce2dc"
+    "body": "---\nid: project-blackout\ntitle: \"Project Blackout: simulated SIEM risk assessment\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Project Blackout: simulated SIEM risk assessment\n\n## What\n\nA simulated SIEM demonstrates Jev risk decisions.\n\n## How Jev fits\n\nEvents become inputs for risk assessment in a security-monitoring interface.\n\n## Why and impact\n\nProvides an operational dashboard example without claiming live incident handling.\n\n## Limits and reuse\n\nSimulation only; no detection coverage or response-safety evidence. Source review: Synthetic detection success does not establish real-traffic effectiveness or calibration. Keep earlier misses beside final results; repeated checkpoints are correlated. API failure is unknown/stale, not safe; stopping an attack is not remediation. Later source repost still explicitly calls this a SIEM simulation. It adds no observed real-traffic validation.\n\n## Sources\n\n- [https://github.com/the-data-sherpa/project_blackout](https://github.com/the-data-sherpa/project_blackout) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "007e812c35fb9eb6ab66183d98c6f057f1a4583c828009e3d78a001c7a836e7d"
   },
   {
     "id": "tweet-category-filter",
@@ -3330,6 +3630,16 @@
     "design_source_hash": "9a8fdce6044b1d367e82f8d70c32727781e3f8f08ecc963c65e6f20ed9615f04"
   },
   {
+    "id": "tenuo-safe-upgrade",
+    "title": "safe-upgrade: judgment, workflow and authority are separate",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/tenuo-safe-upgrade.md",
+    "body": "---\nid: tenuo-safe-upgrade\ntitle: \"safe-upgrade: judgment, workflow and authority are separate\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# safe-upgrade: judgment, workflow and authority are separate\n\n## What\n\nA dependency-upgrade example combines Jev decisions, LangGraph execution flow and Tenuo-scoped worker permissions.\n\n## How Jev fits\n\nCode computes eligible actions first. Jev chooses among that set; the runtime validates the label and handles uncertain or failed responses. A separate authorization layer limits each selected worker’s actual tools and resources.\n\n## Why and impact\n\nShows how a useful semantic router can sit inside a workflow without becoming its permission authority. Installation and passing tests alone may miss migration risks, so supplied repository evidence drives bounded review questions.\n\n## Limits and reuse\n\nArticle examples include illustrative response values. Architecture claims and code excerpts do not independently prove complete authorization enforcement, upgrade correctness or performance. Permissions must remain narrower than whatever action the model prefers.\n\n## Sources\n\n- [Jev in practice: typed decisions, scoped authority | Tenuo](https://tenuo.ai/blog/jev-scoped-authority) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "54a81caa1d7a457700be4dfcac99319ab488f6397fbd31836c6dd7c18f16d3cd"
+  },
+  {
     "id": "toy-supported-claim-check",
     "title": "Toy supported-claim versus overclaim check",
     "category": "quality",
@@ -3338,6 +3648,16 @@
     "path": "docs/use-cases/toy-supported-claim-check.md",
     "body": "---\nid: toy-supported-claim-check\ntitle: \"Toy supported-claim versus overclaim check\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Toy supported-claim versus overclaim check\n\n## What\n\nA developer shares a first live Jev test classifying supported statements and overclaims.\n\n## How Jev fits\n\nScreenshot reports one request containing12questions: six supported claims and six overclaims. Full prompts, passages and labels are absent.\n\n## Why and impact\n\nDisplayed report says12/12correct in330ms with1954input/256outputtokens. Suggests a small source-grounding smoke test; real agent reports remain future work in the screenshot itself.\n\n## Limits and reuse\n\nScreenshot of an assistant-generated result report; not independently verified logs.12syntheticexamples cannot establish production accuracy, calibration or robustness.\n\n## Sources\n\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "b3992b90890a2e5ae6c7196643a70154174f9e2b6edbe42570fd8648662dd179"
+  },
+  {
+    "id": "homing-pigeon",
+    "title": "Homing Pigeon: optional email labels before any mailbox action",
+    "category": "productivity",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/homing-pigeon.md",
+    "body": "---\nid: homing-pigeon\ntitle: \"Homing Pigeon: optional email labels before any mailbox action\"\ncategory: productivity\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Homing Pigeon: optional email labels before any mailbox action\n\n## What\n\nA local Gmail inventory adds optional Jev categories and a spam indicator to sender/subject metadata.\n\n## How Jev fits\n\nA Choice selects one of seven categories; a separate Noul adds a spam marker at the application threshold. Guidance is editable. Current README explicitly describes a read-only inventory, not automatic deletion.\n\n## Why and impact\n\nUseful separation between storage accounting, semantic labels and later user action.\n\n## Limits and reuse\n\nHighest-probability classification has no abstention threshold and ties favor the first category; sender/subject alone omits message context. Future mailbox actions were not implemented in the post. Local hosting and token storage need care; no spam accuracy or safe-deletion evidence.\n\n## Sources\n\n- [GitHub - carlosinho/homing-pigeon: Tool for easier search and clean...](https://github.com/carlosinho/homing-pigeon) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "f8deec8c1cfb210bfa85608377850dd0d785b988e4b04e9e58893b91f15f0bea"
   },
   {
     "id": "jevspeak",
@@ -3438,6 +3758,16 @@
     "path": "docs/use-cases/jev-builder.md",
     "body": "---\nid: jev-builder\ntitle: \"Jev Builder: compose requests from text\"\ncategory: interfaces\nevidence: author-reported\nreviewed_on: 2026-09-21\nindependently_reproduced: false\n---\n\n# Jev Builder: compose requests from text\n\n## What\n\nA request-building interface preserves pasted text while producing Jev JSON.\n\n## How Jev fits\n\nThe user selects a typed question template; application code handles escaping and request assembly. The author describes 34 templates and a simple robustness check.\n\n## Why and impact\n\nReduces manual quoting and newline errors when testing transcripts or paragraphs.\n\n## Limits and reuse\n\nTemplate availability and robustness probes do not establish task accuracy. The source report requires local configuration for API execution; no installation or live tool test was performed here.\n\n## Sources\n\n- [collapseindex.github.io](https://collapseindex.github.io/jev-builder/) — access: `fetched`; review: `demo_interface_reviewed`.\n- [github.com](https://github.com/collapseindex/jev-builder) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "4dc9e4e814f41a99389c190b9c1f85e3ab0e34b30a3d5c3925b8647d26167778"
+  },
+  {
+    "id": "sovereign-rag-benchmark",
+    "title": "Legal RAG comparison: corrected baselines and a registry gate",
+    "category": "limitations",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/sovereign-rag-benchmark.md",
+    "body": "---\nid: sovereign-rag-benchmark\ntitle: \"Legal RAG comparison: corrected baselines and a registry gate\"\ncategory: limitations\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Legal RAG comparison: corrected baselines and a registry gate\n\n## What\n\nA community comparison tests remote Jev judgments against local routing, reranking and entailment components for a small UK-statute workload.\n\n## How Jev fits\n\nJev handles bounded routing, passage comparison and support judgments. The local design combines parsers, neural models and an explicit statute registry gate. After a reader inspected the code, the author acknowledged the original router was regex and the reranker used MiniLM rather than the named DistilBERT and ColBERT models, then reported replacements.\n\n## Why and impact\n\nThe strongest reusable lesson is to check executed baselines and isolate the model from deterministic evidence checks. The corrected article acknowledges that standalone DeBERTa also fails the fabricated-statute probe without a registry gate.\n\n## Limits and reuse\n\nDo not reuse original timings as measurements of the models originally named. Current README, article and follow-up give differing routing timings. Local versus gateway execution includes different overhead; the large monthly reranking cost is a scale projection, not a measured bill. Three statutes and a targeted adversarial probe do not establish general legal accuracy or regulatory compliance. No independent reproduction.\n\n## Sources\n\n- [Jev System One vs Specialized Sovereign RAG. An Empirical Benchmark](https://memonsystems.com/journal/jev-system-one-vs-specialized-sovereign-rag-an-empirical-benchmark/) — access: `fetched`; review: `sections_reviewed`.\n- [GitHub - azterizm/jev-vs-sovereign-benchmark](https://github.com/azterizm/jev-vs-sovereign-benchmark) — access: `fetched`; review: `sections_reviewed`.\n- [Related public project or article](https://memonsystems.com/journal/jev-system-one-vs-specialized-sovereign-rag-an-empirical-benchmark) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "1aee74b57fb3de02e8fb8efbe974aa18cd3005c5fdbba5a1d2a14a1e799ec803"
   },
   {
     "id": "colliber-duckdb",
@@ -3560,6 +3890,16 @@
     "design_source_hash": "20dbd9f7df36807d46579b1896d4ee403612d595092acc93fcce2d913d8449dc"
   },
   {
+    "id": "jev-subtitle-qc",
+    "title": "Subtitle QC: flag translation errors without rewriting cues",
+    "category": "quality",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-subtitle-qc.md",
+    "body": "---\nid: jev-subtitle-qc\ntitle: \"Subtitle QC: flag translation errors without rewriting cues\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Subtitle QC: flag translation errors without rewriting cues\n\n## What\n\nA subtitle translator adds a Jev review queue after a separate model produces translations.\n\n## How Jev fits\n\nLocal code preserves cue IDs, order and timestamps and retries missing translations. Jev sees source–translation pairs and answers whether a line needs human review for omission, negation, names, numbers or unsupported additions.\n\n## Why and impact\n\nAuthor reports catching all 65 injected errors with no false positives among 65 clean controls, matching one DeepSeek configuration under the same binary rubric.\n\n## Limits and reuse\n\nAn early synthetic English-to-German test, not a production benchmark or proof of translation quality. Structural cue checks stay in code; Jev flags suspicious lines and does not rewrite them. Real ambiguity, language pairs and natural errors need separate labelled evaluation.\n\n## Sources\n\n- [GitHub - GeekLinkDev/jev-subtitle-translator: Translate SRT subtitl...](https://github.com/GeekLinkDev/jev-subtitle-translator) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "e56234456968d02490c4291fbd90ea37dc6edbf15249b3b1bea51590956a3934"
+  },
+  {
     "id": "mario-port",
     "title": "Rapid Mario harness port",
     "category": "games",
@@ -3608,6 +3948,16 @@
     "path": "docs/use-cases/scam-message-moderation.md",
     "body": "---\nid: scam-message-moderation\ntitle: \"Scam-message moderation: improved, not solved\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Scam-message moderation: improved, not solved\n\n## What\n\nGroup moderation demo flags scam-like messages.\n\n## How Jev fits\n\nBounded judgments drive fire-emoji flags in group chat; visible messages remain present.\n\n## Why and impact\n\nAuthor advertises moderation solved, then accepts correction to improved.\n\n## Limits and reuse\n\nSmall curated examples only; no deletion/ban, precision/recall, adversarial corpus or appeal process demonstrated. Author's promotional solved claim was corrected to improved. Emoji flags do not establish reliable unattended enforcement.\n\n## Sources\n\n- [https://x.com/oxfrancesco_/status/2100595042385584622](https://x.com/oxfrancesco_/status/2100595042385584622) — access: `public_media_extracted`; review: `demo_trace_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "d3727b8c13e25e91a5e390420fd9cb2258035d8f195df94901fa1cac4fe84bf9"
+  },
+  {
+    "id": "jev-paper-radar",
+    "title": "Paper Radar: filter research feeds and label your misses",
+    "category": "filtering",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-paper-radar.md",
+    "body": "---\nid: jev-paper-radar\ntitle: \"Paper Radar: filter research feeds and label your misses\"\ncategory: filtering\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Paper Radar: filter research feeds and label your misses\n\n## What\n\nA daily paper feed uses Jev to judge title/abstract evidence against user interests and publish selected records.\n\n## How Jev fits\n\nEach interest gets a Noul and contribution type gets a Choice; code owns thresholds, feed intake, dates and publishing. Optional prose comes from a separate writer. User labels feed a calibration command.\n\n## Why and impact\n\nThe author reports 501 papers processed in 33 seconds for $0.0196. A separate 299-paper observation found more high-probability hits for concrete interests than for broad comparative claims, suggesting question wording should be tested.\n\n## Limits and reuse\n\nHit counts alone cannot establish precision or recall. The current README includes newer screening claims beyond the original post; those datasets were not independently audited here. Offline demo output uses a heuristic rather than live Jev. Missing abstract evidence or broad interests can hide relevant papers.\n\n## Sources\n\n- [GitHub - Eliot5566/JEV-Paper-Radar: Let Jev read every new arXiv pa...](https://github.com/Eliot5566/JEV-Paper-Radar) — access: `fetched`; review: `sections_reviewed`.\n- [https://eliot5566.github.io/JEV-Paper-Radar/public/](https://eliot5566.github.io/JEV-Paper-Radar/public/) — access: `fetched`; review: `not_reviewed`.\n- [Related public project or article](https://eliot5566.github.io/JEV-Paper-Radar/public) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "26dcefafa15dd58269fff9188b3f9007e49f3d2a5ad147bfab46ceb47b70a314"
   },
   {
     "id": "charlie-holdem",
@@ -3698,6 +4048,16 @@
     "path": "docs/use-cases/monad-kuru-trading.md",
     "body": "---\nid: monad-kuru-trading\ntitle: \"Monad/Kuru: on-chain trading decision demo\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-20\nindependently_reproduced: false\n---\n\n# Monad/Kuru: on-chain trading decision demo\n\n## What\n\nAuthor claims a Jev-driven trading integration with Monad/Kuru; reviewed UI and recording display dry-run mode.\n\n## How Jev fits\n\nJev receives an asset-pair price feed and selects buy/sell; host integration submits orders on a reported 300ms block cadence.\n\n## Why and impact\n\nShows rapid bounded buy/sell decisions and a host trading interface; live transaction execution remains unverified.\n\n## Limits and reuse\n\nRecording explicitly says dry run and shows negative simulated P&L around -5.20% to -5.27%, conflicting with the post claim of real orders. No transaction audit, realized return, unbiased backtest or risk-control validation. Forced buy/sell offers no abstention; roughly 100 ms displayed average does not establish predictive edge.\n\n## Sources\n\n- [https://x.com/jarrodwatts/status/2100356151468585346](https://x.com/jarrodwatts/status/2100356151468585346) — access: `public_media_extracted`; review: `demo_trace_reviewed`.\n- [https://t.co/vwl2SUu4jm](https://t.co/vwl2SUu4jm) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "2be67b27fb63d7ec0772f1c510e38878e9d1d609755bd2c0b15b8b87d114a188"
+  },
+  {
+    "id": "jev-libero",
+    "title": "LIBERO: Jev chooses among physics-previewed robot actions",
+    "category": "robotics",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jev-libero.md",
+    "body": "---\nid: jev-libero\ntitle: \"LIBERO: Jev chooses among physics-previewed robot actions\"\ncategory: robotics\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# LIBERO: Jev chooses among physics-previewed robot actions\n\n## What\n\nA simulation demo uses Jev to select robot actions in three bundled LIBERO tasks.\n\n## How Jev fits\n\nMuJoCo and collision geometry preview candidate moves. Task-derived state feeds layered choices of intent, motion family and one atomic input; code executes then observes again.\n\n## Why and impact\n\nSaved requests, controls and simulator states make individual episodes inspectable. Author records one successful initial-state example per task.\n\n## Limits and reuse\n\nSimulator previews do substantial physical reasoning; Jev does not infer robot dynamics from images. One seed per task is not a success-rate estimate or evidence for real hardware. Replay/media and full runner were not independently executed.\n\n## Sources\n\n- [Jev × LIBERO — Small decisions. Physical outcomes.](https://dimweaker.github.io/jev-libero/) — access: `fetched`; review: `implementation_report_reviewed`.\n- [GitHub - Dimweaker/jev-libero: Fine-grained robot control with Jev,...](https://github.com/Dimweaker/jev-libero) — access: `fetched`; review: `sections_reviewed`.\n- [Related public project or article](https://dimweaker.github.io/jev-libero) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `implementation_report_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "d503dd03cdc1426c62bb87957f1090238ee444ef5e87339760afb4f5fa9ae041"
   },
   {
     "id": "gust-incidents",
@@ -3800,6 +4160,16 @@
     "design_source_hash": "a4d0c30322c0d8e7ae2929a7df22c0729bfb5f028de074ecb673d877311c6bde"
   },
   {
+    "id": "rakitsu-enforced-gate",
+    "title": "Rakitsu: validate actual tool results before the next step",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/rakitsu-enforced-gate.md",
+    "body": "---\nid: rakitsu-enforced-gate\ntitle: \"Rakitsu: validate actual tool results before the next step\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Rakitsu: validate actual tool results before the next step\n\n## What\n\nAn alpha agent IDE adds typed Jev tools and an application-enforced pipeline gate.\n\n## How Jev fits\n\nThe gate reads the tool JSON result, checks bounds and blocks the next stage when data is missing or invalid. A per-finding grounding example asks whether the supplied diff contains the referenced construct.\n\n## Why and impact\n\nAuthor reports catching a run where Jev failed but the writing agent still declared the change safe. The enforced gate rejected that narration. This is a concrete distinction between an agent mentioning a check and code requiring a successful check.\n\n## Limits and reuse\n\nThe fact-checking example still failed to retrieve adequate source pages. Grounding to a diff is not truth verification. The release also reports fixes for non-finite bounds; alpha tooling and examples were not executed or security-audited here.\n\n## Sources\n\n- [https://rakitsu.com/#wallpapers](https://rakitsu.com/#wallpapers) — access: `fetched`; review: `not_reviewed`.\n- [Rakitsu v0.3.0-alpha.8 — Jev tool type + 8 worked examples, secur...](https://github.com/SK-ENT/rakitsu/discussions/98) — access: `fetched`; review: `release_notes_reviewed`.\n- [Rakitsu — The Agent IDE](https://rakitsu.com/) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "1df0fc942f171ac65b1af027a0fbff0600d833285898fafbb9c59bb7c502740d"
+  },
+  {
     "id": "accounting-history",
     "title": "Accounting judgments with rich transaction history",
     "category": "business",
@@ -3830,6 +4200,16 @@
     "design_source_hash": "a8839c28f9a7f5b9247777823438ec6a254051500515fa634fe3844576169587"
   },
   {
+    "id": "jevkit",
+    "title": "jevkit: measured review bands around a voice assistant",
+    "category": "voice",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/jevkit.md",
+    "body": "---\nid: jevkit\ntitle: \"jevkit: measured review bands around a voice assistant\"\ncategory: voice\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# jevkit: measured review bands around a voice assistant\n\n## What\n\nA Python decision layer prepares context, asks typed questions and routes answers into act, confirm or escalate bands.\n\n## How Jev fits\n\nA German voice assistant uses Jev for addressed-speech detection, tool routing and memory checks. Code handles candidate extraction, numeric/date preprocessing, validation, fallback and outcome logs. A guard was rewritten to detect manipulation instead of merely detecting instructions addressed to an assistant.\n\n## Why and impact\n\nAuthor reports the revised guard handled all 14 tested legitimate commands without errors and used 92 labelled cases to revise a decision band. The useful lesson is to measure the actual application path: mocked unit tests had missed false positives.\n\n## Limits and reuse\n\nTiny local labelled sets do not establish broad safety or calibration. The post and current README give different initial command counts; do not combine them into one precise before/after rate. Minimum confidence across judgments is a heuristic, not a calibrated joint-success probability. A guard judgment cannot enforce permissions or guarantee injection resistance.\n\n## Sources\n\n- [GitHub - tegersdorfer-collab/jevkit: Decision kernel for TypeSafe J...](https://github.com/tegersdorfer-collab/jevkit) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "b136262c8fb8bf4ce443950e797084c9b48af8fc3ec1c30d46f7448da33f4aef"
+  },
+  {
     "id": "arcade-arena",
     "title": "Nine arcade games: batched parallel decisions",
     "category": "Additional reviewed applications",
@@ -3838,6 +4218,16 @@
     "path": "docs/use-cases/arcade-arena.md",
     "body": "---\nid: arcade-arena\ntitle: \"Nine arcade games: batched parallel decisions\"\ncategory: Additional reviewed applications\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Nine arcade games: batched parallel decisions\n\n## What\n\nArcade arena runs nine games with Jev controllers.\n\n## How Jev fits\n\nOne API request batches decisions across game states; author reports under $2 per hour. Later update increases claimed parallel batch from nine to 36 games; this means recurring batched decisions, not one call completing entire sessions.\n\n## Why and impact\n\nIllustrates parallel independent questions across multiple simulations.\n\n## Limits and reuse\n\nNo quality, throughput or billing protocol inspected; cost depends on cadence and state sizes.\n\n## Sources\n\n- [https://jev-arena.vercel.app/](https://jev-arena.vercel.app/) — access: `fetched`; review: `source_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "d55608c9b8f65f94cf788768233453227aba60ed58ffb570e8761b740ab685e3"
+  },
+  {
+    "id": "jev-query-linter",
+    "title": "Jev query linter: static checks plus semantic feedback",
+    "category": "developer-tools",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/jev-query-linter.md",
+    "body": "---\nid: jev-query-linter\ntitle: \"Jev query linter: static checks plus semantic feedback\"\ncategory: developer-tools\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jev query linter: static checks plus semantic feedback\n\n## What\n\nA linter reviews Jev request wording and shape, combining static analysis with Jev-powered feedback.\n\n## How Jev fits\n\nThe author provides a CLI and PHP, JavaScript and Python interfaces so developers or coding agents can inspect queries before wider use.\n\n## Why and impact\n\nPotentially useful for discovering malformed structures and ambiguous questions while making query iteration explicit.\n\n## Limits and reuse\n\nA linter judgment does not prove a query works on real inputs. Static validity, semantic criticism and measured task performance are separate. Distinct project from the earlier code-style JevLint case; effectiveness and rules require further source/evaluation review.\n\n## Sources\n\n- [php](https://fox-islam.github.io/jevlint/library.html) — access: `not_attempted`; review: `not_reviewed`.\n- [js](https://fox-islam.github.io/jevlint/javascript.html) — access: `not_attempted`; review: `not_reviewed`.\n- [python](https://fox-islam.github.io/jevlint/python.html) — access: `not_attempted`; review: `not_reviewed`.\n- [https://fox-islam.github.io/jevlint](https://fox-islam.github.io/jevlint) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "71cb77caaa873d1b2a890d448a80aa9b5af6aaa8be8dc817375ef6b1af8a22a3"
   },
   {
     "id": "autark-harness",
@@ -3950,6 +4340,16 @@
     "design_source_hash": "74c0f26ae725dee0080780084848fe030effd8cc3cf3ad37cc8a0fcd7327e2ba"
   },
   {
+    "id": "food-allergy-detector",
+    "title": "Recipe allergen prototype: unknown must not mean absent",
+    "category": "domain-review",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/food-allergy-detector.md",
+    "body": "---\nid: food-allergy-detector\ntitle: \"Recipe allergen prototype: unknown must not mean absent\"\ncategory: domain-review\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Recipe allergen prototype: unknown must not mean absent\n\n## What\n\nA recipe-screening prototype uses typed questions to flag possible allergens and meat ingredients.\n\n## How Jev fits\n\nThe README separates detection from a later ingredient-attribution request and describes a visibly labelled keyword fallback when the provider fails.\n\n## Why and impact\n\nUseful as a counterexample to overclaiming: missing vocabulary or unmatched input should remain unchecked rather than become an assurance of absence.\n\n## Limits and reuse\n\nNot a validated food-safety tool. The README itself notes unvalidated vocabulary, geographic coverage bias and weaker keyword fallback; recipe text cannot establish ingredients, contamination or label accuracy. No clinical or allergen-detection accuracy evidence. Held from default recommendations.\n\n## Sources\n\n- [https://github.com/SysCoder/FoodAllergyDetector](https://github.com/SysCoder/FoodAllergyDetector) — access: `fetched`; review: `sections_reviewed`.\n- [https://faas-sfo3-7872a1dd.doserverless.co/api/v1/web/fn-a6ef956d-73a5-4702-b7c9-d9286272d233/app/http](https://faas-sfo3-7872a1dd.doserverless.co/api/v1/web/fn-a6ef956d-73a5-4702-b7c9-d9286272d233/app/http) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "cd88e7f0d35ffeaf3f3af589e61f2d4e09246a9dac14dbb95e05138debcbf40b"
+  },
+  {
     "id": "startup-validator",
     "title": "Startup idea feedback while typing",
     "category": "consumer",
@@ -4006,8 +4406,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/jevgate.md",
-    "body": "---\nid: jevgate\ntitle: \"Jevgate: maintainability checks during editing\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Jevgate: maintainability checks during editing\n\n## What\n\nA Rust CLI reviews files during development.\n\n## How Jev fits\n\nWatch mode asks about separating responsibilities, simplifying functions and consolidating repeated logic.\n\n## Why and impact\n\nMakes semantic maintainability feedback available in the editing loop. Follow-up reports $0.20 for a whole-codebase review with caching so later CI runs inspect differences. No defect-recall study supplied.\n\n## Limits and reuse\n\nNo defect or productivity benchmark supplied. Suggestions are contextual and should be checked against tests and project architecture.\n\n## Sources\n\n- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "d16665d3046ad360c066651693d8a6485bc8f15c42342eeca1a3d0f1fc2011be"
+    "body": "---\nid: jevgate\ntitle: \"Jevgate: maintainability checks during editing\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Jevgate: maintainability checks during editing\n\n## What\n\nA Rust CLI reviews files during development.\n\n## How Jev fits\n\nWatch mode asks about separating responsibilities, simplifying functions and consolidating repeated logic.\n\n## Why and impact\n\nMakes semantic maintainability feedback available in the editing loop. Follow-up reports $0.20 for a whole-codebase review with caching so later CI runs inspect differences. No defect-recall study supplied.\n\n## Limits and reuse\n\nNo defect or productivity benchmark supplied. Suggestions are contextual and should be checked against tests and project architecture. September 23 v0.5.1 update reports rewritten literal checks clearing 26 of 46 author-labelled false notes without clearing a labelled positive. Uncertain responses stop becoming ordinary notes; a close decision can trigger one focused follow-up. Security scope remains a function plus at most one caller hop, not whole-program data flow or authorization verification. Source, question and model enter the cache key; unchanged-request reuse is not a fresh model check.\n\n## Sources\n\n- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `sections_reviewed`.\n- [https://crates.io/crates/jevgate](https://crates.io/crates/jevgate) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "821c33a312e171c1dc8614b97079e3e68569d0fa1f69bd1f1fefecaeffecd6c6"
   },
   {
     "id": "jaggedness-probe",
@@ -4046,8 +4446,8 @@
     "default_retrieval": true,
     "evidence_role": "implementation_report",
     "path": "docs/use-cases/awesome-jev-typesafe.md",
-    "body": "---\nid: awesome-jev-typesafe\ntitle: \"Awesome Jev: classify and search a project directory\"\ncategory: retrieval\nevidence: author-reported\nreviewed_on: 2026-09-21\nindependently_reproduced: false\n---\n\n# Awesome Jev: classify and search a project directory\n\n## What\n\nA public project directory uses Jev to classify entries and rerank search.\n\n## How Jev fits\n\nThe author describes 59 typed questions per repository, including whether it actually integrates Jev. Generated pages and project data sit alongside human curation and link checks.\n\n## Why and impact\n\nDirect example of Jev organizing a research collection while code owns the index and publishing.\n\n## Limits and reuse\n\nDirectory counts vary by snapshot; listing is not a security review or independent project validation. Claims about first-of-kind status are unsupported. Credentials and reranking must be isolated from public browser assets in any adaptation. Latest source review: The directory and launch post have different dated counts. Typed project tagging and source links aid discovery; model judgments that a repository really calls Jev do not independently verify execution. Performance claims remain attributed to individual projects, and directory membership is not an endorsement.\n\n## Sources\n\n- [github.com](https://github.com/valentynkit/awesome-jev-typesafe) — access: `fetched`; review: `directory_reviewed`.\n- [awesomejev.vercel.app](https://awesomejev.vercel.app/) — access: `fetched`; review: `directory_reviewed`.\n- [x.com](https://x.com/valentynkit/status/2101386629789233450) — access: `fetched`; review: `post_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
-    "design_source_hash": "a4ca381a6efd88421574a03f80fb9aca1effbedda6fad0a89d89937a593a4a37"
+    "body": "---\nid: awesome-jev-typesafe\ntitle: \"Awesome Jev: classify and search a project directory\"\ncategory: retrieval\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Awesome Jev: classify and search a project directory\n\n## What\n\nA public project directory uses Jev to classify entries and rerank search.\n\n## How Jev fits\n\nThe author describes 59 typed questions per repository, including whether it actually integrates Jev. Generated pages and project data sit alongside human curation and link checks.\n\n## Why and impact\n\nDirect example of Jev organizing a research collection while code owns the index and publishing.\n\n## Limits and reuse\n\nDirectory counts vary by snapshot; listing is not a security review or independent project validation. Claims about first-of-kind status are unsupported. Credentials and reranking must be isolated from public browser assets in any adaptation. Latest source review: The directory and launch post have different dated counts. Typed project tagging and source links aid discovery; model judgments that a repository really calls Jev do not independently verify execution. Performance claims remain attributed to individual projects, and directory membership is not an endorsement. Repeated directory announcements consolidated as one source. Directory entries, stars and search classifications are discovery aids, not independent validations of the listed projects.\n\n## Sources\n\n- [github.com](https://github.com/valentynkit/awesome-jev-typesafe) — access: `fetched`; review: `directory_reviewed`.\n- [awesomejev.vercel.app](https://awesomejev.vercel.app/) — access: `fetched`; review: `directory_reviewed`.\n- [x.com](https://x.com/valentynkit/status/2101386629789233450) — access: `fetched`; review: `post_text_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "8ad3ebaad146fdc2af162576bcef63d217caec6d200b6b9ce78eb3eede1d59e8"
   },
   {
     "id": "microphone-mute",
@@ -4088,6 +4488,16 @@
     "path": "docs/use-cases/drive-through.md",
     "body": "---\nid: drive-through\ntitle: \"Voice drive-through assistant\"\ncategory: voice\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# Voice drive-through assistant\n\n## What\n\nInterpret spoken drive-through orders.\n\n## How Jev fits\n\nAuthor reports local nvidia/parakeet-tdt-0.6b-v2 speech recognition; Jev supplies semantic decisions over menu and current order. Reviewed recording shows item additions, quantity corrections, ingredient removals and size changes.\n\n## Why and impact\n\nIllustrates combining specialized speech recognition with rapid semantic decisions.\n\n## Limits and reuse\n\nA34-second recording was reviewed using a local speech transcript and34sampled frames. It shows an ambiguous size-change exchange and subsequent order update; not a full accuracy or latency benchmark. Displayed cumulativeJevcost$.00598 lacks invoice/protocol verification. No payment handling or production reliability test. Speech recognition is a separate component; sampled frames can miss brief events.\n\n## Sources\n\n- [https://x.com/oow2626/status/2101110230000230872?s=46](https://x.com/oow2626/status/2101110230000230872?s=46) — access: `browser_readable`; review: `post_and_transcript_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "13b2704613744f845bb8c77cd99eeb3831747dafecd47aa89516c180a88e09c4"
+  },
+  {
+    "id": "decor-agent-flinch",
+    "title": "Agent flinch: destructive operations still need explicit authority",
+    "category": "security",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/decor-agent-flinch.md",
+    "body": "---\nid: decor-agent-flinch\ntitle: \"Agent flinch: destructive operations still need explicit authority\"\ncategory: security\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Agent flinch: destructive operations still need explicit authority\n\n## What\n\nA coding-agent gate evaluates a proposed destructive tool call before execution.\n\n## How Jev fits\n\nAuthor supplies JSON state to three Nouls and one Choice. Application policy separately classifies the action; shared destructive work requires confirmation of the resolved environment name even when the judge appears confident.\n\n## Why and impact\n\nA reusable boundary: use Jev to interpret intent and context, but keep destructive-action policy and human confirmation in deterministic code.\n\n## Limits and reuse\n\nThis is an attributed integration report, not proof against destructive-agent incidents. A local-looking endpoint can hide shared resources, so environment resolution must come from trusted application data. The captured repository response did not establish code behavior; end-to-end enforcement remains untested.\n\n## Sources\n\n- [GitHub - arober39/decor-agent](https://github.com/arober39/decor-agent) — access: `fetched`; review: `not_reviewed`.\n- [Building the Agent Flinch with Jev and LaunchDarkly](https://dev.to/alexiskroberson/building-the-agent-flinch-with-jev-and-launchdarkly-pg0) — access: `fetched`; review: `not_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "5ea4a7388ab18fde712669e7e2567612a6b6032ae2ee91f4107f2ab0f1ce5b78"
   },
   {
     "id": "tos-search",
@@ -4360,6 +4770,16 @@
     "design_source_hash": "0c9e927c185e8a1a28826105866438ddb868304359d99dbadeef65c4c9a09f7c"
   },
   {
+    "id": "seo-taxonomy-jev",
+    "title": "SEO taxonomy: context, lookup tables and rubric wording",
+    "category": "data",
+    "default_retrieval": false,
+    "evidence_role": "unvalidated_report",
+    "path": "docs/use-cases/seo-taxonomy-jev.md",
+    "body": "---\nid: seo-taxonomy-jev\ntitle: \"SEO taxonomy: context, lookup tables and rubric wording\"\ncategory: data\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# SEO taxonomy: context, lookup tables and rubric wording\n\n## What\n\nAn author reports adapting a search-query taxonomy benchmark to Jev on 325 wine-and-food tourism queries.\n\n## How Jev fits\n\nChoice questions select category and subcategory; a Score rubric measures similarity. Application code supplies a winery-name gazetteer for deterministic region lookup. The author moved away from array-indexed multi-query state.\n\n## Why and impact\n\nReported exact agreement with human labels rose from 67.4% under a strict rubric to 83.4% when world knowledge was allowed and 89.2% with the gazetteer.\n\n## Limits and reuse\n\nThe linked AI-Seobench README documents the general dashboard, not this Jev run or its per-query files; those were offered on request and not obtained. Model-judge similarity scores differ from human-label exact accuracy. A reported absence of off-topic errors on this set does not prove Jev never goes off topic.\n\n## Sources\n\n- [GitHub - Search-Foundry/AI-Seobench: An interactive dashboard to vi...](https://github.com/Search-Foundry/AI-Seobench) — access: `fetched`; review: `context_repository_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "4660eb98c112a76f6022d2eb6db38c08edcbdcba2e663421e4fc40f140ead562"
+  },
+  {
     "id": "geilt-cli",
     "title": "TypeSafe CLI and agent skill by geilt",
     "category": "Additional reviewed applications",
@@ -4388,6 +4808,16 @@
     "path": "docs/use-cases/dspy-typesafeify.md",
     "body": "---\nid: dspy-typesafeify\ntitle: \"DSPy TypeSafeify: typed signature decorator\"\ncategory: Developer tooling\nevidence: author-reported\nreviewed_on: 2026-09-19\nindependently_reproduced: false\n---\n\n# DSPy TypeSafeify: typed signature decorator\n\n## What\n\nA published decorator for DSPy signatures that uses TypeSafe for suitable typed decisions.\n\n## How Jev fits\n\nThe shared project describes routing compatible signature fields through TypeSafe. Exact supported field types and fallback behavior require repository inspection.\n\n## Why and impact\n\nOffers a migration path for existing DSPy programs without rewriting every decision call. A benchmark image was attached, but no numeric gain is established from the message text.\n\n## Limits and reuse\n\nAuthor-described tool and linked repository; attachment benchmark unreviewed. Do not assume arbitrary text generation or every DSPy signature can be replaced. Source review: Hybrid still incurs generative-model charges. Three-ticket experiment and modeled costs cannot establish general speedup or answer-quality equivalence. Media review: Attachment chart covers only3tickets: modeled cost$0.000377→$0.000263 and observed latency2.329s→1.958s. It is not a broad accuracy or production-cost benchmark.\n\n## Sources\n\n- [https://github.com/typesafeainate/dspy-typesafeify](https://github.com/typesafeainate/dspy-typesafeify) — access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "a1b9427ae8b41c8927524cd16638b209dd0551da36193cf897b523f016a4d945"
+  },
+  {
+    "id": "motion-studio",
+    "title": "Motion Studio: bounded animation edits before generative fallback",
+    "category": "creative",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/motion-studio.md",
+    "body": "---\nid: motion-studio\ntitle: \"Motion Studio: bounded animation edits before generative fallback\"\ncategory: creative\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Motion Studio: bounded animation edits before generative fallback\n\n## What\n\nAn animation editor uses Jev to map user requests onto predefined editing operations.\n\n## How Jev fits\n\nTyped checks screen off-topic requests and choose operation/parameter candidates; application code edits a timeline representation. Requests outside the bounded path escalate to Luna; finished changes can be applied by a coding agent.\n\n## Why and impact\n\nAuthor reports most bounded edits completing in under a second. The useful pattern is to expose a constrained intermediate representation instead of regenerating source code for every edit.\n\n## Limits and reuse\n\nProduct speed multipliers are not independent measurements and use different comparisons. Jev does not write arbitrary animation code. Multi-turn handling was under test; unsupported operations require validation or fallback. Live editor was not operated.\n\n## Sources\n\n- [Motion Studio: a visual animation editor for your website](https://motion.dev/studio) — access: `fetched`; review: `landing_page_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "c4ced9ec5af19045b209bc9d5a67e94a6f270da867ebdb314f79e1eed16d5021"
   },
   {
     "id": "scripted-robotics-vision-claim",
@@ -4508,6 +4938,16 @@
     "path": "docs/use-cases/hush-issue-triage.md",
     "body": "---\nid: hush-issue-triage\ntitle: \"Hush: issue triage with abstention\"\ncategory: quality\nevidence: author-reported\nreviewed_on: 2026-09-21\nindependently_reproduced: false\n---\n\n# Hush: issue triage with abstention\n\n## What\n\nA GitHub Action withholds automatic issue triage below configured thresholds.\n\n## How Jev fits\n\nFour typed questions share one Jev request; code decides which verdicts to apply and reports the associated scores.\n\n## Why and impact\n\nThe author reports a first issue falling below thresholds, so no action was posted. This makes doing nothing an explicit outcome.\n\n## Limits and reuse\n\nThe inspected README reports an 800-issue evaluation with 78% default precision, rising to 88% when question labels are excluded; these are author results, not independently reproduced. Duplicate search is capped at 40 candidates. PR handling uses metadata rather than full diffs, and its three-PR sample is too small for a broad claim. Abstention and maintainer review remain important.\n\n## Sources\n\n- [Hush repository](https://github.com/emreozyoruk/hush) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `readme_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
     "design_source_hash": "67459d68cf13da8a819525d16a1258ee4600fe9fc6db662de534f747a6ffc27b"
+  },
+  {
+    "id": "opencode-foreman",
+    "title": "Foreman: workflow supervision can increase total token use",
+    "category": "agents",
+    "default_retrieval": true,
+    "evidence_role": "implementation_report",
+    "path": "docs/use-cases/opencode-foreman.md",
+    "body": "---\nid: opencode-foreman\ntitle: \"Foreman: workflow supervision can increase total token use\"\ncategory: agents\nevidence: author-reported\nreviewed_on: 2026-09-24\nindependently_reproduced: false\n---\n\n# Foreman: workflow supervision can increase total token use\n\n## What\n\nAn OpenCode plugin uses Jev to select the next allowed workflow capability while coding models perform the work.\n\n## How Jev fits\n\nWorkflow configuration defines stages, model choices, required outputs and allowed transitions. Foreman validates stage outputs and persists progress around the Jev routing decision.\n\n## Why and impact\n\nAuthor reports better subjective structure on basic coding prompts, but also 4–6 times baseline token use initially and roughly twice baseline after fixes. The README explicitly warns that extra review and repair stages add model calls.\n\n## Limits and reuse\n\nNo controlled quality benchmark establishes the claimed improvement. A cheap routing call does not imply a cheaper complete workflow. Include writing-model calls, repeated context, reviews and repairs when measuring cost; persistent progress is not proof of task completion.\n\n## Sources\n\n- [GitHub - Harrison97/opencode-foreman: A generic workflow runtime fo...](https://github.com/Harrison97/opencode-foreman) — access: `fetched`; review: `sections_reviewed`.\n\nAccess and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).\n",
+    "design_source_hash": "a882cec596df2383c87cc25a56fc4d3ab74d9b1bd1a84b78ef9b0fdf1db83914"
   },
   {
     "id": "game-state-value-probe",

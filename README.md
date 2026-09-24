@@ -8,7 +8,7 @@ The assistant evaluates the complete exported research library with Jev: every u
 
 ## Try it
 
-**[Open Jev-bot](https://dm6rtlrn56ej8.cloudfront.net/#bot)** · **[Browse 466 use cases](https://dm6rtlrn56ej8.cloudfront.net/#use-cases)**
+**[Open Jev-bot](https://dm6rtlrn56ej8.cloudfront.net/#bot)** · **[Browse 510 use cases](https://dm6rtlrn56ej8.cloudfront.net/#use-cases)**
 
 The hosted app needs no account or API key from visitors. Describe an idea, review its proposed workflow and example request, then leave feedback. The progress spinner runs until the answer arrives or the request fails.
 
@@ -68,13 +68,13 @@ The latest published main-channel capture boundary appears below. The exact last
 <!-- SNAPSHOT-START -->
 | Layer | Frozen snapshot |
 |---|---|
-| Capture cutoff | 20 September 2026, 22:25:06 IST / 16:55:06 UTC |
-| Messages | 4193 unique IDs; 4193 editorially accounted for |
-| Cases | 466; 386 default eligible, 80 held back |
-| External evidence | 1086 URLs; 0 await first disposition; 125 retain content gaps |
-| Media | 430 / 571 attachments inspected |
+| Capture cutoff | 24 September 2026, 16:29:08 IST / 10:59:08 UTC |
+| Messages | 5183 unique IDs; 5183 editorially accounted for |
+| Cases | 510; 421 default eligible, 89 held back |
+| External evidence | 1515 URLs; 385 await first disposition; 525 retain content gaps |
+| Media | 430 / 755 attachments inspected |
 | Bot | Full-library Jev; optional GLM 5.3 writing |
-| S3 | Private backup verified |
+| S3 | Verified private backup from 2026-09-20; later updates not included |
 
 <!-- SNAPSHOT-END -->
 
@@ -118,6 +118,7 @@ scripts/case_designs.py     Resumable prebuilt teaching examples
 scripts/consolidate.py      Offline private-to-public snapshot rebuild
 scripts/stage_capture.py    New/edited-message intake; no automatic collection
 scripts/collect_discord.py  Optional read-only Discord bot history collector
+scripts/import_discord_pages.py Offline import of authorized browser page archives
 scripts/plan_delta_review.py Reuse prior source reviews and cases in private batch packets
 scripts/research_flow.py    Jev comparison, source refresh, GLM drafts and grounding checks
 scripts/evidence.py         Private SQLite evidence search
@@ -191,6 +192,8 @@ changes in `resource-pool/cases.tsv`, then rebuild with `scripts/consolidate.py`
 run the public-content checks before deployment.
 
 `run` sends the staged text and available context to Jev and incurs API usage. Overlap rows are included for review; request/token limits may leave work pending. Cached successful batches are reused on another run with the same batch ID. Predictions remain unverified review suggestions. Collection and triage neither promote sources nor rebuild, deploy or change the public knowledge base. Review the private receipt and queue before promoting a snapshot.
+
+Without bot access, authorized browser captures can be saved privately as MHTML and imported with `scripts/import_discord_pages.py DIRECTORY --cutoff UTC_TIMESTAMP`. The importer uses actual message-content IDs, separates quoted context, preserves variants, checks main-channel page overlap and excludes unrelated channels. It makes no network or model calls and does not advance the checkpoint. Thread reconciliation, source review, media accounting and publication remain explicit steps.
 
 ## Prebuild case examples
 

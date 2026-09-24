@@ -24,3 +24,6 @@ node_modules/
 /:memory:.ses
 
 # Public material is explicitly exported to docs/.
+
+# Academy source is login-gated content; it lives in its own local repository.
+/ultimate-jev-course/

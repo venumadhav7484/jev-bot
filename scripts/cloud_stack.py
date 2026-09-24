@@ -29,7 +29,7 @@ def template():
             {'Effect': 'Allow', 'Action': ['logs:CreateLogStream', 'logs:PutLogEvents'], 'Resource': attr(name+'Logs', 'Arn')},
             {'Effect': 'Allow', 'Action': ['dynamodb:GetItem', 'dynamodb:PutItem', 'dynamodb:UpdateItem', 'dynamodb:DeleteItem'], 'Resource': attr('Jobs', 'Arn')},
             {'Effect': 'Allow', 'Action': ['s3:GetObject'] if name == 'Api' else ['s3:PutObject'],
-             'Resource': sub('arn:${AWS::Partition}:s3:::${Bucket}/jobs/*')}]
+             'Resource': [sub('arn:${AWS::Partition}:s3:::${Bucket}/jobs/*'), sub('arn:${AWS::Partition}:s3:::${Bucket}/cache/*')]}]
         if name == 'Api':
             policy.append({'Effect': 'Allow', 'Action': 'lambda:InvokeFunction', 'Resource': attr('Worker', 'Arn')})
         add(name+'Role', 'IAM::Role', AssumeRolePolicyDocument=trust,

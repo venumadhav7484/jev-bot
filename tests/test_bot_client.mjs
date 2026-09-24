@@ -54,9 +54,33 @@ test('Polling stops after repeated failures or a definitive server answer', asyn
   await assert.rejects(waitForJob('id', () => {}, {fetcher: async () => json(200, {status: 'complete'}), sleep: async () => {}}), ServiceError);
 });
 test('Progress never shows NaN or exceeds the known stages', () => {
-  const stage = 'Jev is evaluating every research passage';
-  for (const p of [{stage, total: 0, completed: 0}, {stage}, {stage, total: 'x', completed: 1}]) assert.equal(progressMessage(p), 'Jev is reviewing the library for your idea…');
-  assert.match(progressMessage({stage, total: 200, completed: 50}), /25%$/);
-  assert.match(progressMessage({stage, total: 10, completed: 10}), /Library review complete/);
+  for (const stage of ['Jev is checking the shortlisted research', 'Jev is evaluating every research passage']) {
+    for (const p of [{stage, total: 0, completed: 0}, {stage}, {stage, total: 'x', completed: 1}]) assert.equal(progressMessage(p), 'Jev is reviewing the most relevant research…');
+    assert.match(progressMessage({stage, total: 200, completed: 50}), /25%$/);
+    assert.match(progressMessage({stage, total: 10, completed: 10}), /Research reviewed/);
+  }
+  assert.match(progressMessage({stage: 'Jev is testing the design'}), /running the proposed design/);
   assert.match(progressMessage({}), /Preparing/);
+});
+
+import {jevAnswerLines, agreement, searchComplete} from '../web/bot-client.mjs';
+import {exampleDesign} from '../web/answer-design.mjs';
+const executed = {route: {type: 'choice', choice: 'refund', confidence: 1, probabilities: {refund: .96, review: .04}},
+  urgent: {type: 'noul', noul: .7}, impact: {type: 'score', score: 1.43, confidence: .35, legend: {0: 'a', 1: 'b', 2: 'c'}, probabilities: {0: 0, 1: .57, 2: .43}}};
+test('Executed answers are summarized from documented fields only', () => {
+  assert.deepEqual(jevAnswerLines(executed).map(l => l.text), ['refund (96%) · confidence 1.00', '70% probability of yes', '1.43 on 0–2 · confidence 0.35']);
+  assert.equal(jevAnswerLines({x: {type: 'choice'}})[0].text, 'Unrecognized answer');
+});
+test('Agreement compares only unambiguous expected values', () => {
+  const questions = {route: {type: 'choice', criteria: {refund: 'x', review: 'y'}}, urgent: {type: 'noul'}};
+  assert.equal(agreement({queue: 'refund', urgent: true}, executed, questions).status, 'match');
+  assert.equal(agreement({queue: 'review', urgent: true}, executed, questions).status, 'differs');
+  assert.equal(agreement({action: 'show at top'}, executed, questions).status, 'unknown');
+});
+test('Designs expose execution only when every example ran', () => {
+  const base = {coverage: {search_complete: true}, judgments: {}, writer: {status: 'success', blueprint: {examples: [{}, {}]}}};
+  assert.equal(exampleDesign({...base, execution: {status: 'complete', examples: [{}, {}]}}).execution.status, 'complete');
+  assert.equal(exampleDesign({...base, execution: {status: 'complete', examples: [{}]}}).execution, null);
+  assert.equal(exampleDesign({...base, coverage: {search_complete: false}}), null);
+  assert.ok(searchComplete({coverage: {full_library_evaluated: true}}));
 });

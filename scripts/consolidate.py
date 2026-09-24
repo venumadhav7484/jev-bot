@@ -149,7 +149,7 @@ Current detailed gaps: `resource-pool/completion-status.md`. S3 backup does not 
     body = readme.read_text()
     start, end = '<!-- SNAPSHOT-START -->', '<!-- SNAPSHOT-END -->'
     if start in body and end in body:
-        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | {cutoff_label} |\n| Messages | {unique} unique IDs; {accounted} editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Full-library Jev; optional GLM 5.3 writing |\n| S3 | {backup_label}; later updates not included |\n\n'''
+        table = f'''\n| Layer | Frozen snapshot |\n|---|---|\n| Capture cutoff | {cutoff_label} |\n| Messages | {unique} unique IDs; {accounted} editorially accounted for |\n| Cases | {n}; {enabled} default eligible, {n-enabled} held back |\n| External evidence | {summary['external_urls']} URLs; {pending} await first disposition; {gaps} retain content gaps |\n| Media | {media['attachments_reviewed']} / {media['unique_urls']} attachments inspected |\n| Bot | Jev shortlist search and re-ranking; optional GLM 5.3 design, run on Jev |\n| S3 | {backup_label}; later updates not included |\n\n'''
         readme.write_text(body.split(start)[0]+start+table+end+body.split(end, 1)[1])
 
 

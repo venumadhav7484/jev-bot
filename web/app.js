@@ -1,8 +1,8 @@
 import {importIdeaFile} from './file-input.mjs';
-import {exampleDesign, runCommand} from './answer-design.mjs?v=20260920-custom-only';
+import {exampleDesign, runCommand} from './answer-design.mjs?v=20260925-executed';
 import {newsRequest, newsPython, newsSource} from './case-examples.mjs';
-import {loadConfig, startJob, waitForJob, progressMessage, sendJson, ServiceError} from './bot-client.mjs?v=20260924-errors';
-import {categories, prepare, short, plain, links, referenceUrls, signal, filterCases, shuffled} from './evidence.mjs?v=20260920-blueprint';
+import {loadConfig, startJob, waitForJob, progressMessage, sendJson, ServiceError, summarizeAnswer, jevAnswerLines, agreement} from './bot-client.mjs?v=20260925-executed';
+import {categories, prepare, short, plain, links, referenceUrls, signal, filterCases, shuffled} from './evidence.mjs?v=20260925-links';
 const $ = id => document.getElementById(id);
 const node = (tag, text, cls) => { const n = document.createElement(tag); if (text != null) n.textContent = text; if (cls) n.className = cls; return n; };
 function link(label, url, cls) { const a = node('a', label, cls); a.href = url; if (/^https?:/.test(url) || url.startsWith('/docs/')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; } return a; }
@@ -240,15 +240,28 @@ function renderBlueprint(design, root) {
   root.append(flow);
   const workspace = node('section', null, 'example-workspace');
   const preview = node('div', null, 'worked-example');
-  preview.append(node('h3', 'See it on an example'), node('p', 'Illustrative preview · no API call', 'muted'));
+  const executed = design.execution;
+  preview.append(node('h3', 'See it on an example'), node('p', executed ? `Jev answers below were executed on ${executed.model}; the expected action is illustrative` : 'Illustrative preview · no API call', 'muted'));
   const tabs = node('div', null, 'example-tabs');
   tabs.setAttribute('role', 'group'); tabs.setAttribute('aria-label', 'Example inputs');
   const input = node('p', null, 'sample-input'), output = node('pre', null, 'sample-output');
   const code = node('div', null, 'request-example');
+  const live = node('div', null, 'jev-result');
   const buttons = [];
   function select(example, index) {
     input.textContent = example.input;
     output.textContent = JSON.stringify(example.output, null, 2);
+    live.replaceChildren();
+    const run = executed?.examples[index];
+    if (run) {
+      live.append(node('p', `JEV RESULT · EXECUTED ON ${executed.model}`, 'eyebrow'));
+      const list = node('ul', null, 'jev-answers');
+      for (const line of jevAnswerLines(run.answers)) { const li = node('li'); li.append(node('strong', line.id), node('span', line.type, 'pill'), node('span', line.text)); list.append(li); }
+      live.append(list);
+      const check = agreement(example.output, run.answers, design.request.questions);
+      if (check.status === 'match') live.append(node('p', 'Jev’s answers lead to the expected action.', 'agree'));
+      else if (check.status === 'differs') live.append(node('p', 'Jev’s answers differ from the expected action: '+check.notes.filter(n => !n.match).map(n => `${n.id} expected ${n.expected}, got ${n.actual}`).join('; ')+'. Tighten the criteria or route this case to review.', 'caution'));
+    }
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
     code.replaceChildren();
     exampleCode(code, 'request.json', JSON.stringify({...design.request, state: example.state}, null, 2));
@@ -257,8 +270,8 @@ function renderBlueprint(design, root) {
     const control = button(example.label, () => select(example, index));
     buttons.push(control); tabs.append(control);
   });
-  preview.append(tabs, node('p', 'INPUT', 'eyebrow'), input, node('p', 'EXPECTED APP ACTION', 'eyebrow'), output);
-  preview.append(node('p', 'Jev returns typed answers. Your application maps them to this action; preview values are not live results.', 'muted'));
+  preview.append(tabs, node('p', 'INPUT', 'eyebrow'), input, node('p', 'EXPECTED APP ACTION', 'eyebrow'), output, live);
+  preview.append(node('p', executed ? 'One run on this example, not a measured accuracy. Test on your own labeled messages before automating.' : 'Jev returns typed answers. Your application maps them to this action; preview values are not live results.', 'muted'));
   workspace.append(preview, code); root.append(workspace); select(design.examples[0], 0);
   const run = node('details', null, 'run-example');
   run.append(node('summary', 'Run this request'), node('p', 'Save JSON as request.json. Run on your computer or server with JEV_API_KEY set. This makes one paid API request. Your application must validate the response and carry out any action; the request alone executes no actions.'));
@@ -277,13 +290,15 @@ async function renderResearch(r) {
   const byPath = new Map(rows.map(row => [row.path, row]));
   const evidence = r.evidence || [];
   const match = evidence.find(row => row.id === r.judgments?.closest_case?.choice);
-  const closest = match && byPath.get(match.path);
-  const ready = Boolean(r.judgments && r.coverage?.full_library_evaluated);
-  const fit = r.judgments?.fit?.choice;
   const design = exampleDesign(r);
-  const title = design?.title || 'Your answer couldn’t be completed';
+  const title = r.needs_detail ? 'Add a little more detail' : design?.title || 'Your answer couldn’t be completed';
   const intro = node('div', null, 'answer-intro');
   intro.append(node('p', 'YOUR IDEA', 'eyebrow'), node('p', r.idea, 'user-idea'), node('h2', title)); root.append(intro);
+  if (r.needs_detail) {
+    root.append(node('p', 'Jev makes typed judgments about information you supply: yes/no, pick one option, or rate on a scale. It does not write text. Say what information comes in, the decision you need, and what should happen next. For example: “Customer emails arrive. Decide refund, shipping or product. Send urgent ones to me first.”'),
+      button('Edit your idea', () => { $('idea').focus(); $('idea').scrollIntoView({behavior: 'smooth', block: 'center'}); }));
+    return;
+  }
   if (!design) {
     root.append(node('p', 'Couldn’t generate a valid design for this idea. Please retry. No substitute example has been shown.'));
     if (r.comparison) {
@@ -291,7 +306,14 @@ async function renderResearch(r) {
     }
     return;
   }
+  const assessment = node('section', null, 'jev-assessment');
+  assessment.setAttribute('aria-label', 'Jev’s assessment of your idea');
+  assessment.append(node('p', 'JEV’S ASSESSMENT · TYPED JUDGMENTS, NOT A GUARANTEE', 'eyebrow'));
+  const cards = node('div', null, 'assessment-grid');
+  for (const [label, value, note] of summarizeAnswer(r)) { const card = node('div'); card.append(node('span', label, 'eyebrow'), node('strong', value), node('p', note)); cards.append(card); }
+  assessment.append(cards); root.append(assessment);
   root.append(node('p', design.tailored ? 'PROPOSED DESIGN · TAILORED TO YOUR IDEA' : 'PROPOSED EXAMPLE PATTERN · ADAPT TO YOUR APP', 'eyebrow'));
+  if (r.coverage?.weak_evidence) root.append(node('p', 'No close project exists in the research library for this idea. This design follows general Jev guidance; test it carefully.', 'caution'));
   renderBlueprint(design, root);
   const cited = new Set((r.narrative || []).flatMap(section => section.paragraphs.flatMap(p => p.citations)));
   const relevant = evidence.filter(row => !cited.size || cited.has(row.id));
@@ -320,6 +342,7 @@ async function renderResearch(r) {
   }
   if (r.narrative?.length) {
     const notes = node('details', null, 'answer-notes'); notes.append(node('summary', 'Why this design'));
+    if (r.writer?.citation_entailment_verified) notes.append(node('p', 'Jev checked each citation against its source; unsupported citations were removed.', 'muted'));
     for (const section of r.narrative) for (const paragraph of section.paragraphs) {
       const p = node('p', paragraph.text);
       const urls = [...new Set(evidence.filter(row => paragraph.citations.includes(row.id)).flatMap(row => publicReferences(row, byPath.get(row.path))))];
@@ -329,7 +352,9 @@ async function renderResearch(r) {
     root.append(notes);
   }
   if (r.comparison) {
-    const usage = node('details', null, 'answer-usage'); usage.append(node('summary', 'Token usage and cost')); renderComparison(r.comparison, usage); root.append(usage);
+    const usage = node('details', null, 'answer-usage'); usage.append(node('summary', 'Token usage and cost'));
+    if (r.reused) usage.append(node('p', 'Reused from an identical recent question: no new model calls. Figures below are from the original run.', 'mode-note'));
+    renderComparison(r.comparison, usage); root.append(usage);
   }
 }
 function renderFeedback(jobId) {
@@ -385,7 +410,7 @@ let researchBusy = false;
 let connectionState = 'loading';
 const selectedMode = () => 'written';
 function updateMode() {
-  $('mode-note').textContent = 'Get a workflow, example request and relevant sources. Your text is sent to Jev and GLM when you submit.';
+  $('mode-note').textContent = 'Get a workflow, example request and relevant sources. Your text is sent to Jev and GLM when you submit; identical questions may reuse an answer for up to 7 days.';
   let message = '';
   if (connectionState === 'loading') message = 'Connecting…';
   else if (connectionState === 'error') message = 'Can’t connect right now. Retry to load answer options.';
@@ -434,8 +459,8 @@ $('ask').addEventListener('submit', async e => {
   try {
     const id = await startJob($('idea').value, selectedMode());
     const result = await waitForJob(id, progress => { $('status').textContent = progressMessage(progress); });
-    await renderResearch(result); renderFeedback(id);
-    $('status').textContent = exampleDesign(result) ? 'Your recommendation is ready.' : 'Couldn’t complete this answer. Please retry.';
+    await renderResearch(result); if (!result.needs_detail) renderFeedback(id);
+    $('status').textContent = result.needs_detail ? 'Add a few details and submit again.' : exampleDesign(result) ? 'Your recommendation is ready.' : 'Couldn’t complete this answer. Please retry.';
     $('result').scrollIntoView({behavior: 'smooth'});
   } catch (err) {
     // A rendering fault must not leave a partial answer or browser error text behind.

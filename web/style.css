@@ -271,3 +271,14 @@ h1{font-size:37px}
 #status.is-loading::before { content: ""; display: block; flex: 0 0 18px; width: 18px; height: 18px; box-sizing: border-box; border: 2px solid #d7e1d8; border-top-color: #23634b; border-radius: 50%; animation: answer-spin .8s linear infinite; }
 @keyframes answer-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { #status.is-loading::before { animation: none; } }
+.jev-assessment{margin:22px 0 28px}
+.assessment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:10px}
+.assessment-grid>div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.assessment-grid strong{display:block;font-size:17px;margin:6px 0}
+.assessment-grid p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+.jev-result{margin-top:16px}
+.jev-answers{list-style:none;padding:0;margin:8px 0 12px;display:grid;gap:8px}
+.jev-answers li{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:#eef3fb;border:1px solid #d5e0ef;border-radius:9px;padding:10px 12px;font-size:14px;overflow-wrap:anywhere}
+.jev-answers strong{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+.agree{font-size:13px;color:var(--green);font-weight:650}
+@media(max-width:760px){.assessment-grid{grid-template-columns:1fr}}

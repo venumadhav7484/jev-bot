@@ -1,15 +1,52 @@
 """AWS HTTP API and asynchronous worker; public assets live behind CloudFront.
 
-Jobs expire after one day. Conditional concurrency slots and a daily quota bound the
+Jobs expire after one day. Complete answers are reused for identical questions for up
+to seven days (S3 lifecycle), keyed by the normalized idea, prompt version and library. Conditional concurrency slots and a daily quota bound the
 public deployment. Only explicitly submitted feedback is logged; ideas, answer
 bodies and provider errors are not logged.
 """
 import base64
+import hashlib
 import json
 import os
 import re
 import time
 import uuid
+
+
+_fingerprint = None
+
+
+def cache_key(idea, mode):
+    """Same idea text, answer mode, pipeline version and research library → same answer."""
+    global _fingerprint
+    import knowledge_corpus
+    from research_answer import PROMPT_VERSION
+    if _fingerprint is None:
+        _fingerprint = knowledge_corpus.load('local')['fingerprint']
+    normalized = ' '.join(idea.split()).casefold()
+    return 'cache/'+hashlib.sha256(json.dumps([PROMPT_VERSION, _fingerprint, mode, normalized]).encode()).hexdigest()+'.json'
+
+
+def reusable(result):
+    """Cache only complete, checked designs; failures and requests for detail are retried."""
+    return (result.get('coverage', {}).get('search_complete') and result.get('judgments')
+            and result.get('writer', {}).get('status') == 'success' and result.get('execution', {}).get('status') == 'complete')
+
+
+def log_outcome(identifier, result, seconds):
+    """Operational metrics only: no idea text, evidence or model output is logged."""
+    rows = {r['provider']: r for r in result.get('comparison', {}).get('rows', [])}
+    print(json.dumps({'event': 'answer_outcome', 'job_id': identifier, 'seconds': seconds,
+        'status': 'needs_detail' if result.get('needs_detail') else 'design' if reusable(result) else
+                  'writer_'+result.get('writer', {}).get('status', 'not_run') if result.get('judgments') else 'no_assessment',
+        'search_complete': bool(result.get('coverage', {}).get('search_complete')),
+        'execution': result.get('execution', {}).get('status', 'not_run'),
+        'citations_removed': result.get('writer', {}).get('citations_removed'),
+        'glm_requests': result.get('writer', {}).get('requests', 1 if 'glm' in rows else 0),
+        'jev_tokens': rows.get('jev', {}).get('tokens', {}).get('total_tokens'),
+        'glm_tokens': rows.get('glm', {}).get('tokens', {}).get('total_tokens'),
+        'usd': result.get('comparison', {}).get('total_estimated_usd')}), flush=True)
 
 
 def clients():
@@ -189,10 +226,22 @@ def api_request(event, context):
             return reply(400, {'error': 'Enter an idea of 3 to 6000 characters and select a supported mode.'})
         if mode == 'written' and os.environ.get('WRITER_AVAILABLE') != 'true':
             return reply(400, {'error': 'Answers are temporarily unavailable. Please try again later.'})
-        db, _, functions = clients()
+        db, s3, functions = clients()
         now = int(time.time())
         identifier = uuid.uuid4().hex
         table = os.environ['TABLE']
+        key = cache_key(idea, mode)
+        try:
+            s3.head_object(Bucket=os.environ['BUCKET'], Key=key)
+            hit = True
+        except Exception:
+            hit = False  # Missing, expired or unreadable: compute a fresh answer.
+        if hit:
+            # A reused answer makes no model calls, so it uses no quota or answer slot.
+            db.put_item(TableName=table, Item=item(pk='job#'+identifier, status='complete', created=now, ttl=now+86400,
+                        deadline=now, progress=json.dumps({'stage': 'Reused answer'}), result_key=key))
+            print(json.dumps({'event': 'answer_reused', 'job_id': identifier}), flush=True)
+            return reply(202, {'id': identifier})
         slot, rejected = claim_job(db, table, identifier, now)
         if rejected:
             return rejected
@@ -217,7 +266,10 @@ def api_request(event, context):
             return reply(200, {'status': 'failed', 'error': 'Research exceeded the hosting time limit. Please retry.'})
         data = {'status': status, 'created': int(job['created']['N']), 'progress': json.loads(job['progress']['S'])}
         if status == 'complete':
-            data['result'] = json.loads(s3.get_object(Bucket=os.environ['BUCKET'], Key='jobs/'+identifier+'.json')['Body'].read())
+            key = job.get('result_key', {}).get('S') or 'jobs/'+identifier+'.json'
+            data['result'] = json.loads(s3.get_object(Bucket=os.environ['BUCKET'], Key=key)['Body'].read())
+            if 'result_key' in job:
+                data['result']['reused'] = True
         elif status == 'failed':
             data['error'] = job.get('error', {}).get('S', 'Research answer failed.')
         return reply(200, data)
@@ -239,15 +291,26 @@ def worker(event, context):
                        ExpressionAttributeValues=item(**{':yes': 1, ':running': 'running', ':now': int(time.time())}))
     except db.exceptions.ConditionalCheckFailedException:
         return
+    started_at = int(time.time())
     try:
         from research_answer import answer
         def progress(value):
             update(db, identifier, progress=json.dumps(value))
         result = answer(event['idea'], event['mode'], 'local', progress)
+        body = json.dumps(result).encode()
         s3.put_object(Bucket=os.environ['BUCKET'], Key='jobs/'+identifier+'.json',
-                      Body=json.dumps(result).encode(), ContentType='application/json', ServerSideEncryption='AES256')
+                      Body=body, ContentType='application/json', ServerSideEncryption='AES256')
         update(db, identifier, status='complete')
+        log_outcome(identifier, result, int(time.time())-started_at)
+        if reusable(result):
+            try:
+                s3.put_object(Bucket=os.environ['BUCKET'], Key=cache_key(event['idea'], event['mode']),
+                              Body=body, ContentType='application/json', ServerSideEncryption='AES256')
+            except Exception:
+                pass  # The answer is already delivered; a missed cache write only costs a recomputation.
     except Exception:
         update(db, identifier, status='failed', error='Couldn’t complete this answer. Please retry.')
+        print(json.dumps({'event': 'answer_outcome', 'job_id': identifier, 'status': 'error',
+                          'seconds': int(time.time())-started_at}), flush=True)
     finally:
         release(db, identifier, slot)

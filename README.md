@@ -14,7 +14,7 @@ The hosted app needs no account or API key from visitors. Describe an idea, revi
 
 ### Run locally
 
-Python 3.11+; standard library only. Full-library modes need `jev_api_key`; written mode also needs `glm_key`. The legacy CLI `--offline` preview needs no key.
+Python 3.11+; standard library only. Jev answer modes need `jev_api_key`; written mode also needs `glm_key`. The legacy CLI `--offline` preview needs no key.
 
 ```sh
 git clone https://github.com/venumadhav7484/jev-bot.git
@@ -73,7 +73,7 @@ The latest published main-channel capture boundary appears below. The exact last
 | Cases | 510; 421 default eligible, 89 held back |
 | External evidence | 1515 URLs; 385 await first disposition; 525 retain content gaps |
 | Media | 430 / 755 attachments inspected |
-| Bot | Full-library Jev; optional GLM 5.3 writing |
+| Bot | Jev shortlist search and re-ranking; optional GLM 5.3 design, run on Jev |
 | S3 | Verified private backup from 2026-09-20; later updates not included |
 
 <!-- SNAPSHOT-END -->
@@ -95,7 +95,7 @@ The latest published main-channel capture boundary appears below. The exact last
 - [Local media processing](docs/media-processing.md): frame extraction, local speech transcription, OCR and editorial review boundaries.
 - [Development checks](docs/development-checks.json): authored scenarios and a live API smoke test, with scope limits.
 
-Both main answer modes evaluate every exported research document before selecting relevant passages. No fixed design-family neighborhood limits the search. Raw messages, unprocessed media, code and credentials in the private archive are not model context. Related cases remain analogies, not evidence that a proposed design will work. The older 11-family template preview remains available only through `--offline`; its tests do not establish general answer accuracy.
+Both main answer modes search every exported research document: BM25 keyword search plus a Jev Choice over all case summaries build a shortlist, and Jev judges each shortlisted passage separately before relevant passages are selected. No fixed design-family neighborhood limits the search. Raw messages, unprocessed media, code and credentials in the private archive are not model context. Related cases remain analogies, not evidence that a proposed design will work. The older 11-family template preview remains available only through `--offline`; its tests do not establish general answer accuracy.
 
 ## How Jev is used
 
@@ -107,7 +107,7 @@ The research pipeline used Choice to categorize contributions and their relation
 docs/                       Sanitized public evidence and bot snapshot
 web/                        Shared hosted and local browser interface
 scripts/jev_bot.py          CLI and legacy offline design preview
-scripts/research_answer.py  Full-library Jev evaluation and answer modes
+scripts/research_answer.py  Jev search, assessment, design checks and answer modes
 scripts/knowledge_corpus.py Local/S3 research-text loading
 scripts/answer_writer.py    GLM 5.3 cited explanation adapter
 scripts/serve_bot.py        Loopback-only web server

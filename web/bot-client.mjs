@@ -10,9 +10,12 @@ export async function loadConfig(fetcher = fetch) {
   return config;
 }
 
+// Older saved answers used full_library_evaluated; newer ones report a completed shortlist search.
+export const searchComplete = result => Boolean(result.coverage?.search_complete ?? result.coverage?.full_library_evaluated);
+
 export function summarizeAnswer(result) {
   const judgments = result.judgments;
-  if (!judgments || !result.coverage?.full_library_evaluated) return [
+  if (!judgments || !searchComplete(result)) return [
     ['Can Jev help?', 'Assessment incomplete', 'No fit recommendation is available yet.'],
     ['What else is needed?', 'Not established', 'The available result does not support a complete design.'],
     ['Suggested next step', 'Retry the assessment', 'Review the error or missing evidence before acting on this result.']
@@ -93,12 +96,49 @@ export async function waitForJob(id, onProgress, {fetcher = fetch, sleep = pause
 
 export function progressMessage(p = {}) {
   const stage = p.stage || '';
-  if (stage === 'GLM is writing the explanation') return 'Jev assessment complete. GLM is writing your explanation…';
   const total = Number(p.total), completed = Number(p.completed);
   const counted = Number.isFinite(total) && total > 0 && Number.isFinite(completed);
-  if (stage === 'Jev is assessing the selected evidence' || (counted && completed >= total)) return 'Library review complete. Jev is forming your recommendation…';
-  if (stage === 'Jev is evaluating every research passage') {
-    return counted ? `Jev is reviewing the library for your idea… ${Math.max(0, Math.floor(100 * completed / total))}%` : 'Jev is reviewing the library for your idea…';
+  const percent = counted ? ` ${Math.min(100, Math.max(0, Math.floor(100 * completed / total)))}%` : '';
+  if (stage === 'Jev is testing the design') return 'Jev is running the proposed design on its examples…';
+  if (stage === 'GLM is writing the explanation') return 'Jev assessment complete. GLM is drafting your design…';
+  if (stage === 'Jev is assessing the selected evidence') return 'Research reviewed. Jev is forming your recommendation…';
+  if (stage === 'Jev is checking the shortlisted research' || stage === 'Jev is evaluating every research passage') {
+    return counted && completed >= total ? 'Research reviewed. Jev is forming your recommendation…' : 'Jev is reviewing the most relevant research…'+percent;
   }
+  if (stage === 'Finding related research') return 'Finding related projects and research…';
   return 'Preparing your idea for review…';
+}
+
+const pct = value => `${Math.round(value * 100)}%`;
+// One readable line per executed Jev answer, using only fields the API documents.
+export function jevAnswerLines(answers = {}) {
+  return Object.entries(answers).map(([id, a]) => {
+    if (a?.type === 'noul' && Number.isFinite(a.noul)) return {id, type: 'Noul', text: `${pct(a.noul)} probability of yes`};
+    if (a?.type === 'choice' && typeof a.choice === 'string') {
+      const p = a.probabilities?.[a.choice];
+      return {id, type: 'Choice', text: `${a.choice}${Number.isFinite(p) ? ` (${pct(p)})` : ''}${Number.isFinite(a.confidence) ? ` · confidence ${a.confidence.toFixed(2)}` : ''}`};
+    }
+    if (a?.type === 'score' && Number.isFinite(a.score)) {
+      const top = Object.keys(a.legend || {}).length - 1;
+      return {id, type: 'Score', text: `${a.score.toFixed(2)}${top > 0 ? ` on 0–${top}` : ''}${Number.isFinite(a.confidence) ? ` · confidence ${a.confidence.toFixed(2)}` : ''}`};
+    }
+    return {id, type: 'Answer', text: 'Unrecognized answer'};
+  });
+}
+
+// Compare the design's expected application branch with what Jev actually returned.
+// Only unambiguous links are compared; anything else stays "unknown" rather than guessed.
+export function agreement(expected = {}, answers = {}, questions = {}) {
+  const values = Object.values(expected || {});
+  const notes = [];
+  for (const [id, a] of Object.entries(answers)) {
+    const q = questions[id] || {};
+    if (a?.type === 'choice' && q.criteria && !Array.isArray(q.criteria)) {
+      const wanted = values.find(v => typeof v === 'string' && Object.hasOwn(q.criteria, v));
+      if (wanted !== undefined) notes.push({id, match: wanted === a.choice, expected: wanted, actual: a.choice});
+    } else if (a?.type === 'noul' && typeof expected?.[id] === 'boolean') {
+      notes.push({id, match: expected[id] === (a.noul >= .5), expected: String(expected[id]), actual: a.noul >= .5 ? 'true' : 'false'});
+    }
+  }
+  return {status: !notes.length ? 'unknown' : notes.every(n => n.match) ? 'match' : 'differs', notes};
 }

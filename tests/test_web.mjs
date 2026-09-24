@@ -37,3 +37,9 @@ test('Source links deduplicate, reject credentials, and only expose HTTP(S)', ()
   assert.deepEqual(result.map(r => r.url), ['https://github.com/example/repo']);
   assert.equal(result[0].kind, 'Repository');
 });
+
+import {referenceUrls} from '../web/evidence.mjs';
+test('Generated preview images never appear as source links', () => {
+  const text = 'https://github.com/a/b https://ts-docs.mintlify.app/mintlify-assets/_next/image?url=%2Fapi%2Fog https://site.dev/og.webp https://docs.typesafe.ai/cookbooks/semantic_find';
+  assert.deepEqual(referenceUrls({text}), ['https://github.com/a/b', 'https://docs.typesafe.ai/cookbooks/semantic_find']);
+});

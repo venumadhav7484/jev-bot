@@ -24,7 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / 'resource-pool/sources'
 WORK = ROOT / 'research/triage'
 API = 'https://api.typesafe.ai/v1'
-MODEL = 'jev-1.13.0'
+# Pinned for reproducible answers; override with JEV_MODEL when a new version is adopted.
+MODEL = os.environ.get('JEV_MODEL', 'jev-1.13.0')
 VERSION = 'discord-triage-v3'
 DATE_LINE = re.compile(r'^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), \d+ \w+ \d{4} at \d\d:\d\d$')
 KINDS = {
@@ -205,6 +206,13 @@ def validate(payload, response):
         if question['type'] == 'noul':
             if not probability(answer.get('noul')):
                 raise ValueError('Invalid noul probability')
+        elif question['type'] == 'score':
+            levels = {str(i) for i in range(len(question['criteria']))}
+            probs, score = answer.get('probabilities', {}), answer.get('score')
+            if not isinstance(probs, dict) or set(probs) != levels or not all(probability(v) for v in probs.values()) or abs(sum(probs.values()) - 1) > 0.02:
+                raise ValueError('Invalid score probabilities')
+            if isinstance(score, bool) or not isinstance(score, (int, float)) or not 0 <= score <= len(levels)-1 or not probability(answer.get('confidence')):
+                raise ValueError('Invalid score or confidence')
         else:
             probs = answer.get('probabilities', {})
             if answer.get('choice') not in question['criteria'] or set(probs) != set(question['criteria']):
@@ -237,6 +245,13 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
+class RequestRejected(RuntimeError):
+    """TypeSafe returned 422 for a malformed request. `detail` is provider validation text."""
+    def __init__(self, detail):
+        super().__init__('TypeSafe rejected the request (HTTP 422)')
+        self.detail = detail
+
+
 def evaluate(payload, key):
     opener = urllib.request.build_opener(NoRedirect)
     for attempt in range(3):
@@ -250,6 +265,14 @@ def evaluate(payload, key):
                 response['_unreported_attempts'] = attempt
             return response
         except urllib.error.HTTPError as exc:
+            if exc.code == 422:
+                # Validation detail describes the request, not the account; callers may use it
+                # to repair a generated request but must not show it to visitors.
+                try:
+                    detail = exc.read(2000).decode('utf-8', 'replace')
+                finally:
+                    exc.close()
+                raise RequestRejected(detail) from None
             if exc.code not in (429, 500, 502, 503, 504, 529) or attempt == 2:
                 raise RuntimeError(f'TypeSafe HTTP {exc.code}; response body withheld') from None
             time.sleep(min(20, 2 ** attempt * 2))

@@ -49,7 +49,8 @@ export function links(text = '') {
 }
 export function referenceUrls(row, record) {
   return links(record?.sources || row?.text || '').map(item => item.url)
-    .filter(url => !/\.(?:svg|png|jpg|css|woff2?)(?:[?#]|$)/i.test(url))
+    // Image assets and generated preview images are not readable sources.
+    .filter(url => !/\.(?:svg|png|jpe?g|gif|webp|css|woff2?)(?:[?#]|$)/i.test(url) && !/\/_next\/image|\/api\/og|mintlify-assets/i.test(url))
     .sort((a, b) => Number(b.includes('github.com')) - Number(a.includes('github.com'))).slice(0, 2);
 }
 export function signal(row) {

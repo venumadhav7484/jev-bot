@@ -1,6 +1,6 @@
 # Jev-bot answer guide
 
-The assistant now evaluates every exported research document with Jev. Users choose typed judgments with source passages, or a written explanation from GLM 5.3 after Jev evaluation. Both modes accept current local research or a verified S3 snapshot. [Knowledge flow and scope](bot-knowledge-flow.md) describes exact inputs, source selection, caching and failure behavior.
+The assistant searches every exported research document with keyword search and a Jev catalog choice, then has Jev judge each shortlisted passage. Users choose typed judgments with source passages, or a written explanation from GLM 5.3 after Jev evaluation. Both modes accept current local research or a verified S3 snapshot. [Knowledge flow and scope](bot-knowledge-flow.md) describes exact inputs, source selection, caching and failure behavior.
 
 ## Input
 
@@ -42,9 +42,9 @@ Pilot on one supported integration in observation mode. Use seeded policy violat
 
 ## Local assistant and evaluation scope
 
-Run `python3 scripts/serve_bot.py`, then open `http://127.0.0.1:8765`. Configure `jev_api_key` in `.env.local`; written mode additionally uses `glm_key` for GLM 5.3. Jev receives the entered idea and all exported Markdown research in lossless batches. The writing model receives selected evidence and Jev judgments. The UI reports coverage and any failures. Raw media and private operational files are excluded from model context.
+Run `python3 scripts/serve_bot.py`, then open `http://127.0.0.1:8765`. Configure `jev_api_key` in `.env.local`; written mode additionally uses `glm_key` for GLM 5.3. Jev receives the entered idea, every case summary and each shortlisted research passage in its own request. The writing model receives selected evidence and Jev judgments. The UI reports coverage and any failures. Raw media and private operational files are excluded from model context.
 
-The old 11-family authored preview is retained through the CLI `--offline` flag. It is no longer the UI answer pipeline. Its tests remain legacy regression checks, not evaluation of the new full-library modes. Full-library checks exercise complete passage coverage, S3 checksum boundaries, missing-evidence behavior, provider failures and citation validation. These do not establish general answer accuracy.
+The old 11-family authored preview is retained through the CLI `--offline` flag. It is no longer the UI answer pipeline. Its tests remain legacy regression checks, not evaluation of the Jev search modes. Search checks exercise shortlist construction, per-passage requests, S3 checksum boundaries, missing-evidence behavior, provider failures and citation validation. These do not establish general answer accuracy.
 
 The private `scripts/evidence.py search --full` path additionally includes inspected-source review notes. Its abbreviated excerpts are not complete evidence. `--purpose counterevidence` and `--purpose tools` expose those evidence roles explicitly. Development retrieval and assistant checks test selected scenarios, citation resolution, abstention and evidence boundaries; they are not an independent reliability benchmark.
 

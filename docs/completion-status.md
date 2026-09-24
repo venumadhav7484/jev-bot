@@ -11,7 +11,7 @@ Published-library capture boundary: **24 September 2026, 16:29:08 IST / 10:59:08
 | Context screening | 211 links scoped as unrelated context; 37 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
 | X | 290 distinct posts: 140 reviewed, 15 media-pending, 38 thread-expansion pending, 97 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 430 / 755 attachment URLs reviewed; 372 / 659 messages complete | 325 attachments across 287 messages pending |
-| Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
+| Bot | Local web/CLI assistant; Jev shortlist search and re-ranking, optional GLM 5.3 design with Jev-executed examples and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
 | S3 | Verified private backup from 2026-09-20 | Older backup does not include later capture or curation; backup state is separate from evidence review |
 
 ## What the counts mean

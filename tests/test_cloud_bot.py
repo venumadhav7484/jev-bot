@@ -31,6 +31,7 @@ class CloudTests(unittest.TestCase):
         self.db, self.s3, self.fn = MagicMock(), MagicMock(), MagicMock()
         self.db.exceptions.ConditionalCheckFailedException = Conditional
         self.db.exceptions.TransactionCanceledException = Transaction
+        self.s3.head_object.side_effect = RuntimeError('NoSuchKey')  # Default: no reusable answer.
         self.mock = patch.object(app, 'clients', return_value=(self.db, self.s3, self.fn))
         self.mock.start()
         self.addCleanup(self.mock.stop)
@@ -131,6 +132,32 @@ class CloudTests(unittest.TestCase):
             app.worker({'id': 'a'*32, 'idea': 'test', 'mode': 'evidence'}, None)
         self.assertNotIn('secret provider body', str(self.db.update_item.call_args))
         self.db.delete_item.assert_called_once()
+
+    def test_identical_idea_reuses_cached_answer_without_quota_or_worker(self):
+        self.s3.head_object.side_effect = None
+        result = app.api(self.event(body={'idea': '  Route   SUPPORT tickets ', 'mode': 'written'}), None)
+        self.assertEqual(result['statusCode'], 202)
+        self.fn.invoke.assert_not_called()
+        self.db.transact_write_items.assert_not_called()
+        stored = self.db.put_item.call_args.kwargs['Item']
+        self.assertEqual(stored['status']['S'], 'complete')
+        self.assertEqual(stored['result_key']['S'], app.cache_key('route support tickets', 'written'))
+        self.assertTrue(stored['result_key']['S'].startswith('cache/'))
+
+    def test_reused_answer_is_read_from_cache_and_marked(self):
+        now = int(time.time())
+        self.db.get_item.return_value = {'Item': {'status': {'S': 'complete'}, 'created': {'N': str(now)}, 'ttl': {'N': str(now+60)},
+                                                  'progress': {'S': '{}'}, 'result_key': {'S': 'cache/x.json'}}}
+        self.s3.get_object.return_value = {'Body': MagicMock(read=lambda: b'{"idea": "x"}')}
+        result = app.api(self.event('GET', '/api/jobs/'+'a'*32), None)
+        self.assertEqual(self.s3.get_object.call_args.kwargs['Key'], 'cache/x.json')
+        self.assertTrue(json.loads(result['body'])['result']['reused'])
+
+    def test_worker_caches_only_complete_checked_designs(self):
+        good = {'coverage': {'search_complete': True}, 'judgments': {'fit': {}}, 'writer': {'status': 'success'}, 'execution': {'status': 'complete'}}
+        self.assertTrue(app.reusable(good))
+        for change in ({'writer': {'status': 'invalid_output'}}, {'execution': {'status': 'unavailable'}}, {'judgments': None}, {'coverage': {'search_complete': False}}):
+            self.assertFalse(app.reusable({**good, **change}))
 
     def test_infrastructure_separates_site_jobs_and_keys(self):
         stack = template()

@@ -52,17 +52,17 @@ def comparison(result):
     if usage['unreported_attempts']:
         cost.update(known_usage_usd=cost['usd'], usd=None,
                     reason='Some attempts have no reported usage; total cost is unknown.')
-    rows = [{'provider': 'jev', 'model': model, 'role': 'Full-library evaluation and typed judgments',
+    rows = [{'provider': 'jev', 'model': model, 'role': 'Research search, typed judgments and design checks',
              'status': 'success' if result['judgments'] else 'incomplete', 'tokens': tokens, 'cost': cost,
              'api_requests': usage['api_requests'], 'cached_requests': usage['cached_requests'],
              'unreported_attempts': usage['unreported_attempts']}]
     if result['mode'] == 'written':
         row = {'provider': 'glm', 'model': 'glm-5.3', 'role': 'Explanation from selected evidence',
                'status': 'not_run', 'tokens': normalized('glm', {}),
-               'cost': {'usd': None, 'reason': 'No writer request made.'}}
+               'cost': {'usd': 0, 'reason': 'No writer request made.'}}
         row.update(result.get('writer', {}))
         rows.append(row)
     amounts = [r['cost']['usd'] for r in rows]
     return {'rows': rows, 'total_estimated_usd': sum(amounts) if all(v is not None for v in amounts) else None,
-            'scope': 'Different stages of this query: Jev evaluates the full library; GLM writes from selected evidence. This is not an equal-workload benchmark.',
+            'scope': 'Different stages of this query: Jev searches, assesses and checks; GLM writes from selected evidence. This is not an equal-workload benchmark.',
             'cost_note': 'Tokens cover new requests with reported usage in this run. Reused local Jev evaluations add no new request or tokens. Estimates use published rates verified on '+VERIFIED_ON+'; actual charges may differ. Unreported attempts make the total unknown.'}

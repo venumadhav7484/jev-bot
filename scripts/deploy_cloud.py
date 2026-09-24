@@ -15,7 +15,7 @@ from backup_private import AWS, ROOT, load_env
 from cloud_stack import template
 
 WORK = ROOT / 'research/hosting'
-MODULES = ('cloud_bot.py', 'research_answer.py', 'knowledge_corpus.py',
+MODULES = ('cloud_bot.py', 'research_answer.py', 'knowledge_corpus.py', 'fast_search.py',
            'model_costs.py', 'jev_triage.py', 'answer_writer.py', 'backup_private.py')
 ASSETS = ('index.html', 'app.js', 'style.css', 'evidence.mjs', 'bot-client.mjs', 'case-examples.mjs', 'answer-design.mjs', 'file-input.mjs')
 
@@ -91,7 +91,9 @@ def deploy(daily_limit=None, max_concurrent=None):
              json.dumps({'Rules': [{'ApplyServerSideEncryptionByDefault': {'SSEAlgorithm': 'AES256'}}]}))
     aws.call('s3api', 'put-bucket-lifecycle-configuration', '--bucket', bucket, '--lifecycle-configuration',
              json.dumps({'Rules': [{'ID': 'ExpireJobResults', 'Status': 'Enabled', 'Filter': {'Prefix': 'jobs/'},
-                                    'Expiration': {'Days': 1}}]}))
+                                    'Expiration': {'Days': 1}},
+                                   {'ID': 'ExpireReusedAnswers', 'Status': 'Enabled', 'Filter': {'Prefix': 'cache/'},
+                                    'Expiration': {'Days': 7}}]}))
     key = 'deploy/'+hashlib.sha256(archive.read_bytes()).hexdigest()+'.zip'
     aws.call('s3api', 'put-object', '--bucket', bucket, '--key', key, '--body', str(archive), '--server-side-encryption', 'AES256')
     # CLI sync prints only public asset paths; subprocess output remains captured.

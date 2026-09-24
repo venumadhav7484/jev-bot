@@ -92,7 +92,7 @@ def main():
                'usd_total': round(sum(costs), 4), 'usd_unknown': len(outcomes)-len(costs)}
     out = ROOT/'research/evaluations'
     out.mkdir(parents=True, exist_ok=True)
-    path = out/('answers-'+dt.date.today().isoformat()+'.json')
+    path = out/('answers-'+dt.datetime.now().strftime('%Y-%m-%dT%H%M%S')+'.json')
     path.write_text(json.dumps({'summary': summary, 'outcomes': outcomes}, indent=2)+'\n')
     for o in outcomes:
         print(('PASS' if o['pass'] else 'FAIL'), o['id'], {k: o.get(k) for k in ('seconds', 'types', 'fit', 'agreement', 'error') if o.get(k) is not None})

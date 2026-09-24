@@ -35,3 +35,70 @@ export function summarizeAnswer(result) {
     ['Suggested next step', ...next]
   ];
 }
+
+// Messages safe to show visitors. Browser, proxy and parser errors never reach the page.
+export class ServiceError extends Error {}
+const OFFLINE = 'Connection interrupted. Check your connection and try again.';
+const FAILED = 'Couldn’t complete this answer. Please retry.';
+const TRANSIENT = new Set([408, 429, 500, 502, 503, 504]);
+const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+// CloudFront error pages are HTML; treat any unparseable body as absent.
+export async function readReply(response) {
+  try { return await response.json(); } catch { return null; }
+}
+function message(data, fallback) {
+  return typeof data?.error === 'string' && data.error.trim() ? data.error : fallback;
+}
+
+export async function sendJson(url, body, fallback, fetcher = fetch) {
+  let response;
+  try {
+    response = await fetcher(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body), signal: AbortSignal.timeout(30000)});
+  } catch { throw new ServiceError(OFFLINE); }
+  const data = await readReply(response);
+  if (!response.ok || !data) throw new ServiceError(message(data, fallback));
+  return data;
+}
+
+export async function startJob(idea, mode, fetcher = fetch) {
+  const started = await sendJson('/api/jobs', {idea, mode}, 'Couldn’t start your answer. Please try again.', fetcher);
+  if (typeof started.id !== 'string') throw new ServiceError('Couldn’t start your answer. Please try again.');
+  return started.id;
+}
+
+// The server enforces the job deadline. Brief network or proxy failures are
+// retried so a running answer is not abandoned and resubmitted against the daily limit.
+export async function waitForJob(id, onProgress, {fetcher = fetch, sleep = pause, interval = 1500, maxMisses = 5} = {}) {
+  let misses = 0;
+  while (true) {
+    let response = null, job = null;
+    try {
+      response = await fetcher('/api/jobs/'+id, {cache: 'no-store', signal: AbortSignal.timeout(30000)});
+      job = await readReply(response);
+    } catch {}
+    if (response?.ok && job) {
+      misses = 0;
+      if (job.status === 'complete') { if (!job.result) throw new ServiceError(FAILED); return job.result; }
+      if (job.status === 'failed') throw new ServiceError(message(job, FAILED));
+      onProgress(job.progress || {});
+    } else if (response && job && !TRANSIENT.has(response.status)) {
+      throw new ServiceError(message(job, FAILED));
+    } else if (++misses >= maxMisses) {
+      throw new ServiceError('Connection interrupted while your answer was being prepared. Please retry.');
+    }
+    await sleep(interval * (misses + 1));
+  }
+}
+
+export function progressMessage(p = {}) {
+  const stage = p.stage || '';
+  if (stage === 'GLM is writing the explanation') return 'Jev assessment complete. GLM is writing your explanation…';
+  const total = Number(p.total), completed = Number(p.completed);
+  const counted = Number.isFinite(total) && total > 0 && Number.isFinite(completed);
+  if (stage === 'Jev is assessing the selected evidence' || (counted && completed >= total)) return 'Library review complete. Jev is forming your recommendation…';
+  if (stage === 'Jev is evaluating every research passage') {
+    return counted ? `Jev is reviewing the library for your idea… ${Math.max(0, Math.floor(100 * completed / total))}%` : 'Jev is reviewing the library for your idea…';
+  }
+  return 'Preparing your idea for review…';
+}

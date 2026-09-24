@@ -27,3 +27,36 @@ test('Decision summary preserves uncertainty and suggests a practical next step'
   assert.match(cards[1][2], /Unclear: Image/);
   assert.equal(cards[2][1], 'Prototype one decision');
 });
+
+import {readReply, sendJson, startJob, waitForJob, progressMessage, ServiceError} from '../web/bot-client.mjs';
+const html = status => ({ok: false, status, json: async () => { throw new SyntaxError('Unexpected token <'); }});
+const json = (status, data) => ({ok: status < 400, status, json: async () => data});
+const offline = async () => { throw new TypeError('Failed to fetch'); };
+test('Proxy HTML and network failures become visitor-safe messages', async () => {
+  assert.equal(await readReply(html(502)), null);
+  for (const fetcher of [async () => html(502), offline]) {
+    await assert.rejects(startJob('idea', 'written', fetcher), e => e instanceof ServiceError && !/token|fetch/i.test(e.message));
+    await assert.rejects(sendJson('/api/feedback', {}, 'Couldn’t save feedback.', fetcher), e => e instanceof ServiceError && !/token|fetch/i.test(e.message));
+  }
+  await assert.rejects(startJob('idea', 'written', async () => json(429, {error: 'All answer slots are busy.'})), /slots are busy/);
+});
+test('Transient poll failures are retried without abandoning the job', async () => {
+  const replies = [offline, async () => html(504), async () => json(200, {status: 'running', progress: {stage: 'x'}}), async () => html(502), async () => json(200, {status: 'complete', result: {mode: 'written'}})];
+  const seen = [];
+  const result = await waitForJob('a'.repeat(32), p => seen.push(p), {fetcher: () => replies.shift()(), sleep: async () => {}});
+  assert.deepEqual(result, {mode: 'written'});
+  assert.equal(seen.length, 1);
+});
+test('Polling stops after repeated failures or a definitive server answer', async () => {
+  await assert.rejects(waitForJob('id', () => {}, {fetcher: offline, sleep: async () => {}, maxMisses: 3}), /Connection interrupted/);
+  await assert.rejects(waitForJob('id', () => {}, {fetcher: async () => json(404, {error: 'Answer job not found or expired.'}), sleep: async () => {}}), /expired/);
+  await assert.rejects(waitForJob('id', () => {}, {fetcher: async () => json(200, {status: 'failed', error: 'Couldn’t complete this answer. Please retry.'}), sleep: async () => {}}), /Please retry/);
+  await assert.rejects(waitForJob('id', () => {}, {fetcher: async () => json(200, {status: 'complete'}), sleep: async () => {}}), ServiceError);
+});
+test('Progress never shows NaN or exceeds the known stages', () => {
+  const stage = 'Jev is evaluating every research passage';
+  for (const p of [{stage, total: 0, completed: 0}, {stage}, {stage, total: 'x', completed: 1}]) assert.equal(progressMessage(p), 'Jev is reviewing the library for your idea…');
+  assert.match(progressMessage({stage, total: 200, completed: 50}), /25%$/);
+  assert.match(progressMessage({stage, total: 10, completed: 10}), /Library review complete/);
+  assert.match(progressMessage({}), /Preparing/);
+});

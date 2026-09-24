@@ -1,7 +1,7 @@
 import {importIdeaFile} from './file-input.mjs';
 import {exampleDesign, runCommand} from './answer-design.mjs?v=20260920-custom-only';
 import {newsRequest, newsPython, newsSource} from './case-examples.mjs';
-import {loadConfig, summarizeAnswer} from './bot-client.mjs?v=20260920-practical';
+import {loadConfig, startJob, waitForJob, progressMessage, sendJson, ServiceError} from './bot-client.mjs?v=20260924-errors';
 import {categories, prepare, short, plain, links, referenceUrls, signal, filterCases, shuffled} from './evidence.mjs?v=20260920-blueprint';
 const $ = id => document.getElementById(id);
 const node = (tag, text, cls) => { const n = document.createElement(tag); if (text != null) n.textContent = text; if (cls) n.className = cls; return n; };
@@ -9,8 +9,6 @@ function link(label, url, cls) { const a = node('a', label, cls); a.href = url; 
 function button(label, action, cls = 'secondary') { const b = node('button', label, cls); b.type = 'button'; b.addEventListener('click', action); return b; }
 function heading(title, caption, parent) { const h = node('div', null, 'section-heading'); h.append(node('h2', title)); if (caption) h.append(node('p', caption)); parent.append(h); }
 function badge(text, tone = 'neutral') { return node('span', text, `pill ${tone}`); }
-function metric(value, label, note) { const el = node('div', null, 'metric'); el.append(node('span', label, 'eyebrow'), node('strong', value)); if (note) el.append(node('small', note)); return el; }
-function expand(label, text, parent) { if (!text) return; const d = node('details'); d.append(node('summary', label), node('p', plain(text), 'preserve')); parent.append(d); }
 function sourceLinks(text, parent) {
   const urls = links(text);
   if (!urls.length) parent.append(node('p', 'No public artifact link recorded.', 'muted'));
@@ -79,7 +77,7 @@ async function showExplorer(version) {
     root.querySelector('h1').focus({preventScroll: true});
   } catch (e) { if (version === routeVersion) showError(root, e, () => showExplorer(version)); }
 }
-function showError(root, e, retry) { root.replaceChildren(link('← Back to bot', '#bot', 'back'), node('h1', 'Couldn’t load this view'), node('p', e.message), button('Try again', retry)); }
+function showError(root, e, retry) { root.replaceChildren(link('← Back to bot', '#bot', 'back'), node('h1', 'Couldn’t load this view'), node('p', 'Check your connection and try again.'), button('Try again', retry)); }
 async function showCase(id, version) {
   const root = $('detail-view'); root.replaceChildren(node('p', 'Loading case…', 'muted'));
   try {
@@ -192,36 +190,6 @@ document.querySelector('.brand').addEventListener('click', event => {
   history.replaceState(null, '', '/#bot');
   location.reload();
 });
-function evidenceCards(title, caption, rows, parent, counter = false) {
-  heading(title, caption, parent); const grid = node('div', null, 'case-grid related');
-  if (!rows.length) grid.append(node('p', 'No matching evidence surfaced. Absence here does not establish that none exists.', 'empty'));
-  rows.forEach(c => grid.append(caseTile(c, '#bot-results', counter))); parent.append(grid);
-}
-function render(r) {
-  if (r.mode) return renderResearch(r);
-  const root = $('result'); root.replaceChildren();
-  const intro = node('div', null, 'answer-intro'); intro.append(node('p', 'YOUR INTEGRATION MAP', 'eyebrow'), node('h2', r.pattern_label), node('p', r.fit, 'fit')); root.append(intro);
-  const primitive = r.prototype?.questions?.decision?.type || '—';
-  const metrics = node('div', null, 'metrics'); metrics.append(metric(primitive === '—' ? 'Not proposed' : primitive.toUpperCase(), 'Decision primitive', primitive === '—' ? 'See fit assessment' : 'Proposed design, not executed'), metric(String(r.support.length), 'Related cases', 'Analogies, not proof of fit'), metric(String(r.counterevidence.length), 'Counterexamples', 'Failures and mixed results'), metric(r.router.method === 'jev_choice' ? 'Jev' : 'Local rules', 'Idea routing', r.router.method === 'jev_choice' ? 'Typed classification' : r.router.fallback_reason ? 'Local fallback; see notice' : 'No API call')); root.append(metrics);
-  if (r.router.fallback_reason) root.append(node('p', r.router.fallback_reason, 'caution'));
-  if (r.proposal) {
-    heading('Where Jev fits', 'A bounded decision inside your application.', root);
-    const flow = node('ol', null, 'workflow');
-    for (const [name, detail] of [['Prepare', 'Approved input + deterministic checks'], ['Judge', `Focused ${primitive} question`], ['Act', 'Permitted action or fallback']]) { const li = node('li'); li.append(node('strong', name), node('span', detail)); flow.append(li); } root.append(flow);
-    const roles = node('div', null, 'role-grid');
-    for (const [title, text, cls] of [['Jev’s job', r.proposal.role, ''], ['Your application’s job', r.proposal.host, ''], ['Watch out for', r.proposal.caution, 'warning-panel']]) { const box = node('section', null, 'panel ' + cls); box.append(node('h3', title), node('p', text)); roles.append(box); } root.append(roles);
-  }
-  evidenceCards('Patterns to borrow', r.coverage.note, r.support, root);
-  evidenceCards('Limits to design around', 'Keep these counterexamples in the design—not only the footnotes.', r.counterevidence, root, true);
-  heading('Test before rollout', 'Three checks before this becomes a real integration.', root);
-  const checks = node('ol', null, 'check-grid'); r.validation.forEach((text, i) => { const li = node('li'); li.append(node('span', `0${i + 1}`, 'step-number'), node('p', text)); checks.append(li); }); root.append(checks);
-  const next = node('details'); next.append(node('summary', 'Refine this recommendation')); const ul = node('ul'); r.questions.forEach(q => ul.append(node('li', q))); next.append(ul, node('p', 'Add these details to your idea above, then explore again.')); root.append(next);
-  if (r.prototype) { const d = node('details'); d.append(node('summary', 'Inspect proposed API shape'), node('p', 'Unexecuted design template. Replace placeholders and define real options.'), node('pre', JSON.stringify(r.prototype, null, 2))); root.append(d); }
-  const method = node('details'); method.append(node('summary', 'Sources, routing & coverage'));
-  r.references.forEach(url => method.append(link(url, url, 'record-link')));
-  if (r.router.method === 'jev_choice') method.append(node('p', `Routing model: ${r.router.model}. Model confidence ${Number.isFinite(r.router.confidence) ? (r.router.confidence * 100).toFixed(0) + '%' : 'unavailable'} is not calibrated accuracy or a correctness guarantee.`));
-  method.append(node('p', `${r.coverage.curated_cases} case records · ${r.coverage.urls_with_content_gaps ?? 'Unknown'} URLs with content gaps. ${r.answer_method}`)); root.append(method);
-}
 function renderComparison(comparison, root) {
   if (!comparison) return;
   const section = node('section', null, 'usage-comparison');
@@ -323,10 +291,8 @@ async function renderResearch(r) {
     }
     return;
   }
-  else if (design) {
-    root.append(node('p', design.tailored ? 'PROPOSED DESIGN · TAILORED TO YOUR IDEA' : 'PROPOSED EXAMPLE PATTERN · ADAPT TO YOUR APP', 'eyebrow'));
-    renderBlueprint(design, root);
-  } else root.append(node('p', 'Name the input, allowed decisions and desired action. The available assessment does not establish a concrete implementation yet.'));
+  root.append(node('p', design.tailored ? 'PROPOSED DESIGN · TAILORED TO YOUR IDEA' : 'PROPOSED EXAMPLE PATTERN · ADAPT TO YOUR APP', 'eyebrow'));
+  renderBlueprint(design, root);
   const cited = new Set((r.narrative || []).flatMap(section => section.paragraphs.flatMap(p => p.citations)));
   const relevant = evidence.filter(row => !cited.size || cited.has(row.id));
   const ordered = [...(match ? [match] : []), ...relevant.filter(row => row.path.startsWith('docs/use-cases/')), ...relevant.filter(row => !row.path.startsWith('docs/use-cases/'))];
@@ -407,9 +373,7 @@ function renderFeedback(jobId) {
     catch (error) { text.disabled = false; submit.disabled = false; status.textContent = error.message; }
   });
   async function send(data) {
-    const response = await fetch('/api/feedback', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({job_id: jobId, ...data}), signal: AbortSignal.timeout(30000)});
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.error || 'Couldn’t save feedback. Please retry.');
+    await sendJson('/api/feedback', {job_id: jobId, ...data}, 'Couldn’t save feedback. Please retry.');
   }
   form.append(text, submit);
   section.append(row, form, node('p', 'Shared with the site owner.', 'muted'), status);
@@ -467,26 +431,17 @@ $('ask').addEventListener('submit', async e => {
   if (connectionState !== 'ready' || researchBusy) return;
   $('result').replaceChildren();
   researchBusy = true; updateMode(); $('status').textContent = 'Checking your idea against the research…';
-  const headers = {'Content-Type': 'application/json'};
   try {
-    const response = await fetch('/api/jobs', {method: 'POST', headers, body: JSON.stringify({idea: $('idea').value, mode: selectedMode()})});
-    const started = await response.json(); if (!response.ok) throw new Error(started.error || 'Request failed');
-    while (true) {
-      const poll = await fetch('/api/jobs/'+started.id, {headers}); const job = await poll.json();
-      if (!poll.ok || job.status === 'failed') throw new Error(job.error || 'Answer job failed');
-      if (job.status === 'complete') { await render(job.result); renderFeedback(started.id); $('status').textContent = exampleDesign(job.result) ? 'Your recommendation is ready.' : 'Couldn’t complete this answer. Please retry.'; $('result').scrollIntoView({behavior: 'smooth'}); break; }
-      const p = job.progress || {};
-      const stage = p.stage || '';
-      $('status').textContent = stage === 'GLM is writing the explanation'
-        ? 'Jev assessment complete. GLM is writing your explanation…'
-        : stage === 'Jev is assessing the selected evidence' || (p.total && p.completed === p.total)
-          ? 'Library review complete. Jev is forming your recommendation…'
-          : stage === 'Jev is evaluating every research passage'
-            ? `Jev is reviewing the library for your idea… ${Math.floor(100 * p.completed / p.total)}%`
-            : 'Preparing your idea for review…';
-      await new Promise(resolve => setTimeout(resolve, 1500));
-    }
-  } catch (err) { $('status').textContent = err.message; }
+    const id = await startJob($('idea').value, selectedMode());
+    const result = await waitForJob(id, progress => { $('status').textContent = progressMessage(progress); });
+    await renderResearch(result); renderFeedback(id);
+    $('status').textContent = exampleDesign(result) ? 'Your recommendation is ready.' : 'Couldn’t complete this answer. Please retry.';
+    $('result').scrollIntoView({behavior: 'smooth'});
+  } catch (err) {
+    // A rendering fault must not leave a partial answer or browser error text behind.
+    $('result').replaceChildren();
+    $('status').textContent = err instanceof ServiceError ? err.message : 'Couldn’t display this answer. Please retry.';
+  }
   finally { researchBusy = false; updateMode(); }
 });
 route();

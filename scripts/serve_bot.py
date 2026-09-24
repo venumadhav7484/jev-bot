@@ -27,7 +27,7 @@ def run_job(identifier, idea, mode, source):
             JOBS[identifier].update(status='failed', error='Research answer failed. Check configured API access and the selected snapshot; no provider response body is exposed.')
     except Exception:
         with JOB_LOCK:
-            JOBS[identifier].update(status='failed', error='Research answer could not complete.')
+            JOBS[identifier].update(status='failed', error='Couldn’t complete this answer. Please retry.')
 
 
 class Handler(BaseHTTPRequestHandler):

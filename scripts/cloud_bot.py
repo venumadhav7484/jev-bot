@@ -188,7 +188,7 @@ def api_request(event, context):
         except (ValueError, TypeError, UnicodeError):
             return reply(400, {'error': 'Enter an idea of 3 to 6000 characters and select a supported mode.'})
         if mode == 'written' and os.environ.get('WRITER_AVAILABLE') != 'true':
-            return reply(400, {'error': 'Written answers are not configured.'})
+            return reply(400, {'error': 'Answers are temporarily unavailable. Please try again later.'})
         db, _, functions = clients()
         now = int(time.time())
         identifier = uuid.uuid4().hex
@@ -248,6 +248,6 @@ def worker(event, context):
                       Body=json.dumps(result).encode(), ContentType='application/json', ServerSideEncryption='AES256')
         update(db, identifier, status='complete')
     except Exception:
-        update(db, identifier, status='failed', error='Research answer could not complete. Check provider access or try again later.')
+        update(db, identifier, status='failed', error='Couldn’t complete this answer. Please retry.')
     finally:
         release(db, identifier, slot)

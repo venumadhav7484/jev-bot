@@ -3,7 +3,7 @@ id: tos-search
 title: "Terms-of-service line search"
 category: retrieval
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

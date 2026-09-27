@@ -14,6 +14,9 @@ GUILD_ID = CONFIG['guild_id']
 cases=list(csv.DictReader((POOL/'cases.tsv').open(),delimiter='\t'))
 main=json.loads((ROOT / CONFIG['main_snapshot']).read_text())
 threads=json.loads((ROOT / CONFIG['thread_snapshot']).read_text())
+# Additional channels (for example #builders-chat) keep their own snapshot and cursor.
+for rel in CONFIG.get('channel_snapshots',[]):
+    threads['messages']+=json.loads((ROOT / rel).read_text())['messages']
 links=json.loads((SOURCES/'external-links.json').read_text())
 by_id={}
 for row in main['messages']+threads['messages']:

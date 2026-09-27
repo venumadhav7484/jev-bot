@@ -14,6 +14,8 @@ CONFIG = json.loads((ROOT/'resource-pool/sources/collection-checkpoint.json').re
 GUILD_ID = CONFIG['guild_id']
 data = json.loads((ROOT / CONFIG['main_snapshot']).read_text())
 data['messages'] += json.loads((ROOT / CONFIG['thread_snapshot']).read_text())['messages']
+for rel in CONFIG.get('channel_snapshots', []):
+    data['messages'] += json.loads((ROOT / rel).read_text())['messages']
 access = {r['url']:r for r in json.loads((SOURCES/'link-access.json').read_text())}
 reviews = {r['url']:r for r in json.loads((SOURCES/'source-reviews.json').read_text())}
 register = {}

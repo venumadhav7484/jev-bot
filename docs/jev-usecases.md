@@ -1,6 +1,6 @@
 # Jev community use cases
 
-539 curated case records from the 2026-09-27 Discord snapshot. This is an expanding review, not an exhaustive catalog.
+547 curated case records from the 2026-09-27 Discord snapshot. This is an expanding review, not an exhaustive catalog.
 
 All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.
 
@@ -163,6 +163,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Azdaja: typed judgments within recursive LLM workflows](use-cases/azdaja.md) | agents | Author report; see case for inspected evidence |
 | [Choosing among five proposed development actions](use-cases/muse-candidates.md) | agents | Author report; see case for inspected evidence |
 | [DeepSeek harness automatic-choice plugin](use-cases/deepseek-auto.md) | agents | Author report; see case for inspected evidence |
+| [Dehydrator: client-side tool search with BM25, Jev or both](use-cases/dehydrator-tool-search.md) | agents | Author report; see case for inspected evidence |
 | [Empryo: bounded decisions inside a coding harness](use-cases/empryo.md) | agents | Author report; see case for inspected evidence |
 | [Foreman: workflow supervision can increase total token use](use-cases/opencode-foreman.md) | agents | Author report; see case for inspected evidence |
 | [Fuel: initial-message model routing](use-cases/fuel-routing.md) | agents | Author report; see case for inspected evidence |
@@ -207,6 +208,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [E-shop catalogue import: 44,802 decisions and 769 unknowns](use-cases/catalog-import-marketing.md) | business | Author report; see case for inspected evidence |
 | [Industrial configurator: batching “what if” questions, Jev versus Gemini](use-cases/configurator-jev-gemini.md) | business | Author report; see case for inspected evidence |
 | [LeadDemon: remove non-company search hits](use-cases/leaddemon.md) | business | Author report; see case for inspected evidence |
+| [Mexican-Spanish support chats: scope and repeat detection](use-cases/whatsapp-spanish-support.md) | business | Author report; see case for inspected evidence |
 | [Multidimensional lead qualification](use-cases/lead-scoring.md) | business | Author report; see case for inspected evidence |
 | [Near Here: local event validation](use-cases/near-here.md) | business | Author report; see case for inspected evidence |
 | [Orgtools: decision-type classification](use-cases/orgtools.md) | business | Author report; see case for inspected evidence |
@@ -267,6 +269,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Nouls: semantic linting in an LSP](use-cases/nouls-lsp.md) | developer-tools | Author report; see case for inspected evidence |
 | [OpenAPI Sentinel: review semantic changes hidden in prose](use-cases/jev-oas-sentinel.md) | developer-tools | Author report; see case for inspected evidence |
 | [Rust TypeSafe client and tsg semantic search](use-cases/rust-tsg.md) | developer-tools | Author report; see case for inspected evidence |
+| [System One Adapter: compare Jev with an LLM on the same calls](use-cases/system-one-adapter.md) | developer-tools | Author report; see case for inspected evidence |
 | [UsageTap: resolve model keys to lifecycle advice](use-cases/usagetap-model-lifecycle.md) | developer-tools | Author report; see case for inspected evidence |
 | [composable-jev and JevGraph: chaining Jev answers into graphs](use-cases/composable-jev-graph.md) | developer-tools | Author report; see case for inspected evidence |
 | [daf-jev: composable Python decision toolkit](use-cases/daf-jev.md) | developer-tools | Author report; see case for inspected evidence |
@@ -278,6 +281,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Applicant tracking and employee-review experiment](use-cases/ats-experiment.md) | domain-review | Author report; see case for inspected evidence |
 | [Clinical documents: routing and stated-site grounding](use-cases/clinical-document-grounding.md) | domain-review | Author report; see case for inspected evidence |
 | [CriteriaCue: evidence against role criteria, not a ranking](use-cases/criteriacue.md) | domain-review | Author report; see case for inspected evidence |
+| [Dialect bias re-run: Jev as judge and as moderator](use-cases/jev-dialect-bias.md) | domain-review | Author report; see case for inspected evidence |
 | [GlutenOrNot: product-label screening](use-cases/gluten-labels.md) | domain-review | Author report; see case for inspected evidence |
 | [Jev CVSS: classify fields, compute scores](use-cases/cvss.md) | domain-review | Author report; see case for inspected evidence |
 | [Norwegian public-hearing response classification](use-cases/norwegian-hearing.md) | domain-review | Author report; see case for inspected evidence |
@@ -308,6 +312,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Piano note selection failure](use-cases/piano-limits.md) | experiments | Author report; see case for inspected evidence |
 | [Plain-English logic interpreter](use-cases/english-prolog.md) | experiments | Author report; see case for inspected evidence |
 | [Policy-response simulation with 1,024 personas](use-cases/persona-simulation.md) | experiments | Author report; see case for inspected evidence |
+| [PriorBench: a pre-registered evaluation of Jev](use-cases/priorbench-jev.md) | experiments | Author report; see case for inspected evidence |
 | [SVG recognition: 100 yes/no questions as features](use-cases/jev-svg-recognition.md) | experiments | Author report; see case for inspected evidence |
 | [Symbolic integration: choosing candidate techniques](use-cases/symbolic-integration-routing.md) | experiments | Author report; see case for inspected evidence |
 | [Word-choice chatbot experiment](use-cases/word-choice-chatbot.md) | experiments | Author report; see case for inspected evidence |
@@ -404,6 +409,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Pi extension for adjustable output detail](use-cases/pi-detail.md) | interfaces | Author report; see case for inspected evidence |
 | [Saypage: constrained page assembly](use-cases/saypage.md) | interfaces | Author report; see case for inspected evidence |
 | [json-render: selecting UI components](use-cases/json-render.md) | interfaces | Author report; see case for inspected evidence |
+| [Jev does not play dice: confidence on outcomes nobody can know](use-cases/jev-does-not-play-dice.md) | limitations | Author report; see case for inspected evidence |
 | [Jevfend: a “Jev confidence” that tracked word count](use-cases/jevfend-word-count.md) | limitations | Author report; see case for inspected evidence |
 | [Legal RAG comparison: corrected baselines and a registry gate](use-cases/sovereign-rag-benchmark.md) | limitations | Author report; see case for inspected evidence |
 | [Reasoning probes: date arithmetic, literal reading and letter counts](use-cases/riddle-probes.md) | limitations | Author report; see case for inspected evidence |
@@ -453,6 +459,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Perch: tree-based semantic code checks](use-cases/perchscan.md) | quality | Author report; see case for inspected evidence |
 | [Pi Warden: steer coding-agent behavior](use-cases/pi-warden.md) | quality | Author report; see case for inspected evidence |
 | [Postneedle: feedback while drafting a post](use-cases/postneedle.md) | quality | Author report; see case for inspected evidence |
+| [Q-GATE: typed decisions for issues, pull requests and commits](use-cases/q-gate-github.md) | quality | Author report; see case for inspected evidence |
 | [Real or fake: plausibility and scam cues](use-cases/reality-check-rahil.md) | quality | Author report; see case for inspected evidence |
 | [Reaper: semantic review after normal checks](use-cases/reaper.md) | quality | Author report; see case for inspected evidence |
 | [Routing 10,000 synthetic claims](use-cases/synthetic-claims.md) | quality | Author report; see case for inspected evidence |
@@ -530,6 +537,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Pi Jev Sentinel: intent and risk checks](use-cases/pi-jev-sentinel.md) | security | Author report; see case for inspected evidence |
 | [Pi-heed: conversational constraints at tool execution](use-cases/pi-heed.md) | security | Author report; see case for inspected evidence |
 | [Project Blackout: simulated SIEM risk assessment](use-cases/project-blackout.md) | security | Author report; see case for inspected evidence |
+| [Scam Check: phone-side gate, then Jev on risky texts](use-cases/scam-check-android.md) | security | Author report; see case for inspected evidence |
 | [Second Thought: terminal command screening](use-cases/second-thought.md) | security | Author report; see case for inspected evidence |
 | [Security corpus classification benchmark](use-cases/jev-sec-bench.md) | security | Author report; see case for inspected evidence |
 | [Vindex: policy screening before content generation](use-cases/vindex.md) | security | Author report; see case for inspected evidence |

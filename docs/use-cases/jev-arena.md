@@ -30,6 +30,9 @@ Game ladder results are small and author-run; a strategy paragraph winning does 
 - [Jev Arena](https://eliot5566.github.io/jev-arena/?replay=ladder/replays/glass-cannon__trickster__g1.json) — access: `fetched`; review: `not_reviewed`.
 - [https://github.com/Eliot5566/jev-arena](https://github.com/Eliot5566/jev-arena) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/Eliot5566/jev-arena/issues/1](https://github.com/Eliot5566/jev-arena/issues/1) — access: `fetched`; review: `not_reviewed`.
+- [https://eliot5566.github.io/jev-arena/?overlay=1&playlist=highlights](https://eliot5566.github.io/jev-arena/?overlay=1&playlist=highlights) — access: `fetched`; review: `not_reviewed`.
+- [https://eliot5566.github.io/jev-arena/?replay=highlights/glass-cannon-vs-trickster.json](https://eliot5566.github.io/jev-arena/?replay=highlights/glass-cannon-vs-trickster.json) — access: `fetched`; review: `not_reviewed`.
+- [https://github.com/Eliot5566/jev-arena/pull/2](https://github.com/Eliot5566/jev-arena/pull/2) — access: `fetched`; review: `not_reviewed`.
 - [Related public project or article](https://eliot5566.github.io/jev-arena) — discovered via Discord source (private provenance retained locally); access: `not_attempted`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

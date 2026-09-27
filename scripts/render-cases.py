@@ -11,6 +11,8 @@ CONFIG = json.loads((ROOT/'resource-pool/sources/collection-checkpoint.json').re
 GUILD_ID = CONFIG['guild_id']
 messages = json.loads((ROOT / CONFIG['main_snapshot']).read_text())['messages']
 messages += json.loads((ROOT / CONFIG['thread_snapshot']).read_text())['messages']
+for rel in CONFIG.get('channel_snapshots', []):
+    messages += json.loads((ROOT / rel).read_text())['messages']
 by_id = {}
 for row in messages:
     # A synthetic thread starter can reuse the parent ID without its content.

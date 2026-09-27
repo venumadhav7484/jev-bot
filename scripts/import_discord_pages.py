@@ -140,8 +140,8 @@ def run(directory,checkpoint,cutoff):
     ordered=sorted(canonical.values(),key=lambda r:int(r['id'].split('-')[-1]))
     known={}
     root=Path(__file__).resolve().parents[1]
-    for key in ('main_snapshot','thread_snapshot'):
-        for row in json.loads((root/checkpoint[key]).read_text())['messages']:
+    for rel in [checkpoint[k] for k in ('main_snapshot','thread_snapshot')]+checkpoint.get('channel_snapshots',[]):
+        for row in json.loads((root/rel).read_text())['messages']:
             known[row['id'].split('-')[-1]]=row
     new=[r for r in ordered if r['id'].split('-')[-1] not in known]
     def save(name,value):

@@ -28,5 +28,6 @@ One tester’s report of one product in demo mode; it is not evidence about Jev 
 ## Sources
 
 - [Simul | The Soft Skills Simulator for Career & Family](https://getsimul.com/) — access: `fetched`; review: `landing_page_reviewed`.
+- [Jevfend — Defend Your Architecture Using Jev | Free FDE Tool by S...](https://getsimul.com/tools/jevfend) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

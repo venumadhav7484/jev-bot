@@ -29,5 +29,6 @@ A Discord user reports failing their own evaluations. A successful demo is not g
 
 - [https://x.com/gregpr07/status/2100411066966749359?s=46](https://x.com/gregpr07/status/2100411066966749359?s=46) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
 - [https://github.com/browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast) — access: `fetched`; review: `readme_reviewed`.
+- [GitHub - jkudish/jev-browser: Browser use using Typesafe's Jev model](https://github.com/jkudish/jev-browser) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

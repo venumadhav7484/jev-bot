@@ -3,7 +3,7 @@ id: jkudish-tools
 title: "Jev MCP and Chromium browser packages"
 category: Additional reviewed applications
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -29,5 +29,6 @@ Proof-of-concept packages, not verified general compatibility or browser success
 
 - [https://github.com/jkudish/jev-mcp](https://github.com/jkudish/jev-mcp) — access: `fetched`; review: `readme_reviewed`.
 - [https://github.com/jkudish/jev-browser](https://github.com/jkudish/jev-browser) — access: `fetched`; review: `readme_reviewed`.
+- [GitHub - browser-use/jev-ultrafast: i. am. speed.](https://github.com/browser-use/jev-ultrafast) — access: `fetched`; review: `readme_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

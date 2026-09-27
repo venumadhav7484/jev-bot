@@ -3,7 +3,7 @@ id: opencode-foreman
 title: "Foreman: workflow supervision can increase total token use"
 category: agents
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -28,5 +28,6 @@ No controlled quality benchmark establishes the claimed improvement. A cheap rou
 ## Sources
 
 - [GitHub - Harrison97/opencode-foreman: A generic workflow runtime fo...](https://github.com/Harrison97/opencode-foreman) — access: `fetched`; review: `sections_reviewed`.
+- [Foreman — Keep your coding agent on track.](https://harrison97.github.io/opencode-foreman/) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

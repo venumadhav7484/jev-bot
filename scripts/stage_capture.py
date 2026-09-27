@@ -30,7 +30,7 @@ def stage(document, root=ROOT):
     if not isinstance(rows, list) or not rows:
         raise ValueError('Provide a nonempty messages array.')
     previous = {}
-    for relative in (checkpoint['main_snapshot'], checkpoint['thread_snapshot']):
+    for relative in (checkpoint['main_snapshot'], checkpoint['thread_snapshot'], *checkpoint.get('channel_snapshots', [])):
         for row in json.loads((root/relative).read_text())['messages']:
             mid = row['id'].split('-')[-1]
             previous.setdefault(mid, set()).add(fingerprint(row))

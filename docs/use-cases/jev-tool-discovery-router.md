@@ -3,7 +3,7 @@ id: jev-tool-discovery-router
 title: "Tool discovery router: expose a shortlist with a full-list fallback"
 category: agents
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -30,5 +30,6 @@ Author explicitly had not measured actual token savings or compaction frequency.
 - [GitHub - jackbarunz/jev-tool-router: Jev-powered MCP tool routing f...](https://github.com/jackbarunz/jev-tool-router) — access: `fetched`; review: `not_reviewed`.
 - [https://x.com/Barunz5/status/2101778790103810282?s=20](https://x.com/Barunz5/status/2101778790103810282?s=20) — access: `fetched`; review: `not_reviewed`.
 - [https://t.co/aOoAvWIREc](https://t.co/aOoAvWIREc) — access: `not_attempted`; review: `not_reviewed`.
+- [https://x.com/barunz5/status/2101778790103810282?s=46](https://x.com/barunz5/status/2101778790103810282?s=46) — access: `not_attempted`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

@@ -30,7 +30,7 @@ for c in cases:
     for pid in re.findall(r'https?://(?:www\.)?(?:x\.com|twitter\.com|fixupx\.com|fxtwitter\.com|fixvx\.com)/[^/]+/status/(\d+)',(POOL/'use-cases'/f'{c["id"]}.md').read_text()):
         case_for_post.setdefault(pid,set()).add(c['id'])
 messages={}
-for filename in (Path(CONFIG['main_snapshot']).name,Path(CONFIG['thread_snapshot']).name):
+for filename in (Path(CONFIG['main_snapshot']).name,Path(CONFIG['thread_snapshot']).name,*(Path(p).name for p in CONFIG.get('channel_snapshots',[]))):
     for row in json.loads((SOURCES/filename).read_text())['messages']:
         messages.setdefault(row['id'].split('-')[-1],row)
 existing=json.loads(QUEUE.read_text()) if QUEUE.exists() else {'entries':[]}

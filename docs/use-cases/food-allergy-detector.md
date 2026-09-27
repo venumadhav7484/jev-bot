@@ -3,7 +3,7 @@ id: food-allergy-detector
 title: "Recipe allergen prototype: unknown must not mean absent"
 category: domain-review
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

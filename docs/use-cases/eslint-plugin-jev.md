@@ -3,7 +3,7 @@ id: eslint-plugin-jev
 title: "ESLint: natural-language semantic rules"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-21
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

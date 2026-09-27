@@ -28,6 +28,6 @@ Rendered example probabilities are explicitly illustrative. File-level semantic 
 ## Sources
 
 - [https://www.jevlint.com/](https://www.jevlint.com/) — access: `browser_readable`; review: `sections_reviewed`.
-- [jevlint](https://github.com/Fox-Islam/jevlint) — access: `not_attempted`; review: `not_reviewed`.
+- [jevlint](https://github.com/Fox-Islam/jevlint) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

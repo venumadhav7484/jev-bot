@@ -3,7 +3,7 @@ id: heist-one
 title: "HEIST//ONE: realtime stealth game"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -28,5 +28,6 @@ Reviewed recording displays12batchedrequests and288typedjudgments,with260msmedia
 ## Sources
 
 - [https://x.com/AbdelStark/status/2100628873356693788?s=20](https://x.com/AbdelStark/status/2100628873356693788?s=20) — access: `public_media_extracted`; review: `demo_trace_reviewed`.
+- [https://x.com/AbdelStark/status/2102675806027755724](https://x.com/AbdelStark/status/2102675806027755724) — access: `fetched`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

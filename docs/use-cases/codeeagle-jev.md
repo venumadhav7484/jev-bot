@@ -3,7 +3,7 @@ id: codeeagle-jev
 title: "CodeEagle: propose candidates before asking for a judgment"
 category: retrieval
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

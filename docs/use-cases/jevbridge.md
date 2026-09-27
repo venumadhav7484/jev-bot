@@ -3,7 +3,7 @@ id: jevbridge
 title: "JevBridge: ACP and MCP adapter"
 category: agents
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

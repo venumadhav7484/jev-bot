@@ -3,7 +3,7 @@ id: jev-code
 title: "Jev Code: constrained AST construction"
 category: experiments
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

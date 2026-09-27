@@ -3,7 +3,7 @@ id: wellposed
 title: "Wellposed: semantic request linting"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

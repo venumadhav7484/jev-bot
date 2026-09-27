@@ -1,12 +1,12 @@
 # Jev master guide: capabilities, field lessons and effective use
 
-**Consolidated:** 24 September 2026. **Main-channel evidence boundary:** 24 September 2026 at 10:59:08 UTC, within the fixed collection window ending 11:03:05 UTC. All previously known thread cursors and twelve newly discovered threads were revisited in this update; undiscovered threads and arbitrary older edits remain outside verified coverage. Official interface and pricing statements below retain their dated review scope.
+**Consolidated:** 27 September 2026. **Evidence boundaries:** the Discord source channel to 27 September 2026 at 06:32:04 UTC (fixed window ending 06:46 UTC), and the builders' discussion channel from its first message to 27 September 2026 at 03:43:57 UTC. Known threads were revisited; threads started in the discussion channel, undiscovered threads and arbitrary older edits remain outside verified coverage. Official interface and pricing statements below retain their dated review scope.
 
 This is the main practical synthesis of this project's Jev research: what Jev does, where it appears useful, where attempts fail, how to build around it, and how to judge claims. It brings together the technical reference, community cases, corrections, inspected artifacts and our own pipeline experiments. Case links preserve supporting repositories, demos, articles and public posts; private provenance stays local.
 
-**Coverage is substantial, but incomplete.** The catalog contains 510 write-ups, including tools and counterexamples; 421 are default eligible and 89 held back. The captured corpus contains 5,183 unique message IDs. Editorial accounting includes first-pass discussion and unresolved-source dispositions; it is not full claim verification. The September 24 update adds unreviewed sources and media to the earlier backlog. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Current source and media counts](completion-status.md).
+**Coverage is substantial, but incomplete.** The catalog contains 547 write-ups, including tools and counterexamples; 448 are default eligible and 99 held back. The captured corpus contains 8,326 unique message IDs across two channels. Editorial accounting includes first-pass discussion and unresolved-source dispositions; it is not full claim verification. Scoped text reviews do not cover every embedded video or nested document. No community benchmark has been independently reproduced. [Current source and media counts](completion-status.md).
 
-**New field lessons:** batching can change margins; lexical search can beat semantic ranking; workflow design can matter more than a model swap; extra agent stages can increase total cost; and checking hostile instructions is different from checking poisoned evidence. Read the [September 24 synthesis](incremental-findings.md#24-september-2026-new-evidence-and-corrections) for the supporting cases and their limits.
+**New field lessons:** builders' measured lessons on wording, escape options, calibration and API limits are in [section 15](#15-lessons-from-builders-discussion-2027-september). Earlier: batching can change margins; lexical search can beat semantic ranking; workflow design can matter more than a model swap; extra agent stages can increase total cost; and checking hostile instructions is different from checking poisoned evidence. Read the [September 24 synthesis](incremental-findings.md#24-september-2026-new-evidence-and-corrections) for the supporting cases and their limits.
 
 ## Guide map
 
@@ -14,6 +14,7 @@ This is the main practical synthesis of this project's Jev research: what Jev do
 - [Failures and counterexamples](#4-what-fails-what-underperforms-and-why), [implementation method](#5-how-to-build-an-effective-jev-integration) and [evaluation](#6-evaluate-the-claim-not-the-appearance-of-a-demo).
 - [Tools and interfaces](#7-interfaces-tools-and-surrounding-infrastructure), [cost and privacy](#8-cost-latency-and-privacy-assess-the-whole-system) and [su-lekha](#9-worked-proposal-su-lekha).
 - [Our own experiments](#10-what-our-own-use-of-jev-taught-us), [bot recommendation rules](#11-rules-for-recommendations-based-on-this-knowledge) and [remaining unknowns](#12-what-remains-unknown-and-how-this-guide-should-evolve).
+- [Lessons from builders' discussion](#15-lessons-from-builders-discussion-2027-september): question design, calibration, knowledge limits and API infrastructure.
 
 ## 1. What Jev is—and which part of an application it supplies
 
@@ -328,3 +329,47 @@ The shell-vetting CTF screenshot shows a direct read blocked but a script-write 
 OpenPoke's displayed 33/36 agreement is agreement with another model, not labeled accuracy. Its initial 95.3% email suppression led to quarantine rather than silent dropping. Include unresolved items, quarantine work, fallback calls and total pipeline cost when evaluating a screening stage. Its small synthetic-email comparison does not establish production savings. [OpenPoke evidence](use-cases/openpoke-meets-jev.md).
 
 The LangWatch SQL illustration is a concrete bounded-trace evaluation pattern. Promotional throughput artwork is a separate evidence class: a stated 10,000 conversations in about 20 seconds provides no reproducible trace or accuracy labels. Preserve truncation and digest indicators so a judgment on shortened context is not confused with inspection of the entire conversation. [LangWatch](use-cases/langwatch.md).
+
+
+## 15. Lessons from builders' discussion (20–27 September)
+
+A second source channel, where builders discuss problems rather than show projects, adds measured lessons. Most come from a single builder's test, often on synthetic or small data; treat each number as a lead to re-test on your own workload.
+
+### Question and option design
+
+- **Mutually exclusive labels belong in one Choice.** Asked as separate yes/no questions, "is this factual?" and "is this reported speech?" both came back high (0.98 and 0.92) on the same sentence.
+- **Choice picks one winner.** It concentrates probability on its top option and is poor at multi-select or ranking beyond first place. Ask one Noul per candidate (for example 20 results as 20 Nouls in one request) and, if needed, one Choice for the best. See [Dehydrator](use-cases/dehydrator-tool-search.md), where Jev matched top-1 but left positions 2–10 effectively unordered.
+- **Freeze the wording.** Prepending a list of definitions shifted a 0–4 quality score by −0.68 (neutral text of the same length: −0.20); appended instruction-like text shifted it by −0.45; turning "equal to" into "different from" cost 20 accuracy points. Adding a scope phrase ("when introducing the research") removed 27 of 28 false positives in a style check. Wrong criteria descriptions can push accuracy below chance ([PriorBench](use-cases/priorbench-jev.md)). Compare probabilities only within one exact wording; log a wording version with every result.
+- **Escape options cut both ways.** Without a "none of these" option, off-topic inputs are forced into a category with high confidence (0 of 30 flagged, at 0.99). But an epistemic "not enough evidence" option can dominate: in one test it drew 60% of answers and correct picks fell from 83% to 27%. A content catch-all (greetings, fragments) behaved better than an epistemic one. Test with and without, per question.
+- **Option order is stable only when options are distinct.** One test saw the same winner across rotations for 99 of 100 clear questions; on overlapping categories from spoken fragments, 9–16% of winners changed with order, and identical repeated requests changed the winner on 4.6% of near-ties. For large or overlapping sets, ask in two shuffled orders and act only when they agree. For ranking, windows of 5–10 items with several shuffled passes worked best.
+- **Polarity is a bias, not a fix.** Reversing a specification's framing turned "flag everything" (60 of 60 clean items flagged) into "pass everything" (28 of 60 defects missed). The missed rules were the ones needing arithmetic over the data; compute those in code.
+- **Several intents, one request.** Send the message once and ask one Noul per intent plus a Choice for the main intent; handlers run for every intent over its threshold, in the order of the Choice.
+
+### Probabilities and confidence
+
+- **Calibrated on answerable tasks, not on unknowable ones.** Routing tests found confidence buckets that tracked accuracy, and an adversarial study found no calibration collapse. But on a fair die Choice reported 83% while right 19% of the time, and it turned a stated 45% forecast into 6.6% ([dice test](use-cases/jev-does-not-play-dice.md)). Noul tracked stated odds more closely. Keep genuine probabilities as numbers in code.
+- **Thresholds are task-specific.** One pre-registered evaluation found accuracy flat from 0.50 to 0.95 and perfect at 0.99; another team's adjudication curve peaked at 0.90. Measure your own curve.
+- **Repeated calls vary a little.** Twelve identical requests sent ten times each had a median confidence spread of 0.085; answers flipped only on near-ties below 0.35 confidence, and everything above 0.85 was stable.
+- **Confident and wrong is not caught by a threshold.** A model router chose a mid tier for "generate all of the code, make sure it's perfect" at 95% confidence. Builders responded with a lookup-table floor that Jev may only raise, and hard-coded high-stakes domains (finance, legal) to the strongest model.
+- **Labels can inflate confidence.** When only a label asserted what a number counted, median confidence was 0.990, higher than 0.930 when the text independently established it. In the same builder's tests, injected instructions or false assertions in state flipped 1 of 30 answers each, none above 0.90 confidence.
+
+### What Jev knows and what the caller must supply
+
+- **No clock.** "Review by 21/9/2026" scored as standard urgency until the state said "by tomorrow". Put the current date in state, or better, compute "days until" in code.
+- **Judgment from knowledge, facts from state, arithmetic in code.** Jev brings general knowledge (it answers world-knowledge Score questions without state, and plays sensible chess), but counting and numeric comparison belong in code.
+- **Constraints must be structural.** A grid walker stepped through walls it was told to avoid; action history in state did not reliably change repeated-action choices. Offer only legal actions and track progress in code.
+- **Languages.** Mexican-Spanish support checks exceeded 90% ([case](use-cases/whatsapp-spanish-support.md)), but language identification confused Chinese and Japanese queries; a script (character-range) check in code was more reliable.
+- **Domain matters.** The same instrument scored 100%, 92.5% and 50% on three adjacent tasks ([jev-trust](use-cases/jev-trust.md)); a 16-label educational tagging scheme scored 0.37 subset accuracy against ~0.7 for an LLM and ~0.81 for embeddings plus SVM.
+- **No images.** Caption or OCR first; builders report Jev combines noisy OCR with other evidence well.
+
+### Latency, limits and infrastructure
+
+- **Measure latency on the direct API.** Builders measured ~150–160 ms p50 directly against ~430–475 ms through gateways; batching is sublinear (50 questions ~195 ms, 800 ~615 ms). A free gateway returned 429s above about three concurrent requests, and silent SDK retries made a batch take 60 minutes instead of 3. Responses do not expose server time.
+- **Choice supports up to 255 options** (larger sets use a slower two-stage method); split bigger inventories into a tournament. Reported context limits were 32K tokens early and 64K later; the tokenizer is undisclosed and usage is returned only after the call.
+- **The API edge may reject content, not keys.** Requests containing attack-like text (path traversal, SQL-injection request lines, a backticked `python -m`) returned HTTP 403, the same status as an invalid key. Do not treat every 403 as a credential failure; log request IDs and retry-safe content separately.
+- **Keep keys server-side.** Browser calls fail CORS, and a long-lived key in browser storage widens the threat model; use a small backend or short-lived token broker. Choice probabilities are rounded to 0.01, so sums of 0.99 occur.
+
+### Patterns that helped, and ones that did not
+
+- **Helped:** tool routing over names and descriptions with a confidence fallback to the full list; BM25 or embeddings for recall followed by one Jev call scoring each candidate; shaping state (summaries instead of raw OCR, the last asks instead of the whole chat); one extra line of conversation context eliminated every dangerous miss in a 12-case probe.
+- **Did not help:** a broad LLM-judge replacement in an agent orchestrator produced a net loss of 78 correct decisions; a narrow per-claim "is there supporting evidence?" flag worked better. Semantic search over a codebase was slower and worse than grep for coding agents. Inserting Jev into a conversational agent added little when the large model still had to prepare its inputs.

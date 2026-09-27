@@ -3,7 +3,7 @@ id: drone-sim
 title: "Jev Drone: MuJoCo autopilot experiment"
 category: robotics
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

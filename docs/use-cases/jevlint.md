@@ -3,7 +3,7 @@ id: jevlint
 title: "JevLint: semantic coding conventions"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -23,10 +23,11 @@ Makes project-specific conventions available as repeated review checks.
 
 ## Limits and reuse
 
-Rendered example probabilities are explicitly illustrative. File-level semantic checks need precision/recall evaluation and cannot replace compiler/tests or whole-program analysis. CLI distinguishes findings from configuration/API failures; dry-run permits payload review. Selected source files go to the Jev API.
+Rendered example probabilities are explicitly illustrative. File-level semantic checks need precision/recall evaluation and cannot replace compiler/tests or whole-program analysis. CLI distinguishes findings from configuration/API failures; dry-run permits payload review. Selected source files go to the Jev API. Version 1.2.1 adds checks after the author found that criterion names can change results: it flags option descriptions that contradict their labels, or descriptions so close in meaning that the label breaks the tie.
 
 ## Sources
 
 - [https://www.jevlint.com/](https://www.jevlint.com/) — access: `browser_readable`; review: `sections_reviewed`.
+- [jevlint](https://github.com/Fox-Islam/jevlint) — access: `not_attempted`; review: `not_reviewed`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

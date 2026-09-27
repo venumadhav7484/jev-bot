@@ -3,7 +3,7 @@ id: minecraft-jev-distillation
 title: "Minecraft combat: use Jev labels to train a local classifier"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -19,7 +19,7 @@ Jev supplies decisions for a labelled dataset; the local model controls the real
 
 ## Why and impact
 
-The author reports approximately 300 ms remote calls from Australia versus approximately 1 ms local decisions. This moves network latency outside the live loop.
+The author reports approximately 300 ms remote calls from Australia versus approximately 1 ms local decisions. This moves network latency outside the live loop. The author adds that the local model reached about 90% of Jev’s accuracy at about 1 ms, with data gathered by pausing the game between ticks.
 
 ## Limits and reuse
 

@@ -3,7 +3,7 @@ id: jevrouter
 title: "JevRouter: tool shortlist"
 category: agents
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

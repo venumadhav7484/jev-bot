@@ -3,7 +3,7 @@ id: extraction-marker-recovery
 title: "Recover flattened document markers"
 category: retrieval
 evidence: author-reported
-reviewed_on: 2026-09-20
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 

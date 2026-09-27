@@ -1,6 +1,6 @@
 # Jev community use cases
 
-510 curated case records from the 2026-09-24 Discord snapshot. This is an expanding review, not an exhaustive catalog.
+539 curated case records from the 2026-09-27 Discord snapshot. This is an expanding review, not an exhaustive catalog.
 
 All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.
 
@@ -189,6 +189,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Tool discovery router: expose a shortlist with a full-list fallback](use-cases/jev-tool-discovery-router.md) | agents | Author report; see case for inspected evidence |
 | [Tool doors: bounded dispatch around a generative planner](use-cases/tool-door-handoff.md) | agents | Author report; see case for inspected evidence |
 | [jev-compaction: retain original bytes with expandable pointers](use-cases/jev-compaction.md) | agents | Author report; see case for inspected evidence |
+| [osenv: Jev checks every action of a coding-agent hybrid](use-cases/osenv-agent-judge.md) | agents | Author report; see case for inspected evidence |
 | [safe-upgrade: judgment, workflow and authority are separate](use-cases/tenuo-safe-upgrade.md) | agents | Author report; see case for inspected evidence |
 | [Browser Use Jev Ultrafast](use-cases/browser-use.md) | browser | Author report; see case for inspected evidence |
 | [Bside: typed browser actions](use-cases/bside.md) | browser | Author report; see case for inspected evidence |
@@ -197,11 +198,14 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Droidrun: phone control](use-cases/mobile-jev.md) | browser | Author report; see case for inspected evidence |
 | [Jev Mac Voice: voice-driven desktop actions](use-cases/mac-voice.md) | browser | Author report; see case for inspected evidence |
 | [Jev Mobile: Android observe-decide-act](use-cases/jev-mobile.md) | browser | Author report; see case for inspected evidence |
+| [ego-decision-layer: one Jev decision per browser step](use-cases/ego-decision-layer.md) | browser | Author report; see case for inspected evidence |
 | [Accounting judgments with rich transaction history](use-cases/accounting-history.md) | business | Author report; see case for inspected evidence |
 | [Atisbo: feedback triage and noise screening](use-cases/atisbo.md) | business | Author report; see case for inspected evidence |
 | [Biyuya: changing taxonomy traversal versus swapping models](use-cases/biyuya-expense-tree.md) | business | Author report; see case for inspected evidence |
 | [Clinirise: clinic booking and service automation](use-cases/clinirise.md) | business | Author report; see case for inspected evidence |
 | [Construction summaries: proposed Jev grounding checks](use-cases/construction-source-grounding.md) | business | Author report; see case for inspected evidence |
+| [E-shop catalogue import: 44,802 decisions and 769 unknowns](use-cases/catalog-import-marketing.md) | business | Author report; see case for inspected evidence |
+| [Industrial configurator: batching “what if” questions, Jev versus Gemini](use-cases/configurator-jev-gemini.md) | business | Author report; see case for inspected evidence |
 | [LeadDemon: remove non-company search hits](use-cases/leaddemon.md) | business | Author report; see case for inspected evidence |
 | [Multidimensional lead qualification](use-cases/lead-scoring.md) | business | Author report; see case for inspected evidence |
 | [Near Here: local event validation](use-cases/near-here.md) | business | Author report; see case for inspected evidence |
@@ -216,6 +220,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Job-description scoring and satire](use-cases/job-roast.md) | consumer | Author report; see case for inspected evidence |
 | [Magic-8-Jev: bounded-answer oracle](use-cases/magic-eight-ball.md) | consumer | Author report; see case for inspected evidence |
 | [Matching 743 personal skills to a job posting](use-cases/skills-posting-match.md) | consumer | Author report; see case for inspected evidence |
+| [Qualm: screen-time rules written as sentences](use-cases/qualm-screen-time.md) | consumer | Author report; see case for inspected evidence |
 | [Startup idea feedback while typing](use-cases/startup-validator.md) | consumer | Author report; see case for inspected evidence |
 | [Video-to-grocery-cart assistant](use-cases/grocery-cart.md) | consumer | Author report; see case for inspected evidence |
 | [AI news relevance filtering](use-cases/news-aggregator.md) | content | Author report; see case for inspected evidence |
@@ -252,6 +257,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [AILANG: typed decision effects](use-cases/ailang.md) | developer-tools | Author report; see case for inspected evidence |
 | [AgentEval: preserve typed answers and provider provenance](use-cases/agenteval-decision-client.md) | developer-tools | Author report; see case for inspected evidence |
 | [Ash Framework: typed ticket judgments as tools](use-cases/ash-ai.md) | developer-tools | Author report; see case for inspected evidence |
+| [DSPy 3.4: run decision signatures on Jev](use-cases/dspy-system-one.md) | developer-tools | Author report; see case for inspected evidence |
 | [Feelings: probabilistic conditions in Ruby](use-cases/ruby-feelings.md) | developer-tools | Author report; see case for inspected evidence |
 | [Hedgehog: proposed Jev integration into a coding builder](use-cases/hedgehog-proposed.md) | developer-tools | Author report; see case for inspected evidence |
 | [Jev Ultralightspeed: throughput claims need batch-quality checks](use-cases/jev-ultralightspeed.md) | developer-tools | Author report; see case for inspected evidence |
@@ -261,12 +267,17 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Nouls: semantic linting in an LSP](use-cases/nouls-lsp.md) | developer-tools | Author report; see case for inspected evidence |
 | [OpenAPI Sentinel: review semantic changes hidden in prose](use-cases/jev-oas-sentinel.md) | developer-tools | Author report; see case for inspected evidence |
 | [Rust TypeSafe client and tsg semantic search](use-cases/rust-tsg.md) | developer-tools | Author report; see case for inspected evidence |
+| [UsageTap: resolve model keys to lifecycle advice](use-cases/usagetap-model-lifecycle.md) | developer-tools | Author report; see case for inspected evidence |
+| [composable-jev and JevGraph: chaining Jev answers into graphs](use-cases/composable-jev-graph.md) | developer-tools | Author report; see case for inspected evidence |
 | [daf-jev: composable Python decision toolkit](use-cases/daf-jev.md) | developer-tools | Author report; see case for inspected evidence |
+| [decision-gate: rate, spend and privacy limits for Jev loops](use-cases/decision-gate.md) | developer-tools | Author report; see case for inspected evidence |
 | [five-lines: parser rules plus semantic code review](use-cases/five-lines.md) | developer-tools | Author report; see case for inspected evidence |
+| [grev: Unix filters that ask questions instead of matching patterns](use-cases/grev-coreutils.md) | developer-tools | Author report; see case for inspected evidence |
 | [jgrep: select potentially affected tests from a diff](use-cases/jgrep-test-selection.md) | developer-tools | Author report; see case for inspected evidence |
 | [pytest-jev: semantic assertions with explicit uncertainty failures](use-cases/pytest-jev.md) | developer-tools | Author report; see case for inspected evidence |
 | [Applicant tracking and employee-review experiment](use-cases/ats-experiment.md) | domain-review | Author report; see case for inspected evidence |
 | [Clinical documents: routing and stated-site grounding](use-cases/clinical-document-grounding.md) | domain-review | Author report; see case for inspected evidence |
+| [CriteriaCue: evidence against role criteria, not a ranking](use-cases/criteriacue.md) | domain-review | Author report; see case for inspected evidence |
 | [GlutenOrNot: product-label screening](use-cases/gluten-labels.md) | domain-review | Author report; see case for inspected evidence |
 | [Jev CVSS: classify fields, compute scores](use-cases/cvss.md) | domain-review | Author report; see case for inspected evidence |
 | [Norwegian public-hearing response classification](use-cases/norwegian-hearing.md) | domain-review | Author report; see case for inspected evidence |
@@ -281,6 +292,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [STLL: conditional document clauses](use-cases/stll-conditional-template.md) | domain-review | Author report; see case for inspected evidence |
 | [STLL: paragraph selection for document house styles](use-cases/stll-house-style.md) | domain-review | Author report; see case for inspected evidence |
 | [Tariff triage experiment](use-cases/tariff-triage.md) | domain-review | Author report; see case for inspected evidence |
+| [Texas electricity plans: Jev picks prices from fact labels](use-cases/jev-ercot.md) | domain-review | Author report; see case for inspected evidence |
 | [Decision Fabric: separate model errors from policy errors](use-cases/enterprise-decision-fabric.md) | engineering | Author report; see case for inspected evidence |
 | [PCB route-candidate selection](use-cases/pcb-routing.md) | engineering | Author report; see case for inspected evidence |
 | [AskJev: interactive decision stories](use-cases/askjev-stories.md) | experiments | Author report; see case for inspected evidence |
@@ -296,13 +308,18 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Piano note selection failure](use-cases/piano-limits.md) | experiments | Author report; see case for inspected evidence |
 | [Plain-English logic interpreter](use-cases/english-prolog.md) | experiments | Author report; see case for inspected evidence |
 | [Policy-response simulation with 1,024 personas](use-cases/persona-simulation.md) | experiments | Author report; see case for inspected evidence |
+| [SVG recognition: 100 yes/no questions as features](use-cases/jev-svg-recognition.md) | experiments | Author report; see case for inspected evidence |
 | [Symbolic integration: choosing candidate techniques](use-cases/symbolic-integration-routing.md) | experiments | Author report; see case for inspected evidence |
 | [Word-choice chatbot experiment](use-cases/word-choice-chatbot.md) | experiments | Author report; see case for inspected evidence |
 | [jev-trust: logging outcomes and inspecting calibration claims](use-cases/jev-trust.md) | experiments | Author report; see case for inspected evidence |
 | [Agenti: wake the writing model only for useful feed updates](use-cases/agenti-feed-gate.md) | filtering | Author report; see case for inspected evidence |
+| [Fantasy football agent: Jev filters news before Claude reasons](use-cases/football-agent-news-filter.md) | filtering | Author report; see case for inspected evidence |
 | [Feedwall: personal feed rules](use-cases/feedwall.md) | filtering | Author report; see case for inspected evidence |
+| [Garage Interrupt: which recalls matter to one vehicle](use-cases/garage-interrupt.md) | filtering | Author report; see case for inspected evidence |
 | [Paper Radar: filter research feeds and label your misses](use-cases/jev-paper-radar.md) | filtering | Author report; see case for inspected evidence |
 | [jevgrep: ordered log filtering with named state entries](use-cases/jevgrep.md) | filtering | Author report; see case for inspected evidence |
+| [BTC four-hour direction: a pre-registered NO-GO](use-cases/btc-4h-no-go.md) | finance-experiments | Author report; see case for inspected evidence |
+| [Epoch: a trading entry rule restated in plain English](use-cases/epoch-plain-english-rule.md) | finance-experiments | Author report; see case for inspected evidence |
 | [Jev Trade: paper-trading loop](use-cases/jev-trade.md) | finance-experiments | Author report; see case for inspected evidence |
 | [Jmarket: prediction-market suggestions](use-cases/jmarket.md) | finance-experiments | Author report; see case for inspected evidence |
 | [News-to-market signal: unvalidated finance experiment](use-cases/news-market-signal.md) | finance-experiments | Author report; see case for inspected evidence |
@@ -341,8 +358,10 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Generation-ship resource simulation](use-cases/generation-ship.md) | games | Author report; see case for inspected evidence |
 | [HEIST//ONE: realtime stealth game](use-cases/heist-one.md) | games | Author report; see case for inspected evidence |
 | [JEV FC: robot-soccer tactical coach](use-cases/jev-fc.md) | games | Author report; see case for inspected evidence |
+| [Jev Arena: fighters written in English, piloted live by Jev](use-cases/jev-arena.md) | games | Author report; see case for inspected evidence |
 | [Jev Guess: character-guessing game](use-cases/jevguess.md) | games | Author report; see case for inspected evidence |
 | [Jev Plays Pokémon: public spectator client](use-cases/pokemon-boyd.md) | games | Author report; see case for inspected evidence |
+| [Magic 8-Ball: reactive NPC mood from typed judgments](use-cases/magic-8-ball-npc.md) | games | Author report; see case for inspected evidence |
 | [Mario controller using NES memory](use-cases/mario-memory.md) | games | Author report; see case for inspected evidence |
 | [Meridian: virtual-world character decisions](use-cases/meridian.md) | games | Author report; see case for inspected evidence |
 | [Minecraft combat: use Jev labels to train a local classifier](use-cases/minecraft-jev-distillation.md) | games | Author report; see case for inspected evidence |
@@ -351,6 +370,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Parallel Wordle boards](use-cases/multi-wordle.md) | games | Author report; see case for inspected evidence |
 | [Pokémon campaign agent](use-cases/pokemon-run.md) | games | Author report; see case for inspected evidence |
 | [Procedurally generated game controller](use-cases/rocketman-game.md) | games | Author report; see case for inspected evidence |
+| [Rain World: Claude plans, Jev picks the next move](use-cases/rain-world-split-brain.md) | games | Author report; see case for inspected evidence |
 | [Rapid Mario harness port](use-cases/mario-port.md) | games | Author report; see case for inspected evidence |
 | [Roulette Wars: game playtesting](use-cases/roulette-wars.md) | games | Author report; see case for inspected evidence |
 | [Snake: speed versus planning quality](use-cases/snake-limits.md) | games | Author report; see case for inspected evidence |
@@ -384,12 +404,14 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Pi extension for adjustable output detail](use-cases/pi-detail.md) | interfaces | Author report; see case for inspected evidence |
 | [Saypage: constrained page assembly](use-cases/saypage.md) | interfaces | Author report; see case for inspected evidence |
 | [json-render: selecting UI components](use-cases/json-render.md) | interfaces | Author report; see case for inspected evidence |
+| [Jevfend: a “Jev confidence” that tracked word count](use-cases/jevfend-word-count.md) | limitations | Author report; see case for inspected evidence |
 | [Legal RAG comparison: corrected baselines and a registry gate](use-cases/sovereign-rag-benchmark.md) | limitations | Author report; see case for inspected evidence |
 | [Reasoning probes: date arithmetic, literal reading and letter counts](use-cases/riddle-probes.md) | limitations | Author report; see case for inspected evidence |
 | [Urgency wording: expression versus business impact](use-cases/urgency-wording.md) | limitations | Author report; see case for inspected evidence |
 | [Wikipedia deletion study: false facts versus hostile instructions](use-cases/jagged-wikipedia-study.md) | limitations | Author report; see case for inspected evidence |
 | [Agent-session failure classification](use-cases/agent-failure-taxonomy.md) | operations | Author report; see case for inspected evidence |
 | [Discord forum posts to tracked issues](use-cases/forum-to-issues.md) | operations | Author report; see case for inspected evidence |
+| [Fault Diagnosis PoC: manual-grounded triage for a compressor](use-cases/compressor-fault-diagnosis.md) | operations | Author report; see case for inspected evidence |
 | [GitLab launch-blocker triage](use-cases/gitlab-triage.md) | operations | Author report; see case for inspected evidence |
 | [Gust: security-incident evaluation via OpenRouter](use-cases/gust-incidents.md) | operations | Author report; see case for inspected evidence |
 | [Jevernetes: log triage with visible coverage gaps](use-cases/jevernetes.md) | operations | Author report; see case for inspected evidence |
@@ -398,6 +420,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Signal Weave: context cards over BI dashboards](use-cases/signal-weave.md) | operations | Author report; see case for inspected evidence |
 | [Swamp: alert screening before escalation](use-cases/swamp-triage.md) | operations | Author report; see case for inspected evidence |
 | [Waitless: UI timeout investigation advisor](use-cases/waitless.md) | operations | Author report; see case for inspected evidence |
+| [jev-oncall: alert triage with four questions per alert](use-cases/jev-oncall.md) | operations | Author report; see case for inspected evidence |
 | [Email labels with a review queue](use-cases/mail-label-archive.md) | productivity | Author report; see case for inspected evidence |
 | [Homing Pigeon: optional email labels before any mailbox action](use-cases/homing-pigeon.md) | productivity | Author report; see case for inspected evidence |
 | [Atomic claim feedback for coding patches](use-cases/werkfaden-feedback.md) | quality | Author report; see case for inspected evidence |
@@ -443,10 +466,12 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Synthetic generative-agent offload benchmark](use-cases/offload-bench.md) | quality | Author report; see case for inspected evidence |
 | [Tenet: natural-language code review rules](use-cases/tenet.md) | quality | Author report; see case for inspected evidence |
 | [Toy supported-claim versus overclaim check](use-cases/toy-supported-claim-check.md) | quality | Author report; see case for inspected evidence |
+| [TraceRoot: Jev as the detector judge for agent traces](use-cases/traceroot-jev-detector.md) | quality | Author report; see case for inspected evidence |
 | [Unfair-ToS classification: unresolved low-accuracy report](use-cases/unfair-tos-probe.md) | quality | Author report; see case for inspected evidence |
 | [Unsaidbrief: missing decisions in product briefs](use-cases/unsaidbrief.md) | quality | Author report; see case for inspected evidence |
 | [Wellposed: semantic request linting](use-cases/wellposed.md) | quality | Author report; see case for inspected evidence |
 | [Wince: route human review attention](use-cases/wince.md) | quality | Author report; see case for inspected evidence |
+| [eval-layer: agent-specific rubrics judged by Jev or an LLM](use-cases/eval-layer.md) | quality | Author report; see case for inspected evidence |
 | [file2markdown: output-health checks](use-cases/file2markdown-health.md) | quality | Author report; see case for inspected evidence |
 | [jev-align: optimize decision criteria with labels](use-cases/jev-align.md) | quality | Author report; see case for inspected evidence |
 | [jev-commit: check messages against staged changes](use-cases/jev-commit.md) | quality | Author report; see case for inspected evidence |
@@ -475,9 +500,11 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [System One Search: code retrieval and graphs](use-cases/system-one-search.md) | retrieval | Author report; see case for inspected evidence |
 | [Terms-of-service line search](use-cases/tos-search.md) | retrieval | Author report; see case for inspected evidence |
 | [askgrep: semantic code search with a lexical counterexample](use-cases/askgrep.md) | retrieval | Author report; see case for inspected evidence |
+| [jev-digest: verbatim passages for an agent instead of whole pages](use-cases/jev-digest.md) | retrieval | Author report; see case for inspected evidence |
 | [jevtrim: compare relevance selection at matched context budgets](use-cases/jevtrim.md) | retrieval | Author report; see case for inspected evidence |
 | [CARLA realtime driving experiment](use-cases/carla-driving.md) | robotics | Author report; see case for inspected evidence |
 | [Flight-simulator control](use-cases/airplane-sim.md) | robotics | Author report; see case for inspected evidence |
+| [Jev Driver: captions in, driving actions out](use-cases/jev-driver-vision.md) | robotics | Author report; see case for inspected evidence |
 | [Jev Drone: MuJoCo autopilot experiment](use-cases/drone-sim.md) | robotics | Author report; see case for inspected evidence |
 | [LIBERO: Jev chooses among physics-previewed robot actions](use-cases/jev-libero.md) | robotics | Author report; see case for inspected evidence |
 | [Robot joint choices: code previews motion before Jev selects](use-cases/robot-joint-preview.md) | robotics | Author report; see case for inspected evidence |
@@ -487,6 +514,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Structured-state driving simulation](use-cases/driving-sim.md) | robotics | Author report; see case for inspected evidence |
 | [Vision extraction followed by typed verification](use-cases/sde-vision-cascade.md) | robotics | Author report; see case for inspected evidence |
 | [Beta intent gate: bounded routing under latency budget](use-cases/beta-intent-gate.md) | routing | Author report; see case for inspected evidence |
+| [LLM Gateway: Jev rates requests before routing](use-cases/llm-gateway-smart-routing.md) | routing | Author report; see case for inspected evidence |
 | [Agent flinch: destructive operations still need explicit authority](use-cases/decor-agent-flinch.md) | security | Author report; see case for inspected evidence |
 | [Code vulnerability risk flags](use-cases/vulnerability-flags.md) | security | Author report; see case for inspected evidence |
 | [Codebase screening before execution](use-cases/is-malicious.md) | security | Author report; see case for inspected evidence |
@@ -506,6 +534,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Security corpus classification benchmark](use-cases/jev-sec-bench.md) | security | Author report; see case for inspected evidence |
 | [Vindex: policy screening before content generation](use-cases/vindex.md) | security | Author report; see case for inspected evidence |
 | [Website traffic and bot triage](use-cases/website-traffic.md) | security | Author report; see case for inspected evidence |
+| [jev-secrets: pseudonymise requests, restore the answers](use-cases/jev-secrets.md) | security | Author report; see case for inspected evidence |
 | [pg-redact: contextual PII masking](use-cases/pg-redact.md) | security | Author report; see case for inspected evidence |
 | [safe-sh: semantic shell-script analysis](use-cases/safe-sh.md) | security | Author report; see case for inspected evidence |
 | [toolgate: tool-call risk policy](use-cases/toolgate.md) | security | Author report; see case for inspected evidence |

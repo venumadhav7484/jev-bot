@@ -4,10 +4,10 @@ Published-library capture boundary: **27 September 2026, 12:02:04 IST / 06:32:04
 
 | Layer | Current state | Remaining scope |
 |---|---|---|
-| Captured source | 5516 main rows, 2820 supplementary thread rows; 8326 unique IDs; 37 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
-| Editorial accounting | 8326 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
+| Captured source | 5516 main rows, 2880 supplementary thread rows; 8386 unique IDs; 45 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
+| Editorial accounting | 8386 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
 | Cases | 547 write-ups; 448 eligible for default retrieval; 99 held back | Further source validation can correct or merge cases |
-| External URLs | 1862 registered; 684 await first disposition; 835 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
+| External URLs | 1864 registered; 685 await first disposition; 836 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
 | Context screening | 211 links scoped as unrelated context; 37 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
 | X | 327 distinct posts: 140 reviewed, 17 media-pending, 38 thread-expansion pending, 132 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 430 / 755 attachment URLs reviewed; 372 / 659 messages complete | 325 attachments across 287 messages pending |

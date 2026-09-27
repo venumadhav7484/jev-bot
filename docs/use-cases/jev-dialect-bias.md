@@ -23,7 +23,7 @@ On the paper's judge questions, plain Jev did not show the paper's penalty again
 
 ## Limits and reuse
 
-A limited adaptation of the paper; much of the moderation gap lines up with profanity and slurs in the source tweets, and the translation method cannot be separated from dialect. Never put protected attributes into state for decisions about people.
+A limited adaptation of the paper; much of the moderation gap lines up with profanity and slurs in the source tweets, and the translation method cannot be separated from dialect. Never put protected attributes into state for decisions about people. The author later clarified that, as in the original paper, each tweet was judged in isolation, without the conversation it belonged to; testing a reply with its original message in context is an untested extension for moderation.
 
 ## Sources
 

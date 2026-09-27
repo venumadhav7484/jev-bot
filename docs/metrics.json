@@ -3,17 +3,17 @@
   "coverage": {
     "snapshot_date": "2026-09-27",
     "main_channel_rows": 5516,
-    "thread_rows": 2820,
-    "unique_messages": 8326,
-    "thread_count": 37,
+    "thread_rows": 2880,
+    "unique_messages": 8386,
+    "thread_count": 45,
     "thread_rows_include_starters_and_parent_copies": true,
-    "external_urls": 1862,
+    "external_urls": 1864,
     "access_status_counts": {
-      "fetched": 1575,
+      "fetched": 1576,
       "access_failed": 64,
       "browser_readable": 25,
       "public_image_extracted": 32,
-      "not_attempted": 114,
+      "not_attempted": 115,
       "rendered_browser_accessible": 1,
       "public_content_recovered": 2,
       "public_web_reader": 3,
@@ -28,8 +28,8 @@
     "curated_cases": 547,
     "default_retrieval_cases": 448,
     "message_coverage_status_counts": {
-      "cited_in_case": 1327,
-      "excluded_social_or_logistics": 2177,
+      "cited_in_case": 1331,
+      "excluded_social_or_logistics": 2181,
       "ecosystem_jev_not_established": 219,
       "media_context_unresolved": 164,
       "proposed_integration": 546,
@@ -55,20 +55,20 @@
       "jev_role_not_established": 5,
       "other_model_not_jev": 1,
       "planned_integration": 3,
-      "context_only_not_jev_evidence": 234,
+      "context_only_not_jev_evidence": 284,
       "dated_service_limits": 2,
-      "cited_in_guide": 63
+      "cited_in_guide": 65
     },
     "exhaustive": false,
     "independent_benchmarks_run": 0,
     "s3_uploaded": true,
     "machine_triage": {
-      "completed": 8308,
+      "completed": 8368,
       "remaining": 18,
       "is_editorial_approval": false
     },
     "editorial_review": {
-      "newly_reviewed_messages": 7972,
+      "newly_reviewed_messages": 8032,
       "unassigned_messages": 0,
       "unresolved_evidence_statuses": {
         "media_context_unresolved": 164,
@@ -78,7 +78,7 @@
       "evidence_flags_survive_case_assignment": true
     },
     "external_review_status_counts": {
-      "not_reviewed": 684,
+      "not_reviewed": 685,
       "readme_reviewed": 216,
       "inaccessible_content_pending": 58,
       "source_text_reviewed": 94,
@@ -92,11 +92,11 @@
       "sections_reviewed": 75,
       "demo_interface_reviewed": 23,
       "directory_reviewed": 5,
+      "context_only_reviewed": 12,
       "metadata_only": 37,
       "implementation_report_reviewed": 4,
       "inaccessible_after_attempt": 5,
       "official_reference_reviewed": 2,
-      "context_only_reviewed": 11,
       "official_documentation_reviewed": 5,
       "official_cookbook_reviewed": 2,
       "related_tool_reviewed": 4,
@@ -148,7 +148,7 @@
       "provider_announcement_reviewed": 1
     },
     "external_unresolved_content_status_counts": {
-      "not_reviewed": 684,
+      "not_reviewed": 685,
       "inaccessible_content_pending": 58,
       "catalog_reviewed_book_unavailable": 1,
       "post_text_reviewed_media_pending": 36,
@@ -158,38 +158,38 @@
       "nontext_content_pending": 1,
       "video_content_pending": 7
     },
-    "external_urls_with_content_gaps": 835,
+    "external_urls_with_content_gaps": 836,
     "review_disposition_is_full_validation": false,
     "s3_backup_completed_at": "2026-09-20T06:40:05.094561+00:00"
   },
   "triage": {
-    "generated_at": "2026-09-27T08:17:54.144126+00:00",
+    "generated_at": "2026-09-27T14:00:09.570901+00:00",
     "pipeline_version": "discord-triage-v3",
-    "captured_unique_messages": 8326,
-    "machine_triaged": 8316,
+    "captured_unique_messages": 8386,
+    "machine_triaged": 8376,
     "machine_triage_remaining": 10,
     "kinds": {
-      "implementation": 1009,
-      "community_reaction": 2223,
-      "technical_detail": 630,
-      "tool_or_resource": 1228,
-      "evaluation": 704,
-      "substantive_question": 1103,
-      "limitation_or_correction": 1022,
-      "unclear": 309,
-      "unrelated": 88
+      "implementation": 1011,
+      "community_reaction": 2238,
+      "technical_detail": 637,
+      "tool_or_resource": 1230,
+      "evaluation": 707,
+      "substantive_question": 1109,
+      "limitation_or_correction": 1045,
+      "unclear": 310,
+      "unrelated": 89
     },
     "relations": {
       "reported_jev_use": 1549,
-      "not_established": 3360,
-      "jev_discussion": 1605,
-      "other_technology": 962,
+      "not_established": 3395,
+      "jev_discussion": 1614,
+      "other_technology": 978,
       "proposed_jev_use": 840
     },
     "usage": {
-      "input_tokens": 11023326,
-      "output_tokens": 3287917,
-      "requests": 1041
+      "input_tokens": 11097662,
+      "output_tokens": 3311719,
+      "requests": 1049
     },
     "editorially_approved_by_this_pipeline": 0,
     "exhaustive": false,
@@ -198,7 +198,8 @@
       "8c8ffa6c24f99e9f6bb27fcef442d31713aa4704cf24f4725e11e99b11e45df1",
       "26211e6c795f740c3a13dda3e2b34fe67a54dd8b88ca98d2430d57b75e8c91d7",
       "aa7d8b5acd04e9bef9b0fcc7378ddb88830d07706a536b1fca65f8f2da7196ae",
-      "202230b427ae25391e3304de76c7427d70a9cd8a9e0783aeb7692a671645d2b7"
+      "202230b427ae25391e3304de76c7427d70a9cd8a9e0783aeb7692a671645d2b7",
+      "dc792e3a9cf0df6b81dca5502dfee82b0cb7c2093b063d016bd2815f9f5541c9"
     ],
     "remaining_note": "18 actual older message IDs have manual editorial dispositions without Jev predictions. Eight obsolete wrapper-ID predictions remain as historical receipts but do not count against the current corpus.",
     "stored_predictions_including_obsolete_aliases": 5173

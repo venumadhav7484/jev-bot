@@ -1,6 +1,6 @@
 # Remaining evidence review
 
-Capture boundary: **27 September 2026, 12:02:04 IST / 06:32:04 UTC**. The current source register contains 835 explicit content gaps among 1862 URLs. 325 of 755 captured attachment URLs still need complete inspection. These sets overlap; do not add them to estimate missing cases.
+Capture boundary: **27 September 2026, 12:02:04 IST / 06:32:04 UTC**. The current source register contains 836 explicit content gaps among 1864 URLs. 325 of 755 captured attachment URLs still need complete inspection. These sets overlap; do not add them to estimate missing cases.
 
 The catalog has 547 case records. Case inclusion and first-pass message dispositions do not establish independent validation. Fetched text can remain unreviewed, and a scoped README review does not cover every linked result file or video. [Current counts](completion-status.md) · [Latest lessons](incremental-findings.md).
 

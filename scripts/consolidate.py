@@ -84,7 +84,7 @@ Published-library capture boundary: **{cutoff_label}**. Staged incoming batches 
 | X | {len(x_queue['entries'])} distinct posts: {x_counts.get('reviewed', 0)} reviewed, {x_counts.get('pending_media', 0)} media-pending, {x_counts.get('pending_thread_expansion', 0)} thread-expansion pending, {x_counts.get('pending', 0)} pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | {media['attachments_reviewed']} / {media['unique_urls']} attachment URLs reviewed; {media['content_review_counts'].get('content_reviewed', 0)} / {media['messages']} messages complete | {media['attachments_pending']} attachments across {sum(r['remaining_attachments'] > 0 for r in media['entries'])} messages pending |
 | Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
-| S3 | {backup_label} | Older backup does not include later capture or curation; backup state is separate from evidence review |
+| S3 | {backup_label} | Backup does not include later capture or curation; backup state is separate from evidence review |
 
 ## What the counts mean
 

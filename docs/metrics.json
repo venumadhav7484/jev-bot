@@ -160,7 +160,7 @@
     },
     "external_urls_with_content_gaps": 848,
     "review_disposition_is_full_validation": false,
-    "s3_backup_completed_at": "2026-09-20T06:40:05.094561+00:00"
+    "s3_backup_completed_at": "2026-09-27T15:01:55.333036+00:00"
   },
   "triage": {
     "generated_at": "2026-09-27T14:39:05.275520+00:00",

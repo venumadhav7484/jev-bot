@@ -12,7 +12,7 @@ Published-library capture boundary: **27 September 2026, 19:37:43 IST / 14:07:43
 | X | 329 distinct posts: 140 reviewed, 17 media-pending, 38 thread-expansion pending, 134 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 430 / 755 attachment URLs reviewed; 372 / 659 messages complete | 325 attachments across 287 messages pending |
 | Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
-| S3 | Verified private backup from 2026-09-20 | Older backup does not include later capture or curation; backup state is separate from evidence review |
+| S3 | Verified private backup from 2026-09-27 | Backup does not include later capture or curation; backup state is separate from evidence review |
 
 ## What the counts mean
 

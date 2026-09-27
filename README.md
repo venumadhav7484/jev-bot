@@ -74,7 +74,7 @@ The latest published main-channel capture boundary appears below. The exact last
 | External evidence | 1884 URLs; 695 await first disposition; 848 retain content gaps |
 | Media | 430 / 755 attachments inspected |
 | Bot | Jev shortlist search and re-ranking; optional GLM 5.3 design, run on Jev |
-| S3 | Verified private backup from 2026-09-20; later updates not included |
+| S3 | Verified private backup from 2026-09-27; later updates not included |
 
 <!-- SNAPSHOT-END -->
 

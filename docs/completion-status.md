@@ -1,15 +1,15 @@
 # Snapshot and completion status
 
-Published-library capture boundary: **27 September 2026, 12:02:04 IST / 06:32:04 UTC**. Staged incoming batches remain separate until promotion. The exact last-post link and capture cursor are preserved privately. Capture progress is separate from content-review progress.
+Published-library capture boundary: **27 September 2026, 19:37:43 IST / 14:07:43 UTC**. Staged incoming batches remain separate until promotion. The exact last-post link and capture cursor are preserved privately. Capture progress is separate from content-review progress.
 
 | Layer | Current state | Remaining scope |
 |---|---|---|
-| Captured source | 5516 main rows, 2880 supplementary thread rows; 8386 unique IDs; 45 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
-| Editorial accounting | 8386 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
-| Cases | 547 write-ups; 448 eligible for default retrieval; 99 held back | Further source validation can correct or merge cases |
-| External URLs | 1864 registered; 685 await first disposition; 836 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
+| Captured source | 5516 main rows, 2983 supplementary thread rows; 8489 unique IDs; 47 discovered threads | No independent server-total reconciliation; newer posts and undiscovered threads excluded |
+| Editorial accounting | 8489 IDs have case links or explicit dispositions; 0 uncatalogued | Unresolved-media and insufficient-evidence dispositions remain unresolved |
+| Cases | 554 write-ups; 454 eligible for default retrieval; 100 held back | Further source validation can correct or merge cases |
+| External URLs | 1884 registered; 695 await first disposition; 848 retain explicit content gaps | Access failures, metadata shells and uninspected media remain unresolved; scoped reviews do not validate every nested link |
 | Context screening | 211 links scoped as unrelated context; 37 metadata-only pages | Scope screening does not establish absence of a possible Jev integration |
-| X | 327 distinct posts: 140 reviewed, 17 media-pending, 38 thread-expansion pending, 132 pending | Text review does not inspect video/images; scheduled review remains paused |
+| X | 329 distinct posts: 140 reviewed, 17 media-pending, 38 thread-expansion pending, 134 pending | Text review does not inspect video/images; scheduled review remains paused |
 | Attachments | 430 / 755 attachment URLs reviewed; 372 / 659 messages complete | 325 attachments across 287 messages pending |
 | Bot | Local web/CLI assistant; full-library Jev evaluation, optional GLM 5.3 writing and local/S3 research sources | Source/media gaps remain; no independent answer-accuracy or production validation |
 | S3 | Verified private backup from 2026-09-20 | Older backup does not include later capture or curation; backup state is separate from evidence review |

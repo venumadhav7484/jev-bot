@@ -3,7 +3,7 @@ id: schema-sensitivity
 title: "Choice labels and ordering can change probabilities"
 category: quality
 evidence: author-reported
-reviewed_on: 2026-09-19
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -19,7 +19,7 @@ Authors change criterion names and insertion order, compare identical duplicates
 
 ## Why and impact
 
-The follow-up reports duplicate agreement within 0.005 but larger shifts for uncertain passages across label pairs; high-confidence passages move less.
+The follow-up reports duplicate agreement within 0.005 but larger shifts for uncertain passages across label pairs; high-confidence passages move less. In the original thread, reversing a label pair moved the mean from about 0.678 to 0.557 while an exact duplicate gave 0.674, and means stayed stable over 100–500 repetitions; the author recommends versioning the whole question schema (primitive, instruction, labels, descriptions and order) when probabilities feed another system.
 
 ## Limits and reuse
 

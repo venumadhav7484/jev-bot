@@ -3,7 +3,7 @@ id: clash-royale-yolo-state
 title: "Clash Royale: YOLO/CV supplies state, Jev chooses moves"
 category: games
 evidence: author-reported
-reviewed_on: 2026-09-24
+reviewed_on: 2026-09-27
 independently_reproduced: false
 ---
 
@@ -15,7 +15,7 @@ A separate community game controller reports an early winning streak and later 9
 
 ## How Jev fits
 
-The author clarifies that images go through YOLOv9 troop detection and a computer-vision pipeline. Jev receives the resulting JSON state, not screenshots.
+The author clarifies that images go through YOLOv9 troop detection and a computer-vision pipeline. Jev receives the resulting JSON state, not screenshots. Later posts add that OpenCV and NumPy read cards, elixir, badges, health and tower bars, a YOLOv9 model identifies enemy troops, and Jev picks a strategy, a card and a square; a bring-your-own-key replay site lets visitors change the situation and questions.
 
 ## Why and impact
 
@@ -28,8 +28,9 @@ Initial streak and later percentage describe different reports, not a fixed benc
 ## Sources
 
 - [https://x.com/atp_se7en/status/2101871442417905792?s=46](https://x.com/atp_se7en/status/2101871442417905792?s=46) — access: `access_failed`; review: `inaccessible_content_pending`.
-- [https://x.com/atp_se7en/status/2102107698557026683?s=20](https://x.com/atp_se7en/status/2102107698557026683?s=20) — access: `fetched`; review: `not_reviewed`.
+- [https://x.com/atp_se7en/status/2102107698557026683?s=20](https://x.com/atp_se7en/status/2102107698557026683?s=20) — access: `fetched`; review: `post_text_reviewed_media_pending`.
+- [clash-jev](https://clash-jev.vercel.app/) — access: `fetched`; review: `not_reviewed`.
 - [Related public project or article](https://x.com/atp_se7en/status/2101871442417905792) — discovered via Discord source (private provenance retained locally); access: `access_failed`; review: `inaccessible_content_pending`.
-- [Related public project or article](https://x.com/atp_se7en/status/2102107698557026683) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `not_reviewed`.
+- [Related public project or article](https://x.com/atp_se7en/status/2102107698557026683) — discovered via Discord source (private provenance retained locally); access: `fetched`; review: `post_text_reviewed_media_pending`.
 
 Access and review are separate. A returned page may contain only metadata. Source register (local-only evidence) · Review notes (local-only evidence).

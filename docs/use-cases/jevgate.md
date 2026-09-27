@@ -23,11 +23,11 @@ Makes semantic maintainability feedback available in the editing loop. Follow-up
 
 ## Limits and reuse
 
-No defect or productivity benchmark supplied. Suggestions are contextual and should be checked against tests and project architecture. September 23 v0.5.1 update reports rewritten literal checks clearing 26 of 46 author-labelled false notes without clearing a labelled positive. Uncertain responses stop becoming ordinary notes; a close decision can trigger one focused follow-up. Security scope remains a function plus at most one caller hop, not whole-program data flow or authorization verification. Source, question and model enter the cache key; unchanged-request reuse is not a fresh model check. Release notes for 0.17–0.21 report hand-labelled findings on 40 and then 103 pinned projects, with “reviews right” rising from 69% to 76% and “considers right” from 64% to 73%, plus new deserialization, XXE and template XSS checks. These are the author’s own labels, not an independent audit.
+No defect or productivity benchmark supplied. Suggestions are contextual and should be checked against tests and project architecture. September 23 v0.5.1 update reports rewritten literal checks clearing 26 of 46 author-labelled false notes without clearing a labelled positive. Uncertain responses stop becoming ordinary notes; a close decision can trigger one focused follow-up. Security scope remains a function plus at most one caller hop, not whole-program data flow or authorization verification. Source, question and model enter the cache key; unchanged-request reuse is not a fresh model check. Release notes for 0.17–0.21 report hand-labelled findings on 40 and then 103 pinned projects, with “reviews right” rising from 69% to 76% and “considers right” from 64% to 73%, plus new deserialization, XXE and template XSS checks. These are the author’s own labels, not an independent audit. Version 0.22 (27 September) adds Bend 2 and a rule asking whether a law's comment claims more than the law checks. On 23 hand-labelled Bend projects not used for tuning, 70% of reviews were right (53% before a label-driven fix) and law findings were right 15 of 23 times; 3,713 Bend 2 files were read without mistaking any for Bend 1.
 
 ## Sources
 
-- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `sections_reviewed`.
+- [https://github.com/Tech-Byte-Frontier/jevgate](https://github.com/Tech-Byte-Frontier/jevgate) — access: `fetched`; review: `readme_reviewed`.
 - [https://crates.io/crates/jevgate](https://crates.io/crates/jevgate) — access: `fetched`; review: `not_reviewed`.
 - [JevGate - JevGate](https://tech-byte-frontier.github.io/jevgate/) — access: `fetched`; review: `not_reviewed`.
 

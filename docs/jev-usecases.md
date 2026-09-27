@@ -1,6 +1,6 @@
 # Jev community use cases
 
-547 curated case records from the 2026-09-27 Discord snapshot. This is an expanding review, not an exhaustive catalog.
+554 curated case records from the 2026-09-27 Discord snapshot. This is an expanding review, not an exhaustive catalog.
 
 All cases have an identifiable Discord source. Reported outcomes are author claims unless explicitly stated otherwise. No external project was installed or benchmark independently reproduced.
 
@@ -264,6 +264,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Hedgehog: proposed Jev integration into a coding builder](use-cases/hedgehog-proposed.md) | developer-tools | Author report; see case for inspected evidence |
 | [Jev Ultralightspeed: throughput claims need batch-quality checks](use-cases/jev-ultralightspeed.md) | developer-tools | Author report; see case for inspected evidence |
 | [Jev query linter: static checks plus semantic feedback](use-cases/jev-query-linter.md) | developer-tools | Author report; see case for inspected evidence |
+| [Jev-AI-Skill: loop, route and Git decisions for coding assistants](use-cases/jev-ai-skill.md) | developer-tools | Author report; see case for inspected evidence |
 | [JevX: identify heuristic decisions worth evaluating](use-cases/jevx.md) | developer-tools | Author report; see case for inspected evidence |
 | [Jevals: local decision-model workbench](use-cases/jevals.md) | developer-tools | Author report; see case for inspected evidence |
 | [Nouls: semantic linting in an LSP](use-cases/nouls-lsp.md) | developer-tools | Author report; see case for inspected evidence |
@@ -290,6 +291,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Recipe allergen prototype: unknown must not mean absent](use-cases/food-allergy-detector.md) | domain-review | Author report; see case for inspected evidence |
 | [Regulatory-change impact checks](use-cases/regulatory-impact.md) | domain-review | Author report; see case for inspected evidence |
 | [Resume and job-description fit scoring](use-cases/resume-fit.md) | domain-review | Author report; see case for inspected evidence |
+| [Resume review that stays silent unless the evidence agrees](use-cases/resume-review-silence.md) | domain-review | Author report; see case for inspected evidence |
 | [STLL: bounded document-category review](use-cases/stll-legal.md) | domain-review | Author report; see case for inspected evidence |
 | [STLL: case outcome and citation-polarity cascade](use-cases/stll-case-outcome.md) | domain-review | Author report; see case for inspected evidence |
 | [STLL: citation support while drafting](use-cases/stll-citation-support.md) | domain-review | Author report; see case for inspected evidence |
@@ -316,6 +318,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [SVG recognition: 100 yes/no questions as features](use-cases/jev-svg-recognition.md) | experiments | Author report; see case for inspected evidence |
 | [Symbolic integration: choosing candidate techniques](use-cases/symbolic-integration-routing.md) | experiments | Author report; see case for inspected evidence |
 | [Word-choice chatbot experiment](use-cases/word-choice-chatbot.md) | experiments | Author report; see case for inspected evidence |
+| [jev-decision-bench: compare Jev and LLMs on your own decisions](use-cases/jev-decision-bench.md) | experiments | Author report; see case for inspected evidence |
 | [jev-trust: logging outcomes and inspecting calibration claims](use-cases/jev-trust.md) | experiments | Author report; see case for inspected evidence |
 | [Agenti: wake the writing model only for useful feed updates](use-cases/agenti-feed-gate.md) | filtering | Author report; see case for inspected evidence |
 | [Fantasy football agent: Jev filters news before Claude reasons](use-cases/football-agent-news-filter.md) | filtering | Author report; see case for inspected evidence |
@@ -347,6 +350,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Competitive Pokémon: bounded battle choices](use-cases/pokemon-showdown.md) | games | Author report; see case for inspected evidence |
 | [Corealm: state-driven RPG agents](use-cases/corealm-rpg.md) | games | Author report; see case for inspected evidence |
 | [Coup: bluffing game opponents](use-cases/coup.md) | games | Author report; see case for inspected evidence |
+| [DJ Jev: Jev makes the mixing decisions in Rekordbox](use-cases/dj-jev-rekordbox.md) | games | Author report; see case for inspected evidence |
 | [Detective escape room: checking player arguments](use-cases/detective-escape.md) | games | Author report; see case for inspected evidence |
 | [Doom: launch demonstration](use-cases/doom-launch.md) | games | Author report; see case for inspected evidence |
 | [Doom: player and enemies controlled by Jev](use-cases/doom-all-npcs.md) | games | Author report; see case for inspected evidence |
@@ -413,6 +417,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Jevfend: a “Jev confidence” that tracked word count](use-cases/jevfend-word-count.md) | limitations | Author report; see case for inspected evidence |
 | [Legal RAG comparison: corrected baselines and a registry gate](use-cases/sovereign-rag-benchmark.md) | limitations | Author report; see case for inspected evidence |
 | [Reasoning probes: date arithmetic, literal reading and letter counts](use-cases/riddle-probes.md) | limitations | Author report; see case for inspected evidence |
+| [Skill router for Claude Code: a published negative result](use-cases/jev-skill-router.md) | limitations | Author report; see case for inspected evidence |
 | [Urgency wording: expression versus business impact](use-cases/urgency-wording.md) | limitations | Author report; see case for inspected evidence |
 | [Wikipedia deletion study: false facts versus hostile instructions](use-cases/jagged-wikipedia-study.md) | limitations | Author report; see case for inspected evidence |
 | [Agent-session failure classification](use-cases/agent-failure-taxonomy.md) | operations | Author report; see case for inspected evidence |
@@ -493,6 +498,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [Evidence-guided web retrieval](use-cases/guided-retrieval.md) | retrieval | Author report; see case for inspected evidence |
 | [Factory Twelve: evidence selection in supplier replies](use-cases/factory-twelve.md) | retrieval | Author report; see case for inspected evidence |
 | [GBrain: optional relevance reranker](use-cases/gbrain.md) | retrieval | Author report; see case for inspected evidence |
+| [Jev Search: plain-language web search ranked by Jev](use-cases/jev-search.md) | retrieval | Author report; see case for inspected evidence |
 | [Jev versus dedicated rerankers](use-cases/reranking-benchmark.md) | retrieval | Author report; see case for inspected evidence |
 | [JevFind: semantic code search](use-cases/jevfind.md) | retrieval | Author report; see case for inspected evidence |
 | [Lemma selection during proof search](use-cases/lemma-selection.md) | retrieval | Author report; see case for inspected evidence |
@@ -503,6 +509,7 @@ Collection coverage (local-only evidence) · [Storage and retrieval](storage-and
 | [ReadyBase: reranking code context](use-cases/readybase.md) | retrieval | Author report; see case for inspected evidence |
 | [Recover flattened document markers](use-cases/extraction-marker-recovery.md) | retrieval | Author report; see case for inspected evidence |
 | [Relevant-file selection before code generation](use-cases/task-file-filter.md) | retrieval | Author report; see case for inspected evidence |
+| [Research monitor: code runs the loop, Jev screens sources, an LLM writes](use-cases/jev-research-pipeline.md) | retrieval | Author report; see case for inspected evidence |
 | [Selecting product-photo URLs from web pages](use-cases/product-photo-selection.md) | retrieval | Author report; see case for inspected evidence |
 | [System One Search: code retrieval and graphs](use-cases/system-one-search.md) | retrieval | Author report; see case for inspected evidence |
 | [Terms-of-service line search](use-cases/tos-search.md) | retrieval | Author report; see case for inspected evidence |

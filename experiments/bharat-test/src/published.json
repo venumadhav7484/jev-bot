@@ -1,0 +1,30 @@
+{
+  "source": "Adelani et al., SIB-200, EACL 2024, per-language results table (arXiv 2309.07445v3). Accuracy (%) on the 204-sentence test set. gpt4 = gpt-4-0613 zero-shot prompt; gpt35 = gpt-3.5-turbo-0613 zero-shot; xlmr_supervised = XLM-R large fine-tuned on 701 labelled sentences in that language.",
+  "scores": {
+    "eng_Latn": {"gpt35": 71.8, "gpt4": 76.6, "xlmr_supervised": 92.1},
+    "asm_Beng": {"gpt35": 51.8, "gpt4": 49.2, "xlmr_supervised": 88.1},
+    "awa_Deva": {"gpt35": 59.7, "gpt4": 70.6, "xlmr_supervised": 88.1},
+    "ben_Beng": {"gpt35": 59.6, "gpt4": 74.4, "xlmr_supervised": 88.4},
+    "bho_Deva": {"gpt35": 49.4, "gpt4": 67.4, "xlmr_supervised": 86.3},
+    "guj_Gujr": {"gpt35": 65.0, "gpt4": 69.2, "xlmr_supervised": 87.8},
+    "hin_Deva": {"gpt35": 63.1, "gpt4": 79.3, "xlmr_supervised": 90.7},
+    "hne_Deva": {"gpt35": 52.7, "gpt4": 63.6, "xlmr_supervised": 87.5},
+    "kan_Knda": {"gpt35": 60.1, "gpt4": 69.1, "xlmr_supervised": 90.1},
+    "kas_Arab": {"gpt35": 33.0, "gpt4": 46.0, "xlmr_supervised": 77.4},
+    "kas_Deva": {"gpt35": 22.9, "gpt4": 21.7, "xlmr_supervised": 74.4},
+    "mag_Deva": {"gpt35": 54.2, "gpt4": 67.1, "xlmr_supervised": 86.9},
+    "mai_Deva": {"gpt35": 49.5, "gpt4": 66.7, "xlmr_supervised": 89.1},
+    "mal_Mlym": {"gpt35": 59.7, "gpt4": 71.5, "xlmr_supervised": 85.5},
+    "mar_Deva": {"gpt35": 57.8, "gpt4": 72.8, "xlmr_supervised": 89.9},
+    "mni_Beng": {"gpt35": 4.0, "gpt4": 6.9, "xlmr_supervised": 48.7},
+    "npi_Deva": {"gpt35": 62.6, "gpt4": 68.2, "xlmr_supervised": 88.5},
+    "ory_Orya": {"gpt35": 56.2, "gpt4": 67.1, "xlmr_supervised": 89.2},
+    "pan_Guru": {"gpt35": 67.6, "gpt4": 70.9, "xlmr_supervised": 86.3},
+    "san_Deva": {"gpt35": 37.8, "gpt4": 53.3, "xlmr_supervised": 85.9},
+    "sat_Olck": {"gpt35": 1.8, "gpt4": 0.0, "xlmr_supervised": 24.6},
+    "snd_Arab": {"gpt35": 49.1, "gpt4": 62.4, "xlmr_supervised": 85.1},
+    "tam_Taml": {"gpt35": 48.7, "gpt4": 69.2, "xlmr_supervised": 87.0},
+    "tel_Telu": {"gpt35": 60.4, "gpt4": 68.4, "xlmr_supervised": 88.8},
+    "urd_Arab": {"gpt35": 64.3, "gpt4": 76.8, "xlmr_supervised": 87.6}
+  }
+}

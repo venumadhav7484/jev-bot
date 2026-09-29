@@ -1,0 +1,198 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+html,body{margin:0;background:#0B0D12}
+#s{position:relative;width:1080px;height:1350px;overflow:hidden;background:#0B0D12;color:#F3F4F6;
+   font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif}
+.a{position:absolute}
+.h{font-weight:600;letter-spacing:-0.5px}
+.muted{color:#9CA3AF}
+.kicker{font-size:22px;letter-spacing:3px;color:#F59E0B;font-weight:600}
+.tile{position:absolute;padding:10px 20px;border-radius:14px;background:#1A1F29;font-size:36px}
+.card{position:absolute;width:468px;height:250px;border-radius:22px;background:#151A23;border:1px solid #262D3A;box-sizing:border-box;padding:22px 24px}
+.card .lang{font-size:20px;color:#9CA3AF;letter-spacing:0.5px}
+.card .txt{font-size:26px;line-height:1.42;margin-top:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pill{position:absolute;left:24px;bottom:18px;font-size:22px;padding:6px 16px;border-radius:999px}
+.bar{position:absolute;height:16px;border-radius:0 8px 8px 0}
+.val{position:absolute;font-size:20px;font-variant-numeric:tabular-nums}
+.box{position:absolute;border-radius:20px;background:#151A23;border:1px solid #262D3A;box-sizing:border-box;padding:22px 24px}
+.pt{font-size:34px;line-height:1.35}
+</style></head>
+<body><div id="s"></div>
+<script src="data.js"></script>
+<script>
+let T = 0, L = 0, DUR = 0;
+const D = window.DATA, S = document.getElementById('s');
+const TEAL = '#2DD4BF', GREY = '#4B5563', SAFFRON = '#F59E0B';
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = x => 1 - Math.pow(1 - x, 3);
+const sg = (a, b) => ease(clamp((L - a) / (b - a)));           // eased progress in scene-local time
+function el(html, style) { const d = document.createElement('div'); d.innerHTML = html; const e = d.firstElementChild; Object.assign(e.style, style || {}); S.appendChild(e); return e; }
+function kicker(txt, o) { el('<div class="a kicker">' + txt + '</div>', {left: '80px', top: '110px', opacity: o}); }
+function legendSq(c) { return '<span style="display:inline-block;width:16px;height:16px;border-radius:4px;background:' + c + ';vertical-align:-2px"></span>'; }
+
+// ---------- 1. Problem ----------
+function problem(o) {
+  kicker('THE PROBLEM', o);
+  el('<div class="a h" style="width:920px;font-size:64px;line-height:1.15">Most AI is built English-first.</div>', {left: '80px', top: '160px', opacity: Math.min(o, sg(0.2, 0.8))});
+  const pts = ['India\'s Constitution recognises <b style="color:' + SAFFRON + '">22</b> scheduled languages.',
+               'Training a separate model for each one needs labelled data in each one.',
+               'So most apps quietly work in English only.'];
+  el('<div class="a" style="width:920px">' + pts.map((p, i) => '<div class="pt" style="margin-bottom:34px;opacity:' + Math.min(o, sg(1.2 + i * 1.2, 1.8 + i * 1.2)) + '">' + p + '</div>').join('') + '</div>', {left: '80px', top: '340px'});
+  const scripts = ['हिन्दी', 'తెలుగు', 'தமிழ்', 'বাংলা', 'मराठी', 'ગુજરાતી', 'ಕನ್ನಡ', 'മലയാളം', 'ਪੰਜਾਬੀ', 'ଓଡ଼ିଆ', 'اردو', 'অসমীয়া'];
+  scripts.forEach((w, i) => el('<div class="tile">' + w + '</div>', {left: (80 + (i % 4) * 235) + 'px', top: (820 + Math.floor(i / 4) * 110) + 'px', opacity: Math.min(o, sg(4.2 + i * 0.08, 4.7 + i * 0.08))}));
+}
+
+// ---------- 2. Objective ----------
+function objective(o) {
+  kicker('THE OBJECTIVE', o);
+  el('<div class="a h" style="width:920px;font-size:58px;line-height:1.2">Can a small, fast judgment model understand Indian languages <span style="color:' + TEAL + '">without being taught them</span>?</div>', {left: '80px', top: '170px', opacity: Math.min(o, sg(0.2, 0.9))});
+  el('<div class="box" style="width:920px"><div class="muted" style="font-size:22px;letter-spacing:1px">WRITTEN DOWN BEFORE RUNNING</div><div style="font-size:32px;line-height:1.4;margin-top:10px">Beat GPT-4\'s published scores in at least 14 of 21 Indian-language test sets.</div></div>', {left: '80px', top: '600px', opacity: Math.min(o, sg(1.8, 2.5))});
+  el('<div class="a pt muted" style="width:920px">Then compare with today\'s biggest models on accuracy, cost and speed.</div>', {left: '80px', top: '880px', opacity: Math.min(o, sg(3.2, 3.9))});
+}
+
+// ---------- 3. Setup / solution ----------
+function setup(o) {
+  kicker('THE SETUP', o);
+  el('<div class="a h" style="width:920px;font-size:52px">One question per sentence</div>', {left: '80px', top: '160px', opacity: Math.min(o, sg(0.2, 0.8))});
+  const boxes = [['Sentence', 'in any Indian script', '#151A23', '#F3F4F6'],
+                 ['Jev', 'picks 1 of 7 topics', '#0E3B36', TEAL],
+                 ['Topic + confidence', 'e.g. sports · 99%', '#151A23', '#F3F4F6']];
+  boxes.forEach((b, i) => {
+    const p = sg(0.9 + i * 0.7, 1.4 + i * 0.7);
+    el('<div class="box" style="width:260px;height:170px;background:' + b[2] + ';border-color:' + (i === 1 ? TEAL : '#262D3A') + '"><div class="h" style="font-size:32px;color:' + b[3] + '">' + b[0] + '</div><div class="muted" style="font-size:22px;margin-top:10px">' + b[1] + '</div></div>',
+       {left: (80 + i * 330) + 'px', top: '300px', opacity: Math.min(o, p)});
+  });
+  [0, 1].forEach(i => el('<div class="a" style="font-size:44px;color:#9CA3AF">→</div>', {left: (352 + i * 330) + 'px', top: '352px', opacity: Math.min(o, sg(1.3 + i * 0.7, 1.7 + i * 0.7))}));
+  el('<div class="a pt" style="width:920px;color:' + TEAL + '">No translation step · no fine-tuning · no examples</div>', {left: '80px', top: '520px', opacity: Math.min(o, sg(3.0, 3.6))});
+  const rows = ['<b>Test data:</b> SIB-200, the same 204 sentences professionally translated, with human topic labels',
+                '<b>Coverage:</b> 24 Indian test sets, 23 languages, 19 of the 22 scheduled ones',
+                '<b>Scoring:</b> compared with published results, then re-checked by a separate script'];
+  rows.forEach((r, i) => el('<div class="a" style="width:920px;font-size:28px;line-height:1.4;color:#D1D5DB">' + r + '</div>', {left: '80px', top: (660 + i * 130) + 'px', opacity: Math.min(o, sg(4.2 + i * 0.9, 4.8 + i * 0.9))}));
+}
+
+// ---------- 4. Live examples ----------
+function examples(o) {
+  el('<div class="a" style="width:940px"><div class="h" style="font-size:50px;line-height:1.15">Real sentences, real answers</div>'
+     + '<div class="muted" style="font-size:26px;margin-top:14px">Six test sentences in six languages. I never taught Jev any of them.</div></div>', {left: '70px', top: '80px', opacity: o});
+  const scanStart = 3.0, scanEnd = 5.4, top0 = 300, gridH = 800;
+  const scanY = top0 + clamp((L - scanStart) / (scanEnd - scanStart), -0.05, 1.05) * gridH;
+  D.cards.forEach((c, i) => {
+    const col = i % 2, row = Math.floor(i / 2), x = 60 + col * 492, y = top0 + row * 266;
+    const p = sg(0.6 + i * 0.25, 1.2 + i * 0.25);
+    const tagged = L >= scanStart && scanY > y + 150;
+    const pill = tagged ? '<div class="pill" style="background:' + TEAL + ';color:#062A26;font-weight:600">' + c.topic + ' · ' + Math.round(c.confidence * 100) + '%</div>'
+                        : '<div class="pill" style="background:#262D3A;color:#9CA3AF">topic ?</div>';
+    el('<div class="card"><div class="lang">' + c.lang.toUpperCase() + '</div><div class="txt">' + c.text + '</div>' + pill + '</div>',
+       {left: x + 'px', top: (y + (1 - p) * 40) + 'px', opacity: Math.min(o, p), borderColor: tagged ? TEAL : '#262D3A'});
+  });
+  if (L >= scanStart - 0.05 && L <= scanEnd + 0.15) {
+    el('<div class="a"></div>', {left: '40px', top: scanY + 'px', width: '1000px', height: '4px', background: TEAL, boxShadow: '0 0 24px 6px rgba(45,212,191,0.55)', opacity: o});
+    el('<div class="a" style="font-size:22px;font-weight:600;color:' + TEAL + '">Jev reading…</div>', {left: '860px', top: (scanY - 34) + 'px', opacity: o});
+  }
+  el('<div class="a muted">' + D.stats.p50 + ' s per sentence (median)</div>', {left: '80px', top: '1120px', fontSize: '26px', opacity: Math.min(o, sg(5.8, 6.3))});
+}
+
+// ---------- 5. Scoreboard vs GPT-4 (published) ----------
+function scoreboard(o) {
+  el('<div class="a h">Result 1: topic accuracy</div>', {left: '60px', top: '80px', fontSize: '50px', opacity: o});
+  el('<div class="a" style="font-size:24px;color:#D1D5DB">' + legendSq(GREY) + '&nbsp; GPT-4 (2023), published &nbsp;&nbsp;&nbsp;' + legendSq(TEAL) + '&nbsp; Jev (2026), measured</div>', {left: '60px', top: '160px', opacity: o});
+  const gx = 330, gw = 560;
+  const HL = ['Telugu', 'Hindi'];
+  const rowsAll = D.rows.concat([{native: 'English', name: 'reference', jev: D.english.jev, gpt4: D.english.gpt4, ref: true}]);
+  el('<div class="a"></div>', {left: '60px', top: '1068px', width: '960px', height: '1px', background: '#262D3A', opacity: o});
+  rowsAll.forEach((r, i) => {
+    const y = 236 + i * 70 + (r.ref ? 16 : 0);
+    const gp = sg(0.8 + i * 0.05, 2.6 + i * 0.05), jp = sg(3.0 + i * 0.05, 5.0 + i * 0.05);
+    const hl = HL.includes(r.name) ? sg(5.8 + HL.indexOf(r.name) * 0.4, 6.3 + HL.indexOf(r.name) * 0.4) : 0;
+    if (hl > 0) el('<div class="a"></div>', {left: '40px', top: (y - 8) + 'px', width: '1000px', height: '72px', border: '3px solid ' + SAFFRON, borderRadius: '14px', opacity: Math.min(o, hl), boxSizing: 'border-box'});
+    el('<div class="a" style="font-size:' + (r.ref ? 26 : 32) + 'px;' + (r.ref ? 'color:#9CA3AF' : '') + '">' + r.native + '</div>', {left: '60px', top: (y - 2) + 'px', opacity: o});
+    el('<div class="a muted" style="font-size:18px">' + r.name + '</div>', {left: '200px', top: (y + 10) + 'px', opacity: o});
+    el('<div class="bar"></div>', {left: gx + 'px', top: (y + 4) + 'px', width: (gw * r.gpt4 / 100 * gp) + 'px', background: GREY, opacity: o});
+    el('<div class="bar"></div>', {left: gx + 'px', top: (y + 28) + 'px', width: (gw * r.jev / 100 * jp) + 'px', background: TEAL, opacity: o});
+    if (gp > 0.05) el('<div class="val muted">' + (r.gpt4 * gp).toFixed(1) + '</div>', {left: (gx + gw * r.gpt4 / 100 * gp + 12) + 'px', top: (y - 1) + 'px', opacity: o});
+    if (jp > 0.05) el('<div class="val" style="color:' + TEAL + ';font-weight:600">' + (r.jev * jp).toFixed(1) + '</div>', {left: (gx + gw * r.jev / 100 * jp + 12) + 'px', top: (y + 23) + 'px', opacity: o});
+  });
+  const st = D.stats;
+  const gain = n => { const r = D.rows.find(x => x.name === n); return (r.jev - r.gpt4).toFixed(1); };
+  el('<div class="a h" style="font-size:34px;width:960px;line-height:1.35"><span style="color:' + SAFFRON + '">Telugu +' + gain('Telugu') + ' · Hindi +' + gain('Hindi') + ' points</span><br>Above GPT-4 in <span style="color:' + TEAL + '">' + st.beats + ' of ' + st.of + '</span> Indian test sets</div>', {left: '60px', top: '1180px', opacity: Math.min(o, sg(6.6, 7.2))});
+}
+
+// ---------- 6. Voice requests ----------
+function voice(o) {
+  const V = D.voice;
+  el('<div class="a" style="width:960px"><div class="h" style="font-size:50px;line-height:1.15">Result 2: real voice requests</div>'
+     + '<div class="muted" style="font-size:24px;margin-top:10px">60 intents like "set an alarm" · 2,974 requests per language · still zero-shot</div></div>', {left: '60px', top: '70px', opacity: o});
+  V.examples.forEach((e, i) => {
+    const y = 215 + i * 136, p = sg(0.6 + i * 0.4, 1.1 + i * 0.4), tagged = L >= 2.0 + i * 0.5;
+    const pill = tagged ? '<span style="background:' + TEAL + ';color:#062A26;font-weight:600;padding:6px 14px;border-radius:999px;font-size:21px">' + e.intent + ' · ' + Math.round(e.confidence * 100) + '%</span>'
+                        : '<span style="background:#262D3A;color:#9CA3AF;padding:6px 14px;border-radius:999px;font-size:21px">intent ?</span>';
+    el('<div class="card" style="width:960px;height:120px;padding:16px 22px"><div style="font-size:30px">' + e.text + '</div><div class="muted" style="font-size:19px;margin-top:6px">"' + e.gloss + '" (translation)</div><div style="position:absolute;right:20px;top:40px">' + pill + '</div></div>',
+       {left: '60px', top: (y + (1 - p) * 30) + 'px', opacity: Math.min(o, p), borderColor: tagged ? TEAL : '#262D3A'});
+  });
+  el('<div class="a" style="font-size:21px;color:#D1D5DB">' + legendSq(GREY) + '&nbsp; Trained on English only &nbsp;&nbsp;' + legendSq(TEAL) + '&nbsp; Jev, zero-shot &nbsp;&nbsp;<span style="display:inline-block;width:3px;height:18px;background:#F3F4F6;vertical-align:-3px"></span>&nbsp; Trained on that language</div>', {left: '60px', top: '505px', opacity: Math.min(o, sg(3.2, 3.6))});
+  const gx = 330, gw = 560;
+  V.rows.forEach((r, i) => {
+    const y = 565 + i * 78, gp = sg(3.6 + i * 0.05, 5.0 + i * 0.05), jp = sg(5.2 + i * 0.05, 6.8 + i * 0.05), tp = sg(7.0, 7.5);
+    const hi = ['Telugu', 'Hindi'].indexOf(r.name), hl = hi >= 0 ? sg(7.6 + hi * 0.4, 8.1 + hi * 0.4) : 0;
+    if (hl > 0) el('<div class="a"></div>', {left: '40px', top: (y - 10) + 'px', width: '1000px', height: '70px', border: '3px solid ' + SAFFRON, borderRadius: '14px', opacity: Math.min(o, hl), boxSizing: 'border-box'});
+    el('<div class="a" style="font-size:30px">' + r.native + '</div>', {left: '60px', top: (y - 2) + 'px', opacity: o});
+    el('<div class="a muted" style="font-size:18px">' + r.name + '</div>', {left: '200px', top: (y + 9) + 'px', opacity: o});
+    el('<div class="bar"></div>', {left: gx + 'px', top: (y + 4) + 'px', width: (gw * r.zero / 100 * gp) + 'px', background: GREY, opacity: o});
+    el('<div class="bar"></div>', {left: gx + 'px', top: (y + 28) + 'px', width: (gw * r.jev / 100 * jp) + 'px', background: TEAL, opacity: o});
+    if (tp > 0) el('<div class="a"></div>', {left: (gx + gw * r.full / 100 - 1) + 'px', top: (y - 2) + 'px', width: '3px', height: '52px', background: '#F3F4F6', opacity: Math.min(o, tp)});
+    if (gp > 0.05) el('<div class="val muted">' + (r.zero * gp).toFixed(1) + '</div>', {left: (gx + gw * r.zero / 100 * gp + 12) + 'px', top: (y - 1) + 'px', opacity: o});
+    if (jp > 0.05) el('<div class="val" style="color:' + TEAL + ';font-weight:600">' + (r.jev * jp).toFixed(1) + '</div>', {left: (gx + gw * r.full / 100 + 14) + 'px', top: (y + 23) + 'px', opacity: o});
+  });
+  el('<div class="a h" style="font-size:38px"><span style="color:' + TEAL + '">' + V.stats.jev.toFixed(1) + '%</span> <span class="muted" style="font-size:28px">vs</span> <span style="color:#9CA3AF">' + V.stats.zero.toFixed(1) + '%</span> <span class="muted" style="font-size:24px;font-weight:400">&nbsp;average · trained on each language: ' + V.stats.full.toFixed(1) + '%</span></div>', {left: '60px', top: '1135px', opacity: Math.min(o, sg(8.6, 9.1))});
+}
+
+// ---------- 7. Against today's models (needs D.rivals) ----------
+function rivals(o) {
+  const R = D.rivals;
+  el('<div class="a" style="width:960px"><div class="h" style="font-size:50px;line-height:1.15">Result 3: against today\'s models</div><div class="muted" style="font-size:24px;margin-top:10px">' + R.subtitle + '</div></div>', {left: '60px', top: '70px', opacity: o});
+  const metrics = [['Accuracy · 10 most-spoken languages', 'acc', v => v.toFixed(1) + '%', 100],
+                   ['Cost per 1,000 requests', 'usd', v => '$' + (v < 0.1 ? v.toFixed(3) : v.toFixed(2)), R.maxUsd],
+                   ['Time per request (median)', 'sec', v => v.toFixed(2) + ' s', R.maxSec]];
+  metrics.forEach((m, k) => {
+    const top = 240 + k * 330, p0 = 0.8 + k * 2.2;
+    el('<div class="a h" style="font-size:30px">' + m[0] + '</div>', {left: '60px', top: top + 'px', opacity: Math.min(o, sg(p0, p0 + 0.4))});
+    R.models.forEach((r, i) => {
+      const y = top + 56 + i * 62, p = sg(p0 + 0.3 + i * 0.1, p0 + 1.4 + i * 0.1), isJev = r.name === 'Jev';
+      const w = 560 * Math.max(0.004, r[m[1]] / m[3]) * p;
+      el('<div class="a" style="font-size:26px;' + (isJev ? 'color:' + TEAL + ';font-weight:600' : 'color:#D1D5DB') + '">' + r.name + '</div>', {left: '60px', top: (y - 6) + 'px', opacity: Math.min(o, p)});
+      el('<div class="bar" style="height:22px"></div>', {left: '330px', top: y + 'px', width: w + 'px', background: isJev ? TEAL : GREY, opacity: o});
+      if (p > 0.05) el('<div class="val" style="font-size:24px;' + (isJev ? 'color:' + TEAL + ';font-weight:600' : 'color:#D1D5DB') + '">' + m[2](r[m[1]]) + '</div>', {left: (330 + w + 12) + 'px', top: (y - 4) + 'px', opacity: o});
+    });
+  });
+}
+
+// ---------- 8. Conclusion (needs D.conclusion) ----------
+function conclusion(o) {
+  kicker('CONCLUSION', o);
+  D.conclusion.points.forEach((p, i) => el('<div class="a" style="width:920px;font-size:38px;line-height:1.3"><span style="color:' + TEAL + ';font-weight:600">' + (i + 1) + '.</span> ' + p + '</div>', {left: '80px', top: (180 + i * 190) + 'px', opacity: Math.min(o, sg(0.4 + i * 1.2, 1.0 + i * 1.2))}));
+  el('<div class="a muted" style="width:920px;font-size:21px;line-height:1.55">' + D.conclusion.footnote + '</div>', {left: '80px', top: '980px', opacity: Math.min(o, sg(4.4, 5.0))});
+}
+
+// [scene, time its last animation finishes]; every scene then holds still for HOLD seconds before fading out.
+const HOLD = 4.0, FADE = 0.45;
+const SCENES = [[problem, 5.6], [objective, 3.9], [setup, 6.6], [examples, 6.3], [scoreboard, 7.2], [voice, 9.1]]
+  .concat(D.rivals ? [[rivals, 6.9]] : []).concat(D.conclusion ? [[conclusion, 5.0]] : [])
+  .map(([fn, end]) => [fn, end + HOLD + FADE]);
+window.TOTAL = SCENES.reduce((a, s) => a + s[1], 0);
+
+function renderAt(t) {
+  T = t; S.innerHTML = '';
+  let start = 0;
+  for (const [fn, dur] of SCENES) {
+    if (t >= start && t < start + dur) {
+      L = t - start; DUR = dur;
+      const o = Math.min(ease(clamp(L / 0.5)), 1 - ease(clamp((L - (dur - 0.45)) / 0.45)));
+      if (o > 0) fn(o);
+      return;
+    }
+    start += dur;
+  }
+}
+renderAt(parseFloat(new URLSearchParams(location.search).get('t') || '0'));
+</script></body></html>

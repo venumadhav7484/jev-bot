@@ -1,0 +1,99 @@
+{
+  "per_locale": {
+    "en-US": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 85.0,
+      "xlmr_zero": null,
+      "xlmr_full": 88.3,
+      "avg_input_tokens": 1605.4,
+      "beats_xlmr_zero": false
+    },
+    "hi-IN": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 81.6,
+      "xlmr_zero": 74.8,
+      "xlmr_full": 85.8,
+      "avg_input_tokens": 1620.5,
+      "beats_xlmr_zero": true
+    },
+    "te-IN": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 81.0,
+      "xlmr_zero": 68.2,
+      "xlmr_full": 84.5,
+      "avg_input_tokens": 1631.1,
+      "beats_xlmr_zero": true
+    },
+    "ta-IN": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 78.7,
+      "xlmr_zero": 68.1,
+      "xlmr_full": 83.5,
+      "avg_input_tokens": 1635.3,
+      "beats_xlmr_zero": true
+    },
+    "kn-IN": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 79.5,
+      "xlmr_zero": 63.5,
+      "xlmr_full": 84.0,
+      "avg_input_tokens": 1631.7,
+      "beats_xlmr_zero": true
+    },
+    "ml-IN": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 81.5,
+      "xlmr_zero": 70.1,
+      "xlmr_full": 85.1,
+      "avg_input_tokens": 1636.5,
+      "beats_xlmr_zero": true
+    },
+    "bn-BD": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 79.0,
+      "xlmr_zero": 66.0,
+      "xlmr_full": 84.1,
+      "avg_input_tokens": 1623.9,
+      "beats_xlmr_zero": true
+    },
+    "ur-PK": {
+      "n": 2974,
+      "ok": 2974,
+      "failed": 0,
+      "accuracy": 79.2,
+      "xlmr_zero": 65.6,
+      "xlmr_full": 83.2,
+      "avg_input_tokens": 1622.6,
+      "beats_xlmr_zero": true
+    }
+  },
+  "summary": {
+    "requests_ok": 23792,
+    "requests_failed": 0,
+    "wins_vs_xlmr_zero": 7,
+    "of": 7,
+    "indian_mean_jev": 80.07,
+    "indian_mean_xlmr_zero": 68.04,
+    "indian_mean_xlmr_full": 84.31,
+    "total_input_tokens": 38682490,
+    "total_usd": 1.6247,
+    "seconds_p50": 0.384
+  },
+  "pass": {
+    "P3_beats_xlmr_zero_in_5_of_7": true
+  }
+}

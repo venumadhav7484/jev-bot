@@ -15,6 +15,7 @@ import uuid
 
 
 _fingerprint = None
+TRY_DAILY_LIMIT = 3000  # live Bharat-demo answers per UTC day, counted separately from research answers
 
 
 def cache_key(idea, mode):
@@ -217,6 +218,10 @@ def api_request(event, context):
                           'hosted': True, 'access_required': False})
     if method == 'POST' and path == '/api/feedback':
         return accept_feedback(event)
+    if method == 'POST' and path == '/api/try':
+        return try_live(event)
+    if method == 'POST' and path == '/api/psychro':
+        return live_call(event, 'psychro')
     if method == 'POST' and path == '/api/jobs':
         if event.get('headers', {}).get('content-type', '').split(';')[0] != 'application/json':
             return reply(415, {'error': 'Expected JSON.'})
@@ -276,7 +281,97 @@ def api_request(event, context):
     return reply(404, {'error': 'Not found.'})
 
 
+def try_live(event):
+    return live_call(event, 'try')
+
+
+def live_call(event, kind):
+    """Public demos (Bharat test 'try', psychrometric 'psychro'): one synchronous Jev reading through the worker,
+    which alone holds the Jev key. Only the task and timing are logged, never the visitor's text."""
+    import bharat_try
+    import psychro_try
+    if event.get('headers', {}).get('content-type', '').split(';')[0] != 'application/json':
+        return reply(415, {'error': 'Expected JSON.'})
+    bad = 'Enter a sentence of 1 to 500 characters.' if kind == 'try' else 'Type a question with two values.'
+    try:
+        body = event.get('body') or ''
+        if event.get('isBase64Encoded'):
+            body = base64.b64decode(body, validate=True).decode()
+        if len(body.encode()) > 4000:
+            raise ValueError('Request too large.')
+        data = json.loads(body)
+    except (ValueError, TypeError, UnicodeError):
+        return reply(400, {'error': bad})
+    try:
+        if kind == 'try':
+            task, text = bharat_try.parse(data)
+            request = {'task': task, 'text': text}
+        elif isinstance(data, dict) and 'chart_text' in data:
+            task, text = 'psychro_chart', psychro_try.parse_chart(data)
+            request = {'chart_text': text}
+        else:
+            task, (text, _) = 'psychro', psychro_try.parse(data)
+            request = {'text': text}
+    except ValueError as exc:
+        # psychro_try messages are written for visitors (e.g. how many values were found); bharat_try's are not.
+        return reply(400, {'error': str(exc) if kind == 'psychro' else bad})
+    db, _, functions = clients()
+    now = int(time.time())
+    resets_at = (now // 86400 + 1) * 86400
+    try:
+        db.update_item(TableName=os.environ['TABLE'], Key=item(pk=kind+'#'+time.strftime('%Y-%m-%d', time.gmtime(now))),
+                       UpdateExpression='SET #ttl = :ttl ADD used :one',
+                       ConditionExpression='attribute_not_exists(used) OR used < :limit',
+                       ExpressionAttributeNames={'#ttl': 'ttl'},
+                       ExpressionAttributeValues=item(**{':ttl': now+172800, ':one': 1, ':limit': TRY_DAILY_LIMIT}))
+    except db.exceptions.ConditionalCheckFailedException:
+        return reply(429, {'code': 'daily_limit', 'resets_at': resets_at,
+                           'error': 'Today’s live answers have run out. They reset at 00:00 UTC; the recorded answers still work.'
+                           if kind == 'try' else 'Today’s live answers have run out. They reset at 00:00 UTC; clicking the chart still works.'},
+                     resets_at-now)
+    try:
+        response = functions.invoke(FunctionName=os.environ['WORKER'], InvocationType='RequestResponse',
+                                    Payload=json.dumps({kind: request}).encode())
+        data = json.loads(response['Payload'].read())
+    except Exception:
+        data = None
+    if not isinstance(data, dict) or response.get('FunctionError'):
+        return reply(502, {'error': 'Live answers are unavailable right now. Please try again shortly.'})
+    if 'error' in data:
+        return reply(502, {'error': data['error']})
+    print(json.dumps({'event': kind+'_answer', 'task': task, 'seconds': data.get('seconds')}), flush=True)
+    return reply(200, data)
+
+
+def try_worker(request):
+    import bharat_try
+    try:
+        task, text = bharat_try.parse(request)
+        return bharat_try.ask(task, text, os.environ['jev_api_key'])
+    except bharat_try.Unavailable as exc:
+        return {'error': str(exc)}
+    except Exception:
+        return {'error': 'Live answers are unavailable right now. Please try again shortly.'}
+
+
+def psychro_worker(request):
+    import psychro_try
+    try:
+        if 'chart_text' in request:
+            return psychro_try.ask_chart(psychro_try.parse_chart(request), os.environ['jev_api_key'])
+        text, numbers = psychro_try.parse(request)
+        return psychro_try.ask(text, numbers, os.environ['jev_api_key'])
+    except psychro_try.Unavailable as exc:
+        return {'error': str(exc)}
+    except Exception:
+        return {'error': 'Live answers are unavailable right now. Please try again shortly.'}
+
+
 def worker(event, context):
+    if 'try' in event:
+        return try_worker(event['try'])
+    if 'psychro' in event:
+        return psychro_worker(event['psychro'])
     identifier = event.get('id', '')
     slot = event.get('slot', 'lock')  # Compatibility with in-flight pre-upgrade jobs.
     if not re.fullmatch('[a-f0-9]{32}', identifier) or not re.fullmatch(r'lock(?:#[0-9]{1,2})?', slot):

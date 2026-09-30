@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ask a psychrometric chart · Jev reads, code computes</title>
+<meta name="description" content="Type two values in plain words or technician shorthand. Jev works out which property each number is; the page computes all seven psychrometric properties exactly and plots the point.">
+<link rel="stylesheet" href="/bharat.css?v=20260930"><link rel="stylesheet" href="/psychro.css?v=20260930"><script type="module" src="/psychro.js?v=20260930b"></script></head>
+<body><main>
+<header class="top"><a class="brand" href="/" title="Jev-bot home">Jev<span> / </span>bot</a><span class="tag"><i aria-hidden="true"></i>PSYCHROMETRIC CHART · LIVE DEMO</span></header>
+
+<section class="hero">
+  <p class="kicker">JEV READS THE QUESTION · CODE DOES THE MATH</p>
+  <h1>Upload a psychrometric chart. <em>Ask it anything.</em></h1>
+  <p class="lede">Upload a photo or screenshot of your psychrometric chart, or use the sample. The page reads the chart on your device, lines up its axes and checks them against the equations. Then ask in plain words: Jev works out which property each number is, and the answer is computed exactly and plotted on your chart.</p>
+  <dl class="stats" id="stats" aria-label="Pilot results"></dl>
+</section>
+
+<section class="psy-layout">
+  <div class="chart-panel">
+    <div class="source-row">
+      <label class="primary upload-btn" for="file">⇪ Upload a chart image</label><input id="file" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden>
+      <button id="use-sample" type="button" class="ghost">Sample chart</button>
+      <select id="drawn" aria-label="Chart drawn from the equations"><option value="">Chart drawn from the equations…</option></select>
+    </div>
+    <p class="hint drop-hint">Drop or paste a psychrometric chart image here. It is read on your device and never uploaded.</p>
+    <ol id="steps" class="steps" hidden></ol>
+    <figure class="psy-chart" id="dropzone">
+      <div id="chart-wrap" class="chart-wrap"></div>
+      <figcaption id="chart-credit" class="hint"></figcaption>
+    </figure>
+    <div class="chart-tools">
+      <label class="toggle"><input id="show-curves" type="checkbox"> Show the equations’ RH curves over this chart</label>
+      <label class="pressure">Pressure <select id="pressure"></select></label>
+    </div>
+  </div>
+  <div class="psy-left">
+    <section class="ask-card" aria-label="Ask">
+      <label for="text">Ask about this chart</label>
+      <form id="ask"><textarea id="text" rows="2" maxlength="300" placeholder="e.g. DB 30 °C, WB 22 °C → dew point?"></textarea>
+        <div class="row"><span id="count" class="count">0 / 300</span><button id="run" class="primary" type="submit" disabled>Ask Jev</button></div></form>
+      <div class="examples" id="examples" aria-label="Examples"></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+    <div id="reading"></div>
+    <div id="answer"><div class="card empty"><p class="hint">Ask a question or click the chart. All seven properties appear here.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <p><b>How it was tested.</b> Two pilots used 200 generated questions each (textbook, technician shorthand and chat style), with pass lines written down before any request was sent.
+    Pilot 1 <b>failed</b> at 159 of 200: it asked Jev seven separate yes/no questions about what was being asked, and Jev over-answered them on shorthand.
+    Pilot 2 used fresh questions and a new design: return all seven properties, and let the unit written next to a number narrow its options. It scored <b>194 of 200</b>, which was the pass line. Chat and textbook questions were all right; shorthand was the weak spot (61 of 67, mostly “Tdp” read as dry-bulb).
+    The dropdown next to each number lets you fix a wrong reading in one click.</p>
+  <p><b>Reading uploaded charts.</b> This runs in your browser with Tesseract.js OCR; the image isn’t uploaded. Jev reads the chart’s text to decide the chart type and units, and code lines up the axes and checks them against the equations.
+    On 10 fresh test images of two chart designs, 9 were read within ±0.3 °C and ±0.2 g/kg, which was the pass line. The miss was 13.8 °C off, because its pressure label wasn’t read. An earlier version failed at 8 of 10 on small images.
+    It hasn’t been tested on phone photos, skewed scans or IP-unit charts. Keep the dashed curves switched on to see whether the fit looks right.</p>
+  <p><b>The math.</b> Moist-air relations from the ASHRAE Handbook Fundamentals (2017), chapter 1, the same ones PsychroLib uses. They were checked against the sea-level chart: its RH, enthalpy and volume lines agree to within 0.2% RH, 0.05 kJ/kg and 0.0003 m³/kg. The 0 °C wet-bulb line is off by up to 0.3 °C, because the equations switch from water to ice there. Charts other than sea level are drawn by this page from the same equations.
+    <a href="https://github.com/venumadhav7484/jev-bot/tree/main/experiments/psychrometric-charts" rel="noopener">Code, plans and raw results ↗</a></p>
+  <p>Sea-level chart © FlyCarpet Inc, <a href="https://www.flycarpet.net/en/psyonline" rel="noopener">flycarpet.net/en/psyonline</a>, used with credit. Text you type is sent to Jev to read it and is not stored. For learning and quick checks, not a substitute for engineering sign-off.</p>
+</footer>
+</main></body></html>

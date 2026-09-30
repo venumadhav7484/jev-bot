@@ -51,7 +51,7 @@ def template():
     add('HttpApi', 'ApiGatewayV2::Api', Name=sub('${AWS::StackName}-api'), ProtocolType='HTTP')
     add('Integration', 'ApiGatewayV2::Integration', ApiId=ref('HttpApi'), IntegrationType='AWS_PROXY',
         IntegrationUri=attr('Api', 'Arn'), PayloadFormatVersion='2.0', TimeoutInMillis=29000)
-    for name, route in [('ConfigRoute', 'GET /api/config'), ('CreateRoute', 'POST /api/jobs'), ('JobRoute', 'GET /api/jobs/{id}'), ('FeedbackRoute', 'POST /api/feedback')]:
+    for name, route in [('ConfigRoute', 'GET /api/config'), ('CreateRoute', 'POST /api/jobs'), ('JobRoute', 'GET /api/jobs/{id}'), ('FeedbackRoute', 'POST /api/feedback'), ('TryRoute', 'POST /api/try'), ('PsychroRoute', 'POST /api/psychro')]:
         add(name, 'ApiGatewayV2::Route', ApiId=ref('HttpApi'), RouteKey=route, Target=sub('integrations/${Integration}'))
     add('Stage', 'ApiGatewayV2::Stage', ApiId=ref('HttpApi'), StageName='$default', AutoDeploy=True,
         DefaultRouteSettings={'ThrottlingBurstLimit': 40, 'ThrottlingRateLimit': 20})
@@ -77,7 +77,7 @@ def template():
             'ContentTypeOptions': {'Override': True}, 'FrameOptions': {'FrameOption': 'DENY', 'Override': True},
             'ReferrerPolicy': {'ReferrerPolicy': 'no-referrer', 'Override': True},
             'StrictTransportSecurity': {'AccessControlMaxAgeSec': 31536000, 'Override': True},
-            'ContentSecurityPolicy': {'ContentSecurityPolicy': "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'", 'Override': True}}})
+            'ContentSecurityPolicy': {'ContentSecurityPolicy': "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'", 'Override': True}}})
     common = {'ViewerProtocolPolicy': 'redirect-to-https', 'ResponseHeadersPolicyId': ref('Headers')}
     add('Distribution', 'CloudFront::Distribution', DistributionConfig={
         'Enabled': True, 'Comment': 'Jev bot shared research assistant', 'DefaultRootObject': 'index.html',

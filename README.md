@@ -12,6 +12,10 @@ The assistant evaluates the complete exported research library with Jev: every u
 
 The hosted app needs no account or API key from visitors. Describe an idea, review its proposed workflow and example request, then leave feedback. The progress spinner runs until the answer arrives or the request fails.
 
+### Bharat test live demo
+
+**[/bharat-test-demo](https://dm6rtlrn56ej8.cloudfront.net/bharat-test-demo)** lets visitors pick one of 24 Indian-language test sets (or English) and a real SIB-200 test sentence, or write their own, and see Jev answer live. A second tab does the same for MASSIVE voice requests over 60 intents. Each live answer shows the choice, confidence, ranked options, time and cost; test sentences also show the human label and the answers recorded from Jev, gpt-6-astra and GLM 5.3 on 29–30 September 2026. Live calls use the exact question from the experiment (`scripts/bharat_spec.json`), go only to Jev, pass through the worker Lambda that holds the key, and are capped separately at 3,000 per UTC day. Visitor text is neither stored nor logged. Sample data: `web/bharat-samples.json` (SIB-200, CC BY-SA 4.0; MASSIVE 1.1, CC BY 4.0).
+
 ### Run locally
 
 Python 3.11+; standard library only. Jev answer modes need `jev_api_key`; written mode also needs `glm_key`. The legacy CLI `--offline` preview needs no key.

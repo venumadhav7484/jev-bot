@@ -9,6 +9,8 @@ from urllib.parse import unquote, urlsplit
 from jev_bot import ROOT
 from research_answer import answer as research_answer
 from backup_private import load_env
+import bharat_try
+import psychro_try
 
 JOBS = {}
 JOB_LOCK = threading.Lock()
@@ -46,7 +48,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Cache-Control', 'no-store')
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('Referrer-Policy', 'no-referrer')
-        self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
+        self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
         self.end_headers()
         self.wfile.write(data)
 
@@ -71,7 +73,20 @@ class Handler(BaseHTTPRequestHandler):
                   '/answer-design.mjs': ('web/answer-design.mjs', 'text/javascript'),
                   '/case-examples.mjs': ('web/case-examples.mjs', 'text/javascript'),
                   '/bot-client.mjs': ('web/bot-client.mjs', 'text/javascript'),
-                  '/evidence.mjs': ('web/evidence.mjs', 'text/javascript')}
+                  '/evidence.mjs': ('web/evidence.mjs', 'text/javascript'),
+                  '/bharat-test-demo': ('web/bharat.html', 'text/html'), '/bharat-test-demo/': ('web/bharat.html', 'text/html'),
+                  '/bharat.js': ('web/bharat.js', 'text/javascript'), '/bharat.css': ('web/bharat.css', 'text/css'),
+                  '/bharat-samples.json': ('web/bharat-samples.json', 'application/json'),
+                  '/psychro-data': ('web/psychro.html', 'text/html'), '/psychro-data/': ('web/psychro.html', 'text/html'),
+                  '/psychro.js': ('web/psychro.js', 'text/javascript'), '/psychro.css': ('web/psychro.css', 'text/css'),
+                  '/psychro-solver.mjs': ('web/psychro-solver.mjs', 'text/javascript'),
+                  '/psychro-upload.mjs': ('web/psychro-upload.mjs', 'text/javascript'),
+                  '/psychro-flycarpet.svg': ('web/psychro-flycarpet.svg', 'image/svg+xml')}
+        vendor = {'/vendor/tesseract/tesseract.min.js': 'text/javascript', '/vendor/tesseract/worker.min.js': 'text/javascript',
+                  '/vendor/tesseract/core/tesseract-core-simd-lstm.wasm.js': 'text/javascript',
+                  '/vendor/tesseract/lang/eng.traineddata.gz': 'application/octet-stream'}
+        if path in vendor:
+            return self.send(200, (ROOT/'web'/path.lstrip('/')).read_bytes(), vendor[path])
         if path in static:
             name, kind = static[path]
             return self.send(200, (ROOT/name).read_bytes(), kind+'; charset=utf-8')
@@ -81,10 +96,42 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(200, candidate.read_bytes(), 'text/plain; charset=utf-8')
         self.send(404, b'{"error":"Not found"}')
 
+    def try_live(self, request):
+        """Bharat test demo: one live Jev answer. Visitor text is not logged."""
+        import os
+        try:
+            task, text = bharat_try.parse(request)
+        except ValueError:
+            return self.send(400, b'{"error":"Enter a sentence of 1 to 500 characters."}')
+        key = os.environ.get('jev_api_key') or load_env(ROOT/'.env.local').get('jev_api_key')
+        if not key:
+            return self.send(503, b'{"error":"Live answers are unavailable right now. The recorded answers still work."}')
+        try:
+            return self.send(200, json.dumps(bharat_try.ask(task, text, key)).encode())
+        except bharat_try.Unavailable as exc:
+            return self.send(502, json.dumps({'error': str(exc)}).encode())
+
+    def psychro_live(self, request):
+        """Psychrometric demo: Jev reads which property each number is. Visitor text is not logged."""
+        import os
+        chart = isinstance(request, dict) and 'chart_text' in request
+        try:
+            parsed = psychro_try.parse_chart(request) if chart else psychro_try.parse(request)
+        except ValueError as exc:
+            return self.send(400, json.dumps({'error': str(exc)}).encode())
+        key = os.environ.get('jev_api_key') or load_env(ROOT/'.env.local').get('jev_api_key')
+        if not key:
+            return self.send(503, b'{"error":"Live answers are unavailable right now. Clicking the chart still works."}')
+        try:
+            result = psychro_try.ask_chart(parsed, key) if chart else psychro_try.ask(*parsed, key)
+            return self.send(200, json.dumps(result).encode())
+        except psychro_try.Unavailable as exc:
+            return self.send(502, json.dumps({'error': str(exc)}).encode())
+
     def do_POST(self):
         if not self.trusted():
             return self.send(403, b'{"error":"Local access only"}')
-        if self.path not in ('/api/answer', '/api/jobs', '/api/feedback'):
+        if self.path not in ('/api/answer', '/api/jobs', '/api/feedback', '/api/try', '/api/psychro'):
             return self.send(404, b'{"error":"Not found"}')
         if self.headers.get_content_type() != 'application/json':
             return self.send(415, b'{"error":"Expected JSON"}')
@@ -94,6 +141,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(413, b'{"error":"Request too large or empty"}')
             self.connection.settimeout(60)
             request = json.loads(self.rfile.read(size))
+            if self.path == '/api/try':
+                return self.try_live(request)
+            if self.path == '/api/psychro':
+                return self.psychro_live(request)
             if self.path == '/api/feedback':
                 from cloud_bot import parse_feedback
                 try:

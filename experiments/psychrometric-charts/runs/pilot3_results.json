@@ -1,0 +1,217 @@
+{
+ "summary": {
+  "n": 600,
+  "answered": 600,
+  "missing": [],
+  "threshold": 0.75,
+  "jev_labelled_numbers": 533,
+  "misreads": 14,
+  "misreads_flagged": 12,
+  "correct_flagged": 29,
+  "correct_total": 519,
+  "silent_wrong_answers": 1,
+  "C1_recall": 0.8571428571428571,
+  "C1_pass": false,
+  "C2_burden": 0.055876685934489405,
+  "C2_pass": true,
+  "C3_silent": 0.0016666666666666668,
+  "C3_pass": true,
+  "p1": 586,
+  "p2": 586,
+  "by_style": {
+   "textbook:ok": 200,
+   "shorthand:miss": 14,
+   "chat:ok": 200,
+   "shorthand:ok": 186
+  },
+  "misreads_by_style": {
+   "shorthand": 14
+  },
+  "seconds_p50": 0.355,
+  "usd_total": 0.018053154000000002,
+  "refused": 10,
+  "wrong_without_step": 4,
+  "wrong_with_step": 1
+ },
+ "misreads": [
+  {
+   "id": "q001",
+   "style": "shorthand",
+   "text": "Tdp 17°C, WBT 19C. Need W and H.",
+   "value": "17°C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.72,
+   "flagged": true
+  },
+  {
+   "id": "q007",
+   "style": "shorthand",
+   "text": "RH 27 SV 0.875 m³/kg HR?",
+   "value": "27",
+   "read_as": "tdb",
+   "was": "rh",
+   "confidence": 0.95,
+   "flagged": false
+  },
+  {
+   "id": "q028",
+   "style": "shorthand",
+   "text": "Site reading DP 29°F / RH 34. -> WB?",
+   "value": "29°F",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.56,
+   "flagged": true
+  },
+  {
+   "id": "q067",
+   "style": "shorthand",
+   "text": "DPT 15C, H 54.8 kJ/kg. W?",
+   "value": "15C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.25,
+   "flagged": true
+  },
+  {
+   "id": "q085",
+   "style": "shorthand",
+   "text": "Tdp 9 H 33.1 kJ/kg Need RH.",
+   "value": "9",
+   "read_as": "twb",
+   "was": "tdp",
+   "confidence": 0.37,
+   "flagged": true
+  },
+  {
+   "id": "q181",
+   "style": "shorthand",
+   "text": "DP 14C RH 26 -> h?",
+   "value": "26",
+   "read_as": "tdb",
+   "was": "rh",
+   "confidence": 0.28,
+   "flagged": true
+  },
+  {
+   "id": "q232",
+   "style": "shorthand",
+   "text": "RH 41 W 12.2 g/kg -> WBT?",
+   "value": "41",
+   "read_as": "tdb",
+   "was": "rh",
+   "confidence": 0.52,
+   "flagged": true
+  },
+  {
+   "id": "q340",
+   "style": "shorthand",
+   "text": "Tdp 29C, SV 0.923 m³/kg. -> RH and H?",
+   "value": "29C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.42,
+   "flagged": true
+  },
+  {
+   "id": "q358",
+   "style": "shorthand",
+   "text": "DPT 9, v 0.840 m³/kg. DBT and W?",
+   "value": "9",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.34,
+   "flagged": true
+  },
+  {
+   "id": "q394",
+   "style": "shorthand",
+   "text": "Site reading Tdp 12C / SV 0.834 m³/kg. Need Tdb and HR.",
+   "value": "12C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.4,
+   "flagged": true
+  },
+  {
+   "id": "q433",
+   "style": "shorthand",
+   "text": "DPT 26°C, h 85.1 kJ/kg. Twb?",
+   "value": "26°C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.92,
+   "flagged": false
+  },
+  {
+   "id": "q559",
+   "style": "shorthand",
+   "text": "Site reading Tdp 9 / v 0.858 m³/kg. Rest of the properties?",
+   "value": "9",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.68,
+   "flagged": true
+  },
+  {
+   "id": "q568",
+   "style": "shorthand",
+   "text": "DP 33C, SV 0.934 m³/kg. WBT and W?",
+   "value": "33C",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.25,
+   "flagged": true
+  },
+  {
+   "id": "q598",
+   "style": "shorthand",
+   "text": "Tdp 26 SV 0.912 m³/kg Tdb?",
+   "value": "26",
+   "read_as": "tdb",
+   "was": "tdp",
+   "confidence": 0.53,
+   "flagged": true
+  }
+ ],
+ "silent": [
+  {
+   "id": "q007",
+   "text": "RH 27 SV 0.875 m³/kg HR?",
+   "abs_error": {
+    "w": 10.159
+   }
+  }
+ ],
+ "wrong_answers": [
+  {
+   "id": "q007",
+   "text": "RH 27 SV 0.875 m³/kg HR?",
+   "abs_error": {
+    "w": 10.159
+   }
+  },
+  {
+   "id": "q028",
+   "text": "Site reading DP 29°F / RH 34. -> WB?",
+   "abs_error": {
+    "twb": 12.063
+   }
+  },
+  {
+   "id": "q181",
+   "text": "DP 14C RH 26 -> h?",
+   "abs_error": {
+    "h": 10.87
+   }
+  },
+  {
+   "id": "q232",
+   "text": "RH 41 W 12.2 g/kg -> WBT?",
+   "abs_error": {
+    "twb": 2.487
+   }
+  }
+ ]
+}

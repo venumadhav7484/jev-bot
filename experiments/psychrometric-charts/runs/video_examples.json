@@ -1,0 +1,92 @@
+{
+ "recorded": "30 September 2026, live /api/psychro, jev-1.13.0",
+ "examples": [
+  {
+   "question": "DB 30 °C, WB 22 °C → dew point?",
+   "numbers": [
+    {
+     "raw": "30 °C",
+     "label": "tdb",
+     "source": "jev",
+     "confidence": 1.0
+    },
+    {
+     "raw": "22 °C",
+     "label": "twb",
+     "source": "jev",
+     "confidence": 1.0
+    }
+   ],
+   "highlight": "tdp",
+   "seconds": 0.187,
+   "usd": 3.5448000000000003e-05,
+   "state": {
+    "tdb": 30.0,
+    "twb": 21.999999999999105,
+    "tdp": 18.438149530800274,
+    "rh": 0.49973391662980754,
+    "w": 0.013302969085117347,
+    "h": 64.19303135682804,
+    "v": 0.8771577506010722
+   }
+  },
+  {
+   "question": "RH 55%, DP 14 C. Need WB and W.",
+   "numbers": [
+    {
+     "raw": "55%",
+     "label": "rh",
+     "source": "unit",
+     "confidence": null
+    },
+    {
+     "raw": "14 C",
+     "label": "tdp",
+     "source": "jev",
+     "confidence": 0.98
+    }
+   ],
+   "highlight": "twb",
+   "seconds": 0.163,
+   "usd": 2.9484e-05,
+   "state": {
+    "tdb": 23.557373246207135,
+    "twb": 17.47345610741976,
+    "tdp": 13.999999999998636,
+    "rh": 0.5500000000000002,
+    "w": 0.009970128127417308,
+    "h": 49.07086618742981,
+    "v": 0.8540119355158271
+   }
+  },
+  {
+   "question": "measured 30 degrees and 60% humidity in the server room, what’s the dew point?",
+   "numbers": [
+    {
+     "raw": "30 degrees",
+     "label": "tdb",
+     "source": "jev",
+     "confidence": 1.0
+    },
+    {
+     "raw": "60%",
+     "label": "rh",
+     "source": "unit",
+     "confidence": null
+    }
+   ],
+   "highlight": "tdp",
+   "seconds": 0.21,
+   "usd": 2.982e-05,
+   "state": {
+    "tdb": 30.0,
+    "twb": 23.81268407301519,
+    "tdp": 21.387990203004392,
+    "rh": 0.6000000000000001,
+    "w": 0.016040902665907755,
+    "h": 71.19337993619295,
+    "v": 0.8809383181902063
+   }
+  }
+ ]
+}

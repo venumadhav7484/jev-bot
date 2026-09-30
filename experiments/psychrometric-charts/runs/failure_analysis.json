@@ -1,0 +1,169 @@
+{
+ "n": 200,
+ "misses": 6,
+ "refused": 4,
+ "wrong_answers": 2,
+ "max_error_when_read_right_C": 0.0,
+ "items": [
+  {
+   "id": "q052",
+   "text": "Tdp 18C RH 74% -> h?",
+   "style": "shorthand",
+   "misread": [
+    "“18C” read as dry-bulb (it was dew point)"
+   ],
+   "confidence": [
+    0.35
+   ],
+   "asked": [
+    "h"
+   ],
+   "outcome": "wrong answer",
+   "abs_error_asked": {
+    "h": 13.677
+   },
+   "abs_error_all": {
+    "tdb": 4.877,
+    "twb": 4.481,
+    "tdp": 4.699,
+    "rh": 0.0,
+    "w": 3.414,
+    "h": 13.677,
+    "v": 0.019
+   },
+   "units": {
+    "tdb": "°C",
+    "twb": "°C",
+    "tdp": "°C",
+    "rh": "% RH",
+    "w": "g/kg",
+    "h": "kJ/kg",
+    "v": "m³/kg"
+   }
+  },
+  {
+   "id": "q091",
+   "text": "Site reading Tdp 27°C / SV 0.902 m³/kg. -> H?",
+   "style": "shorthand",
+   "misread": [
+    "“27°C” read as dry-bulb (it was dew point)"
+   ],
+   "confidence": [
+    0.7
+   ],
+   "asked": [
+    "h"
+   ],
+   "outcome": "refused",
+   "why": "not a moist-air state (humidity above saturation or negative)"
+  },
+  {
+   "id": "q145",
+   "text": "RH 46 H 36.4 kJ/kg Rest of the properties?",
+   "style": "shorthand",
+   "misread": [
+    "“46” read as dry-bulb (it was relative humidity)"
+   ],
+   "confidence": [
+    0.59
+   ],
+   "asked": [
+    "tdb",
+    "twb",
+    "tdp",
+    "w",
+    "v"
+   ],
+   "outcome": "refused",
+   "why": "not a moist-air state (humidity above saturation or negative)"
+  },
+  {
+   "id": "q172",
+   "text": "Site reading DP 43°F / Tdb 53°F. -> H?",
+   "style": "shorthand",
+   "misread": [
+    "“53°F” read as wet-bulb (it was dry-bulb)"
+   ],
+   "confidence": [
+    0.58
+   ],
+   "asked": [
+    "h"
+   ],
+   "outcome": "wrong answer",
+   "abs_error_asked": {
+    "h": 6.675
+   },
+   "abs_error_all": {
+    "tdb": 6.564,
+    "twb": 2.886,
+    "tdp": 0.0,
+    "rh": 23.692,
+    "w": 0.0,
+    "h": 6.675,
+    "v": 0.019
+   },
+   "units": {
+    "tdb": "°C",
+    "twb": "°C",
+    "tdp": "°C",
+    "rh": "% RH",
+    "w": "g/kg",
+    "h": "kJ/kg",
+    "v": "m³/kg"
+   }
+  },
+  {
+   "id": "q178",
+   "text": "Tdp 18°C, WB 25°C. Need W and H.",
+   "style": "shorthand",
+   "misread": [
+    "“18°C” read as dry-bulb (it was dew point)"
+   ],
+   "confidence": [
+    0.61
+   ],
+   "asked": [
+    "w",
+    "h"
+   ],
+   "outcome": "refused",
+   "why": "not a moist-air state (humidity above saturation or negative)"
+  },
+  {
+   "id": "q199",
+   "text": "Tdp 62°F, Tdb 98F. Need WBT.",
+   "style": "shorthand",
+   "misread": [
+    "“62°F” read as dry-bulb (it was dew point)"
+   ],
+   "confidence": [
+    0.43
+   ],
+   "asked": [
+    "twb"
+   ],
+   "outcome": "refused",
+   "why": "give two different properties from tdb, twb, tdp, rh, w, h, v"
+  }
+ ],
+ "confidence": {
+  "note": "Post-hoc on the pilot v2 questions; a threshold picked here must be validated on fresh questions before any claim.",
+  "jev_labelled_numbers": 173,
+  "misread": 6,
+  "misread_confidence": [
+   0.35,
+   0.43,
+   0.58,
+   0.59,
+   0.61,
+   0.7
+  ],
+  "correct_below": {
+   "0.7": 8,
+   "0.75": 11,
+   "0.8": 13,
+   "0.9": 19
+  }
+ }
+}

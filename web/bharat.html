@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Try Jev in Indian languages · The Bharat test</title>
+<meta name="description" content="Pick an Indian language and a real test sentence, or write your own, and see Jev answer live. Zero-shot: no fine-tuning, no examples.">
+<link rel="stylesheet" href="/bharat.css?v=20260930"><script type="module" src="/bharat.js?v=20260930"></script></head>
+<body><main>
+<header class="top"><a class="brand" href="/" title="Jev-bot home">Jev<span> / </span>bot</a><span class="tag"><i aria-hidden="true"></i>THE BHARAT TEST · LIVE DEMO</span></header>
+
+<section class="hero">
+  <p class="kicker">ZERO-SHOT · NO FINE-TUNING · NO EXAMPLES</p>
+  <h1>See <em>Jev</em> read Indian languages</h1>
+  <p class="lede">Pick a language and a real test sentence, or write your own. Jev, a small judgment model, answers live. It was never taught these languages.</p>
+  <dl class="stats" id="stats" aria-label="Test results"></dl>
+</section>
+
+<div class="tabs" role="tablist" aria-label="Task">
+  <button role="tab" id="tab-topic" aria-controls="panel" aria-selected="true" data-task="topic">News topics <small>7 options · SIB-200</small></button>
+  <button role="tab" id="tab-intent" aria-controls="panel" aria-selected="false" data-task="intent" tabindex="-1">Voice requests <small>60 intents · MASSIVE</small></button>
+</div>
+
+<section id="panel" class="panel" role="tabpanel" aria-labelledby="tab-topic">
+  <div class="pick">
+    <label for="lang">Language</label>
+    <select id="lang"></select>
+    <p id="lang-stats" class="lang-stats"></p>
+    <h2 id="samples-title">Real test sentences</h2>
+    <p class="hint" id="samples-hint">Tap one and Jev answers it live.</p>
+    <ol id="samples" class="samples"></ol>
+  </div>
+  <div class="work">
+    <form id="ask">
+      <label for="text" id="text-label">Sentence</label>
+      <textarea id="text" dir="auto" rows="4" maxlength="500" placeholder="Type or paste a sentence in any Indian language…"></textarea>
+      <div class="row"><span id="count" class="count">0 / 500</span><button id="run" class="primary" type="submit" disabled>Ask Jev live</button></div>
+    </form>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <div id="result"></div>
+    <div id="recorded"></div>
+    <details class="request"><summary>The exact request Jev receives</summary>
+      <p class="hint">Sent server-side to <code>POST https://api.typesafe.ai/v1/systemone</code>. The API key stays on the server.</p>
+      <pre id="request-json"></pre><button id="copy" type="button" class="ghost">Copy JSON</button></details>
+  </div>
+</section>
+
+<footer>
+  <p><b>How it was tested.</b> Jev (jev-1.13.0) answered every test sentence in 24 Indian-language SIB-200 test sets plus English, and the MASSIVE voice requests in 7 locales. GPT-4 and XLM-R figures are published results; gpt-6-astra and GLM 5.3 were run on the same requests with the same instructions. Narrow tasks only: topic tagging and intent routing. The benchmarks are public, so training overlap can’t be ruled out.
+  <a href="https://github.com/venumadhav7484/jev-bot/tree/main/experiments/bharat-test" rel="noopener">Code, plan and raw logs ↗</a></p>
+  <p>Live answers are Jev’s answers now; recorded answers are from 29–30 September 2026. Text you type is sent to Jev to answer it and is not stored. Sentences: SIB-200 (CC BY-SA 4.0) and MASSIVE 1.1 (CC BY 4.0).</p>
+</footer>
+</main></body></html>

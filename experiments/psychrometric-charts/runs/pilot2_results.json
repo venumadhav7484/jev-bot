@@ -1,0 +1,352 @@
+{
+ "summary": {
+  "n": 200,
+  "answered": 200,
+  "p1": 194,
+  "p1_pass": true,
+  "p2": 194,
+  "p2_pass": true,
+  "pass_line": 194,
+  "highlight_correct": 193,
+  "numbers_labelled_by_jev": 173,
+  "numbers_labelled_by_unit": 227,
+  "seconds_p50": 0.377,
+  "input_tokens_mean": 706,
+  "usd_total": 0.005933802,
+  "breakdown": {
+   "style:chat": {
+    "n": 66,
+    "p1": 66,
+    "p2": 66,
+    "highlight": 65
+   },
+   "style:shorthand": {
+    "n": 67,
+    "p1": 61,
+    "p2": 61,
+    "highlight": 61
+   },
+   "style:textbook": {
+    "n": 67,
+    "p1": 67,
+    "p2": 67,
+    "highlight": 67
+   },
+   "unit:°C": {
+    "n": 145,
+    "p1": 142,
+    "p2": 142,
+    "highlight": 139
+   },
+   "unit:°F": {
+    "n": 55,
+    "p1": 52,
+    "p2": 52,
+    "highlight": 54
+   }
+  }
+ },
+ "failures": [
+  {
+   "id": "q052",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdb",
+    "rh"
+   ],
+   "true_labels": [
+    "tdp",
+    "rh"
+   ],
+   "highlight": "h",
+   "true_first": "h",
+   "reason": null,
+   "jev_labelled": 1,
+   "seconds": 0.379,
+   "tokens": 700,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "Tdp 18C RH 74% -> h?"
+  },
+  {
+   "id": "q091",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "tdp",
+    "v"
+   ],
+   "highlight": "h",
+   "true_first": "h",
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "jev_labelled": 1,
+   "seconds": 0.396,
+   "tokens": 709,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "Site reading Tdp 27°C / SV 0.902 m³/kg. -> H?"
+  },
+  {
+   "id": "q145",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdb",
+    "h"
+   ],
+   "true_labels": [
+    "rh",
+    "h"
+   ],
+   "highlight": "all",
+   "true_first": "all",
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "jev_labelled": 1,
+   "seconds": 0.404,
+   "tokens": 809,
+   "style": "shorthand",
+   "unit": "°F",
+   "text": "RH 46 H 36.4 kJ/kg Rest of the properties?"
+  },
+  {
+   "id": "q172",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdp",
+    "twb"
+   ],
+   "true_labels": [
+    "tdp",
+    "tdb"
+   ],
+   "highlight": "h",
+   "true_first": "h",
+   "reason": null,
+   "jev_labelled": 2,
+   "seconds": 0.37,
+   "tokens": 843,
+   "style": "shorthand",
+   "unit": "°F",
+   "text": "Site reading DP 43°F / Tdb 53°F. -> H?"
+  },
+  {
+   "id": "q178",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdb",
+    "twb"
+   ],
+   "true_labels": [
+    "tdp",
+    "twb"
+   ],
+   "highlight": "w",
+   "true_first": "w",
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "jev_labelled": 2,
+   "seconds": 0.389,
+   "tokens": 843,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "Tdp 18°C, WB 25°C. Need W and H."
+  },
+  {
+   "id": "q199",
+   "p1": false,
+   "p2": false,
+   "highlight_ok": true,
+   "labels": [
+    "tdb",
+    "tdb"
+   ],
+   "true_labels": [
+    "tdp",
+    "tdb"
+   ],
+   "highlight": "twb",
+   "true_first": "twb",
+   "reason": "give two different properties from tdb, twb, tdp, rh, w, h, v",
+   "jev_labelled": 2,
+   "seconds": 0.38,
+   "tokens": 843,
+   "style": "shorthand",
+   "unit": "°F",
+   "text": "Tdp 62°F, Tdb 98F. Need WBT."
+  }
+ ],
+ "highlight_misses": [
+  {
+   "id": "q008",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "tdp",
+    "v"
+   ],
+   "true_labels": [
+    "tdp",
+    "v"
+   ],
+   "highlight": "w",
+   "true_first": "rh",
+   "reason": null,
+   "jev_labelled": 1,
+   "seconds": 0.899,
+   "tokens": 726,
+   "style": "chat",
+   "unit": "°C",
+   "text": "hey, in the server room the dewpoint is 8 °C and the volume per kg of air is 0.833 m³/kg, how do I get the humidity?"
+  },
+  {
+   "id": "q016",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "v",
+    "h"
+   ],
+   "true_labels": [
+    "v",
+    "h"
+   ],
+   "highlight": "h",
+   "true_first": "w",
+   "reason": null,
+   "jev_labelled": 0,
+   "seconds": 0.356,
+   "tokens": 570,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "v 0.910 m³/kg H 105.7 kJ/kg -> HR?"
+  },
+  {
+   "id": "q025",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "tdb",
+    "twb"
+   ],
+   "true_labels": [
+    "tdb",
+    "twb"
+   ],
+   "highlight": "rh",
+   "true_first": "w",
+   "reason": null,
+   "jev_labelled": 2,
+   "seconds": 0.348,
+   "tokens": 839,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "Site reading DB 13C / WB 7C. HR?"
+  },
+  {
+   "id": "q115",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "rh",
+    "w"
+   ],
+   "true_labels": [
+    "rh",
+    "w"
+   ],
+   "highlight": "twb",
+   "true_first": "tdb",
+   "reason": null,
+   "jev_labelled": 0,
+   "seconds": 0.34,
+   "tokens": 565,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "RH 56% HR 5.1 g/kg DBT and Twb?"
+  },
+  {
+   "id": "q148",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "tdb",
+    "h"
+   ],
+   "true_labels": [
+    "tdb",
+    "h"
+   ],
+   "highlight": "h",
+   "true_first": "v",
+   "reason": null,
+   "jev_labelled": 1,
+   "seconds": 0.431,
+   "tokens": 702,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "DB 11C h 24.9 kJ/kg SV?"
+  },
+  {
+   "id": "q166",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "tdb",
+    "tdp"
+   ],
+   "true_labels": [
+    "tdb",
+    "tdp"
+   ],
+   "highlight": "all",
+   "true_first": "w",
+   "reason": null,
+   "jev_labelled": 2,
+   "seconds": 0.348,
+   "tokens": 847,
+   "style": "shorthand",
+   "unit": "°F",
+   "text": "Site reading DBT 90 °F / Tdp 62F. HR and SV?"
+  },
+  {
+   "id": "q175",
+   "p1": true,
+   "p2": true,
+   "highlight_ok": false,
+   "labels": [
+    "twb",
+    "tdp"
+   ],
+   "true_labels": [
+    "twb",
+    "tdp"
+   ],
+   "highlight": "tdp",
+   "true_first": "tdb",
+   "reason": null,
+   "jev_labelled": 2,
+   "seconds": 0.336,
+   "tokens": 842,
+   "style": "shorthand",
+   "unit": "°C",
+   "text": "Site reading WBT 10C / DPT -0C. DBT?"
+  }
+ ]
+}

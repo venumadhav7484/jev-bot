@@ -1,0 +1,241 @@
+{
+ "v1": {
+  "u1": 8,
+  "u2_recorded": 8,
+  "pass_line": 9,
+  "rows": [
+   {
+    "name": "FlyCarpet 902 px (development image)",
+    "u1": true,
+    "u2": true,
+    "dt": 0.154,
+    "dw": 0.04,
+    "pressure": 101325,
+    "pressureOk": true
+   },
+   {
+    "name": "FlyCarpet 677 px",
+    "u1": false,
+    "u2": false,
+    "error": "Couldn’t find the temperature scale along the bottom of this chart."
+   },
+   {
+    "name": "FlyCarpet 1,300 px",
+    "u1": true,
+    "u2": true,
+    "dt": 0.192,
+    "dw": 0.121,
+    "pressure": 101325,
+    "pressureOk": true
+   },
+   {
+    "name": "FlyCarpet JPEG 0.7",
+    "u1": true,
+    "u2": true,
+    "dt": 0.147,
+    "dw": 0.118,
+    "pressure": 101325,
+    "pressureOk": true
+   },
+   {
+    "name": "FlyCarpet 0.9× + margins",
+    "u1": true,
+    "u2": true,
+    "dt": 0.229,
+    "dw": 0.074,
+    "pressure": 101325,
+    "pressureOk": true
+   },
+   {
+    "name": "Drawn 0 m",
+    "u1": true,
+    "u2": true,
+    "dt": 0.095,
+    "dw": 0.034,
+    "pressure": 101325,
+    "pressureOk": true
+   },
+   {
+    "name": "Drawn 920 m",
+    "u1": true,
+    "u2": true,
+    "dt": 0.086,
+    "dw": 0.06,
+    "pressure": 90750,
+    "pressureOk": true
+   },
+   {
+    "name": "Drawn 1500 m",
+    "u1": true,
+    "u2": true,
+    "dt": 0.051,
+    "dw": 0.008,
+    "pressure": 84556,
+    "pressureOk": true
+   },
+   {
+    "name": "Drawn 2200 m",
+    "u1": true,
+    "u2": true,
+    "dt": 0.054,
+    "dw": 0.022,
+    "pressure": 77541,
+    "pressureOk": true
+   },
+   {
+    "name": "Drawn 1500 m JPEG 0.7 @720",
+    "u1": false,
+    "u2": false,
+    "error": "Couldn’t find the temperature scale along the bottom of this chart."
+   }
+  ]
+ },
+ "v2": {
+  "u1": 9,
+  "u2": 10,
+  "pass_line": 9,
+  "rows": [
+   {
+    "name": "FlyCarpet 640 px",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.267,
+    "dw": 0.024,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "7/17",
+    "match": 5.7,
+    "secs": 1.4
+   },
+   {
+    "name": "FlyCarpet 760 px",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.141,
+    "dw": 0.047,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "10/20",
+    "match": 6,
+    "secs": 1.2
+   },
+   {
+    "name": "FlyCarpet 1,100 px",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.165,
+    "dw": 0.023,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "12/20",
+    "match": 7.7,
+    "secs": 0.8
+   },
+   {
+    "name": "FlyCarpet JPEG 0.5",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.138,
+    "dw": 0.031,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "9/19",
+    "match": 6.7,
+    "secs": 0.8
+   },
+   {
+    "name": "FlyCarpet 0.8× + 40 px margins",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.129,
+    "dw": 0.045,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "9/19",
+    "match": 7.5,
+    "secs": 1.1
+   },
+   {
+    "name": "Drawn 540 m",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.1,
+    "dw": 0.053,
+    "pressure": 95004,
+    "pressureOk": true,
+    "labels": "6/5",
+    "match": 9.1,
+    "secs": 1
+   },
+   {
+    "name": "Drawn sea level 1,600 px",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.04,
+    "dw": 0.015,
+    "pressure": 101325,
+    "pressureOk": true,
+    "labels": "13/11",
+    "match": 10,
+    "secs": 0.9
+   },
+   {
+    "name": "Drawn 920 m JPEG 0.8 @700",
+    "u1": false,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 13.844,
+    "dw": 0.086,
+    "pressure": 101325,
+    "pressureOk": false,
+    "labels": "7/11",
+    "match": 4,
+    "secs": 1.3
+   },
+   {
+    "name": "Drawn 2,200 m @800",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.05,
+    "dw": 0.01,
+    "pressure": 77541,
+    "pressureOk": true,
+    "labels": "12/11",
+    "match": 11.9,
+    "secs": 1.3
+   },
+   {
+    "name": "Drawn 1,500 m @1,100",
+    "u1": true,
+    "u2": true,
+    "kind": "psychrometric chart",
+    "units": "SI units",
+    "dt": 0.061,
+    "dw": 0.044,
+    "pressure": 84556,
+    "pressureOk": true,
+    "labels": "10/6",
+    "match": 15,
+    "secs": 0.9
+   }
+  ]
+ },
+ "note": "Run in the browser on 30 Sep 2026 against the local server; see PLAN.md for the pre-registered protocol."
+}

@@ -1,0 +1,337 @@
+{
+ "chart": "FlyCarpet sea-level SI chart (\u00a9 FlyCarpet Inc, flycarpet.net/en/psyonline)",
+ "pressure_pa": 101325.0,
+ "calibration": {
+  "x = a + b\u00b7t + c\u00b7W + d\u00b7t\u00b7W": [
+   196.50819040671797,
+   12.650652248307082,
+   -1135.1876243472282,
+   22.660842737203765
+  ],
+  "y = Y0 - W_g_per_kg\u00b718": 590.0,
+  "residual_px": 0.054,
+  "pass": true
+ },
+ "rh_levels_found": [
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90
+ ],
+ "lines": {
+  "rh": {
+   "count": 9,
+   "worst_dev": 0.002,
+   "limit": 0.01,
+   "pass": true
+  },
+  "h": {
+   "count": 27,
+   "worst_dev": 0.0495,
+   "limit": 0.5,
+   "pass": true
+  },
+  "v": {
+   "count": 10,
+   "worst_dev": 0.0003,
+   "limit": 0.005,
+   "pass": true
+  },
+  "twb": {
+   "count": 9,
+   "worst_dev": 0.3224,
+   "limit": 0.3,
+   "pass": false
+  }
+ },
+ "detail": {
+  "rh": [
+   {
+    "value": 0.1004,
+    "max_dev": 0.0016,
+    "points": 6321
+   },
+   {
+    "value": 0.2008,
+    "max_dev": 0.0014,
+    "points": 6321
+   },
+   {
+    "value": 0.3012,
+    "max_dev": 0.0016,
+    "points": 6298
+   },
+   {
+    "value": 0.4016,
+    "max_dev": 0.002,
+    "points": 6173
+   },
+   {
+    "value": 0.502,
+    "max_dev": 0.0016,
+    "points": 5711
+   },
+   {
+    "value": 0.6024,
+    "max_dev": 0.0016,
+    "points": 5355
+   },
+   {
+    "value": 0.7028,
+    "max_dev": 0.0016,
+    "points": 5061
+   },
+   {
+    "value": 0.8032,
+    "max_dev": 0.0015,
+    "points": 4787
+   },
+   {
+    "value": 0.9036,
+    "max_dev": 0.002,
+    "points": 4577
+   }
+  ],
+  "h": [
+   {
+    "value": -5.0016,
+    "max_dev": 0.0008,
+    "points": 16
+   },
+   {
+    "value": -0.0015,
+    "max_dev": 0.001,
+    "points": 11
+   },
+   {
+    "value": 5.0022,
+    "max_dev": 0.0007,
+    "points": 11
+   },
+   {
+    "value": 10.0017,
+    "max_dev": 0.0021,
+    "points": 11
+   },
+   {
+    "value": 15.0002,
+    "max_dev": 0.0024,
+    "points": 11
+   },
+   {
+    "value": 19.9998,
+    "max_dev": 0.0009,
+    "points": 12
+   },
+   {
+    "value": 25.0046,
+    "max_dev": 0.0029,
+    "points": 12
+   },
+   {
+    "value": 30.0042,
+    "max_dev": 0.0019,
+    "points": 13
+   },
+   {
+    "value": 35.0095,
+    "max_dev": 0.0036,
+    "points": 13
+   },
+   {
+    "value": 40.0155,
+    "max_dev": 0.0071,
+    "points": 14
+   },
+   {
+    "value": 45.0108,
+    "max_dev": 0.0082,
+    "points": 14
+   },
+   {
+    "value": 50.0168,
+    "max_dev": 0.0116,
+    "points": 14
+   },
+   {
+    "value": 55.0766,
+    "max_dev": 0.0196,
+    "points": 14
+   },
+   {
+    "value": 60.08,
+    "max_dev": 0.0168,
+    "points": 14
+   },
+   {
+    "value": 65.0926,
+    "max_dev": 0.0186,
+    "points": 14
+   },
+   {
+    "value": 70.0908,
+    "max_dev": 0.0204,
+    "points": 14
+   },
+   {
+    "value": 75.0892,
+    "max_dev": 0.022,
+    "points": 14
+   },
+   {
+    "value": 80.1021,
+    "max_dev": 0.0236,
+    "points": 14
+   },
+   {
+    "value": 85.1007,
+    "max_dev": 0.0251,
+    "points": 14
+   },
+   {
+    "value": 90.1019,
+    "max_dev": 0.0245,
+    "points": 14
+   },
+   {
+    "value": 95.1097,
+    "max_dev": 0.0305,
+    "points": 14
+   },
+   {
+    "value": 100.1064,
+    "max_dev": 0.0347,
+    "points": 15
+   },
+   {
+    "value": 105.1055,
+    "max_dev": 0.0363,
+    "points": 17
+   },
+   {
+    "value": 110.1063,
+    "max_dev": 0.0495,
+    "points": 20
+   },
+   {
+    "value": 115.1113,
+    "max_dev": 0.0444,
+    "points": 20
+   },
+   {
+    "value": 120.1166,
+    "max_dev": 0.0395,
+    "points": 20
+   },
+   {
+    "value": 125.1289,
+    "max_dev": 0.0418,
+    "points": 20
+   }
+  ],
+  "v": [
+   {
+    "value": 0.76,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.78,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.8,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.82,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.8399,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.8599,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.8799,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.8999,
+    "max_dev": 0.0,
+    "points": 19
+   },
+   {
+    "value": 0.92,
+    "max_dev": 0.0001,
+    "points": 21
+   },
+   {
+    "value": 0.9402,
+    "max_dev": 0.0003,
+    "points": 21
+   }
+  ],
+  "twb": [
+   {
+    "value": -9.9792,
+    "max_dev": 0.0084,
+    "points": 19
+   },
+   {
+    "value": -4.9773,
+    "max_dev": 0.002,
+    "points": 19
+   },
+   {
+    "value": 0.3792,
+    "max_dev": 0.3224,
+    "points": 19
+   },
+   {
+    "value": 5.026,
+    "max_dev": 0.0009,
+    "points": 19
+   },
+   {
+    "value": 10.0315,
+    "max_dev": 0.0016,
+    "points": 19
+   },
+   {
+    "value": 15.0385,
+    "max_dev": 0.0018,
+    "points": 19
+   },
+   {
+    "value": 20.0513,
+    "max_dev": 0.005,
+    "points": 20
+   },
+   {
+    "value": 25.0565,
+    "max_dev": 0.0047,
+    "points": 20
+   },
+   {
+    "value": 30.0621,
+    "max_dev": 0.006,
+    "points": 20
+   }
+  ]
+ }
+}

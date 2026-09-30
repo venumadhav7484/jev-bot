@@ -1,0 +1,1505 @@
+{
+ "summary": {
+  "n": 200,
+  "answered": 200,
+  "missing": [],
+  "p1": 195,
+  "p1_pass": true,
+  "p2": 159,
+  "p2_pass": false,
+  "pass_line": 194,
+  "asked_set_correct": 160,
+  "seconds_p50": 0.357,
+  "input_tokens_mean": 1122,
+  "usd_total": 0.009420726,
+  "confidence_on_wrong_labels": [
+   0.6,
+   0.6,
+   0.49,
+   0.78,
+   0.51
+  ],
+  "breakdown": {
+   "pair:h+rh": {
+    "n": 10,
+    "p1": 10,
+    "p2": 9
+   },
+   "pair:h+tdb": {
+    "n": 10,
+    "p1": 10,
+    "p2": 9
+   },
+   "pair:h+tdp": {
+    "n": 10,
+    "p1": 9,
+    "p2": 7
+   },
+   "pair:h+v": {
+    "n": 10,
+    "p1": 10,
+    "p2": 6
+   },
+   "pair:h+w": {
+    "n": 11,
+    "p1": 11,
+    "p2": 10
+   },
+   "pair:rh+tdb": {
+    "n": 10,
+    "p1": 10,
+    "p2": 8
+   },
+   "pair:rh+tdp": {
+    "n": 11,
+    "p1": 11,
+    "p2": 9
+   },
+   "pair:rh+twb": {
+    "n": 11,
+    "p1": 9,
+    "p2": 7
+   },
+   "pair:rh+v": {
+    "n": 10,
+    "p1": 9,
+    "p2": 8
+   },
+   "pair:rh+w": {
+    "n": 11,
+    "p1": 11,
+    "p2": 10
+   },
+   "pair:tdb+tdp": {
+    "n": 10,
+    "p1": 10,
+    "p2": 8
+   },
+   "pair:tdb+twb": {
+    "n": 11,
+    "p1": 11,
+    "p2": 10
+   },
+   "pair:tdb+v": {
+    "n": 11,
+    "p1": 11,
+    "p2": 7
+   },
+   "pair:tdb+w": {
+    "n": 11,
+    "p1": 11,
+    "p2": 10
+   },
+   "pair:tdp+twb": {
+    "n": 11,
+    "p1": 11,
+    "p2": 6
+   },
+   "pair:tdp+v": {
+    "n": 11,
+    "p1": 10,
+    "p2": 8
+   },
+   "pair:twb+v": {
+    "n": 10,
+    "p1": 10,
+    "p2": 8
+   },
+   "pair:twb+w": {
+    "n": 10,
+    "p1": 10,
+    "p2": 9
+   },
+   "pair:v+w": {
+    "n": 11,
+    "p1": 11,
+    "p2": 10
+   },
+   "style:chat": {
+    "n": 66,
+    "p1": 66,
+    "p2": 58
+   },
+   "style:shorthand": {
+    "n": 67,
+    "p1": 62,
+    "p2": 34
+   },
+   "style:textbook": {
+    "n": 67,
+    "p1": 67,
+    "p2": 67
+   },
+   "unit:°C": {
+    "n": 157,
+    "p1": 153,
+    "p2": 125
+   },
+   "unit:°F": {
+    "n": 43,
+    "p1": 42,
+    "p2": 34
+   }
+  }
+ },
+ "failures": [
+  {
+   "id": "q001",
+   "p1": false,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "rh",
+    "v"
+   ],
+   "asked": [
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "twb"
+   ],
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "confidence": [
+    0.6,
+    1.0
+   ],
+   "seconds": 0.911,
+   "tokens": 1107,
+   "text": "RH 78 SV 0.890 m³/kg Need WB.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+v"
+  },
+  {
+   "id": "q002",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdp",
+    "twb"
+   ],
+   "true_labels": [
+    "tdp",
+    "twb"
+   ],
+   "asked": [
+    "tdb",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "w",
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.455,
+   "tokens": 1123,
+   "text": "hey, in the server room the dew point is 8 degrees and the wet bulb is 16.7 C, how do I get the moisture content and specific volume?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "tdp+twb"
+  },
+  {
+   "id": "q007",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "v"
+   ],
+   "true_labels": [
+    "rh",
+    "v"
+   ],
+   "asked": [
+    "tdb",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "twb",
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.598,
+   "tokens": 1110,
+   "text": "RH 82% v 0.849 m³/kg -> WB and W?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+v"
+  },
+  {
+   "id": "q010",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "w",
+    "twb"
+   ],
+   "true_labels": [
+    "w",
+    "twb"
+   ],
+   "asked": [
+    "h",
+    "v"
+   ],
+   "true_asked": [
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    0.8
+   ],
+   "seconds": 0.345,
+   "tokens": 1105,
+   "text": "Site reading HR 2.9 g/kg / WB 6°C. -> v?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "twb+w"
+  },
+  {
+   "id": "q013",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "rh"
+   ],
+   "true_labels": [
+    "twb",
+    "rh"
+   ],
+   "asked": [
+    "h",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "tdp",
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    0.97,
+    0.66
+   ],
+   "seconds": 0.405,
+   "tokens": 1098,
+   "text": "Twb 23 RH 55 Tdp and SV?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+twb"
+  },
+  {
+   "id": "q016",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "v"
+   ],
+   "true_labels": [
+    "twb",
+    "v"
+   ],
+   "asked": [
+    "tdb",
+    "tdp"
+   ],
+   "true_asked": [
+    "tdp"
+   ],
+   "reason": null,
+   "confidence": [
+    0.73,
+    0.99
+   ],
+   "seconds": 0.436,
+   "tokens": 1108,
+   "text": "Twb 23 SV 0.875 m³/kg -> DP?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "twb+v"
+  },
+  {
+   "id": "q022",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "tdp"
+   ],
+   "true_labels": [
+    "rh",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    0.86
+   ],
+   "seconds": 0.391,
+   "tokens": 1095,
+   "text": "RH 42%, DPT 3. W?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+tdp"
+  },
+  {
+   "id": "q025",
+   "p1": false,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "twb"
+   ],
+   "true_labels": [
+    "rh",
+    "twb"
+   ],
+   "asked": [
+    "h",
+    "tdp",
+    "w"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    0.6,
+    0.96
+   ],
+   "seconds": 0.533,
+   "tokens": 1097,
+   "text": "RH 73 WBT 90F H?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "rh+twb"
+  },
+  {
+   "id": "q028",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "tdp"
+   ],
+   "true_labels": [
+    "tdb",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh",
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    0.89,
+    0.55
+   ],
+   "seconds": 0.302,
+   "tokens": 1099,
+   "text": "Tdb 11 Tdp 5°C Need RH and h.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdb+tdp"
+  },
+  {
+   "id": "q029",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdp",
+    "h"
+   ],
+   "true_labels": [
+    "tdp",
+    "h"
+   ],
+   "asked": [
+    "rh",
+    "tdb"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.344,
+   "tokens": 1132,
+   "text": "hey, in the server room the dewpoint is 9.7 °C and the enthalpy is 45.5 kJ/kg, how do I get the relative humidity?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "h+tdp"
+  },
+  {
+   "id": "q031",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "tdb"
+   ],
+   "true_labels": [
+    "v",
+    "tdb"
+   ],
+   "asked": [
+    "h",
+    "tdp",
+    "w"
+   ],
+   "true_asked": [
+    "tdp",
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.322,
+   "tokens": 1112,
+   "text": "v 0.903 m³/kg Tdb 36°C -> DP and H?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdb+v"
+  },
+  {
+   "id": "q041",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "tdp"
+   ],
+   "true_labels": [
+    "rh",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "tdb"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.351,
+   "tokens": 1111,
+   "text": "I measured humidity = 65% and dewpoint = 19 C. can you tell me the heat content?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "rh+tdp"
+  },
+  {
+   "id": "q043",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "twb"
+   ],
+   "true_labels": [
+    "tdb",
+    "twb"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "tdp",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.33,
+   "tokens": 1102,
+   "text": "Site reading Tdb 37°C / WBT 29. v?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdb+twb"
+  },
+  {
+   "id": "q052",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "tdp"
+   ],
+   "true_labels": [
+    "twb",
+    "tdp"
+   ],
+   "asked": [
+    "rh",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "rh",
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    0.87,
+    0.75
+   ],
+   "seconds": 0.359,
+   "tokens": 1101,
+   "text": "Site reading Twb 6C / DPT -3. Need RH and v.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+twb"
+  },
+  {
+   "id": "q053",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "tdp"
+   ],
+   "true_labels": [
+    "v",
+    "tdp"
+   ],
+   "asked": [
+    "rh",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "twb",
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.309,
+   "tokens": 1129,
+   "text": "I measured specific volume = 0.911 m³/kg and dew point = 25.8 degrees. what's the wet-bulb reading and humidity?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "tdp+v"
+  },
+  {
+   "id": "q064",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "rh"
+   ],
+   "true_labels": [
+    "twb",
+    "rh"
+   ],
+   "asked": [
+    "h",
+    "tdp",
+    "w"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    0.99,
+    1.0
+   ],
+   "seconds": 0.333,
+   "tokens": 1102,
+   "text": "Site reading WBT 14°C / RH 40%. Need H.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+twb"
+  },
+  {
+   "id": "q080",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "h"
+   ],
+   "true_labels": [
+    "v",
+    "h"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.45,
+   "tokens": 1135,
+   "text": "quick one: volume per kg of air 0.854 m³/kg and enthalpy 41.8 kJ/kg at the AHU inlet, what's the humidity?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "h+v"
+  },
+  {
+   "id": "q082",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "w"
+   ],
+   "true_labels": [
+    "v",
+    "w"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "tdb"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.33,
+   "tokens": 1119,
+   "text": "Site reading v 0.865 m³/kg / HR 16.6 g/kg. Need H.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "v+w"
+  },
+  {
+   "id": "q085",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "h"
+   ],
+   "true_labels": [
+    "rh",
+    "h"
+   ],
+   "asked": [
+    "tdb",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.326,
+   "tokens": 1106,
+   "text": "RH 89%, H 98.4 kJ/kg. v?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "h+rh"
+  },
+  {
+   "id": "q103",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "h",
+    "w"
+   ],
+   "true_labels": [
+    "h",
+    "w"
+   ],
+   "asked": [
+    "rh",
+    "tdb",
+    "v"
+   ],
+   "true_asked": [
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.333,
+   "tokens": 1109,
+   "text": "h 65 kJ/kg W 13.7 g/kg -> v?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "h+w"
+  },
+  {
+   "id": "q106",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "h",
+    "tdb"
+   ],
+   "true_labels": [
+    "h",
+    "tdb"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.374,
+   "tokens": 1112,
+   "text": "Site reading H 67.1 kJ/kg / DB 76 °F. RH?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "h+tdb"
+  },
+  {
+   "id": "q109",
+   "p1": false,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "tdp",
+    "v"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "confidence": [
+    0.49,
+    1.0
+   ],
+   "seconds": 0.329,
+   "tokens": 1111,
+   "text": "DPT 21C, SV 0.895 m³/kg. RH?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+v"
+  },
+  {
+   "id": "q112",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "h"
+   ],
+   "true_labels": [
+    "v",
+    "h"
+   ],
+   "asked": [
+    "tdb",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "twb"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.327,
+   "tokens": 1119,
+   "text": "SV 0.815 m³/kg, h 26.2 kJ/kg. Need WB.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "h+v"
+  },
+  {
+   "id": "q127",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "tdb"
+   ],
+   "true_labels": [
+    "rh",
+    "tdb"
+   ],
+   "asked": [
+    "tdp",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.353,
+   "tokens": 1097,
+   "text": "RH 32% Tdb 21 -> W?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+tdb"
+  },
+  {
+   "id": "q131",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "h"
+   ],
+   "true_labels": [
+    "v",
+    "h"
+   ],
+   "asked": [
+    "rh",
+    "tdb",
+    "w"
+   ],
+   "true_asked": [
+    "tdb",
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.393,
+   "tokens": 1133,
+   "text": "quick one: specific volume 0.889 m³/kg and enthalpy 75 kJ/kg at the AHU inlet, how do I get the air temperature and humidity?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "h+v"
+  },
+  {
+   "id": "q133",
+   "p1": false,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "twb"
+   ],
+   "true_labels": [
+    "rh",
+    "twb"
+   ],
+   "asked": [
+    "h",
+    "tdp",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "h",
+    "v"
+   ],
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "confidence": [
+    0.78,
+    0.97
+   ],
+   "seconds": 0.377,
+   "tokens": 1098,
+   "text": "RH 28, Twb 6. Need h and SV.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "rh+twb"
+  },
+  {
+   "id": "q137",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "v"
+   ],
+   "true_labels": [
+    "twb",
+    "v"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.34,
+   "tokens": 1132,
+   "text": "quick one: wet-bulb reading 59.7 degrees F and specific volume 0.847 m³/kg at the AHU inlet, what's the humidity?",
+   "style": "chat",
+   "fahrenheit": true,
+   "pair": "twb+v"
+  },
+  {
+   "id": "q139",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "w"
+   ],
+   "true_labels": [
+    "tdb",
+    "w"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "v"
+   ],
+   "true_asked": [
+    "h",
+    "v"
+   ],
+   "reason": null,
+   "confidence": [
+    0.92,
+    1.0
+   ],
+   "seconds": 0.344,
+   "tokens": 1108,
+   "text": "Tdb 53F, W 3.4 g/kg. -> H and v?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "tdb+w"
+  },
+  {
+   "id": "q151",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "tdb",
+    "v"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    0.96,
+    0.99
+   ],
+   "seconds": 0.353,
+   "tokens": 1113,
+   "text": "Site reading DB 58F / SV 0.818 m³/kg. -> RH?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "tdb+v"
+  },
+  {
+   "id": "q154",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "h",
+    "v"
+   ],
+   "true_labels": [
+    "h",
+    "v"
+   ],
+   "asked": [
+    "rh",
+    "tdb",
+    "tdp",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "tdb",
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.398,
+   "tokens": 1123,
+   "text": "Site reading H 79.4 kJ/kg / SV 0.895 m³/kg. -> DB and W?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "h+v"
+  },
+  {
+   "id": "q157",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "h",
+    "tdp"
+   ],
+   "true_labels": [
+    "h",
+    "tdp"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    0.98,
+    0.99
+   ],
+   "seconds": 0.375,
+   "tokens": 1111,
+   "text": "Site reading h 82.7 kJ/kg / DPT 76°F. HR?",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "h+tdp"
+  },
+  {
+   "id": "q163",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "tdp"
+   ],
+   "true_labels": [
+    "twb",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "w"
+   ],
+   "true_asked": [
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    0.92,
+    0.28
+   ],
+   "seconds": 0.37,
+   "tokens": 1096,
+   "text": "WB 10C Tdp 1 -> W?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+twb"
+  },
+  {
+   "id": "q164",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "rh",
+    "w"
+   ],
+   "true_labels": [
+    "rh",
+    "w"
+   ],
+   "asked": [
+    "h",
+    "tdb",
+    "twb"
+   ],
+   "true_asked": [
+    "tdb",
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.318,
+   "tokens": 1117,
+   "text": "I measured relative humidity = 43% and moisture content = 9.7 g/kg. how do I get the temperature and heat content?",
+   "style": "chat",
+   "fahrenheit": false,
+   "pair": "rh+w"
+  },
+  {
+   "id": "q166",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdp",
+    "twb"
+   ],
+   "true_labels": [
+    "tdp",
+    "twb"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    0.82,
+    0.95
+   ],
+   "seconds": 0.363,
+   "tokens": 1096,
+   "text": "DP 13 Twb 21 Need h.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+twb"
+  },
+  {
+   "id": "q172",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "tdb",
+    "v"
+   ],
+   "asked": [
+    "h",
+    "w"
+   ],
+   "true_asked": [
+    "w"
+   ],
+   "reason": null,
+   "confidence": [
+    0.94,
+    1.0
+   ],
+   "seconds": 0.345,
+   "tokens": 1112,
+   "text": "DBT 61F, SV 0.830 m³/kg. Need W.",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "tdb+v"
+  },
+  {
+   "id": "q178",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "tdp"
+   ],
+   "true_labels": [
+    "tdb",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "twb",
+    "v",
+    "w"
+   ],
+   "true_asked": [
+    "twb"
+   ],
+   "reason": null,
+   "confidence": [
+    0.97,
+    0.99
+   ],
+   "seconds": 0.397,
+   "tokens": 1103,
+   "text": "DBT 31C, DP 14C. Need WBT.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdb+tdp"
+  },
+  {
+   "id": "q184",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "rh"
+   ],
+   "true_labels": [
+    "tdb",
+    "rh"
+   ],
+   "asked": [
+    "h",
+    "tdp",
+    "twb",
+    "w"
+   ],
+   "true_asked": [
+    "tdp",
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    1.0
+   ],
+   "seconds": 0.323,
+   "tokens": 1103,
+   "text": "DB 63 °F RH 48% Need DPT and H.",
+   "style": "shorthand",
+   "fahrenheit": true,
+   "pair": "rh+tdb"
+  },
+  {
+   "id": "q187",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "twb",
+    "tdp"
+   ],
+   "true_labels": [
+    "twb",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "tdb",
+    "v"
+   ],
+   "true_asked": [
+    "tdb"
+   ],
+   "reason": null,
+   "confidence": [
+    0.99,
+    0.87
+   ],
+   "seconds": 0.323,
+   "tokens": 1102,
+   "text": "Site reading Twb 9C / DPT 6C. -> DBT?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+twb"
+  },
+  {
+   "id": "q190",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "tdb",
+    "v"
+   ],
+   "true_labels": [
+    "tdb",
+    "v"
+   ],
+   "asked": [
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "rh"
+   ],
+   "reason": null,
+   "confidence": [
+    0.83,
+    1.0
+   ],
+   "seconds": 0.4,
+   "tokens": 1106,
+   "text": "DB 13 SV 0.816 m³/kg RH?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdb+v"
+  },
+  {
+   "id": "q196",
+   "p1": true,
+   "p2": false,
+   "asked_ok": false,
+   "labels": [
+    "v",
+    "tdp"
+   ],
+   "true_labels": [
+    "v",
+    "tdp"
+   ],
+   "asked": [
+    "h",
+    "rh",
+    "w"
+   ],
+   "true_asked": [
+    "h"
+   ],
+   "reason": null,
+   "confidence": [
+    1.0,
+    0.99
+   ],
+   "seconds": 0.341,
+   "tokens": 1114,
+   "text": "Site reading v 0.902 m³/kg / DPT 22C. -> H?",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "tdp+v"
+  },
+  {
+   "id": "q199",
+   "p1": false,
+   "p2": false,
+   "asked_ok": true,
+   "labels": [
+    "tdb",
+    "h"
+   ],
+   "true_labels": [
+    "tdp",
+    "h"
+   ],
+   "asked": [
+    "v"
+   ],
+   "true_asked": [
+    "v"
+   ],
+   "reason": "not a moist-air state (humidity above saturation or negative)",
+   "confidence": [
+    0.51,
+    0.99
+   ],
+   "seconds": 0.347,
+   "tokens": 1104,
+   "text": "Site reading DPT -1 / h 24 kJ/kg. Need SV.",
+   "style": "shorthand",
+   "fahrenheit": false,
+   "pair": "h+tdp"
+  }
+ ]
+}

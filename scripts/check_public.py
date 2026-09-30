@@ -4,12 +4,20 @@ This is a publication guard, not a complete secret-detection system. It prints
 paths and issue types only, never matched secrets or private source contents.
 """
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
 import subprocess
 from backup_private import ROOT, load_env
 from public_links import is_discord_url, is_private_artifact, private_artifact_roots
+
+
+# Vendored binaries whose base64 payload happens to contain AWS-key-shaped substrings. Pinned by content hash: any
+# change to the file brings the check back. The exact-secret check above still applies to these files.
+KEY_PATTERN_FALSE_POSITIVES = {
+    'web/vendor/tesseract/core/tesseract-core-simd-lstm.wasm.js': 'ce20eda9533cbed1e6c2b4276fbae1e0adc61b6754b5513084be601787b457cf',
+}
 
 
 def inspect(files):
@@ -33,7 +41,8 @@ def inspect(files):
             findings.append((name, 'environment file'))
         if any(secret in raw for secret in secrets):
             findings.append((name, 'credential value'))
-        if re.search(rb'(?:AKIA|ASIA)[A-Z0-9]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----', raw):
+        if re.search(rb'(?:AKIA|ASIA)[A-Z0-9]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----', raw) and \
+                KEY_PATTERN_FALSE_POSITIVES.get(name) != hashlib.sha256(raw).hexdigest():
             findings.append((name, 'credential-like material'))
         text = raw.decode('utf-8', errors='replace')
         if any(value in text for value in private_ids) or any(n.casefold() in text.casefold() for n in private_names):
